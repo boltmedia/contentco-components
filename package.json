@@ -1,6 +1,6 @@
 {
   "name": "contentco-components",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Shared components for Content.co platform",
   "author": "himynameistimli",
   "license": "MIT",
@@ -31,7 +31,8 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@react-bootstrap/babel-preset": "^1.2.0",
+    "@react-bootstrap/eslint-config": "^1.3.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
@@ -69,5 +70,6 @@
     "directory": "lib"
   },
   "dependencies": {
+    "@emotion/styled": "^10.0.27"
   }
 }
