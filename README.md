@@ -15,8 +15,9 @@ npm install --save contentco-components
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'contentco-components'
-import 'contentco-components/dist/index.css'
+import { MyComponent } from 'contentco-components'
+// alt 
+// import MyComponent from 'contentco-components/lib/MyComponent'
 
 class Example extends Component {
   render() {
