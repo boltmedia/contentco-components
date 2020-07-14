@@ -1,0 +1,6 @@
+{
+  "name": "contentco-components/TestComponent",
+  "private": true,
+  "main": "../cjs/TestComponent.js",
+  "module": "../esm/TestComponent.js"
+}

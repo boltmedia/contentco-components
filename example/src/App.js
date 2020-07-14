@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { ExampleComponent } from 'contentco-components'
-import 'contentco-components/dist/index.css'
+// import { TestComponent } from 'contentco-components';
+import TestComponent from 'contentco-components/TestComponent';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return <TestComponent text='Create React Library Example 😄' />;
+};
 
-export default App
+export default App;
