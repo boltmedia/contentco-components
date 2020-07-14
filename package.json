@@ -1,6 +1,6 @@
 {
   "name": "contentco-components",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Shared components for Content.co platform",
   "author": "himynameistimli",
   "license": "MIT",
@@ -62,9 +62,7 @@
   },
   "files": [
     "CHANGELOG.md",
-    "lib",
-    "dist",
-    "es"
+    "lib"
   ],
   "publishConfig": {
     "directory": "lib"
