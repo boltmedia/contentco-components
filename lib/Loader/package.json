@@ -1,0 +1,6 @@
+{
+  "name": "contentco-components/Loader",
+  "private": true,
+  "main": "../cjs/Loader.js",
+  "module": "../esm/Loader.js"
+}

@@ -1,13 +1,12 @@
 import React from 'react';
 
 import { Logo } from 'contentco-components';
-
+import Styles from './App.module.scss';
 const App = () => {
   return (
     <>
       <h2>Logo</h2>
-      <Logo />
-      <Logo style={{ color: 'blue', width: '200px' }} />
+      <Logo className={Styles.logo} />
     </>
   );
 };
