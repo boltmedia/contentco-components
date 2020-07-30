@@ -1,0 +1,6 @@
+{
+  "name": "contentco-components/Logo",
+  "private": true,
+  "main": "../cjs/Logo.js",
+  "module": "../esm/Logo.js"
+}

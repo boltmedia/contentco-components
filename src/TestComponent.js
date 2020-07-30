@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const ExampleComponent = ({ text }) => {
-  return <Container>eeee {text}</Container>;
+  return <Container>{text}</Container>;
 };
 
 export default ExampleComponent;
