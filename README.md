@@ -13,19 +13,32 @@ npm install --save contentco-components
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import { MyComponent } from 'contentco-components'
-// alt 
+import { MyComponent } from 'contentco-components';
+// alt
 // import MyComponent from 'contentco-components/lib/MyComponent'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```
 
-## License
+## Development
 
-MIT © [himynameistimli](https://github.com/himynameistimli)
+In order to components while running them we have to run two commands
+
+1. Watching and rebuilding the components:
+
+```
+npm run start
+```
+
+2. Viewing the output via the example:
+
+```
+cd example
+npm run start
+```
