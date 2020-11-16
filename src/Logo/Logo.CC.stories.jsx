@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from './Logo';
 
 export default {
-  title: 'Hire Digital Logo',
+  title: 'Content.co Logo',
   component: Logo
 };
 
@@ -11,22 +11,18 @@ const Template = (args) => <Logo {...args} />;
 
 export const Default = Template.bind({});
 
-Default.args = {
-  site: '2'
-};
+Default.args = {};
 
 export const Gray = Template.bind({});
 
 Gray.args = {
-  type: Logo.Type.DARKGRAY,
-  site: '2'
+  type: Logo.Type.DARKGRAY
 };
 
 export const White = Template.bind({});
 
 White.args = {
-  type: Logo.Type.WHITE,
-  site: '2'
+  type: Logo.Type.WHITE
 };
 
 White.parameters = {
@@ -36,13 +32,11 @@ White.parameters = {
 export const Blue = Template.bind({});
 
 Blue.args = {
-  type: Logo.Type.BLUE,
-  site: '2'
+  type: Logo.Type.BLUE
 };
 
 export const DarkBlue = Template.bind({});
 
 DarkBlue.args = {
-  type: Logo.Type.DARKBLUE,
-  site: '2'
+  type: Logo.Type.DARKBLUE
 };

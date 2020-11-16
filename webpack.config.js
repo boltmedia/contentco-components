@@ -1,7 +1,30 @@
-const exec = require('child_process').exec;
+const path = require('path');
+// Not used if rollup is used
+// If used add to package.json
+/* {
+  "main": "dist/contentco-components.js",
+  "module": "src/index.js",
+}
+*/
 
+// See https://webpack.js.org/guides/author-libraries/
 module.exports = {
   entry: './src/index.jsx',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'contentco-components.js',
+    library: 'contentcoComponents'
+  },
+  externals: {
+    // Add each external node_module, will be treated as peerDep
+    lodash: {
+      commonjs: 'lodash',
+      commonjs2: 'lodash',
+      amd: 'lodash',
+      root: '_'
+    }
+  },
+
   module: {
     rules: [
       {
@@ -12,6 +35,22 @@ module.exports = {
           }
         ],
         exclude: /node_modules/
+      },
+      {
+        test: /\.inline.svg$/,
+        include: /src/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: {
+                  removeViewBox: false
+                }
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(sa|sc)ss$/,
@@ -51,26 +90,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    {
-      apply: (compiler) => {
-        compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-          exec('npm run build', (err, stdout, stderr) => {
-            if (stdout) process.stdout.write(stdout);
-            if (stderr) process.stderr.write(stderr);
-          });
-        });
-      }
-    }
-  ],
+  plugins: [],
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
     descriptionFiles: ['package.json'],
-    modules: ['node_modules'],
-    // alias: {
-    //   // assets: path.resolve(__dirname, 'src/assets'),
-    //   // 'react-toggle': path.resolve(__dirname, 'node_modules/react-toggle')
-    //   // 'react-quill': path.resolve(__dirname, 'node_modules/react-quill')
-    // },
+    modules: ['node_modules']
   }
 };

@@ -1,30 +1,46 @@
+// .storybook/preview.js
+
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app"
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-actions'
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
-      use: ["style-loader", "css-loader", "sass-loader"],
+      use: ['style-loader', 'css-loader', 'sass-loader']
+    });
+
+    config.module.rules.push({
+      test: /\.inline.svg$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            svgoConfig: {
+              plugins: {
+                removeViewBox: false
+              }
+            }
+          }
+        }
+      ]
     });
 
     config.module.rules.push({
       test: /\.(js|jsx)$/,
-      loader: require.resolve("babel-loader"),
+      loader: require.resolve('babel-loader'),
+      exclude: /(node_modules|dist)/, // exclude any commonjs files
+
       options: {
-        presets: [["react-app", { flow: false }]]
+        presets: [['react-app', { flow: false }]]
       }
     });
-    config.resolve.extensions.push(".js", ".jsx");
+    config.resolve.extensions.push('.js', '.jsx');
 
     return config;
   }
-
-
-}
+};

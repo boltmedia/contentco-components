@@ -3,7 +3,11 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
-import copy from "rollup-plugin-copy";
+import copy from 'rollup-plugin-copy';
+import clear from 'rollup-plugin-clear';
+import inlineSvg from 'rollup-plugin-inline-svg';
+import scss from 'rollup-plugin-scss';
+
 const packageJson = require('./package.json');
 
 export default {
@@ -13,41 +17,46 @@ export default {
       file: packageJson.module,
       format: 'esm',
       sourcemap: true
+    },
+    {
+      file: packageJson.main,
+      format: 'cjs',
+      sourcemap: true
     }
   ],
   plugins: [
-  postcss({
-    extract: true,
-    plugins: [
-      autoprefixer,
-    ],
-  }),
-  babel({
-    babelHelpers: 'runtime',
-    exclude: 'node_modules/**',
-  }),
-  resolve({
-    browser: true,
-    resolveOnly: [
-      /^(?!react$)/,
-      /^(?!react-dom$)/,
-      /^(?!prop-types)/,
-    ],
-  }),
-  commonjs(),
+    scss(),
+    inlineSvg(),
+    postcss({
+      extract: true,
+      plugins: [autoprefixer]
+    }),
+    babel({
+      babelHelpers: 'runtime',
+      exclude: 'node_modules/**'
+    }),
+    resolve({
+      browser: true
+      // resolveOnly: [/^(?!react$)/, /^(?!react-dom$)/, /^(?!prop-types)/]
+    }),
+    commonjs(),
     copy({
       targets: [
         {
-          src: "src/variables.scss",
-          dest: "build",
-          rename: "variables.scss"
+          src: 'src/variables.scss',
+          dest: 'build',
+          rename: 'variables.scss'
         },
         {
-          src: "src/typography.scss",
-          dest: "build",
-          rename: "typography.scss"
+          src: 'src/typography.scss',
+          dest: 'build',
+          rename: 'typography.scss'
         }
       ]
+    }),
+    clear({
+      targets: ['build'],
+      watch: true // default: false
     })
   ]
 };

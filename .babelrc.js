@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   // Cache the returned value forever and don't call this function again.
   // api.cache(true);
 
@@ -24,30 +24,21 @@ module.exports = api => {
   // api.cache.using(fn); // api.cache(fn)
 
   return {
-    "env": {
-      "test": {
-        "presets": [
-          [
-            "@babel/preset-env"
-          ],
-          "@babel/preset-react"
-        ]
+    env: {
+      test: {
+        presets: [['@babel/preset-env'], '@babel/preset-react']
       }
     },
-    "presets": [
+    presets: [
       [
-        "@babel/preset-env",
+        '@babel/preset-env',
         {
-          "modules": false
+          modules: false
         }
       ],
-      "@babel/preset-react"
+      '@babel/preset-react'
     ],
-    "ignore": [
-      "node_modules/**"
-    ],
-    "plugins": [
-      "@babel/plugin-transform-runtime"
-    ]
+    ignore: ['node_modules/**'],
+    plugins: ['@babel/plugin-transform-runtime']
   };
 };
