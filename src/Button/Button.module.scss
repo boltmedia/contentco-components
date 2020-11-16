@@ -1,0 +1,185 @@
+@import '../variables.scss';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 18px;
+  font-family: $cerebri;
+  min-width: 75px;
+  min-height: 42px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  line-height: 38px;
+  transition: background-color 0.4s $cubic, box-shadow 0.3s ease-in-out;
+  will-change: background;
+  word-wrap: break-word;
+  outline: none;
+  background-color: transparent;
+
+  & ~ & {
+    margin-left: 10px;
+  }
+
+  @include ie-only {
+    // apply these styles on ie only
+    height: 42px; // fix on flex child not centering vertically when no height is provided
+  }
+
+  &:focus {
+    transition: none;
+    outline: none;
+    box-shadow: 0 0 0 3px $blue-10;
+  }
+}
+
+.blue {
+  background-color: $blue-100;
+  color: $white;
+
+  &:hover {
+    background-color: $blue-shadow;
+  }
+  &:active {
+    background-color: $dark-blue;
+  }
+}
+
+.darkblue {
+  background-color: $dark-blue;
+  color: $white;
+
+  &:hover {
+    background-color: $dark-blue-shadow;
+    color: $white;
+  }
+  &:active {
+    background-color: $blue-black;
+  }
+}
+
+.lightGray {
+  background-color: $gray-7;
+  color: $gray-80;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $gray-10;
+  }
+
+  &:active {
+    background-color: $gray-20;
+  }
+
+  &[disabled] {
+    cursor: default;
+    background-color: $gray-5;
+  }
+}
+
+.gray {
+  background-color: $gray-80;
+  color: $white;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+  &:active {
+    background-color: $black;
+  }
+
+  &[disabled] {
+    cursor: default;
+    background-color: $gray-40;
+  }
+}
+
+.white {
+  background-color: $white;
+  color: $dark-blue;
+
+  &:hover {
+    background-color: $white-shadow;
+    color: $dark-blue;
+  }
+
+  &:active {
+    background-color: $light-blue;
+    color: $dark-blue;
+  }
+}
+
+.blueOutline {
+  color: $blue-100;
+  border-color: $blue-100;
+  background: transparent;
+
+  &:hover {
+    border-color: $darkblue;
+    color: $darkblue;
+  }
+}
+
+.redOutline {
+  color: $red;
+  border-color: $red;
+  background: transparent;
+
+  &:hover {
+    border-color: $strongred;
+    color: $strongred !important;
+  }
+}
+
+.whiteBlueOutline {
+  color: $blue-shadow;
+  border-color: $white;
+  background-color: $white;
+  border-color: $blue-shadow;
+  word-break: break-word;
+  white-space: normal;
+
+  &:hover {
+    background-color: $blue-5;
+    color: $darkblue;
+    border-color: $darkblue;
+  }
+}
+
+.darkblueOutline {
+  color: $darkblue;
+  border: 2px solid $darkblue;
+
+  &:hover {
+    border-color: $blue-100;
+    color: $blue-100;
+    background: $white;
+  }
+}
+
+.fullwidth {
+  width: 100%;
+  margin: 6px 0px;
+}
+
+.large {
+  height: 56px;
+}
+
+.fullwidthLarge {
+  width: 100%;
+  margin: 6px 0px;
+  height: 56px;
+}
