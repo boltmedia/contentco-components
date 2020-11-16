@@ -26,7 +26,8 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "generate": "node ./util/create-component",
     "deploy": "gh-pages -d example/build",
-    "build-storybook": "build-storybook --no-dll"
+    "build-storybook": "build-storybook --no-dll",
+    "postinstall": "npm run build"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",

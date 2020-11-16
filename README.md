@@ -7,7 +7,13 @@
 ## Install
 
 ```bash
-npm install --save contentco-components
+npm install --save git+https://github.com/boltmedia/contentco-components.git
+```
+
+or
+
+```bash
+yarn add git+https://github.com/boltmedia/contentco-components.git
 ```
 
 ## Usage
@@ -16,8 +22,6 @@ npm install --save contentco-components
 import React, { Component } from 'react';
 
 import { MyComponent } from 'contentco-components';
-// alt
-// import MyComponent from 'contentco-components/lib/MyComponent'
 
 class Example extends Component {
   render() {
@@ -28,17 +32,28 @@ class Example extends Component {
 
 ## Development
 
-In order to components while running them we have to run two commands
+1. To add a new component, you can create it manually or use the built-in helper to generate the base files.
 
-1. Watching and rebuilding the components:
-
-```
-npm run start
+```bash
+yarn generate [ComponentName]
 ```
 
-2. Viewing the output via the example:
+2. Watching and rebuilding the components:
 
+```bash
+yarn dev
 ```
-cd example
-npm run start
+
+3. To create a build:
+
+```bash
+yarn build
+```
+
+## Storybook
+
+To watch and rebuild via Storybook:
+
+```bash
+yarn storybook
 ```
