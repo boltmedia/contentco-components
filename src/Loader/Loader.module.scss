@@ -51,14 +51,24 @@ $error-left: $loader-size/4;
 }
 
 .loader {
-  // height: 100%;
-  // width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  // overflow: hidden;
   transition: all 0.2s $cubic;
   position: relative;
+  overflow: hidden;
+  width: 70.72px;
+  height: 70.72px;
+
+  &.large {
+    width: 70.72px;
+    height: 70.72px;
+  }
+
+  &.small {
+    width: 21.22px;
+    height: 21.22px;
+  }
 
   .checkmark {
     animation-duration: 800ms;
@@ -70,17 +80,19 @@ $error-left: $loader-size/4;
     transform-origin: left top;
     border-right: $check-thickness solid $check-color;
     border-top: $check-thickness solid $check-color;
-    left: -$check-width;
-    top: $check-width;
+    left: 7px;
+    top: 35px;
     position: absolute;
   }
 
   .error {
-    position: absolute;
-    left: -$check-width;
-    top: 0;
+    // position: absolute;
+    // left: 7px;
+    // top: 35px;
     width: $loader-size/2;
     height: $loader-size/2;
+    // width: 50px;
+    // height: 50px;
 
     &:before,
     &:after {
@@ -88,6 +100,7 @@ $error-left: $loader-size/4;
       content: ' ';
       height: $loader-size/2;
       width: 2px;
+      left: 35.35px - 1px;
       background-color: #f00;
     }
 
