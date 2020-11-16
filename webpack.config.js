@@ -12,6 +12,42 @@ module.exports = {
           }
         ],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(sa|sc)ss$/,
+        include: /src/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: /src/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
@@ -26,5 +62,15 @@ module.exports = {
         });
       }
     }
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx', '.scss'],
+    descriptionFiles: ['package.json'],
+    modules: ['node_modules'],
+    // alias: {
+    //   // assets: path.resolve(__dirname, 'src/assets'),
+    //   // 'react-toggle': path.resolve(__dirname, 'node_modules/react-toggle')
+    //   // 'react-quill': path.resolve(__dirname, 'node_modules/react-quill')
+    // },
+  }
 };

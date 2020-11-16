@@ -31,7 +31,7 @@ const has = (t) => !targets.length || targets.includes(t);
 
 const babel = (outDir, envName) =>
   shell(
-    `yarn babel ${srcRoot} -x .es6,.js,.es,.jsx,.mjs --out-dir ${outDir} --env-name "${envName}"`
+    `yarn babel ${srcRoot} -x .es6,.js,.es,.jsx,.mjs,.css --out-dir ${outDir} --env-name "${envName}"`
   );
 
 /**
