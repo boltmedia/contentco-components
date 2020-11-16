@@ -5,7 +5,8 @@ import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import clear from 'rollup-plugin-clear';
-import inlineSvg from 'rollup-plugin-inline-svg';
+import reactSvg from 'rollup-plugin-react-svg';
+
 import scss from 'rollup-plugin-scss';
 
 const packageJson = require('./package.json');
@@ -26,9 +27,9 @@ export default {
   ],
   plugins: [
     scss(),
-    inlineSvg(),
+    reactSvg(),
     postcss({
-      extract: true,
+      // extract: true,
       plugins: [autoprefixer]
     }),
     babel({
