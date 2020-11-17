@@ -31,6 +31,16 @@ module.exports = {
     });
 
     config.module.rules.push({
+      test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|svg)$/i,
+      exclude: /\.inline\./,
+      use: [
+        {
+          loader: 'file-loader'
+        }
+      ]
+    });
+
+    config.module.rules.push({
       test: /\.(js|jsx)$/,
       loader: require.resolve('babel-loader'),
       exclude: /(node_modules|dist)/, // exclude any commonjs files

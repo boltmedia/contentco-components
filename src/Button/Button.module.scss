@@ -32,6 +32,10 @@
     margin-left: 10px;
   }
 
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
   @include ie-only {
     // apply these styles on ie only
     height: 42px; // fix on flex child not centering vertically when no height is provided
@@ -49,10 +53,10 @@
   color: $white;
 
   &:hover {
-    background-color: $blue-shadow;
+    background-color: darken($blue-100, 10%);
   }
   &:active {
-    background-color: $dark-blue;
+    background-color: darken($blue-100, 20%);
   }
 }
 
@@ -61,48 +65,35 @@
   color: $white;
 
   &:hover {
-    background-color: $dark-blue-shadow;
-    color: $white;
+    background-color: darken($dark-blue, 10%);
   }
   &:active {
-    background-color: $blue-black;
+    background-color: darken($dark-blue, 20%);
   }
 }
 
 .lightGray {
   background-color: $gray-7;
   color: $gray-80;
-  border: 1px solid transparent;
 
   &:hover {
-    background-color: $gray-10;
+    background-color: darken($gray-7, 10%);
   }
 
   &:active {
-    background-color: $gray-20;
-  }
-
-  &[disabled] {
-    cursor: default;
-    background-color: $gray-5;
+    background-color: darken($gray-7, 20%);
   }
 }
 
 .gray {
   background-color: $gray-80;
   color: $white;
-  border: 1px solid transparent;
 
   &:hover {
-    background-color: $gray-100;
+    background-color: darken($gray-80, 10%);
   }
   &:active {
-    background-color: $black;
-  }
-
-  &[disabled] {
-    cursor: default;
-    background-color: $gray-40;
+    background-color: darken($gray-80, 20%);
   }
 }
 
@@ -127,8 +118,13 @@
   background: transparent;
 
   &:hover {
-    border-color: $darkblue;
-    color: $darkblue;
+    border-color: darken($blue-100, 10%);
+    color: darken($blue-100, 10%);
+  }
+
+  &:active {
+    border-color: darken($blue-100, 20%);
+    color: darken($blue-100, 20%);
   }
 }
 
@@ -138,8 +134,13 @@
   background: transparent;
 
   &:hover {
-    border-color: $strongred;
-    color: $strongred !important;
+    border-color: darken($red, 10%);
+    color: darken($red, 10%);
+  }
+
+  &:active {
+    border-color: darken($red, 20%);
+    color: darken($red, 20%);
   }
 }
 
@@ -153,19 +154,14 @@
 
   &:hover {
     background-color: $blue-5;
-    color: $darkblue;
-    border-color: $darkblue;
+    border-color: darken($blue-shadow, 10%);
+    color: darken($blue-shadow, 10%);
   }
-}
 
-.darkblueOutline {
-  color: $darkblue;
-  border: 2px solid $darkblue;
-
-  &:hover {
-    border-color: $blue-100;
-    color: $blue-100;
-    background: $white;
+  &:active {
+    background-color: $blue-5;
+    border-color: darken($blue-shadow, 20%);
+    color: darken($blue-shadow, 20%);
   }
 }
 
