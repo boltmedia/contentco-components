@@ -68,16 +68,16 @@ export default [
         sourcemap: true
       }
     ]
-  },
-  {
-    ...settings,
-    preserveModules: true,
-    output: [
-      {
-        dir: `build/lib`,
-        format: 'esm',
-        sourcemap: true
-      }
-    ]
   }
+  // {
+  //   ...settings,
+  //   preserveModules: true,
+  //   output: [
+  //     {
+  //       dir: `build/lib`,
+  //       format: 'esm',
+  //       sourcemap: true
+  //     }
+  //   ]
+  // }
 ];

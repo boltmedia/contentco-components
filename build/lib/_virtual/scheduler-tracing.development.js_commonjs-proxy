@@ -1,3 +1,0 @@
-import schedulerTracing_development from '../node_modules/scheduler/cjs/scheduler-tracing.development.js';
-export { default } from '../node_modules/scheduler/cjs/scheduler-tracing.development.js';
-//# sourceMappingURL=scheduler-tracing.development.js_commonjs-proxy.map
