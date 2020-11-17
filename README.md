@@ -44,28 +44,26 @@ Fonts are included in the package but are not used in the components, only used 
 
 ## Development
 
-1. To add a new component, you can create it manually or use the built-in helper to generate the base files.
+1. To get started you need to install both `rollup` and `storybook`
+
+```bash
+yarn -D add rollup && yarn global add storybook@next
+```
+
+2. To add a new component, you can create it manually or use the built-in helper to generate the base files.
 
 ```bash
 yarn generate [ComponentName]
 ```
 
-2. Watching and rebuilding the components:
-
-```bash
-yarn dev
-```
-
-3. To create a build:
-
-```bash
-yarn build
-```
-
-## Storybook
-
-To watch and rebuild via Storybook:
+3. To test your components, I recommend using Storybook, which will rebuild on each change you make:
 
 ```bash
 yarn storybook
+```
+
+4. To generate a build for release, you can run:
+
+```bash
+yarn build
 ```
