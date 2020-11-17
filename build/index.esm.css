@@ -1,5 +1,28 @@
 /* prettier-ignore */
 /* beautify ignore:start */
+.white {
+  color: #fff; }
+
+.black {
+  color: #212529; }
+
+.blue {
+  color: #1269db; }
+
+.darkblue {
+  color: #193278; }
+
+.darkgray {
+  color: #626e7a; }
+
+.logo {
+  width: 180px; }
+
+.hdLogo {
+  width: 155px; }
+
+/* prettier-ignore */
+/* beautify ignore:start */
 @keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
@@ -105,29 +128,6 @@
   width: 100vw;
   pointer-events: none;
   top: 0; }
-
-/* prettier-ignore */
-/* beautify ignore:start */
-.white {
-  color: #fff; }
-
-.black {
-  color: #212529; }
-
-.blue {
-  color: #1269db; }
-
-.darkblue {
-  color: #193278; }
-
-.darkgray {
-  color: #626e7a; }
-
-.logo {
-  width: 180px; }
-
-.hdLogo {
-  width: 155px; }
 
 /* prettier-ignore */
 /* beautify ignore:start */
