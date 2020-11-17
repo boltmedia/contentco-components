@@ -38,10 +38,6 @@ class Example extends Component {
 }
 ```
 
-## Notes
-
-Fonts are included in the package but are not used in the components, only used for the Storybook previews. You should include the fonts in the actual project.
-
 ## Development
 
 1. To get started you need to install both `rollup` and `storybook`
@@ -67,3 +63,7 @@ yarn storybook
 ```bash
 yarn build
 ```
+
+## Notes
+
+Fonts are included in the package but are not used in the components, only used for the Storybook previews. You should include the fonts in the actual project.
