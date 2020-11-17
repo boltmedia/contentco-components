@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader/Loader.jsx';
 import Styles from './Button.module.scss';
 import classNames from 'classnames';
 

@@ -3242,5 +3242,117 @@ Logo.Type = {
   DARKGRAY: Styles.darkgray
 };
 
+var css_248z$1 = "/* prettier-ignore */\n/* beautify ignore:start */\n@keyframes Loader-module_spin__LpOfZ {\n  to {\n    transform: rotate(360deg); } }\n\n@-webkit-keyframes Loader-module_spin__LpOfZ {\n  to {\n    transform: rotate(360deg); } }\n\n@-webkit-keyframes Loader-module_checkmark__3Wc2t {\n  0% {\n    height: 0;\n    width: 0;\n    opacity: 1; }\n  20% {\n    height: 0;\n    width: 25px;\n    opacity: 1; }\n  40% {\n    height: 50px;\n    width: 25px;\n    opacity: 1; }\n  100% {\n    height: 50px;\n    width: 25px;\n    opacity: 1; } }\n\n@keyframes Loader-module_checkmark__3Wc2t {\n  0% {\n    height: 0;\n    width: 0;\n    opacity: 1; }\n  20% {\n    height: 0;\n    width: 25px;\n    opacity: 1; }\n  40% {\n    height: 50px;\n    width: 25px;\n    opacity: 1; }\n  100% {\n    height: 50px;\n    width: 25px;\n    opacity: 1; } }\n\n.Loader-module_loader__1Wyo3 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);\n  position: relative;\n  overflow: hidden;\n  width: 70.72px;\n  height: 70.72px; }\n  .Loader-module_loader__1Wyo3.Loader-module_large__2Kqju {\n    width: 70.72px;\n    height: 70.72px; }\n  .Loader-module_loader__1Wyo3.Loader-module_small__1ziqy {\n    width: 21.22px;\n    height: 21.22px; }\n  .Loader-module_loader__1Wyo3 .Loader-module_checkmark__3Wc2t {\n    -webkit-animation-duration: 800ms;\n            animation-duration: 800ms;\n    -webkit-animation-timing-function: ease;\n            animation-timing-function: ease;\n    -webkit-animation-name: Loader-module_checkmark__3Wc2t;\n            animation-name: Loader-module_checkmark__3Wc2t;\n    transform: scaleX(-1) rotate(135deg);\n    height: 50px;\n    width: 25px;\n    transform-origin: left top;\n    border-right: 3px solid #5cb85c;\n    border-top: 3px solid #5cb85c;\n    left: 7px;\n    top: 35px;\n    position: absolute; }\n  .Loader-module_loader__1Wyo3 .Loader-module_error__3xEKa {\n    width: 50px;\n    height: 50px; }\n    .Loader-module_loader__1Wyo3 .Loader-module_error__3xEKa:before, .Loader-module_loader__1Wyo3 .Loader-module_error__3xEKa:after {\n      position: absolute;\n      content: ' ';\n      height: 50px;\n      width: 2px;\n      left: 34.35px;\n      background-color: #f00; }\n    .Loader-module_loader__1Wyo3 .Loader-module_error__3xEKa:before {\n      transform: rotate(45deg); }\n    .Loader-module_loader__1Wyo3 .Loader-module_error__3xEKa:after {\n      transform: rotate(-45deg); }\n  .Loader-module_loader__1Wyo3 .Loader-module_spinner__1RNuN {\n    display: inline-block;\n    width: 50px;\n    height: 50px;\n    border: 3px solid #8cc0f0;\n    border-radius: 50%;\n    border-top-color: #1269db;\n    animation: Loader-module_spin__LpOfZ 1s ease-in-out infinite;\n    -webkit-animation: Loader-module_spin__LpOfZ 1s ease-in-out infinite; }\n  .Loader-module_loader__1Wyo3.Loader-module_large__2Kqju .Loader-module_spinner__1RNuN {\n    width: 50px;\n    height: 50px; }\n  .Loader-module_loader__1Wyo3.Loader-module_small__1ziqy .Loader-module_spinner__1RNuN {\n    width: 15px;\n    height: 15px; }\n  .Loader-module_loader__1Wyo3.Loader-module_white__3ZIZK .Loader-module_spinner__1RNuN {\n    border: 3px solid #fff;\n    border-top-color: #8cc0f0; }\n  .Loader-module_loader__1Wyo3.Loader-module_blue__14W3S .Loader-module_spinner__1RNuN {\n    border: 3px solid #8cc0f0;\n    border-top-color: #1269db; }\n\n.Loader-module_full__1yGGp {\n  margin: auto;\n  width: 100%; }\n\n.Loader-module_container__1GovT {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  height: 100vh;\n  width: 100vw;\n  pointer-events: none;\n  top: 0; }\n";
+var Styles$1 = {"loader":"Loader-module_loader__1Wyo3","large":"Loader-module_large__2Kqju","small":"Loader-module_small__1ziqy","checkmark":"Loader-module_checkmark__3Wc2t","error":"Loader-module_error__3xEKa","spinner":"Loader-module_spinner__1RNuN","spin":"Loader-module_spin__LpOfZ","white":"Loader-module_white__3ZIZK","blue":"Loader-module_blue__14W3S","full":"Loader-module_full__1yGGp","container":"Loader-module_container__1GovT"};
+styleInject(css_248z$1);
+
+var Loader = function Loader(_ref) {
+  var className = _ref.className,
+      size = _ref.size,
+      color = _ref.color,
+      type = _ref.type,
+      isError = _ref.isError,
+      isCompleted = _ref.isCompleted,
+      props = objectWithoutProperties(_ref, ["className", "size", "color", "type", "isError", "isCompleted"]);
+
+  return /*#__PURE__*/react.createElement("div", _extends_1({
+    className: classnames(Styles$1.loader, className, size, color, type)
+  }, props), !isError && !isCompleted && /*#__PURE__*/react.createElement("div", {
+    className: Styles$1.spinner
+  }), isCompleted && /*#__PURE__*/react.createElement("div", {
+    className: classnames(Styles$1.checkmark)
+  }), isError && /*#__PURE__*/react.createElement("div", {
+    className: classnames(Styles$1.error)
+  }));
+};
+
+Loader.propTypes = {
+  className: propTypes.string,
+  style: propTypes.object,
+  size: propTypes.string,
+  color: propTypes.string,
+  type: propTypes.string,
+  isCompleted: propTypes.bool,
+  isError: propTypes.bool
+};
+Loader.defaultProps = {
+  isCompleted: false,
+  color: Styles$1.blue
+};
+Loader.Color = {
+  WHITE: Styles$1.white,
+  BLUE: Styles$1.blue
+};
+Loader.Size = {
+  LARGE: Styles$1.large,
+  SMALL: Styles$1.small
+};
+Loader.Type = {
+  INLINE: Styles$1.inline,
+  FULL: Styles$1.full
+};
+Loader.Styles = Styles$1;
+
+var css_248z$2 = "/* prettier-ignore */\n/* beautify ignore:start */\n.Button-module_btn__173LG {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  padding: 0 18px;\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  min-width: 75px;\n  min-height: 42px;\n  border-radius: 3px;\n  box-sizing: border-box;\n  border: 2px solid transparent;\n  cursor: pointer;\n  vertical-align: middle;\n  text-align: center;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  white-space: nowrap;\n  font-weight: 500;\n  font-size: 16px;\n  text-decoration: none;\n  overflow: hidden;\n  line-height: 38px;\n  transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease-in-out;\n  will-change: background;\n  word-wrap: break-word;\n  outline: none;\n  background-color: transparent; }\n  .Button-module_btn__173LG ~ .Button-module_btn__173LG {\n    margin-left: 10px; }\n  .Button-module_btn__173LG[disabled] {\n    cursor: default;\n    opacity: 0.5; }\n  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n    .Button-module_btn__173LG {\n      height: 42px; } }\n  .Button-module_btn__173LG:focus {\n    transition: none;\n    outline: none;\n    box-shadow: 0 0 0 3px #c4e0fb; }\n\n.Button-module_blue__3scNy {\n  background-color: #1269db;\n  color: #fff; }\n  .Button-module_blue__3scNy:hover {\n    background-color: #0e52ac; }\n  .Button-module_blue__3scNy:active {\n    background-color: #0a3c7d; }\n\n.Button-module_darkblue__spEK8 {\n  background-color: #193278;\n  color: #fff; }\n  .Button-module_darkblue__spEK8:hover {\n    background-color: #10204e; }\n  .Button-module_darkblue__spEK8:active {\n    background-color: #070f24; }\n\n.Button-module_lightGray__2B-hB {\n  background-color: #edf0f3;\n  color: #3f474f; }\n  .Button-module_lightGray__2B-hB:hover {\n    background-color: #ced7df; }\n  .Button-module_lightGray__2B-hB:active {\n    background-color: #b0bdca; }\n\n.Button-module_gray__10NAk {\n  background-color: #3f474f;\n  color: #fff; }\n  .Button-module_gray__10NAk:hover {\n    background-color: #282e33; }\n  .Button-module_gray__10NAk:active {\n    background-color: #121416; }\n\n.Button-module_white__1LXIC {\n  background-color: #fff;\n  color: #193278; }\n  .Button-module_white__1LXIC:hover {\n    background-color: #eff7ff;\n    color: #193278; }\n  .Button-module_white__1LXIC:active {\n    background-color: #c4e0fb;\n    color: #193278; }\n\n.Button-module_blueOutline__3sFRD {\n  color: #1269db;\n  border-color: #1269db;\n  background: transparent; }\n  .Button-module_blueOutline__3sFRD:hover {\n    border-color: #0e52ac;\n    color: #0e52ac; }\n  .Button-module_blueOutline__3sFRD:active {\n    border-color: #0a3c7d;\n    color: #0a3c7d; }\n\n.Button-module_redOutline__3uZzc {\n  color: #c66;\n  border-color: #c66;\n  background: transparent; }\n  .Button-module_redOutline__3uZzc:hover {\n    border-color: #bf4040;\n    color: #bf4040; }\n  .Button-module_redOutline__3uZzc:active {\n    border-color: #993333;\n    color: #993333; }\n\n.Button-module_whiteBlueOutline__2TZcV {\n  color: #0751b3;\n  border-color: #fff;\n  background-color: #fff;\n  border-color: #0751b3;\n  word-break: break-word;\n  white-space: normal; }\n  .Button-module_whiteBlueOutline__2TZcV:hover {\n    background-color: #eff7ff;\n    border-color: #053b82;\n    color: #053b82; }\n  .Button-module_whiteBlueOutline__2TZcV:active {\n    background-color: #eff7ff;\n    border-color: #032551;\n    color: #032551; }\n\n.Button-module_fullwidth__GxWlw {\n  width: 100%;\n  margin: 6px 0px; }\n\n.Button-module_large__1nbMn {\n  height: 56px; }\n\n.Button-module_fullwidthLarge__rLxyj {\n  width: 100%;\n  margin: 6px 0px;\n  height: 56px; }\n";
+var Styles$2 = {"btn":"Button-module_btn__173LG","blue":"Button-module_blue__3scNy","darkblue":"Button-module_darkblue__spEK8","lightGray":"Button-module_lightGray__2B-hB","gray":"Button-module_gray__10NAk","white":"Button-module_white__1LXIC","blueOutline":"Button-module_blueOutline__3sFRD","redOutline":"Button-module_redOutline__3uZzc","whiteBlueOutline":"Button-module_whiteBlueOutline__2TZcV","fullwidth":"Button-module_fullwidth__GxWlw","large":"Button-module_large__1nbMn","fullwidthLarge":"Button-module_fullwidthLarge__rLxyj"};
+styleInject(css_248z$2);
+
+var Type = {
+  WHITE: Styles$2.white,
+  WHITE_BLUE_OUTLINE: Styles$2.whiteBlueOutline,
+  BLUE_OUTLINE: Styles$2.blueOutline,
+  RED_OUTLINE: Styles$2.redOutline,
+  LIGHT_GRAY: Styles$2.lightGray,
+  BLUE: Styles$2.blue,
+  DARKBLUE: Styles$2.darkblue,
+  GRAY: Styles$2.gray
+};
+var lightTypes = [Type.WHITE, Type.WHITE_BLUE_OUTLINE, Type.BLUE_OUTLINE, Type.RED_OUTLINE, Type.LIGHT_GRAY];
+
+var Button = function Button(_ref) {
+  var type = _ref.type,
+      size = _ref.size,
+      className = _ref.className,
+      children = _ref.children,
+      content = _ref.content,
+      disabled = _ref.disabled,
+      isLoading = _ref.isLoading,
+      props = objectWithoutProperties(_ref, ["type", "size", "className", "children", "content", "disabled", "isLoading"]);
+
+  var isLight = lightTypes.filter(function (l) {
+    return l === type;
+  });
+  return /*#__PURE__*/react.createElement("button", _extends_1({
+    type: "button",
+    className: classnames(Styles$2.btn, className, type, size),
+    disabled: disabled
+  }, props), isLoading && /*#__PURE__*/react.createElement(Loader, {
+    style: {
+      marginRight: '10px'
+    },
+    color: (isLight === null || isLight === void 0 ? void 0 : isLight.length) ? Loader.Color.BLUE : Loader.Color.WHITE,
+    size: Loader.Size.SMALL
+  }), content || children);
+};
+
+Button.Type = Type;
+Button.Size = {
+  FULLWIDTH: Styles$2.fullwidth,
+  FULLWIDTH_LARGE: Styles$2.fullwidthLarge,
+  LARGE: Styles$2.large
+};
+Button.Styles = Styles$2;
+Button.propTypes = {
+  type: propTypes.string,
+  size: propTypes.string,
+  children: propTypes.node,
+  content: propTypes.string,
+  className: propTypes.string,
+  disabled: propTypes.bool,
+  isLoading: propTypes.bool
+};
+
+exports.Button = Button;
+exports.Loader = Loader;
 exports.Logo = Logo;
 //# sourceMappingURL=index.cjs.js.map
