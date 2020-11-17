@@ -3317,12 +3317,13 @@ var Button = function Button(_ref) {
       content = _ref.content,
       disabled = _ref.disabled,
       isLoading = _ref.isLoading,
-      props = objectWithoutProperties(_ref, ["type", "size", "className", "children", "content", "disabled", "isLoading"]);
+      Elem = _ref.element,
+      props = objectWithoutProperties(_ref, ["type", "size", "className", "children", "content", "disabled", "isLoading", "element"]);
 
   var isLight = lightTypes.filter(function (l) {
     return l === type;
   });
-  return /*#__PURE__*/react.createElement("button", _extends_1({
+  return /*#__PURE__*/react.createElement(Elem, _extends_1({
     type: "button",
     className: classnames(Styles$2.btn, className, type, size),
     disabled: disabled
@@ -3342,6 +3343,9 @@ Button.Size = {
   LARGE: Styles$2.large
 };
 Button.Styles = Styles$2;
+Button.defaultProps = {
+  element: 'button'
+};
 Button.propTypes = {
   type: propTypes.string,
   size: propTypes.string,
@@ -3349,7 +3353,8 @@ Button.propTypes = {
   content: propTypes.string,
   className: propTypes.string,
   disabled: propTypes.bool,
-  isLoading: propTypes.bool
+  isLoading: propTypes.bool,
+  asLink: propTypes.bool
 };
 
 exports.Button = Button;

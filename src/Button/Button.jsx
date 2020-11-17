@@ -31,11 +31,12 @@ const Button = ({
   content,
   disabled,
   isLoading,
+  element: Elem,
   ...props
 }) => {
   const isLight = lightTypes.filter((l) => l === type);
   return (
-    <button
+    <Elem
       type='button'
       className={classNames(Styles.btn, className, type, size)}
       disabled={disabled}
@@ -49,7 +50,7 @@ const Button = ({
         />
       )}
       {content || children}
-    </button>
+    </Elem>
   );
 };
 
@@ -63,6 +64,10 @@ Button.Size = {
 
 Button.Styles = Styles;
 
+Button.defaultProps = {
+  element: 'button'
+};
+
 Button.propTypes = {
   type: PropTypes.string,
   size: PropTypes.string,
@@ -70,7 +75,8 @@ Button.propTypes = {
   content: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  asLink: PropTypes.bool
 };
 
 export default Button;
