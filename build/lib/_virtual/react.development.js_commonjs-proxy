@@ -1,0 +1,3 @@
+import react_development from '../node_modules/react/cjs/react.development.js';
+export { default } from '../node_modules/react/cjs/react.development.js';
+//# sourceMappingURL=react.development.js_commonjs-proxy.map

@@ -46,7 +46,7 @@ module.exports = {
       exclude: /(node_modules|dist)/, // exclude any commonjs files
 
       options: {
-        presets: [['react-app', { flow: false }]]
+        presets: [['@babel/preset-react', { flow: false }]]
       }
     });
     config.resolve.extensions.push('.js', '.jsx');

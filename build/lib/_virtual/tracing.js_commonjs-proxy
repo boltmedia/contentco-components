@@ -1,0 +1,3 @@
+import tracing from '../node_modules/scheduler/tracing.js';
+export { default } from '../node_modules/scheduler/tracing.js';
+//# sourceMappingURL=tracing.js_commonjs-proxy.map

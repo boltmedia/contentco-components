@@ -1,0 +1,3 @@
+import defineProperty from '../node_modules/@babel/runtime/helpers/defineProperty.js';
+export { default } from '../node_modules/@babel/runtime/helpers/defineProperty.js';
+//# sourceMappingURL=defineProperty.js_commonjs-proxy.map

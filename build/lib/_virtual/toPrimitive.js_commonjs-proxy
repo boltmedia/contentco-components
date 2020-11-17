@@ -1,0 +1,3 @@
+import toPrimitive from '../node_modules/@babel/runtime/helpers/toPrimitive.js';
+export { default } from '../node_modules/@babel/runtime/helpers/toPrimitive.js';
+//# sourceMappingURL=toPrimitive.js_commonjs-proxy.map

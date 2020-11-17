@@ -1,0 +1,420 @@
+@import 'src/styles/variables';
+
+$border-radius: 4px;
+$margin: 10px;
+$height: 48px;
+$border: 2px;
+$labelTopPosition: 4px;
+$labelTopColor: $blue-badge;
+
+.newContainer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+  min-height: $height + $border;
+  border-radius: $border-radius;
+  position: relative;
+  background-color: $white;
+  border: 1px solid $gray-20;
+
+  &.hasFile {
+    .label {
+      top: $labelTopPosition;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $labelTopColor;
+    }
+
+    .drop {
+    }
+
+    .file {
+      padding: 20px 12px 4px 12px;
+      opacity: 1;
+      height: inherit;
+      flex: 1;
+    }
+
+    .placeholder {
+      cursor: pointer;
+      display: none;
+      padding: 24px 16px 8px 16px;
+    }
+  }
+
+  &.multi {
+    height: inherit;
+    display: block;
+    // display: flex;
+    // // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+    .file {
+      padding: 8px 16px;
+      display: flex;
+    }
+
+    .fileRemove {
+      position: initial;
+      top: auto;
+      right: auto;
+      margin: 0;
+      height: 24px;
+    }
+
+    .placeholder {
+      display: flex;
+    }
+
+    .fileList {
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      padding-top: 0;
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  pointer-events: none;
+  color: $labelTopColor;
+  transition: 0.1s all ease-in-out;
+  margin-bottom: 0;
+  cursor: text;
+
+  &.error {
+    color: $strongred;
+  }
+}
+
+// .label {
+//   position: absolute;
+//   top: 24px;
+//   left: 16px;
+//   font-size: 12px;
+//   font-weight: 600;
+//   line-height: 24px;
+//   color: $white;
+//   opacity: 0;
+//   padding: 0;
+//   pointer-events: none;
+//   transition: 0.1s all ease-in-out;
+// }
+
+.placeholder {
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  position: relative;
+  display: flex;
+  padding: 0px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  color: $darkblue-alt;
+  outline: none;
+  box-shadow: 0px 4px 20px 0px transparent;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+    0.1s padding ease-in-out;
+  -webkit-appearance: none;
+  line-height: 56px;
+  align-items: center;
+}
+
+.browse {
+  height: 24px;
+  line-height: 24px;
+  background-color: $gray-60;
+  border-radius: 6px;
+  color: $white;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-80;
+  }
+}
+
+.file {
+  // padding: 24px 16px 8px 16px;
+  // margin: 4px;
+  // background-color: $gray-60;
+  border-radius: 8px;
+  // padding: 0 8px;
+  // display: flex;
+  transition: 0.3s opacity $cubic, 0.3s height $cubic;
+  opacity: 0;
+  height: 0;
+  // display: none;
+  z-index: $z-base;
+  overflow: hidden;
+
+  .fileName {
+    display: flex;
+    // color: $white;
+    color: $black;
+    // width: calc(100% - 30px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    // font-size: 13px;
+    font-size: 16px;
+    line-height: 24px;
+    // font-weight: 500;
+    // padding: 8px;
+    //pointer-events: none;
+  }
+
+  .fileRemove {
+    // color: $white;
+    color: $gray-80;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // position: absolute;
+    // top: 50%;
+    margin: 0 4px;
+    // margin-top: -15px;
+    cursor: pointer;
+
+    &:hover {
+      color: $strongred;
+
+      .removeCross {
+        border-color: $strongred;
+      }
+    }
+  }
+
+  .removeCross {
+    // background-color: $gray-80;
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    display: flex;
+    border: 2px solid transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s border $cubic;
+    cursor: pointer;
+  }
+}
+
+.fileNew {
+  padding: 5px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  // background-color: $gray-40;
+  // margin: 4px;
+  display: flex;
+  overflow: hidden;
+
+  .remove {
+    margin-left: auto;
+    padding: 0 4px;
+    display: none;
+    flex-shrink: 0;
+  }
+
+  a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  a:link,
+  a:visited {
+    color: $blue;
+  }
+
+  &:hover {
+    background-color: $gray-5;
+
+    .remove {
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      color: $darkblue;
+    }
+  }
+}
+
+.single.container {
+  :global {
+    .filepond--root {
+      // min-height: 64px;
+      max-height: 142px;
+      min-height: 42px;
+    }
+
+    .filepond--list-scroller {
+      margin-top: 1em;
+    }
+  }
+}
+
+// .container {
+//   width: 100%;
+//   box-sizing: border-box;
+//   display: flex;
+//   flex-direction: column;
+//   // height: 56px;
+//   border-radius: 4px;
+//   position: relative;
+//   // background-color: $gray-5;
+//   background-color: $white;
+//   transition: 0.3s background-color $cubic, 0.3s box-shadow $cubic;
+//   // box-shadow: $basic-shadow;
+//   border: 1px solid $gray-20;
+
+//   .label {
+//     padding-left: 16px;
+//     padding-top: 4px;
+//     color: $darkblue;
+//     font-size: 12px;
+//     line-height: 24px;
+//     font-weight: 600;
+//     z-index: $z-label;
+//     transition: 0.1s all ease-in-out;
+//   }
+
+//   .label.error {
+//     color: $strongred;
+//   }
+
+//   .field {
+//     box-sizing: border-box;
+//     width: 100%;
+//     height: 56px;
+//     position: relative;
+//     padding: 0px 16px;
+//     border: none;
+//     border-radius: 4px;
+//     font-size: 16px;
+//     font-weight: 400;
+//     line-height: normal;
+//     background-color: transparent;
+//     color: $black;
+//     outline: none;
+//     box-shadow: 0px 4px 20px 0px transparent;
+//     transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+//       0.1s padding ease-in-out;
+//     -webkit-appearance: none;
+//   }
+// }
+
+.addButton {
+  position: absolute;
+  right: 16px;
+  top: 9px;
+  margin: 0;
+  padding: 0 16px;
+  min-width: 0;
+  height: 36px;
+  min-height: 36px;
+  line-height: 36px;
+  border: 0;
+  // z-index: $z-button;
+}
+
+.newAddButton {
+  // position: absolute;
+  margin-left: auto;
+  padding-right: 4px;
+  min-width: 0;
+  // height: 36px;
+  // min-height: 36px;
+  // line-height: 36px;
+  border: 0;
+  // z-index: $z-button;
+}
+
+.drop {
+  // flex-grow: 1;
+  // background: green;
+}
+
+.dropIsActive {
+  background: $blue-5;
+}
+
+.dragAccept {
+  background: $green-10;
+}
+
+.dragReject {
+  background: $red-10;
+}
+
+.progress {
+  background-color: $blue-5;
+  border-radius: 3px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.5s ease;
+  position: absolute;
+  overflow: hidden;
+}
+
+.imageAddButton {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: $black;
+  color: $white;
+  opacity: 0.8;
+  height: 36px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.imageRemoveButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+
+  &:hover {
+    cursor: pointer;
+
+    color: $black;
+    background: $white;
+  }
+}

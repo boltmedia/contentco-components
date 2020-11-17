@@ -1,0 +1,3 @@
+import scheduler from '../node_modules/scheduler/index.js';
+export { default } from '../node_modules/scheduler/index.js';
+//# sourceMappingURL=index6.js_commonjs-proxy.map

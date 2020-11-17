@@ -1,0 +1,3 @@
+import lineHeight_1 from '../node_modules/line-height/lib/line-height.js';
+export { default } from '../node_modules/line-height/lib/line-height.js';
+//# sourceMappingURL=line-height.js_commonjs-proxy.map

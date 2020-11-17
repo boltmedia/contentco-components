@@ -1,0 +1,3 @@
+import autosize from '../node_modules/autosize/dist/autosize.js';
+export { default } from '../node_modules/autosize/dist/autosize.js';
+//# sourceMappingURL=autosize.js_commonjs-proxy.map

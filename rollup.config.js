@@ -11,20 +11,9 @@ import scss from 'rollup-plugin-scss';
 
 const packageJson = require('./package.json');
 
-export default {
+const settings = {
   input: 'src/index.jsx',
-  output: [
-    {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true
-    },
-    {
-      file: packageJson.main,
-      format: 'cjs',
-      sourcemap: true
-    }
-  ],
+
   plugins: [
     scss(),
     reactSvg(),
@@ -37,7 +26,8 @@ export default {
       exclude: 'node_modules/**'
     }),
     resolve({
-      browser: true
+      browser: true,
+      extensions: ['.js', '.jsx']
       // resolveOnly: [/^(?!react$)/, /^(?!react-dom$)/, /^(?!prop-types)/]
     }),
     commonjs(),
@@ -61,3 +51,33 @@ export default {
     })
   ]
 };
+
+export default [
+  {
+    ...settings,
+    preserveModules: false,
+    output: [
+      {
+        file: packageJson.module,
+        format: 'esm',
+        sourcemap: true
+      },
+      {
+        file: packageJson.main,
+        format: 'cjs',
+        sourcemap: true
+      }
+    ]
+  },
+  {
+    ...settings,
+    preserveModules: true,
+    output: [
+      {
+        dir: `build/lib`,
+        format: 'esm',
+        sourcemap: true
+      }
+    ]
+  }
+];

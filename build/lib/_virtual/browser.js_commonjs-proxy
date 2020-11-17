@@ -1,0 +1,3 @@
+import browser from '../node_modules/invariant/browser.js';
+export { default } from '../node_modules/invariant/browser.js';
+//# sourceMappingURL=browser.js_commonjs-proxy.map

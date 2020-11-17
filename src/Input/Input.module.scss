@@ -1,0 +1,506 @@
+@import '../variables.scss';
+
+$border-radius: 4px;
+$margin: 10px;
+$height: 48px;
+$border: 2px;
+$labelTopPosition: 4px;
+$labelTopColor: $blue-badge;
+
+.container {
+  font-family: $cerebri;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: $height + $border;
+  border-radius: $border-radius;
+  position: relative;
+  background-color: $white;
+  border: 1px solid $gray-20;
+
+  &.containerError {
+    border: 1px solid $strongred;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 13px; // (50px - 24px) /2 = 13px
+  left: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  pointer-events: none;
+  color: $labelTopColor;
+  transition: 0.1s all ease-in-out;
+  margin-bottom: 0;
+  cursor: text;
+
+  &.error {
+    color: $strongred;
+  }
+}
+
+.base {
+  font-family: $cerebri;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  background-color: transparent;
+  border-radius: $border-radius;
+  outline: none;
+  color: $black;
+  vertical-align: top;
+  -webkit-appearance: none;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+    0.1s padding ease-in-out;
+
+  &::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &:-ms-input-placeholder {
+    color: transparent;
+  }
+  &::-moz-placeholder {
+    color: transparent;
+  }
+  &:-moz-placeholder {
+    color: transparent;
+  }
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:not(:placeholder-shown),
+  .error & {
+    padding-top: 20px;
+    padding-bottom: 4px;
+  }
+
+  &:not(:placeholder-shown) ~ .label {
+    left: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    top: $labelTopPosition;
+  }
+
+  .error & ~ .label,
+  &:not(:placeholder-shown) ~ .label.error {
+    left: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    top: $labelTopPosition;
+    color: $strongred;
+  }
+
+  &:disabled {
+    background: $gray-2;
+  }
+
+  &:focus {
+    // Use this focus styling for all
+    transition: none;
+    outline: none;
+    box-shadow: 0 0 0 3px $blue-10;
+  }
+}
+
+.quill {
+  min-height: 108px;
+  padding: 12px 12px 12px 12px;
+  @include ie-only {
+    padding: 0;
+  }
+}
+
+.textArea {
+  min-height: 108px;
+  padding: 12px 12px 12px 12px;
+  resize: vertical;
+  position: relative;
+  overflow: auto;
+}
+
+.input {
+  padding: 12px 12px 12px 12px;
+  min-height: 48px;
+}
+
+.inputActive {
+  padding: 20px 12px 4px 12px;
+}
+
+.select {
+  padding: 0 !important;
+
+  & + .label {
+    opacity: 0;
+
+    &.hasValue {
+      opacity: 1;
+      left: 12px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      top: $labelTopPosition;
+    }
+
+    &.error {
+      opacity: 1;
+      color: $strongred;
+    }
+  }
+
+  :global {
+    .s-contact__loading-indicator > span {
+      width: 5px;
+      height: 5px;
+      border-radius: 10px;
+
+      & ~ span {
+        margin-left: 5px;
+      }
+    }
+    .s-contact__indicator {
+      color: $gray-20;
+      &:hover {
+        background-color: $gray-5;
+      }
+      cursor: pointer;
+      border-left: 1px solid $gray-10;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .s-contact__control {
+      border: 0;
+      min-height: $height;
+
+      transition: 0.3s box-shadow ease-in-out;
+      &.s-contact__control--is-focused {
+        // Use this focus styling for all
+        transition: none;
+        outline: none;
+        box-shadow: 0 0 0 3px $blue-10;
+      }
+    }
+
+    .s-contact__placeholder {
+      color: $labelTopColor;
+      transition: 0.1s all ease-in-out;
+      // margin: 0 0 0 12px;
+      // Added this for single placeholders
+
+      :local(.containerError) & {
+        display: none;
+      }
+    }
+
+    .s-contact__indicator-separator {
+      display: none !important;
+    }
+
+    .s-contact__menu {
+      z-index: $z-menu;
+      margin-top: 3px;
+      // To account for focus
+    }
+
+    .s-contact__input {
+      // margin-left: 12px;
+    }
+
+    .s-contact__option {
+      font-size: 14px;
+    }
+
+    .s-contact__value-container {
+      padding: 0;
+      line-height: 24px;
+      min-height: 48px;
+      padding: 12px;
+      &.s-contact__value-container--is-multi {
+        padding: 12px;
+      }
+
+      &.s-contact__value-container--has-value {
+        padding: 20px 12px 4px 12px;
+        &.s-contact__value-container--is-multi {
+          padding: 20px 10px 4px 10px;
+        }
+      }
+    }
+
+    .s-contact__single-value {
+      top: initial;
+      transform: initial;
+    }
+
+    .s-contact__multi-value-orderable {
+      padding: 4px;
+
+      & ~ div > .s-contact__input {
+        margin-left: 0;
+      }
+    }
+
+    .s-contact__multi-value {
+      background: $gray-7;
+      // margin: 4px;
+      // padding-left: 10px;
+      // cursor: default;
+      // border-radius: 3px;
+      // display: flex;
+      // height: 30px;
+      // line-height: 30px;
+      // font-weight: 500;
+      // background: $dark-gray;
+      // position: relative;
+      white-space: nowrap;
+      // overflow: hidden;
+
+      & ~ div > .s-contact__input {
+        margin-left: 0;
+      }
+    }
+
+    .s-contact__multi-value__label {
+      // color: $white;
+      padding: 0 4px 0 5px;
+    }
+
+    .s-contact__multi-value__remove {
+      cursor: pointer;
+      // color: $white !important;
+      // padding-left: 6px;
+      // padding-right: 6px;
+
+      // &:hover {
+      //   background: transparent;
+      // }
+    }
+  }
+}
+
+.multiContainer {
+  height: auto !important;
+  min-height: 48px + 2px;
+}
+
+.containerMultiLink {
+  .addButton {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    margin: 0;
+    padding: 0 16px;
+    min-width: 0;
+    height: 38px;
+    min-height: 38px;
+    line-height: 38px;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  padding-top: 0;
+}
+
+.link {
+  padding: 5px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  // background-color: $gray-40;
+  // margin: 4px;
+  display: flex;
+  overflow: hidden;
+
+  .remove {
+    margin-left: auto;
+    padding: 0 4px;
+    display: none;
+    flex-shrink: 0;
+  }
+
+  a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  a:link,
+  a:visited {
+    color: $blue;
+  }
+
+  &:hover {
+    background-color: $gray-5;
+
+    .remove {
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      color: $darkblue;
+    }
+  }
+}
+
+.dualContainer {
+  .dualInput {
+    border: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+  .dualInputTextInput {
+    padding: 20px 12px 4px 12px;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      color: $gray-10;
+    }
+    &:-ms-input-placeholder {
+      color: $gray-10;
+    }
+    &::-moz-placeholder {
+      color: $gray-10;
+    }
+    &:-moz-placeholder {
+      color: $gray-10;
+    }
+    &::placeholder {
+      color: $gray-10;
+    }
+  }
+
+  .dualSelect {
+    :global {
+      .s-contact__single-value {
+        position: initial;
+      }
+
+      .s-contact__indicators {
+        height: 100% !important;
+        align-items: flex-end;
+      }
+
+      .s-contact__indicator-separator {
+        display: none !important;
+      }
+
+      .s-contact__indicator {
+        border-left: 0;
+        padding: 14px 6px;
+      }
+
+      .s-contact__value-container {
+        padding: 12px 0 !important;
+        height: 100% !important;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        div {
+          // height: 100%;
+          line-height: normal !important;
+          margin: 0 !important;
+          width: 100%;
+        }
+
+        .s-contact__single-value {
+          height: 20px;
+          text-align: right;
+        }
+
+        & > div:last-child {
+          position: absolute;
+          top: 0;
+        }
+
+        .s-contact__input {
+          width: 100%;
+          display: flex !important;
+          align-items: flex-end !important;
+          justify-content: flex-end !important;
+          padding: 0 !important;
+
+          & > div {
+            display: none !important;
+          }
+
+          & > input {
+            width: 100% !important;
+            height: 20px !important;
+            margin: 0 0 12px 0 !important;
+            position: static;
+            text-align: right;
+          }
+        }
+      }
+
+      .s-contact__menu {
+        min-width: 150px !important;
+        right: 0;
+      }
+    }
+  }
+
+  .dualInput + .label.error {
+    color: $strongred;
+  }
+
+  &.active {
+    .label {
+      top: $labelTopPosition;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      color: $labelTopColor;
+    }
+  }
+
+  &.shrink {
+    .dualInput {
+      flex-basis: 60% !important;
+    }
+
+    .dualSelect {
+      flex-basis: 40% !important;
+    }
+
+    .base {
+      padding-right: 0;
+    }
+
+    :global {
+      .s-contact__indicators {
+        display: none !important;
+      }
+      .s-contact__value-container {
+        padding-right: 10px !important;
+      }
+    }
+  }
+}

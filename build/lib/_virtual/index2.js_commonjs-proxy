@@ -1,0 +1,3 @@
+import react from '../node_modules/react/index.js';
+export { default } from '../node_modules/react/index.js';
+//# sourceMappingURL=index2.js_commonjs-proxy.map
