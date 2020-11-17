@@ -1,3 +1,20 @@
+.inputGroup {
+  display: flex;
+  width: 100%; }
+  .inputGroup .inputGroup {
+    flex-basis: 50%;
+    margin-left: 10px; }
+  .inputGroup .inputContainer {
+    flex: 50%; }
+  .inputGroup .inputContainer ~ .inputContainer {
+    margin-left: 10px; }
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px; }
+
 /* prettier-ignore */
 /* beautify ignore:start */
 .btn {
@@ -131,46 +148,6 @@
   width: 100%;
   margin: 6px 0px;
   height: 56px; }
-
-.inputGroup {
-  display: flex;
-  width: 100%; }
-  .inputGroup .inputGroup {
-    flex-basis: 50%;
-    margin-left: 10px; }
-  .inputGroup .inputContainer {
-    flex: 50%; }
-  .inputGroup .inputContainer ~ .inputContainer {
-    margin-left: 10px; }
-
-.inputContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px; }
-
-/* prettier-ignore */
-/* beautify ignore:start */
-.white {
-  color: #fff; }
-
-.black {
-  color: #212529; }
-
-.blue {
-  color: #1269db; }
-
-.darkblue {
-  color: #193278; }
-
-.darkgray {
-  color: #626e7a; }
-
-.logo {
-  width: 180px; }
-
-.hdLogo {
-  width: 155px; }
 
 /* prettier-ignore */
 /* beautify ignore:start */
@@ -498,6 +475,29 @@
 
 .dualContainer.shrink :global .s-contact__value-container {
   padding-right: 10px !important; }
+
+/* prettier-ignore */
+/* beautify ignore:start */
+.white {
+  color: #fff; }
+
+.black {
+  color: #212529; }
+
+.blue {
+  color: #1269db; }
+
+.darkblue {
+  color: #193278; }
+
+.darkgray {
+  color: #626e7a; }
+
+.logo {
+  width: 180px; }
+
+.hdLogo {
+  width: 155px; }
 
 /* prettier-ignore */
 /* beautify ignore:start */

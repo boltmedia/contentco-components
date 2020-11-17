@@ -1,60 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Styles from './Input.module.scss';
 import classNames from 'classnames';
 import Select from 'react-select';
 import AsyncSelect from 'react-select/async';
-import { AsyncPaginate } from 'react-select-async-paginate';
+import AsyncPaginate from 'react-select-async-paginate';
 import CreatableSelect from 'react-select/creatable';
 
 const customStyles = {
   option: (provided, state) => ({
-    ...provided,
+    ...provided
   }),
   input: (styles) => ({
     ...styles,
     margin: 0,
-    padding: 0,
+    padding: 0
   }),
   menu: (styles) => ({
     ...styles,
-    margin: '2px 0',
+    margin: '2px 0'
   }),
   placeholder: (styles) => ({
-    ...styles,
+    ...styles
   }),
   control: (styles) => ({
     ...styles,
     boxShadow: 'none',
     ':hover': {
-      borderColor: '#a1aab3',
-    },
+      borderColor: '#a1aab3'
+    }
   }),
   valueContainer: (styles) => ({
     ...styles,
     padding: '2px 15px',
-    fontSize: '16px',
+    fontSize: '16px'
   }),
   singleValue: (styles) => ({
     ...styles,
     marginLeft: '0',
-    fontSize: '16px',
-  }),
+    fontSize: '16px'
+  })
 };
 
-const SelectInput = ({ disabled, name, className, label, onChange, classNamePrefix, ...props }) => {
+const SelectInput = ({
+  disabled,
+  name,
+  className,
+  label,
+  onChange,
+  classNamePrefix,
+  ...props
+}) => {
   const [value, setValue] = useState(props.value || props.defaultValue);
-
-  const optionValue = props?.getOptionValue?.(props.value || props.defaultValue || {});
   const containerClass = classNames(
     Styles.container,
     className,
-    props.isMulti && value && value.length && Styles.active,
-    !props.isMulti && value && Styles.active,
+    props.isMulti && value?.length && Styles.active,
+    !props.isMulti && Object.keys(value || {}).length && Styles.active,
     disabled && Styles.locked,
     props.error && Styles.containerError,
     props.isMulti && Styles.multiContainer
   );
+
+  useEffect(() => {
+    if (props.value) {
+      setValue(props.value);
+    }
+  }, [props.value]);
 
   const fieldClass = classNames(
     Styles.select,
@@ -65,9 +77,10 @@ const SelectInput = ({ disabled, name, className, label, onChange, classNamePref
   const labelClass = classNames(
     Styles.label,
     props.error && Styles.error,
-    props.isMulti && value && value.length && Styles.hasValue,
-    !props.isMulti && value && Styles.hasValue
+    props.isMulti && value?.length && Styles.hasValue,
+    !props.isMulti && Object.keys(value || {}).length && Styles.hasValue
   );
+
   const handleChange = (event, { action, name }) => {
     setValue(event);
     // Pass any other change events from parent
@@ -76,7 +89,11 @@ const SelectInput = ({ disabled, name, className, label, onChange, classNamePref
     } catch (err) {}
   };
 
-  const CustomSelect = props.isPaginated ? AsyncPaginate : props.isAsync ? AsyncSelect : Select;
+  const CustomSelect = props.isPaginated
+    ? AsyncPaginate
+    : props.isAsync
+    ? AsyncSelect
+    : Select;
   const SelectComponent = props.isCreatable ? CreatableSelect : Select;
   return (
     <div className={containerClass}>
@@ -90,7 +107,7 @@ const SelectInput = ({ disabled, name, className, label, onChange, classNamePref
         onChange={handleChange}
         additional={{ page: 1 }}
         SelectComponent={SelectComponent}
-        createOptionPosition={'first'}
+        createOptionPosition='first'
         isDisabled={disabled}
         classNamePrefix={classNamePrefix}
         closeMenuOnSelect={!props.isMulti}
@@ -105,14 +122,14 @@ const SelectInput = ({ disabled, name, className, label, onChange, classNamePref
 };
 
 SelectInput.propTypes = {
-  classNamePrefix: PropTypes.string,
+  classNamePrefix: PropTypes.string
 };
 
 SelectInput.defaultProps = {
   menuPlacement: 'auto',
   classNamePrefix: 's-contact',
   isAsync: false,
-  isPaginated: false,
+  isPaginated: false
 };
 
 export default SelectInput;

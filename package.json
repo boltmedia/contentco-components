@@ -33,11 +33,7 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-autosize-textarea": "^7.1.0",
-    "react-input-mask": "^2.0.4",
-    "react-select": "^3.1.0",
-    "react-select-async-paginate": "^0.4.1"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
@@ -84,6 +80,8 @@
     "prop-types": "^15.7.2",
     "react-is": "^17.0.1",
     "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^3.1.8",
     "rollup-plugin-react-svg": "^3.0.3",
     "rollup-plugin-scss": "^2.6.1",
@@ -98,8 +96,10 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.12.1",
-    "@babel/runtime": "^7.12.1",
-    "rollup-plugin-copy": "^3.3.0",
-    "storybook": "^6.1.0-rc.4"
+    "@babel/runtime": "^7.12.5",
+    "react-autosize-textarea": "^7.1.0",
+    "react-input-mask": "^2.0.4",
+    "react-select": "3.1.0",
+    "react-select-async-paginate": "0.3.14"
   }
 }

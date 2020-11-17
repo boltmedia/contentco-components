@@ -6,17 +6,29 @@ import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import clear from 'rollup-plugin-clear';
 import reactSvg from 'rollup-plugin-react-svg';
+import external from 'rollup-plugin-peer-deps-external';
 
 import scss from 'rollup-plugin-scss';
 
 const packageJson = require('./package.json');
-
-const settings = {
+export default {
   input: 'src/index.jsx',
-
+  output: [
+    {
+      file: packageJson.module,
+      format: 'esm',
+      sourcemap: true
+    },
+    {
+      file: packageJson.main,
+      format: 'cjs',
+      sourcemap: true
+    }
+  ],
   plugins: [
     scss(),
     reactSvg(),
+    external({ includeDependencies: true }),
     postcss({
       // extract: true,
       plugins: [autoprefixer]
@@ -45,6 +57,7 @@ const settings = {
         }
       ]
     }),
+
     clear({
       targets: ['build'],
       watch: true // default: false
@@ -52,32 +65,14 @@ const settings = {
   ]
 };
 
-export default [
-  {
-    ...settings,
-    preserveModules: false,
-    output: [
-      {
-        file: packageJson.module,
-        format: 'esm',
-        sourcemap: true
-      },
-      {
-        file: packageJson.main,
-        format: 'cjs',
-        sourcemap: true
-      }
-    ]
-  }
-  // {
-  //   ...settings,
-  //   preserveModules: true,
-  //   output: [
-  //     {
-  //       dir: `build/lib`,
-  //       format: 'esm',
-  //       sourcemap: true
-  //     }
-  //   ]
-  // }
-];
+// {
+//   ...settings,
+//   preserveModules: true,
+//   output: [
+//     {
+//       dir: `build/lib`,
+//       format: 'esm',
+//       sourcemap: true
+//     }
+//   ]
+// }
