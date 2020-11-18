@@ -6,6 +6,7 @@ import InputGroup from './Form/InputGroup';
 import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
 import Select from './Input/Select';
+import Card from './Card/Card';
 
 export {
   Logo,
@@ -15,5 +16,6 @@ export {
   InputGroup,
   TextInput,
   TextArea,
-  Select
+  Select,
+  Card
 };

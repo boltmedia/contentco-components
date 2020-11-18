@@ -459,7 +459,99 @@ SelectInput.defaultProps = {
   isPaginated: false
 };
 
+var css_248z$5 = "/* prettier-ignore */\n/* beautify ignore:start */\n.Card-module_container__19jRJ {\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  background: #fff;\n  border: 1px solid #d8dfe6;\n  border-radius: 3px;\n  margin-bottom: 20px; }\n\n.Card-module_header__2UPBX {\n  padding: 10px 20px;\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  font-size: 20px;\n  font-weight: 600;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  min-height: 65px;\n  box-sizing: border-box; }\n\n.Card-module_note__22XAs {\n  padding: 20px;\n  background-color: #d2e5f8;\n  font-size: 14px;\n  border-top: 1px solid #d8dfe6; }\n\n.Card-module_item__1VJRt {\n  margin: 0;\n  padding: 20px;\n  border-top: 1px solid #edf0f3; }\n  .Card-module_item__1VJRt.Card-module_noPaddingLeft__3HajD {\n    padding-left: 0; }\n  .Card-module_item__1VJRt.Card-module_noPadding__2j_hA {\n    padding: 0; }\n  .Card-module_item__1VJRt.Card-module_noBorder__PVp40 {\n    border: 0; }\n\n.Card-module_footer__2zfeT {\n  border-top: 1px solid #d8dfe6;\n  display: flex;\n  padding: 15px 20px;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px; }\n  .Card-module_footer__2zfeT.Card-module_right__3RLNc {\n    justify-content: flex-end; }\n\n.Card-module_flex__2VnYC {\n  display: flex; }\n";
+var Styles$5 = {"container":"Card-module_container__19jRJ","header":"Card-module_header__2UPBX","note":"Card-module_note__22XAs","item":"Card-module_item__1VJRt","noPaddingLeft":"Card-module_noPaddingLeft__3HajD","noPadding":"Card-module_noPadding__2j_hA","noBorder":"Card-module_noBorder__PVp40","footer":"Card-module_footer__2zfeT","right":"Card-module_right__3RLNc","flex":"Card-module_flex__2VnYC"};
+styleInject(css_248z$5);
+
+var CardHeader = function CardHeader(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      title = _ref.title,
+      props = _objectWithoutProperties__default['default'](_ref, ["className", "children", "title"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$5.header, className)
+  }, props), children || title && /*#__PURE__*/React__default['default'].createElement("span", null, title));
+};
+
+CardHeader.propTypes = {
+  title: PropTypes__default['default'].string,
+  children: PropTypes__default['default'].node,
+  className: PropTypes__default['default'].string
+};
+
+var Note = function Note(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      props = _objectWithoutProperties__default['default'](_ref, ["children", "className"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$5.note, className)
+  }, props), children);
+};
+
+Note.propTypes = {
+  children: PropTypes__default['default'].node,
+  className: PropTypes__default['default'].string
+};
+
+var CardHeader$1 = function CardHeader(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      right = _ref.right,
+      props = _objectWithoutProperties__default['default'](_ref, ["className", "children", "right"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$5.footer, right && Styles$5.right, className)
+  }, props), children);
+};
+
+CardHeader$1.propTypes = {
+  title: PropTypes__default['default'].string,
+  children: PropTypes__default['default'].node,
+  className: PropTypes__default['default'].string
+};
+
+var CardItem = function CardItem(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      noPadding = _ref.noPadding,
+      noBorder = _ref.noBorder,
+      noPaddingLeft = _ref.noPaddingLeft,
+      flex = _ref.flex,
+      props = _objectWithoutProperties__default['default'](_ref, ["className", "children", "noPadding", "noBorder", "noPaddingLeft", "flex"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$5.item, _defineProperty__default['default']({}, Styles$5.flex, flex), _defineProperty__default['default']({}, Styles$5.noPadding, noPadding), _defineProperty__default['default']({}, Styles$5.noPaddingLeft, noPaddingLeft), _defineProperty__default['default']({}, Styles$5.noBorder, noBorder), className)
+  }, props), children);
+};
+
+CardItem.propTypes = {
+  children: PropTypes__default['default'].node,
+  className: PropTypes__default['default'].string
+};
+
+var Card = function Card(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      props = _objectWithoutProperties__default['default'](_ref, ["className", "children"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$5.container, className)
+  }, props), children);
+};
+
+Card.propTypes = {
+  children: PropTypes__default['default'].node,
+  className: PropTypes__default['default'].string
+};
+Card.Header = CardHeader;
+Card.Note = Note;
+Card.Footer = CardHeader$1;
+Card.Item = CardItem;
+
 exports.Button = Button;
+exports.Card = Card;
 exports.InputContainer = InputContainer;
 exports.InputGroup = InputGroup;
 exports.Loader = Loader;

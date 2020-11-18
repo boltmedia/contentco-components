@@ -1,0 +1,67 @@
+@import '../variables.scss';
+
+.container {
+  font-family: $cerebri;
+  background: $white;
+  border: 1px solid $gray-10;
+  border-radius: $card-border-radius;
+  margin-bottom: 20px;
+}
+
+.header {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: 600;
+  border-top-right-radius: $card-border-radius;
+  border-top-left-radius: $card-border-radius;
+  min-height: 65px;
+  box-sizing: border-box;
+}
+
+.note {
+  padding: 20px;
+  background-color: $light-blue-grey;
+  font-size: 14px;
+  border-top: 1px solid $gray-10;
+}
+
+.item {
+  margin: 0;
+  padding: 20px;
+  border-top: 1px solid $gray-7;
+
+  &.noPaddingLeft {
+    padding-left: 0;
+  }
+
+  &.noPadding {
+    padding: 0;
+  }
+
+  &.noBorder {
+    border: 0;
+  }
+}
+
+.footer {
+  border-top: 1px solid $gray-10;
+  display: flex;
+  padding: 15px 20px;
+  border-bottom-right-radius: $card-border-radius;
+  border-bottom-left-radius: $card-border-radius;
+
+  &.right {
+    justify-content: flex-end;
+  }
+}
+
+.flex {
+  display: flex;
+
+  // @include for-size(tablet-landscape-down) {
+  //   flex-wrap: wrap;
+  // }
+}
