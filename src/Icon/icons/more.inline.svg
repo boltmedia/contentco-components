@@ -1,0 +1,18 @@
+<svg class="i-more-vert"
+  xmlns="http://www.w3.org/2000/svg"
+  width="15"
+  height="30"
+  viewBox="0 0 15 30">
+  <g fill="currentColor"
+    transform="rotate(90 1.25 7.75)">
+    <circle cx="8.5"
+      cy="1.5"
+      r="1.5" />
+    <circle cx="1.5"
+      cy="1.5"
+      r="1.5" />
+    <circle cx="15.5"
+      cy="1.5"
+      r="1.5" />
+  </g>
+</svg>

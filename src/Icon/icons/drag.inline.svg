@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="30"
+  height="30"
+  viewBox="0 0 30 30">
+  <g fill="currentColor"
+    fill-rule="nonzero">
+    <g transform="rotate(90 3 9.5)">
+      <circle cx="8.5"
+        cy="1.5"
+        r="1.5" />
+      <circle cx="1.5"
+        cy="1.5"
+        r="1.5" />
+      <circle cx="15.5"
+        cy="1.5"
+        r="1.5" />
+    </g>
+    <g transform="rotate(90 7 13.5)">
+      <circle cx="8.5"
+        cy="1.5"
+        r="1.5" />
+      <circle cx="1.5"
+        cy="1.5"
+        r="1.5" />
+      <circle cx="15.5"
+        cy="1.5"
+        r="1.5" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="30"
+  height="30"
+  viewBox="0 0 30 30">
+  <g fill="none"
+    fill-rule="evenodd"
+    stroke="currentColor"
+    stroke-width="2">
+    <path d="M15 21c4.97 0 9-6 9-6s-4.03-6-9-6-9 6-9 6 4.03 6 9 6z" />
+    <circle cx="15"
+      cy="15"
+      r="3" />
+  </g>
+</svg>

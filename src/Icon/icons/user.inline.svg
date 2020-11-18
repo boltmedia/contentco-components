@@ -1,0 +1,10 @@
+<svg width="30"
+  height="30"
+  viewBox="0 0 30 30"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 24H8v-2c0-2.698 1.428-5.067 4-6-1.339-1.24-1.886-2.511-2-4 .114-2.723 2.302-5 5-5s4.886 2.277 5 5c-.114 1.489-.661 2.76-2 4 2.572.933 4 3.302 4 6v2z"
+    stroke="currentColor"
+    stroke-width="2"
+    fill="none"
+    fill-rule="evenodd" />
+</svg>

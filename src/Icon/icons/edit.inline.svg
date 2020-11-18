@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="30"
+  height="30"
+  viewBox="0 0 30 30">
+  <g fill="none"
+    fill-rule="evenodd"
+    stroke="currentColor"
+    stroke-width="2">
+    <path d="M11.633 23.68l-4.051 1.058a.62.62 0 0 1-.314-.004c-.34-.09-.596-.42-.57-.737l.339-4.174L17.523 7.326l4.596 3.857L11.633 23.68zM17.525 7.324l4.596 3.857 1.284-1.53a3 3 0 1 0-4.597-3.857l-1.283 1.53z" />
+  </g>
+</svg>
