@@ -24,7 +24,7 @@ const Template = (args) => (
     <Frontend.Expand {...args} />
     <Frontend.Minimize {...args} />
 
-    <h3>Main Sections</h3>
+    <h3>Navigation</h3>
     <Frontend.Dashboard {...args} />
     <Frontend.Brief {...args} />
     <Frontend.ChatUsers {...args} />
@@ -36,6 +36,7 @@ const Template = (args) => (
     <Frontend.Project {...args} />
     <Frontend.Timesheet {...args} />
     <Frontend.Guide {...args} />
+    <Frontend.Notification {...args} />
 
     <h3>Social</h3>
     <Frontend.Google {...args} />
@@ -56,9 +57,11 @@ const Template = (args) => (
     <Frontend.Caret {...args} />
     <Frontend.Close {...args} />
     <Frontend.Down {...args} />
-
     <Frontend.More {...args} />
     <Frontend.MoreVertical {...args} />
+    <Frontend.StarEmpty {...args} />
+    <Frontend.StarFull {...args} />
+    <Frontend.Logout {...args} />
 
     <h3>Not Reviewed</h3>
 
@@ -75,15 +78,11 @@ const Template = (args) => (
     <Frontend.Question {...args} />
     <Frontend.Link {...args} />
     <Frontend.Pencil {...args} />
-    <Frontend.StarEmpty {...args} />
-    <Frontend.StarFull {...args} />
     <Frontend.External {...args} />
     <Frontend.Wallet {...args} />
     <Frontend.Help {...args} />
-    <Frontend.Notification {...args} />
     <Frontend.Ok {...args} />
     <Frontend.Menu {...args} />
-    <Frontend.Logout {...args} />
   </React.Fragment>
 );
 export const Default = Template.bind({});

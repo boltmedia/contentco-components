@@ -1,12 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24">
-    <g id="logout"
-        fill="currentColor"
-        fill-rule="nonzero">
-        <path d="M16.38 9.09a.75.75 0 1 1 .94-1.17l3.25 3.45c.36.3.37.85 0 1.15l-3.24 3.55a.75.75 0 1 1-.96-1.15l2.54-2.96-2.53-2.87z" />
-        <path d="M10.7 12.75h8.72c.35 0 .64-.34.64-.75s-.29-.75-.64-.75H10.7c-.35 0-.64.34-.64.75s.29.75.64.75z" />
-        <path d="M13.19 17.7l-.01-.76c0-.5.4-.9.9-.9.5-.01.9.39.91.88a47 47 0 0 1 0 1.7.9.9 0 0 1-.9.88H5.9a.9.9 0 0 1-.91-.9V5.4c0-.5.4-.9.9-.9h8.07c.5 0 .9.4.9.9v1.67a.9.9 0 1 1-1.81 0V6.3H6.81v11.4h6.38z" />
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15v3H1V2h10v3"/>
+    <path fill="currentColor" d="M14.707 4.293l4.95 4.95a1 1 0 010 1.414l-4.95 4.95a1 1 0 01-1.414-1.415L16.484 11H7a1 1 0 010-2h9.586l-3.293-3.293a1 1 0 111.414-1.414z"/>
+  </g>
 </svg>
