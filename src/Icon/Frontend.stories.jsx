@@ -63,25 +63,26 @@ const Template = (args) => (
     <Frontend.StarFull {...args} />
     <Frontend.Logout {...args} />
 
-    <h3>Not Reviewed</h3>
-
-    <Frontend.Location {...args} />
-    <Frontend.Globe {...args} />
+    <h3>To Be Added</h3>
     <Frontend.Search {...args} />
-    <Frontend.Note {...args} />
     <Frontend.Org {...args} />
     <Frontend.Skill {...args} />
-    <Frontend.Profile {...args} />
     <Frontend.Profile2 {...args} />
-    <Frontend.Quote {...args} />
     <Frontend.Reference {...args} />
     <Frontend.Question {...args} />
     <Frontend.Link {...args} />
     <Frontend.Pencil {...args} />
     <Frontend.External {...args} />
+    <Frontend.Ok {...args} />
+
+    <h3>Not Used - Delete</h3>
+    <Frontend.Location {...args} />
+    <Frontend.Globe {...args} />
+    <Frontend.Note {...args} />
+    <Frontend.Profile {...args} />
+    <Frontend.Quote {...args} />
     <Frontend.Wallet {...args} />
     <Frontend.Help {...args} />
-    <Frontend.Ok {...args} />
     <Frontend.Menu {...args} />
   </React.Fragment>
 );

@@ -9,57 +9,57 @@ export default {
 
 const Template = (args) => (
   <React.Fragment>
-    <h3>Icons</h3>
+    <h3>Icons to move to frontend</h3>
     <Icon.External {...args} />
+    <Icon.Drag {...args} />
+    <Icon.Edit {...args} />
+    <Icon.Preview {...args} />
+    <Icon.Profile {...args} />
+    <Icon.Search {...args} />
+    <Icon.Xero {...args} />
+    <Icon.Refresh {...args} />
+    <Icon.Play {...args} />
+    <Icon.Stop {...args} />
+    <Icon.Invoice {...args} />
+    <Icon.Filter {...args} />
+    <Icon.Split {...args} />
+    <Icon.BinSmall {...args} />
+
+    <h3>Icons to remove - Use Frontend version instead</h3>
+    <Icon.Paperclip {...args} />
+    <Icon.SplitSmall {...args} />
+
     <Icon.Add {...args} />
     <Icon.Close {...args} />
     <Icon.Logout {...args} />
     <Icon.Home {...args} />
     <Icon.Talent {...args} />
-    <Icon.Profile {...args} />
     <Icon.Brief {...args} />
     <Icon.Down {...args} />
-    <Icon.Drag {...args} />
-    <Icon.Edit {...args} />
-    <Icon.Preview {...args} />
     <Icon.More {...args} />
     <Icon.User {...args} />
-    <Icon.Search {...args} />
-    <Icon.Xero {...args} />
-    <Icon.Refresh {...args} />
-    <Icon.Filter {...args} />
     <Icon.Email {...args} />
-    <Icon.Split {...args} />
+    <Icon.Folder {...args} />
+
     <Icon.Minimize {...args} />
     <Icon.Company {...args} />
 
     <Icon.Timesheet {...args} />
 
-    <Icon.Paperclip {...args} />
-    <Icon.Stretch {...args} />
-    <Icon.Shrink {...args} />
-    <Icon.ChevronLeft {...args} />
-    <Icon.ChevronRight {...args} />
-    <Icon.Play {...args} />
-    <Icon.Stop {...args} />
-    <Icon.Folder {...args} />
-    <Icon.Invoice {...args} />
-
-    <h3>Small Icons</h3>
-
-    <Icon.MinimizeSmall {...args} />
-    <Icon.SplitSmall {...args} />
-    <Icon.EditSmall {...args} />
-    <Icon.BinSmall {...args} />
-    <Icon.ChevronDownSmall {...args} />
-    <Icon.UpSmall {...args} />
-    <Icon.CloseSmall {...args} />
-    <h3>Extra Small Icons</h3>
-
     <Icon.MoreExtraSmall {...args} />
 
     <Icon.ExpandExtraSmall {...args} />
     <Icon.CollapseExtraSmall {...args} />
+    <Icon.ChevronDownSmall {...args} />
+    <Icon.UpSmall {...args} />
+    <Icon.CloseSmall {...args} />
+    <Icon.EditSmall {...args} />
+
+    <Icon.MinimizeSmall {...args} />
+    <Icon.Stretch {...args} />
+    <Icon.Shrink {...args} />
+    <Icon.ChevronLeft {...args} />
+    <Icon.ChevronRight {...args} />
   </React.Fragment>
 );
 export const Default = Template.bind({});
