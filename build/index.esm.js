@@ -536,8 +536,7 @@ var Drag = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$2({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "15"
+  viewBox: "0 0 15 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M3 10a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0-6.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0 13a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zM9 10a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0-6.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0 13a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0z",
   fill: "currentColor"
@@ -549,8 +548,7 @@ var Preview = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$3({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   strokeWidth: "2",
@@ -570,8 +568,7 @@ var Xero = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$4({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "64"
+  viewBox: "0 0 64 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -586,8 +583,7 @@ var Refresh = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$5({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -606,8 +602,7 @@ var Filter = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$6({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M16.453 2c.277 0 .527.112.708.293a1 1 0 01.03 1.383h0l-5.192 5.662.001 7.445c-.179.645-.405.914-.685 1.066a1.119 1.119 0 01-.844.094h0l-1.832-.703a.999.999 0 01-.44-.334 1 1 0 01-.193-.483h0L8 9.338l-5.19-5.662a.997.997 0 01-.262-.72.997.997 0 01.324-.693A1 1 0 013.546 2h0z",
   stroke: "currentColor",
@@ -621,8 +616,7 @@ var Split = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$7({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -645,8 +639,7 @@ var Invoice = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$8({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -669,8 +662,7 @@ var Play = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$9({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M2.068 1.699v16.588a1 1 0 001 1 1 1 0 00.491-.129l14.817-8.361a1 1 0 00.38-1.363 1 1 0 00-.386-.382L3.553.825a1 1 0 00-1.36.389 1 1 0 00-.125.485z",
   fill: "currentColor",
@@ -683,8 +675,7 @@ var Stop = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$a({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("rect", {
   x: "1",
   y: "1",
@@ -701,8 +692,7 @@ var Google = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$b({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M10.202 8.568h9.44c.104.581.156 1.137.156 1.666 0 1.884-.395 3.566-1.185 5.046a8.554 8.554 0 01-3.379 3.47c-1.462.833-3.14 1.25-5.032 1.25a9.83 9.83 0 01-3.893-.788 9.999 9.999 0 01-3.19-2.129 10.001 10.001 0 01-2.13-3.19C.466 12.661.203 11.363.203 10S.464 7.34.99 6.107a10 10 0 012.129-3.19 10 10 0 013.19-2.13A9.834 9.834 0 0110.202 0c2.604 0 4.84.872 6.706 2.617l-2.722 2.617c-1.067-1.033-2.396-1.55-3.984-1.55-1.12 0-2.155.283-3.106.847A6.236 6.236 0 004.837 6.83c-.555.968-.833 2.025-.833 3.171s.278 2.203.833 3.17a6.235 6.235 0 002.26 2.299c.95.564 1.985.846 3.105.846a6.64 6.64 0 002.083-.312c.634-.209 1.155-.47 1.563-.782a5.653 5.653 0 001.067-1.067c.304-.4.528-.777.671-1.133.143-.356.241-.695.293-1.016h-5.677V8.568z",
   fill: "currentColor"
@@ -714,8 +704,7 @@ var Facebook = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$c({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M7.494 6.557H5.41V9.96h2.085v9.989H11.5V9.915h2.796l.295-3.358H11.5V4.642c0-.79.159-1.108.926-1.108h2.17V.051h-2.772C8.84.051 7.5 1.364 7.5 3.875c-.006 2.193-.006 2.682-.006 2.682z",
   fill: "currentColor"
@@ -727,8 +716,7 @@ var Twitter = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$d({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M19.975 3.811a7.993 7.993 0 01-2.352.642 4.106 4.106 0 001.798-2.264 8.125 8.125 0 01-2.597.993 4.106 4.106 0 00-2.988-1.295c-2.641 0-4.585 2.465-3.987 5.025a11.618 11.618 0 01-8.44-4.277 4.107 4.107 0 001.264 5.466 4.107 4.107 0 01-1.855-.51c-.044 1.9 1.314 3.673 3.283 4.063a4.054 4.054 0 01-1.85.07 4.092 4.092 0 003.825 2.842 8.27 8.27 0 01-6.063 1.698 11.566 11.566 0 006.276 1.837c7.598 0 11.893-6.422 11.636-12.176a7.991 7.991 0 002.05-2.114z",
   fill: "currentColor"
@@ -740,8 +728,7 @@ var Linkedin = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$e({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M4.851 2.447c0 1.347-1.085 2.447-2.425 2.447A2.434 2.434 0 010 2.447C0 1.099 1.085 0 2.425 0c1.341 0 2.426 1.1 2.426 2.447zm-.354 4.177h-4.1v13.248h4.1zm6.553 0H7.12v13.248h3.93v-6.95c0-1.865.858-2.972 2.496-2.972 1.51 0 2.234 1.064 2.234 2.972v6.95h4.078v-8.39c0-3.546-2.007-5.262-4.823-5.262-2.808 0-3.993 2.191-3.993 2.191V6.624h.008z",
   fill: "currentColor"
@@ -753,8 +740,7 @@ var Instagram = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$f({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -773,8 +759,7 @@ var Youtube = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$g({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M19.55 5.186a2.505 2.505 0 00-1.763-1.774c-1.554-.42-7.787-.42-7.787-.42s-6.233 0-7.787.42c-.858.23-1.533.91-1.763 1.774C.034 6.75.034 10.014.034 10.014s0 3.264.416 4.829c.23.863.905 1.514 1.763 1.745 1.554.42 7.787.42 7.787.42s6.233 0 7.787-.42a2.467 2.467 0 001.763-1.745c.416-1.565.416-4.829.416-4.829s0-3.264-.416-4.828zM7.96 12.977V7.05l5.21 2.963-5.21 2.964z",
   fill: "currentColor"
@@ -786,8 +771,7 @@ var Word = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$h({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -802,8 +786,7 @@ var Audio = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$i({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -818,8 +801,7 @@ var Excel = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$j({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -834,8 +816,7 @@ var File = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$k({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z",
   fill: "currentColor"
@@ -847,8 +828,7 @@ var Pdf = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$l({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -863,8 +843,7 @@ var Attachment = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$m({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   strokeWidth: "1.5",
@@ -885,8 +864,7 @@ var Search = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$n({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M7.5 0a7.5 7.5 0 016.257 11.636l5.182 5.182a1.5 1.5 0 01-2.121 2.121l-5.182-5.182A7.5 7.5 0 117.5 0zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z",
   fill: "currentColor"
@@ -898,8 +876,7 @@ var Close = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$o({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M4.034 4.034l11.932 11.932M3.99 16.01L16.01 3.99",
   stroke: "currentColor",
@@ -933,8 +910,7 @@ var Timesheet = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$q({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   fill: "none"
@@ -964,8 +940,7 @@ var Brief = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$r({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M13 4V2H7v2h6zm5 7.5H1.999L2 16c0 .776.224 1 1 1h14c.776 0 1-.224 1-1v-4.5zM17 6H3c-.776 0-1 .224-1 1l-.001 3H18V7c0-.776-.224-1-1-1zM5 2a2 2 0 012-2h6a2 2 0 012 2v2h2c1.88 0 3 1.12 3 3v9c0 1.88-1.12 3-3 3H3c-1.88 0-3-1.12-3-3V7c0-1.88 1.12-3 3-3h2V2z",
   fill: "currentColor"
@@ -977,8 +952,7 @@ var Skill = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$s({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M15 20H5v-3.073s.108-2.157-.693-4.421c-.8-2.264-2.299-4.421-2.299-4.421L8.498.697A2 2 0 0111.32.514a2 2 0 01.183.183l6.489 7.388s-1.536 2.263-2.299 4.42C14.93 14.664 15 16.928 15 16.928V20zM4.496 8.256c.218.374.447.789.677 1.236a18.88 18.88 0 011.014 2.316c.355 1.002.581 2.036.706 3.07h6.225c.11-.923.295-1.838.576-2.716a11.98 11.98 0 01.119-.354c.04-.114.082-.228.126-.343.252-.66.566-1.34.929-2.037.207-.399.423-.788.642-1.164l-4.87-5.839V6.91c.564.253.958.83.958 1.501 0 .905-.715 1.638-1.598 1.638S8.402 9.316 8.402 8.41c0-.671.394-1.248.959-1.5V2.424L4.496 8.256z",
   fill: "currentColor"
@@ -990,8 +964,7 @@ var Chat = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$t({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none"
 }, /*#__PURE__*/React.createElement("path", {
@@ -1010,8 +983,7 @@ var Expand = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$u({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M18 1a1 1 0 011 1v7a1 1 0 11-2 0l-.001-4.586L4.414 16.999 9 17a1 1 0 110 2H2a1 1 0 01-1-1v-7a1 1 0 112 0v4.585L15.585 3H11a1 1 0 110-2h7z",
   fill: "currentColor",
@@ -1024,8 +996,7 @@ var Minimize = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$v({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor",
   fillRule: "evenodd"
@@ -1041,8 +1012,7 @@ var Project = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$w({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1061,8 +1031,7 @@ var Assessment = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$x({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   strokeWidth: "2",
@@ -1081,8 +1050,7 @@ var Talent = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$y({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   fill: "none",
@@ -1102,8 +1070,7 @@ var Profile = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$z({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   fill: "none"
@@ -1133,8 +1100,7 @@ var ChatUsers = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$A({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm0 5.548c-1.503 0-2.785 1.245-2.937 2.815l-.009.117.015.15c.101.82.421 1.475 1.072 2.129l.17.163 1.203 1.115-1.542.56c-1.5.543-2.421 1.89-2.495 3.576l-.005.222-.001.2A7.963 7.963 0 0010 18a7.962 7.962 0 004.529-1.405v-.2c0-1.716-.86-3.11-2.308-3.723l-.193-.076-1.542-.56 1.204-1.114c.765-.709 1.132-1.404 1.24-2.293l.015-.149-.008-.117c-.146-1.512-1.34-2.722-2.771-2.81L10 5.549zM10 2a8 8 0 00-6.354 12.861c.336-1.434 1.147-2.658 2.33-3.472l.056-.037-.027-.037a5.316 5.316 0 01-.924-2.465l-.027-.276-.002-.119C5.166 5.755 7.345 3.55 10 3.55c2.583 0 4.716 2.088 4.934 4.688l.014.218-.002.119c-.08 1.026-.382 1.922-.951 2.741l-.028.037.056.037c1.184.814 1.995 2.038 2.331 3.472A8 8 0 0010 2z",
   fill: "currentColor"
@@ -1146,8 +1112,7 @@ var Down = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$B({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M2 7l8 8 8-8",
   stroke: "currentColor",
@@ -1163,8 +1128,7 @@ var Company = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$C({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1190,8 +1154,7 @@ var Dashboard = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$D({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M2 2h6v6H2zm10 0h6v6h-6zm0 10h6v6h-6zM2 12h6v6H2z",
   stroke: "currentColor",
@@ -1206,8 +1169,7 @@ var Guide = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$E({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   stroke: "currentColor",
   fill: "none",
@@ -1227,8 +1189,7 @@ var Reference = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$F({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1247,8 +1208,7 @@ var Caret = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$G({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M18.633 6.64l-7.865 9.438a1 1 0 01-1.408.128 1 1 0 01-.128-.128L1.367 6.64A1 1 0 012.135 5h15.73a1 1 0 011 1 1 1 0 01-.232.64z",
   fill: "currentColor"
@@ -1260,8 +1220,7 @@ var Link = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$H({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1280,8 +1239,7 @@ var Pencil = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$I({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1300,8 +1258,7 @@ var Picture = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$J({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("path", {
@@ -1320,8 +1277,7 @@ var StarEmpty = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$K({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   fill: "currentColor",
   d: "M10 14.632l.614.323 4.288 2.254-.936-5.458.497-.485 3.468-3.381-5.48-.797L10 2.122 7.55 7.088l-.687.1-4.794.697 3.965 3.865-.117.684-.819 4.775L10 14.632zm-6.597 2.702l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
@@ -1333,8 +1289,7 @@ var StarFull = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$L({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   fill: "currentColor",
   d: "M3.403 17.334l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
@@ -1346,8 +1301,7 @@ var External = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$M({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1371,8 +1325,7 @@ var Activity = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$N({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M11.678 14.874l-1.881-4.76-1.51 3.792a.99.99 0 01-.808.617.983.983 0 01-.925-.42l-1.707-2.467-1.536 1.851a.99.99 0 11-1.523-1.264l2.37-2.855a.973.973 0 01.805-.357.989.989 0 01.77.426L7.13 11.46l1.75-4.394a.99.99 0 011.84.002l1.756 4.447L14.403 5.2a.99.99 0 01.867-.698c.4-.033.789.186.968.551l2.101 4.282a.99.99 0 01-1.777.872l-.997-2.033-2.02 6.624a.99.99 0 01-.907.7c-.445.001-.81-.246-.96-.625z",
   fill: "currentColor"
@@ -1384,8 +1337,7 @@ var Notification = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$O({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
@@ -1405,8 +1357,7 @@ var Ok = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$P({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M2 12l5.172 4.31a1 1 0 001.454-.187L18 3h0",
   stroke: "currentColor",
@@ -1421,8 +1372,7 @@ var Phone = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$Q({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M7.88 6.614a3.03 3.03 0 00.166-1.753L7.01.755A1 1 0 005.897.01L.857.737A1 1 0 00.002 1.79a19.525 19.525 0 005.62 12.574c3.398 3.432 7.973 5.392 12.788 5.636a1 1 0 001.045-.897l.54-5.273a1 1 0 00-.767-1.075l-3.768-.882a3.052 3.052 0 00-1.926.223l-1.362.587c-1.086-.718-1.82-1.305-2.626-2.118-.835-.844-1.423-1.593-2.124-2.688l.458-1.262zm9.684 11.315C13.59 17.518 9.86 15.8 7.043 12.956A17.51 17.51 0 012.078 2.582l3.213-.463.805 3.182c.03.161.008.382-.077.582l-.644 1.77a1 1 0 00.09.867c.894 1.445 1.609 2.389 2.66 3.45 1.027 1.039 1.958 1.755 3.411 2.685a1 1 0 00.935.076l1.885-.813c.232-.109.459-.136.677-.092l2.883.675-.351 3.428z",
   fill: "currentColor"
@@ -1434,8 +1384,7 @@ var Email = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$R({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M18 6.382V5H2v1.382l8 4 8-4zm0 2.236l-8 4-8-4V16h16V8.618zM2 3h16a2 2 0 012 2v11a2 2 0 01-2 2H2a2 2 0 01-2-2V5a2 2 0 012-2z",
   fill: "currentColor"
@@ -1447,8 +1396,7 @@ var Add = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$S({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M2.5 10h15M10 17.5v-15",
   stroke: "currentColor",
@@ -1465,8 +1413,7 @@ var More = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$T({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "10",
-  width: "20"
+  viewBox: "0 0 20 10"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("circle", {
@@ -1489,8 +1436,7 @@ var MoreVertical = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$U({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "10"
+  viewBox: "0 0 10 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor"
 }, /*#__PURE__*/React.createElement("circle", {
@@ -1516,8 +1462,7 @@ var Settings = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$V({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M13.444 1.685a1.98 1.98 0 011.212 2.029l-.024.234a1.275 1.275 0 01-.06.278c.36.284.69.6.987.942l.216.26c.13-.034.222-.054.277-.06l.234-.024a1.98 1.98 0 011.451 3.503l-.182.15a1.275 1.275 0 01-.24.153c.053.447.065.902.033 1.359l-.032.342c.116.067.196.118.239.153l.182.149a1.98 1.98 0 01-1.45 3.503l-.235-.024a1.275 1.275 0 01-.278-.06 7.284 7.284 0 01-.942.987l-.261.215c.035.13.056.223.061.278l.024.234a1.98 1.98 0 01-3.503 1.451l-.15-.182a1.275 1.275 0 01-.153-.24 7.308 7.308 0 01-1.702.001c-.049.095-.1.175-.152.239l-.149.182a1.98 1.98 0 01-3.503-1.45l.024-.235a1.275 1.275 0 01.06-.278 7.284 7.284 0 01-.987-.942l-.216-.262c-.13.036-.222.056-.277.062l-.234.024a1.98 1.98 0 01-1.451-3.503l.182-.15a1.275 1.275 0 01.24-.153 7.308 7.308 0 01-.033-1.359l.032-.343a1.958 1.958 0 01-.239-.152l-.182-.149a1.98 1.98 0 011.45-3.503l.235.024c.097.01.19.03.278.06a7.284 7.284 0 01.942-.987l.261-.216a2.003 2.003 0 01-.061-.277l-.024-.234a1.98 1.98 0 013.503-1.451l.15.183c.06.075.112.155.153.238a7.308 7.308 0 011.702 0c.049-.095.1-.175.152-.239l.149-.182a1.98 1.98 0 012.291-.578zm-2.296 5.543a3 3 0 10-2.296 5.544 3 3 0 002.296-5.543z",
   stroke: "currentColor",
@@ -1531,8 +1476,7 @@ var Question = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$W({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   d: "M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm-.243 13.558c-.797 0-1.377.529-1.377 1.282 0 .726.58 1.264 1.376 1.264.83 0 1.403-.538 1.403-1.264 0-.753-.571-1.282-1.402-1.282zm.251-9.694c-1.808 0-3.799.882-3.758 3.454h1.801c0-1.065.623-1.887 1.852-1.887.936 0 1.792.467 1.792 1.592 0 .866-.511 1.264-1.316 1.87-.918.666-1.645 1.445-1.593 2.71l.01.63h1.783v-.483c0-.98.373-1.265 1.378-2.027.83-.631 1.696-1.332 1.696-2.805 0-2.059-1.74-3.054-3.645-3.054z",
   fill: "currentColor"
@@ -1544,8 +1488,7 @@ var Text = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$X({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "currentColor",
   fillRule: "evenodd"
@@ -1562,8 +1505,7 @@ var Logout = (({
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$Y({
   xmlns: "http://www.w3.org/2000/svg",
-  height: "20",
-  width: "20"
+  viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
