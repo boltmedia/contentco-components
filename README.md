@@ -43,7 +43,13 @@ class Example extends Component {
 1. To get started you need to install both `rollup` and `storybook`
 
 ```bash
-yarn -D add rollup && yarn global add storybook@next
+npx sb@6.0.28
+yarn -D add rollup
+
+# Installing as peer dependencies
+yarn add -P classnames@2.2.6 prop-types@15.7.2 react@16.13.1 react-dom@16.13.1
+
+
 ```
 
 2. To add a new component, you can create it manually or use the built-in helper to generate the base files.

@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-  width="30"
-  height="30"
-  viewBox="0 0 30 30">
-  <path fill="none"
-    stroke="currentColor"
-    stroke-width="4"
-    d="M26.99 15H3.4995M15 3.25475v23.4905"
-    stroke-linecap="round"
-    stroke-linejoin="round" /></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.5 10h15M10 17.5v-15"/>
+  </g>
+</svg>

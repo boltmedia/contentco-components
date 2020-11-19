@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24">
-  <path id="close-thin"
-    fill="currentColor"
-    fill-rule="nonzero"
-    d="M13.16 12l.8.8 3.3 3.3a.82.82 0 1 1-1.17 1.16l-3.29-3.29-.8-.8-.8.8-3.3 3.29a.82.82 0 0 1-1.16-1.17l3.3-3.28.8-.8-.8-.81-3.3-3.3a.82.82 0 1 1 1.17-1.16l3.29 3.3.8.8.8-.8 3.3-3.3a.82.82 0 1 1 1.16 1.17l-3.3 3.29-.8.8z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.0338 4.0338l11.9324 11.9324M3.9896 16.0104L16.0104 3.9896"/>
+  </g>
 </svg>

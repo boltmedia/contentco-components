@@ -3,76 +3,99 @@ import React from 'react';
 import Icon from './Icon';
 
 export default {
-  title: 'Icons/Admin',
+  title: 'Icon',
   component: Icon
 };
 
 const Template = (args) => (
   <React.Fragment>
-    <h3>Icons to move to frontend</h3>
-    <Icon.External {...args} />
+    <h3>Icons To Add</h3>
     <Icon.Drag {...args} />
-    <Icon.Edit {...args} />
-    <Icon.Preview {...args} />
-    <Icon.Profile {...args} />
-    <Icon.Search {...args} />
-    <Icon.Xero {...args} />
     <Icon.Refresh {...args} />
+    <Icon.Preview {...args} />
     <Icon.Play {...args} />
     <Icon.Stop {...args} />
-    <Icon.Invoice {...args} />
+
+    <Icon.Xero {...args} width='64' />
     <Icon.Filter {...args} />
     <Icon.Split {...args} />
-    <Icon.BinSmall {...args} />
 
-    <h3>Icons to remove - Use Frontend version instead</h3>
-    <Icon.Paperclip {...args} />
-    <Icon.SplitSmall {...args} />
+    <h3>File Types</h3>
+    <Icon.Audio {...args} />
+    <Icon.Excel {...args} />
+    <Icon.Word {...args} />
+    <Icon.Pdf {...args} />
+    <Icon.Text {...args} />
+    <Icon.File {...args} />
+    <Icon.Picture {...args} />
+    <Icon.Reference {...args} />
 
-    <Icon.Add {...args} />
-    <Icon.Close {...args} />
-    <Icon.Logout {...args} />
-    <Icon.Home {...args} />
-    <Icon.Talent {...args} />
+    <h3>Chat</h3>
+    <Icon.Attachment {...args} />
+    <Icon.Expand {...args} />
+    <Icon.Minimize {...args} />
+
+    <h3>Navigation</h3>
+    <Icon.Dashboard {...args} />
     <Icon.Brief {...args} />
+    <Icon.ChatUsers {...args} />
+    <Icon.Company {...args} />
+    <Icon.Chat {...args} />
+    <Icon.Settings {...args} />
+    <Icon.Question {...args} />
+    <Icon.Talent {...args} />
+    <Icon.Project {...args} />
+    <Icon.Timesheet {...args} />
+    <Icon.Guide {...args} />
+    <Icon.Notification {...args} />
+    <Icon.Profile {...args} />
+    <Icon.Invoice {...args} />
+
+    <h3>Social</h3>
+    <Icon.Google {...args} />
+    <Icon.Facebook {...args} />
+    <Icon.Twitter {...args} />
+    <Icon.Linkedin {...args} />
+    <Icon.Instagram {...args} />
+    <Icon.Youtube {...args} />
+
+    <h3>Brief</h3>
+    <Icon.Email {...args} />
+    <Icon.Phone {...args} />
+    <Icon.Chat {...args} />
+    <Icon.Skill {...args} />
+
+    <h3>Other</h3>
+
+    <Icon.Activity {...args} />
+    <Icon.Add {...args} />
+    <Icon.Assessment {...args} />
+    <Icon.Caret {...args} />
+    <Icon.Close {...args} />
     <Icon.Down {...args} />
     <Icon.More {...args} />
-    <Icon.User {...args} />
-    <Icon.Email {...args} />
-    <Icon.Folder {...args} />
-
-    <Icon.Minimize {...args} />
-    <Icon.Company {...args} />
-
-    <Icon.Timesheet {...args} />
-
-    <Icon.MoreExtraSmall {...args} />
-
-    <Icon.ExpandExtraSmall {...args} />
-    <Icon.CollapseExtraSmall {...args} />
-    <Icon.ChevronDownSmall {...args} />
-    <Icon.UpSmall {...args} />
-    <Icon.CloseSmall {...args} />
-    <Icon.EditSmall {...args} />
-
-    <Icon.MinimizeSmall {...args} />
-    <Icon.Stretch {...args} />
-    <Icon.Shrink {...args} />
-    <Icon.ChevronLeft {...args} />
-    <Icon.ChevronRight {...args} />
+    <Icon.MoreVertical {...args} />
+    <Icon.StarEmpty {...args} />
+    <Icon.StarFull {...args} />
+    <Icon.Logout {...args} />
+    <Icon.Search {...args} />
+    <Icon.Link {...args} />
+    <Icon.Edit {...args} />
+    <Icon.External {...args} />
+    <Icon.Ok {...args} />
   </React.Fragment>
 );
 export const Default = Template.bind({});
 Default.args = {
-  height: '30px',
-  width: '30px',
+  height: '20px',
+  width: '20px',
   style: { margin: '10px' }
 };
 
 export const White = Template.bind({});
 White.args = {
-  height: '30px',
-  width: '30px',
+  height: '20px',
+  width: '20px',
   style: { margin: '10px' },
   color: 'white'
 };

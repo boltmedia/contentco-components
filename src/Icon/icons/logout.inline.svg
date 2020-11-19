@@ -1,15 +1,7 @@
-<svg height="30"
-  width="30"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 30 30">
-  <g fill="none"
-    fill-rule="evenodd">
-    <g fill="currentColor">
-      <path d="M19.435 11.401a.938.938 0 0 1 1.182-1.455l4.053 4.305a.937.937 0 0 1 .01 1.447l-4.053 4.432a.937.937 0 1 1-1.203-1.438l3.18-3.702z" />
-      <path d="M13.073 15.947h10.902v-1.875H13.073c-.441 0-.799.42-.799.937s.358.938.8.938z" />
-    </g>
-    <path d="M8 7.234v15.532l8-1.694V8.928z"
-      stroke="currentColor"
-      stroke-width="2" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15v3H1V2h10v3"/>
+    <path fill="currentColor" d="M14.707 4.293l4.95 4.95a1 1 0 010 1.414l-4.95 4.95a1 1 0 01-1.414-1.415L16.484 11H7a1 1 0 010-2h9.586l-3.293-3.293a1 1 0 111.414-1.414z"/>
   </g>
 </svg>

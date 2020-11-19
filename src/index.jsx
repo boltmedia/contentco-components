@@ -7,6 +7,7 @@ import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
 import Select from './Input/Select';
 import Card from './Card/Card';
+import Icon from './Icon/Icon';
 
 export {
   Logo,
@@ -17,5 +18,6 @@ export {
   TextInput,
   TextArea,
   Select,
-  Card
+  Card,
+  Icon
 };
