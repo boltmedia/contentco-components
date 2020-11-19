@@ -16,7 +16,7 @@ const Template = (args) => (
     <Icon.Play {...args} />
     <Icon.Stop {...args} />
 
-    <Icon.Xero {...args} width='64' />
+    <Icon.Xero {...args} />
     <Icon.Filter {...args} />
     <Icon.Split {...args} />
 
@@ -87,15 +87,11 @@ const Template = (args) => (
 );
 export const Default = Template.bind({});
 Default.args = {
-  height: '20px',
-  width: '20px',
   style: { margin: '10px' }
 };
 
 export const White = Template.bind({});
 White.args = {
-  height: '20px',
-  width: '20px',
   style: { margin: '10px' },
   color: 'white'
 };
