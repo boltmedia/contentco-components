@@ -23,7 +23,7 @@
     "dev": "rollup -c -w",
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006 --no-dll -s ./src -c .storybook",
-    "storybook:export": "build-storybook",
+    "storybook:export": "build-storybook -o docs-build",
     "predeploy": "cd example && yarn install && yarn run build",
     "generate": "node ./util/create-component",
     "deploy": "gh-pages -d example/build",
