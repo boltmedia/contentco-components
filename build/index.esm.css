@@ -567,23 +567,6 @@
   pointer-events: none;
   top: 0; }
 
-.inputGroup {
-  display: flex;
-  width: 100%; }
-  .inputGroup .inputGroup {
-    flex-basis: 50%;
-    margin-left: 10px; }
-  .inputGroup .inputContainer {
-    flex: 50%; }
-  .inputGroup .inputContainer ~ .inputContainer {
-    margin-left: 10px; }
-
-.inputContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px; }
-
 /* prettier-ignore */
 /* beautify ignore:start */
 .white {
@@ -606,6 +589,140 @@
 
 .hdLogo {
   width: 155px; }
+
+/* prettier-ignore */
+/* beautify ignore:start */
+.base {
+  font-family: "Cerebri Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+.display {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  color: #193278;
+  letter-spacing: -1px; }
+  @media only screen and (max-width: 599px) {
+    .display {
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      font-size: 30px; } }
+  @media only screen and (min-width: 600px) {
+    .display {
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      font-size: 40px; } }
+  @media only screen and (min-width: 1200px) {
+    .display {
+      font-size: 50px; } }
+
+.headline {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  color: #193278;
+  letter-spacing: -0.5px; }
+  @media only screen and (max-width: 599px) {
+    .headline {
+      font-size: 24px; } }
+  @media only screen and (min-width: 600px) {
+    .headline {
+      font-size: 35px; } }
+  @media only screen and (min-width: 1200px) {
+    .headline {
+      font-size: 40px; } }
+
+.subheadline {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: -0.3px;
+  color: #193278; }
+  @media only screen and (max-width: 599px) {
+    .subheadline {
+      font-size: 20px; } }
+  @media only screen and (min-width: 600px) {
+    .subheadline {
+      font-size: 23.994px; } }
+  @media only screen and (min-width: 1200px) {
+    .subheadline {
+      font-size: 27px; } }
+
+.intro {
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+  color: #193278; }
+  @media only screen and (max-width: 599px) {
+    .intro {
+      font-size: 18px; } }
+  @media only screen and (min-width: 600px) {
+    .intro {
+      font-size: 20px; } }
+  @media only screen and (min-width: 1200px) {
+    .intro {
+      font-size: 24px; } }
+
+.headingTwo {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 5px;
+  letter-spacing: -0.3px;
+  color: #193278; }
+  @media only screen and (max-width: 599px) {
+    .headingTwo {
+      font-size: 16px; } }
+  @media only screen and (min-width: 600px) {
+    .headingTwo {
+      font-size: 18; } }
+  @media only screen and (min-width: 1200px) {
+    .headingTwo {
+      font-size: 22px; } }
+
+.sectionBody {
+  font-size: 18px;
+  padding: 0 50px;
+  margin: 0; }
+  @media only screen and (max-width: 599px) {
+    .sectionBody {
+      font-size: 16px;
+      padding: 0; } }
+
+.body {
+  margin: 0;
+  color: #3f474f;
+  font-size: 18px; }
+  @media only screen and (max-width: 599px) {
+    .body {
+      font-size: 16px; } }
+
+.base.white {
+  color: #fff; }
+
+.paragraph {
+  margin-bottom: 20px; }
+
+.center {
+  text-align: center; }
+
+.whiteCenter {
+  color: #fff;
+  text-align: center; }
+
+.darkblueCenter {
+  color: #193278;
+  text-align: center; }
+
+.primary {
+  font-size: 18px;
+  line-height: 1.475; }
+
+.secondary {
+  font-size: 14px;
+  color: #3f474f;
+  hyphens: manual;
+  font-weight: 400;
+  line-height: 1.475; }
 
 /* prettier-ignore */
 /* beautify ignore:start */
@@ -656,3 +773,20 @@
 
 .flex {
   display: flex; }
+
+.inputGroup {
+  display: flex;
+  width: 100%; }
+  .inputGroup .inputGroup {
+    flex-basis: 50%;
+    margin-left: 10px; }
+  .inputGroup .inputContainer {
+    flex: 50%; }
+  .inputGroup .inputContainer ~ .inputContainer {
+    margin-left: 10px; }
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px; }
