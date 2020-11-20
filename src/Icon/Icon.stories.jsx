@@ -16,7 +16,7 @@ const Template = (args) => (
     <Icon.Play {...args} />
     <Icon.Stop {...args} />
 
-    <Icon.Xero {...args} width='64' />
+    <Icon.Xero {...args} style={{ ...args.style, width: '64px' }} />
     <Icon.Filter {...args} />
     <Icon.Split {...args} />
 
