@@ -9,6 +9,7 @@ import Select from './Input/Select';
 import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Toggle from './Toggle/Toggle';
+import Text from './Text/Text';
 import evergreenTheme from '.theme';
 
 export {
@@ -23,5 +24,6 @@ export {
   Card,
   Icon,
   Toggle,
+  Text,
   evergreenTheme
 };

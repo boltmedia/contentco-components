@@ -49,6 +49,7 @@ module.exports = {
         presets: [['@babel/preset-react', { flow: false }]]
       }
     });
+
     config.resolve.extensions.push('.js', '.jsx');
 
     return config;

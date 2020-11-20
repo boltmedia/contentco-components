@@ -1,0 +1,179 @@
+@import '../variables';
+
+// sizes
+
+.base {
+  font-family: $cerebri;
+}
+
+.display {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  // margin-bottom: 5px;
+  color: $darkblue;
+  letter-spacing: -1px;
+
+  @include for-size(phone-only) {
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    font-size: 30px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    font-size: 40px;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 50px;
+  }
+}
+
+.headline {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+  // margin-bottom: 5px;
+  color: $darkblue;
+  letter-spacing: -0.5px;
+
+  @include for-size(phone-only) {
+    font-size: 24px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 35px;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 40px;
+  }
+}
+
+.subheadline {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  // margin-bottom: 5px;
+  letter-spacing: -0.3px;
+  color: $darkblue;
+
+  @include for-size(phone-only) {
+    font-size: 20px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 23.994px;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 27px;
+  }
+}
+
+.intro {
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+  // margin-bottom: 5px;
+  color: $darkblue;
+
+  @include for-size(phone-only) {
+    font-size: 18px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 20px;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 24px;
+  }
+}
+
+.headingTwo {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 5px;
+  letter-spacing: -0.3px;
+  color: $darkblue;
+
+  @include for-size(phone-only) {
+    font-size: 16px;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 18;
+  }
+
+  @include for-size(desktop-up) {
+    font-size: 22px;
+  }
+}
+
+.sectionBody {
+  font-size: 18px;
+  padding: 0 50px;
+  margin: 0;
+  // margin-bottom: 5px;
+
+  @include for-size(phone-only) {
+    font-size: 16px;
+    padding: 0;
+  }
+}
+
+.body {
+  // line-height: 1.5;
+  margin: 0;
+  // margin-bottom: 5px;
+  color: $gray-80;
+  font-size: 18px;
+
+  @include for-size(phone-only) {
+    font-size: 16px;
+  }
+}
+
+// variations
+
+.base {
+  // for higher specificity
+  &.white {
+    color: $white;
+  }
+}
+
+.paragraph {
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.whiteCenter {
+  color: $white;
+  text-align: center;
+}
+
+.darkblueCenter {
+  color: $darkblue;
+  text-align: center;
+}
+
+.primary {
+  font-size: 18px;
+  line-height: 1.475;
+}
+
+.secondary {
+  font-size: 14px;
+  color: $gray-80;
+  hyphens: manual;
+  font-weight: 400;
+  line-height: 1.475;
+}
