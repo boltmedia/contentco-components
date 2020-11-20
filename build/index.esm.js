@@ -11,8 +11,7 @@ import Select from 'react-select';
 import AsyncSelect from 'react-select/async';
 import AsyncPaginate from 'react-select-async-paginate';
 import CreatableSelect from 'react-select/creatable';
-import { Switch } from 'evergreen-ui';
-export { default as evergreenTheme } from '.theme';
+import { Switch, defaultTheme } from 'evergreen-ui';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -1669,5 +1668,19 @@ Text$1.Size = {
   DISPLAY: Styles$6.display
 };
 
-export { Button, Card, Icon, InputContainer, InputGroup, Loader, Logo, SelectInput as Select, Text$1 as Text, TextArea, TextInput, Toggle };
+function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+var theme = _objectSpread$1(_objectSpread$1({}, defaultTheme), {}, {
+  typography: _objectSpread$1(_objectSpread$1({}, defaultTheme.typography), {}, {
+    fontFamilies: {
+      display: '"Cerebri Sans", "SF UI Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      mono: '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace"',
+      ui: '"Cerebri Sans", "SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+    }
+  })
+});
+
+export { Button, Card, Icon, InputContainer, InputGroup, Loader, Logo, SelectInput as Select, Text$1 as Text, TextArea, TextInput, Toggle, theme as evergreenTheme };
 //# sourceMappingURL=index.esm.js.map

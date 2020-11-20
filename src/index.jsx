@@ -10,7 +10,7 @@ import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Toggle from './Toggle/Toggle';
 import Text from './Text/Text';
-import evergreenTheme from '.theme';
+import evergreenTheme from './theme';
 
 export {
   Logo,

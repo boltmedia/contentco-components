@@ -16,7 +16,6 @@ var AsyncSelect = require('react-select/async');
 var AsyncPaginate = require('react-select-async-paginate');
 var CreatableSelect = require('react-select/creatable');
 var evergreenUi = require('evergreen-ui');
-var _theme = require('.theme');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -33,7 +32,6 @@ var Select__default = /*#__PURE__*/_interopDefaultLegacy(Select);
 var AsyncSelect__default = /*#__PURE__*/_interopDefaultLegacy(AsyncSelect);
 var AsyncPaginate__default = /*#__PURE__*/_interopDefaultLegacy(AsyncPaginate);
 var CreatableSelect__default = /*#__PURE__*/_interopDefaultLegacy(CreatableSelect);
-var _theme__default = /*#__PURE__*/_interopDefaultLegacy(_theme);
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -1690,12 +1688,20 @@ Text$1.Size = {
   DISPLAY: Styles$6.display
 };
 
-Object.defineProperty(exports, 'evergreenTheme', {
-  enumerable: true,
-  get: function () {
-    return _theme__default['default'];
-  }
+function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread$1(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(Object(source), true).forEach(function (key) { _defineProperty__default['default'](target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+var theme = _objectSpread$1(_objectSpread$1({}, evergreenUi.defaultTheme), {}, {
+  typography: _objectSpread$1(_objectSpread$1({}, evergreenUi.defaultTheme.typography), {}, {
+    fontFamilies: {
+      display: '"Cerebri Sans", "SF UI Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      mono: '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace"',
+      ui: '"Cerebri Sans", "SF UI Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+    }
+  })
 });
+
 exports.Button = Button;
 exports.Card = Card;
 exports.Icon = Icon;
@@ -1708,4 +1714,5 @@ exports.Text = Text$1;
 exports.TextArea = TextArea;
 exports.TextInput = TextInput;
 exports.Toggle = Toggle;
+exports.evergreenTheme = theme;
 //# sourceMappingURL=index.cjs.js.map
