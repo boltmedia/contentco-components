@@ -15,7 +15,7 @@ export default class Password extends React.Component {
       score: 0,
       isValid: null,
       value: props.value || '',
-      togglePassword: false,
+      togglePassword: false
     };
   }
 
@@ -63,7 +63,11 @@ export default class Password extends React.Component {
 
     // always sets a zero score when min length requirement is not met
     // which avoids unnecessary zxcvbn computations (they require quite lots of CPU)
-    if (this.props.showStrength && e.target.value && !this.isTooShort(e.target.value)) {
+    if (
+      this.props.showStrength &&
+      e.target.value &&
+      !this.isTooShort(e.target.value)
+    ) {
       result = zxcvbn(e.target.value);
       score = result.score;
       try {
@@ -79,7 +83,7 @@ export default class Password extends React.Component {
           error: error,
           value: e.target.value,
           isValid: score >= minScore,
-          score,
+          score
         },
         () => {
           if (onChange !== null) {
@@ -95,7 +99,7 @@ export default class Password extends React.Component {
         {
           error: this.props.error,
           value: e.target.value,
-          isValid: !this.state.error,
+          isValid: !this.state.error
         },
         () => {
           if (onChange !== null) {
@@ -121,16 +125,21 @@ export default class Password extends React.Component {
       Styles.isStrength1,
       Styles.isStrength2,
       Styles.isStrength3,
-      Styles.isStrength4,
+      Styles.isStrength4
     ];
 
     const toogleText = togglePassword ? 'hide' : 'show';
     const passwordType = togglePassword ? 'text' : 'password';
     return (
       <div
-        className={classNames(InputStyles.container, error && InputStyles.containerError, {
-          [strengthClasses[score]]: value.length > 0,
-        })}>
+        className={classNames(
+          InputStyles.container,
+          error && InputStyles.containerError,
+          {
+            [strengthClasses[score]]: value.length > 0
+          }
+        )}
+      >
         <input
           className={classNames(InputStyles.base, InputStyles.input)}
           name={this.props.name}
@@ -147,14 +156,23 @@ export default class Password extends React.Component {
         />
         <label
           htmlFor='password'
-          className={classNames(InputStyles.label, isValid === false && InputStyles.error)}>
+          className={classNames(
+            InputStyles.label,
+            isValid === false && InputStyles.error
+          )}
+        >
           {(isValid === false && error) || this.props.placeholder}
         </label>
         <span className={Styles.button} onClick={this.handleToggle}>
           {toogleText}
         </span>
         {this.props.showStrength && (
-          <div className={classNames(Styles.strength, value && Styles['score' + score])} />
+          <div
+            className={classNames(
+              Styles.strength,
+              value && Styles['score' + score]
+            )}
+          />
         )}
       </div>
     );
@@ -172,7 +190,7 @@ Password.propTypes = {
   placeholder: PropTypes.string,
   style: PropTypes.object,
   showStrength: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
 };
 
 Password.defaultProps = {
@@ -184,5 +202,5 @@ Password.defaultProps = {
   minLength: 5,
   autoFocus: true,
   placeholder: 'Password',
-  minScore: 2,
+  minScore: 2
 };

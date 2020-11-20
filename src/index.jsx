@@ -8,6 +8,7 @@ import TextArea from './Input/TextArea';
 import Select from './Input/Select';
 import Card from './Card/Card';
 import Icon from './Icon/Icon';
+import Toggle from './Toggle/Toggle';
 
 export {
   Logo,
@@ -19,5 +20,6 @@ export {
   TextArea,
   Select,
   Card,
-  Icon
+  Icon,
+  Toggle
 };

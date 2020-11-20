@@ -8,7 +8,9 @@ const Toggle = ({ defaultChecked, onChange, ...props }) => {
     setChecked(e.target.checked);
     onChange?.(e);
   };
-  return <Switch height={24} checked={checked} onChange={handleChange} {...props} />;
+  return (
+    <Switch height={24} checked={checked} onChange={handleChange} {...props} />
+  );
 };
 
 export default Toggle;
