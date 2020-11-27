@@ -10,6 +10,7 @@ import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Toggle from './Toggle/Toggle';
 import Text from './Text/Text';
+import SegmentedControl from './SegmentedControl/SegmentedControl';
 import evergreenTheme from './theme';
 
 export {
@@ -25,5 +26,6 @@ export {
   Icon,
   Toggle,
   Text,
-  evergreenTheme
+  evergreenTheme,
+  SegmentedControl
 };
