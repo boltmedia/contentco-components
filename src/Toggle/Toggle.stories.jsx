@@ -12,3 +12,8 @@ export const Default = Template.bind({});
 Default.args = {
   defaultChecked: true
 };
+
+export const False = Template.bind({});
+False.args = {
+  defaultChecked: false
+};
