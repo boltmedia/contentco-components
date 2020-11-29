@@ -43,6 +43,7 @@ const QuillEditor = (props) => {
         placeholder={props.placeholder}
         scrollingContainer='#scrollContainer'
         onChange={handleChange}
+        readOnly ={props.locked}
       />
       <label htmlFor={props.name} className={classNames(Styles.label, props.error && Styles.error)}>
         {props.error || props.label}

@@ -16,6 +16,5 @@ Default.args = {
   placeholder: 'Description',
   defaultValue: 'This is a sample default value',
   value: 'This is a sample value',
-  locked: false,
-  active: false
+  locked: false
 };
