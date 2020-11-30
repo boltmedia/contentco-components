@@ -6,7 +6,7 @@ import InputGroup from './Form/InputGroup';
 import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
 import Select from './Input/Select';
-import Quill from './Input/Quill';
+//import Quill from './Input/Quill';
 import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Toggle from './Toggle/Toggle';
@@ -29,5 +29,5 @@ export {
   Text,
   evergreenTheme,
   SegmentedControl,
-  Quill
+  //Quill
 };

@@ -1,20 +1,133 @@
-@import url(react-quill/dist/quill.bubble.css);
-.inputGroup {
-  display: flex;
-  width: 100%; }
-  .inputGroup .inputGroup {
-    flex-basis: 50%;
-    margin-left: 10px; }
-  .inputGroup .inputContainer {
-    flex: 50%; }
-  .inputGroup .inputContainer ~ .inputContainer {
-    margin-left: 10px; }
+/* prettier-ignore */
+/* beautify ignore:start */
+.white {
+  color: #fff; }
 
-.inputContainer {
+.black {
+  color: #212529; }
+
+.blue {
+  color: #1269db; }
+
+.darkblue {
+  color: #193278; }
+
+.darkgray {
+  color: #626e7a; }
+
+.logo {
+  width: 180px; }
+
+.hdLogo {
+  width: 155px; }
+
+/* prettier-ignore */
+/* beautify ignore:start */
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1; }
+  20% {
+    height: 0;
+    width: 25px;
+    opacity: 1; }
+  40% {
+    height: 50px;
+    width: 25px;
+    opacity: 1; }
+  100% {
+    height: 50px;
+    width: 25px;
+    opacity: 1; } }
+
+.loader {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px; }
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  width: 70.72px;
+  height: 70.72px; }
+  .loader.large {
+    width: 70.72px;
+    height: 70.72px; }
+  .loader.small {
+    width: 21.22px;
+    height: 21.22px; }
+  .loader .checkmark {
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+    height: 50px;
+    width: 25px;
+    transform-origin: left top;
+    border-right: 3px solid #5cb85c;
+    border-top: 3px solid #5cb85c;
+    left: 7px;
+    top: 35px;
+    position: absolute; }
+  .loader .error {
+    width: 50px;
+    height: 50px; }
+    .loader .error:before, .loader .error:after {
+      position: absolute;
+      content: ' ';
+      height: 50px;
+      width: 2px;
+      left: 34.35px;
+      background-color: #f00; }
+    .loader .error:before {
+      transform: rotate(45deg); }
+    .loader .error:after {
+      transform: rotate(-45deg); }
+  .loader .spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #8cc0f0;
+    border-radius: 50%;
+    border-top-color: #1269db;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite; }
+  .loader.large .spinner {
+    width: 50px;
+    height: 50px; }
+  .loader.small .spinner {
+    width: 15px;
+    height: 15px; }
+  .loader.white .spinner {
+    border: 3px solid #fff;
+    border-top-color: #8cc0f0; }
+  .loader.blue .spinner {
+    border: 3px solid #8cc0f0;
+    border-top-color: #1269db; }
+
+.full {
+  margin: auto;
+  width: 100%; }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  top: 0; }
 
 /* prettier-ignore */
 /* beautify ignore:start */
@@ -149,114 +262,6 @@
   width: 100%;
   margin: 6px 0px;
   height: 56px; }
-
-/* prettier-ignore */
-/* beautify ignore:start */
-@keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
-@keyframes checkmark {
-  0% {
-    height: 0;
-    width: 0;
-    opacity: 1; }
-  20% {
-    height: 0;
-    width: 25px;
-    opacity: 1; }
-  40% {
-    height: 50px;
-    width: 25px;
-    opacity: 1; }
-  100% {
-    height: 50px;
-    width: 25px;
-    opacity: 1; } }
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-  width: 70.72px;
-  height: 70.72px; }
-  .loader.large {
-    width: 70.72px;
-    height: 70.72px; }
-  .loader.small {
-    width: 21.22px;
-    height: 21.22px; }
-  .loader .checkmark {
-    animation-duration: 800ms;
-    animation-timing-function: ease;
-    animation-name: checkmark;
-    transform: scaleX(-1) rotate(135deg);
-    height: 50px;
-    width: 25px;
-    transform-origin: left top;
-    border-right: 3px solid #5cb85c;
-    border-top: 3px solid #5cb85c;
-    left: 7px;
-    top: 35px;
-    position: absolute; }
-  .loader .error {
-    width: 50px;
-    height: 50px; }
-    .loader .error:before, .loader .error:after {
-      position: absolute;
-      content: ' ';
-      height: 50px;
-      width: 2px;
-      left: 34.35px;
-      background-color: #f00; }
-    .loader .error:before {
-      transform: rotate(45deg); }
-    .loader .error:after {
-      transform: rotate(-45deg); }
-  .loader .spinner {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #8cc0f0;
-    border-radius: 50%;
-    border-top-color: #1269db;
-    animation: spin 1s ease-in-out infinite;
-    -webkit-animation: spin 1s ease-in-out infinite; }
-  .loader.large .spinner {
-    width: 50px;
-    height: 50px; }
-  .loader.small .spinner {
-    width: 15px;
-    height: 15px; }
-  .loader.white .spinner {
-    border: 3px solid #fff;
-    border-top-color: #8cc0f0; }
-  .loader.blue .spinner {
-    border: 3px solid #8cc0f0;
-    border-top-color: #1269db; }
-
-.full {
-  margin: auto;
-  width: 100%; }
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-  top: 0; }
 
 /* prettier-ignore */
 /* beautify ignore:start */
@@ -585,350 +590,23 @@
 .dualContainer.shrink :global .s-contact__value-container {
   padding-right: 10px !important; }
 
-/* prettier-ignore */
-/* beautify ignore:start */
-.white {
-  color: #fff; }
-
-.black {
-  color: #212529; }
-
-.blue {
-  color: #1269db; }
-
-.darkblue {
-  color: #193278; }
-
-.darkgray {
-  color: #626e7a; }
-
-.logo {
-  width: 180px; }
-
-.hdLogo {
-  width: 155px; }
-
-/* prettier-ignore */
-/* beautify ignore:start */
-.editor {
-  font-family: "Cerebri Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
-  .editor :global .ql-tooltip {
-    z-index: 200; }
-  .editor :global .ql-editor {
-    box-sizing: border-box;
-    cursor: text;
-    outline: none;
-    overflow-y: auto;
-    padding: 0;
-    tab-size: 4;
-    -moz-tab-size: 4;
-    text-align: left;
-    word-wrap: break-word; }
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .editor :global .ql-editor {
-        padding: 10px 15px; } }
-    .editor :global .ql-editor * {
-      font-family: "Cerebri Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-      word-break: break-word !important;
-      box-sizing: border-box;
-      max-width: 100%; }
-    .editor :global .ql-editor a {
-      color: #0751b3 !important;
-      word-break: break-all !important; }
-    .editor :global .ql-editor img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0 !important; }
-    .editor :global .ql-editor p,
-    .editor :global .ql-editor ol,
-    .editor :global .ql-editor ul,
-    .editor :global .ql-editor pre,
-    .editor :global .ql-editor blockquote,
-    .editor :global .ql-editor h1,
-    .editor :global .ql-editor h2,
-    .editor :global .ql-editor h3,
-    .editor :global .ql-editor h4,
-    .editor :global .ql-editor h5,
-    .editor :global .ql-editor h6 {
-      margin: 0;
-      padding: 0;
-      word-break: break-word;
-      counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
-    .editor :global .ql-editor ol,
-    .editor :global .ql-editor ul {
-      padding: 10px 0;
-      font-size: 16px; }
-      .editor :global .ql-editor ol:last-child,
-      .editor :global .ql-editor ul:last-child {
-        padding-bottom: 0; }
-    .editor :global .ql-editor ol > li {
-      list-style-type: none; }
-    .editor :global .ql-editor ul > li {
-      list-style-type: none; }
-      .editor :global .ql-editor ul > li::before {
-        content: '\2022'; }
-    .editor :global .ql-editor ul[data-checked='true'], .editor :global .ql-editor ul[data-checked='false'] {
-      pointer-events: none; }
-    .editor :global .ql-editor ul[data-checked='true'] > li *,
-    .editor :global .ql-editor ul[data-checked='false'] > li * {
-      pointer-events: all; }
-    .editor :global .ql-editor ul[data-checked='true'] > li::before,
-    .editor :global .ql-editor ul[data-checked='false'] > li::before {
-      color: #777;
-      cursor: pointer;
-      pointer-events: all; }
-    .editor :global .ql-editor ul[data-checked='true'] > li::before {
-      content: '\2611'; }
-    .editor :global .ql-editor ul[data-checked='false'] > li::before {
-      content: '\2610'; }
-    .editor :global .ql-editor li::before {
-      display: inline-block;
-      margin-right: 0.3em;
-      text-align: right;
-      white-space: nowrap;
-      width: 1.2em; }
-    .editor :global .ql-editor li:not(.ql-direction-rtl)::before {
-      margin-left: -1.5em; }
-    .editor :global .ql-editor ol li,
-    .editor :global .ql-editor ul li {
-      padding-left: 1.5em; }
-    .editor :global .ql-editor ol li {
-      counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
-      counter-increment: list-num; }
-      .editor :global .ql-editor ol li:before {
-        content: counter(list-num, decimal) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-1 {
-        counter-increment: list-1;
-        counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-1:before {
-          content: counter(list-1, lower-alpha) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-2 {
-        counter-increment: list-2;
-        counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-2:before {
-          content: counter(list-2, lower-roman) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-3 {
-        counter-increment: list-3;
-        counter-reset: list-4 list-5 list-6 list-7 list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-3:before {
-          content: counter(list-3, decimal) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-4 {
-        counter-increment: list-4;
-        counter-reset: list-5 list-6 list-7 list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-4:before {
-          content: counter(list-4, lower-alpha) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-5 {
-        counter-increment: list-5;
-        counter-reset: list-6 list-7 list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-5:before {
-          content: counter(list-5, lower-roman) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-6 {
-        counter-increment: list-6;
-        counter-reset: list-7 list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-6:before {
-          content: counter(list-6, decimal) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-7 {
-        counter-increment: list-7;
-        counter-reset: list-8 list-9; }
-        .editor :global .ql-editor ol li.ql-indent-7:before {
-          content: counter(list-7, lower-alpha) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-8 {
-        counter-increment: list-8;
-        counter-reset: list-9; }
-        .editor :global .ql-editor ol li.ql-indent-8:before {
-          content: counter(list-8, lower-roman) ". "; }
-      .editor :global .ql-editor ol li.ql-indent-9 {
-        counter-increment: list-9; }
-        .editor :global .ql-editor ol li.ql-indent-9:before {
-          content: counter(list-9, decimal) ". "; }
-    .editor :global .ql-editor .ql-indent-1:not(.ql-direction-rtl) {
-      padding-left: 3em; }
-    .editor :global .ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
-      padding-left: 4.5em; }
-    .editor :global .ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
-      padding-right: 3em; }
-    .editor :global .ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
-      padding-right: 4.5em; }
-    .editor :global .ql-editor .ql-indent-2:not(.ql-direction-rtl) {
-      padding-left: 6em; }
-    .editor :global .ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
-      padding-left: 7.5em; }
-    .editor :global .ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
-      padding-right: 6em; }
-    .editor :global .ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
-      padding-right: 7.5em; }
-    .editor :global .ql-editor .ql-indent-3:not(.ql-direction-rtl) {
-      padding-left: 9em; }
-    .editor :global .ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
-      padding-left: 10.5em; }
-    .editor :global .ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
-      padding-right: 9em; }
-    .editor :global .ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
-      padding-right: 10.5em; }
-    .editor :global .ql-editor .ql-indent-4:not(.ql-direction-rtl) {
-      padding-left: 12em; }
-    .editor :global .ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
-      padding-left: 13.5em; }
-    .editor :global .ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
-      padding-right: 12em; }
-    .editor :global .ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
-      padding-right: 13.5em; }
-    .editor :global .ql-editor .ql-indent-5:not(.ql-direction-rtl) {
-      padding-left: 15em; }
-    .editor :global .ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
-      padding-left: 16.5em; }
-    .editor :global .ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
-      padding-right: 15em; }
-    .editor :global .ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
-      padding-right: 16.5em; }
-    .editor :global .ql-editor .ql-indent-6:not(.ql-direction-rtl) {
-      padding-left: 18em; }
-    .editor :global .ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
-      padding-left: 19.5em; }
-    .editor :global .ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
-      padding-right: 18em; }
-    .editor :global .ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
-      padding-right: 19.5em; }
-    .editor :global .ql-editor .ql-indent-7:not(.ql-direction-rtl) {
-      padding-left: 21em; }
-    .editor :global .ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
-      padding-left: 22.5em; }
-    .editor :global .ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
-      padding-right: 21em; }
-    .editor :global .ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
-      padding-right: 22.5em; }
-    .editor :global .ql-editor .ql-indent-8:not(.ql-direction-rtl) {
-      padding-left: 24em; }
-    .editor :global .ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
-      padding-left: 25.5em; }
-    .editor :global .ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
-      padding-right: 24em; }
-    .editor :global .ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
-      padding-right: 25.5em; }
-    .editor :global .ql-editor .ql-indent-9:not(.ql-direction-rtl) {
-      padding-left: 27em; }
-    .editor :global .ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
-      padding-left: 28.5em; }
-    .editor :global .ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
-      padding-right: 27em; }
-    .editor :global .ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
-      padding-right: 28.5em; }
-    .editor :global .ql-editor .ql-video {
-      display: block;
-      max-width: 100%; }
-      .editor :global .ql-editor .ql-video.ql-align-center {
-        margin: 0 auto; }
-      .editor :global .ql-editor .ql-video.ql-align-right {
-        margin: 0 0 0 auto; }
-    .editor :global .ql-editor .ql-bg-black {
-      background-color: #000; }
-    .editor :global .ql-editor .ql-bg-red {
-      background-color: #e60000; }
-    .editor :global .ql-editor .ql-bg-orange {
-      background-color: #f90; }
-    .editor :global .ql-editor .ql-bg-yellow {
-      background-color: #ff0; }
-    .editor :global .ql-editor .ql-bg-green {
-      background-color: #008a00; }
-    .editor :global .ql-editor .ql-bg-blue {
-      background-color: #06c; }
-    .editor :global .ql-editor .ql-bg-purple {
-      background-color: #93f; }
-    .editor :global .ql-editor .ql-color-white {
-      color: #fff; }
-    .editor :global .ql-editor .ql-color-red {
-      color: #e60000; }
-    .editor :global .ql-editor .ql-color-orange {
-      color: #f90; }
-    .editor :global .ql-editor .ql-color-yellow {
-      color: #ff0; }
-    .editor :global .ql-editor .ql-color-green {
-      color: #008a00; }
-    .editor :global .ql-editor .ql-color-blue {
-      color: #06c; }
-    .editor :global .ql-editor .ql-color-purple {
-      color: #93f; }
-    .editor :global .ql-editor .ql-font-serif {
-      font-family: Georgia, Times New Roman, serif; }
-    .editor :global .ql-editor .ql-font-monospace {
-      font-family: Monaco, Courier New, monospace; }
-    .editor :global .ql-editor .ql-size-small {
-      font-size: 0.75em; }
-    .editor :global .ql-editor .ql-size-large {
-      font-size: 1.5em; }
-    .editor :global .ql-editor .ql-size-huge {
-      font-size: 2.5em; }
-    .editor :global .ql-editor .ql-direction-rtl {
-      direction: rtl;
-      text-align: inherit; }
-    .editor :global .ql-editor .ql-align-center {
-      text-align: center; }
-    .editor :global .ql-editor .ql-align-justify {
-      text-align: justify; }
-    .editor :global .ql-editor .ql-align-right {
-      text-align: right; }
-    .editor :global .ql-editor.ql-blank::before {
-      font-style: normal;
-      font-family: "Cerebri Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      line-height: 28px;
-      font-size: 16px;
-      color: #a1aab3;
-      content: attr(data-placeholder);
-      pointer-events: none;
-      left: 0; }
-
-/* prettier-ignore */
-/* beautify ignore:start */
-.container {
-  font-family: "Cerebri Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: #fff;
-  border: 1px solid #d8dfe6;
-  border-radius: 3px;
-  margin-bottom: 20px; }
-
-.header {
-  padding: 10px 20px;
+.inputGroup {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 20px;
-  font-weight: 600;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  min-height: 65px;
-  box-sizing: border-box; }
+  width: 100%; }
+  .inputGroup .inputGroup {
+    flex-basis: 50%;
+    margin-left: 10px; }
+  .inputGroup .inputContainer {
+    flex: 50%; }
+  .inputGroup .inputContainer ~ .inputContainer {
+    margin-left: 10px; }
 
-.note {
-  padding: 20px;
-  background-color: #d2e5f8;
-  font-size: 14px;
-  border-top: 1px solid #d8dfe6; }
-
-.item {
-  margin: 0;
-  padding: 20px;
-  border-top: 1px solid #edf0f3; }
-  .item.noPaddingLeft {
-    padding-left: 0; }
-  .item.noPadding {
-    padding: 0; }
-  .item.noBorder {
-    border: 0; }
-
-.footer {
-  border-top: 1px solid #d8dfe6;
+.inputContainer {
   display: flex;
-  padding: 15px 20px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px; }
-  .footer.right {
-    justify-content: flex-end; }
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px; }
 
-.flex {
-  display: flex; }
-
-/* prettier-ignore */
-/* beautify ignore:start */
 /* prettier-ignore */
 /* beautify ignore:start */
 .base {
@@ -1062,3 +740,56 @@
   hyphens: manual;
   font-weight: 400;
   line-height: 1.475; }
+
+/* prettier-ignore */
+/* beautify ignore:start */
+.container {
+  font-family: "Cerebri Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #fff;
+  border: 1px solid #d8dfe6;
+  border-radius: 3px;
+  margin-bottom: 20px; }
+
+.header {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: 600;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  min-height: 65px;
+  box-sizing: border-box; }
+
+.note {
+  padding: 20px;
+  background-color: #d2e5f8;
+  font-size: 14px;
+  border-top: 1px solid #d8dfe6; }
+
+.item {
+  margin: 0;
+  padding: 20px;
+  border-top: 1px solid #edf0f3; }
+  .item.noPaddingLeft {
+    padding-left: 0; }
+  .item.noPadding {
+    padding: 0; }
+  .item.noBorder {
+    border: 0; }
+
+.footer {
+  border-top: 1px solid #d8dfe6;
+  display: flex;
+  padding: 15px 20px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px; }
+  .footer.right {
+    justify-content: flex-end; }
+
+.flex {
+  display: flex; }
+
+/* prettier-ignore */
+/* beautify ignore:start */
