@@ -96,7 +96,10 @@ const SelectInput = ({
     : Select;
   const SelectComponent = props.isCreatable ? CreatableSelect : Select;
   return (
-    <div className={containerClass}>
+    <div
+      className={containerClass}
+      {...{ 'data-test-id': props['data-test-id'] }}
+    >
       <CustomSelect
         className={fieldClass}
         styles={customStyles}
@@ -122,7 +125,8 @@ const SelectInput = ({
 };
 
 SelectInput.propTypes = {
-  classNamePrefix: PropTypes.string
+  classNamePrefix: PropTypes.string,
+  'data-test-id': PropTypes.string
 };
 
 SelectInput.defaultProps = {
