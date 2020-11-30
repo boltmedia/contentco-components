@@ -39,6 +39,6 @@ module.exports = (api) => {
       '@babel/preset-react'
     ],
     ignore: ['node_modules/**'],
-    plugins: ['@babel/plugin-transform-runtime']
+    plugins: ['@babel/plugin-transform-runtime', 'transform-class-properties']
   };
 };

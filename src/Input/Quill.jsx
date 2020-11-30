@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import Styles from './Input.module.scss';
 import QuillStyles from './Quill.module.scss';
 import classNames from 'classnames';
-// import ReactQuill from 'react-quill';
-import ReactQuill from './QuillDynamic';
-// import ReactQuill from './QuillBase';
+//import ReactQuill from 'react-quill';
+//import ReactQuill from './QuillDynamic';
+import ReactQuill from './QuillBase';
+import 'react-quill/dist/quill.bubble.css'; // ES6
 
 const QuillEditor = (props) => {
   const fieldClassName = classNames(
@@ -36,11 +37,13 @@ const QuillEditor = (props) => {
         className={classNames(Styles.base, Styles.quill, QuillStyles.editor)}
         id={props.name}
         name={props.name}
-        defaultValue={props.value}
+        defaultValue={props.defaultValue}
+        value={props.value}
         theme='bubble'
         placeholder={props.placeholder}
         scrollingContainer='#scrollContainer'
         onChange={handleChange}
+        readOnly ={props.locked}
       />
       <label htmlFor={props.name} className={classNames(Styles.label, props.error && Styles.error)}>
         {props.error || props.label}
@@ -57,6 +60,7 @@ QuillEditor.props = {
   predicted: PropTypes.bool,
   required: PropTypes.bool,
   value: PropTypes.string,
+  defaultValue: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
