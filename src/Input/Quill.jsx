@@ -6,7 +6,6 @@ import classNames from 'classnames';
 //import ReactQuill from 'react-quill';
 //import ReactQuill from './QuillDynamic';
 import ReactQuill from './QuillBase';
-import 'react-quill/dist/quill.bubble.css'; // ES6
 
 const QuillEditor = (props) => {
   const fieldClassName = classNames(
