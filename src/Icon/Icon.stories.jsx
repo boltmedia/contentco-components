@@ -9,12 +9,13 @@ export default {
 
 const Template = (args) => (
   <React.Fragment>
-    <h3>Icons To Add</h3>
+    <h3>General</h3>
     <Icon.Drag {...args} />
     <Icon.Refresh {...args} />
     <Icon.Preview {...args} />
     <Icon.Play {...args} />
     <Icon.Stop {...args} />
+    <Icon.Download {...args} />
 
     <Icon.Xero {...args} style={{ ...args.style, width: '64px' }} />
     <Icon.Filter {...args} />

@@ -487,9 +487,11 @@ var SelectInput = function SelectInput(_ref) {
 
   var CustomSelect = props.isPaginated ? AsyncPaginate__default['default'] : props.isAsync ? AsyncSelect__default['default'] : Select__default['default'];
   var SelectComponent = props.isCreatable ? CreatableSelect__default['default'] : Select__default['default'];
-  return /*#__PURE__*/React__default['default'].createElement("div", {
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
     className: containerClass
-  }, /*#__PURE__*/React__default['default'].createElement(CustomSelect, _extends__default['default']({
+  }, {
+    'data-test-id': props['data-test-id']
+  }), /*#__PURE__*/React__default['default'].createElement(CustomSelect, _extends__default['default']({
     className: fieldClass,
     styles: customStyles,
     name: name,

@@ -467,9 +467,11 @@ var SelectInput = function SelectInput(_ref) {
 
   var CustomSelect = props.isPaginated ? AsyncPaginate : props.isAsync ? AsyncSelect : Select;
   var SelectComponent = props.isCreatable ? CreatableSelect : Select;
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", _extends$Z({
     className: containerClass
-  }, /*#__PURE__*/React.createElement(CustomSelect, _extends$Z({
+  }, {
+    'data-test-id': props['data-test-id']
+  }), /*#__PURE__*/React.createElement(CustomSelect, _extends$Z({
     className: fieldClass,
     styles: customStyles,
     name: name,
@@ -499,6 +501,7 @@ SelectInput.propTypes = {
   classNamePrefix: PropTypes.string,
   isMultiLevel: PropTypes.bool,
   getOptionChildren: PropTypes.func
+  'data-test-id': PropTypes.string
 };
 SelectInput.defaultProps = {
   menuPlacement: 'auto',
