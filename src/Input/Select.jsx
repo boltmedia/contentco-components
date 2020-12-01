@@ -8,11 +8,10 @@ import AsyncPaginate from 'react-select-async-paginate';
 import CreatableSelect from 'react-select/creatable';
 
 
-const ExpandIcon = () => <span className={Styles.iconExpand} />
-const CollapseIcon = () => <span className={Styles.iconCollapse} />
+const RightArrow = () => <span className={Styles.rightArrow} />
+const DownArrow = () => <span className={Styles.downArrow} />
 
 const Option = (props) => {
-  console.log(props)
   const { data, getStyles, innerRef, innerProps, indentBy = 0, selectOption, selectProps } = props;
   const [isExpanded, setIsExpanded] = useState(false);
   const newInnerProps = { ...innerProps,  onClick: () => selectOption(data)};
@@ -23,7 +22,7 @@ const Option = (props) => {
         <div className={Styles.actions}>
           {props.data?.children?.length > 0 && (
             <button className={Styles.action} onClick={() => setIsExpanded(!isExpanded)}>
-              {isExpanded ? < CollapseIcon /> : <ExpandIcon />}
+              {isExpanded ? <RightArrow /> : <DownArrow />}
             </button>
           )}
         </div>

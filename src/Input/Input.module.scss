@@ -542,7 +542,7 @@ $labelTopColor: $blue-badge;
   cursor: pointer;
 }
 
-.iconExpand {
+.rightArrow {
   &:before {
     border: 5px solid transparent;
     border-top-color: #A1AAB3;
@@ -556,7 +556,7 @@ $labelTopColor: $blue-badge;
   }
 }
 
-.iconCollapse {
+.downArrow {
   &:before {
     border: 5px solid transparent;
     border-left-color: #A1AAB3;

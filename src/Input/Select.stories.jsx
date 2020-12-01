@@ -376,6 +376,7 @@ MultiLevel.args = {
   options: MultiLevelData,
   isMultiLevel: true,
   isMulti: true,
+  hideSelectedOptions: false
   //getOptionChildren: ({ children }) => children
 };
 
