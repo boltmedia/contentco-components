@@ -7,6 +7,44 @@ import AsyncSelect from 'react-select/async';
 import AsyncPaginate from 'react-select-async-paginate';
 import CreatableSelect from 'react-select/creatable';
 
+
+const ExpandIcon = () => <span className={Styles.iconExpand} />
+const CollapseIcon = () => <span className={Styles.iconCollapse} />
+
+const Option = (props) => {
+  console.log(props)
+  const { data, getStyles, innerRef, innerProps, indentBy = 0, selectOption, selectProps } = props;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const newInnerProps = { ...innerProps,  onClick: () => selectOption(data)};
+  const children = (data && selectProps?.getOptionChildren?.(data)) || data?.children || [];
+  return (
+    <React.Fragment>
+      <div className={Styles.multiLevelOption}>
+        <div className={Styles.actions}>
+          {props.data?.children?.length > 0 && (
+            <button className={Styles.action} onClick={() => setIsExpanded(!isExpanded)}>
+              {isExpanded ? < CollapseIcon /> : <ExpandIcon />}
+            </button>
+          )}
+        </div>
+        <div
+          {...newInnerProps}
+          style={{ marginLeft: `${20 * indentBy}px`}}
+          className={Styles.optionItem}>
+          {selectProps?.getOptionLabel?.(data)}
+        </div>
+      </div>
+      {isExpanded && children?.length > 0 ? (
+        children?.map((v, idx) => (
+          <Option key={idx} {...props} data={v} indentBy={indentBy + 1} />
+        ))
+      ) : (
+        null
+      )}
+    </React.Fragment>
+  );
+}
+
 const customStyles = {
   option: (provided, state) => ({
     ...provided
@@ -112,6 +150,7 @@ const SelectInput = ({
         classNamePrefix={classNamePrefix}
         closeMenuOnSelect={!props.isMulti}
         {...props}
+        {...(props.isMultiLevel && { components: { ...props.components, Option } })}
       />
 
       <label htmlFor={name} className={labelClass}>
@@ -122,14 +161,16 @@ const SelectInput = ({
 };
 
 SelectInput.propTypes = {
-  classNamePrefix: PropTypes.string
+  classNamePrefix: PropTypes.string,
+  isMultiLevel: PropTypes.bool,
+  getOptionChildren: PropTypes.func
 };
 
 SelectInput.defaultProps = {
   menuPlacement: 'auto',
   classNamePrefix: 's-contact',
   isAsync: false,
-  isPaginated: false
+  isPaginated: false,
 };
 
 export default SelectInput;
