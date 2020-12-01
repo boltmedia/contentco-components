@@ -1,4 +1,4 @@
-import _extends$Z from '@babel/runtime/helpers/extends';
+import _extends$_ from '@babel/runtime/helpers/extends';
 import _objectWithoutProperties from '@babel/runtime/helpers/objectWithoutProperties';
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
@@ -79,7 +79,7 @@ var Logo = function Logo(_ref) {
 
   var Component = site === '2' ? HireDigital : ContentCo;
   var logoSize = site === '2' ? Styles.hdLogo : Styles.logo;
-  return /*#__PURE__*/React.createElement(Component, _extends$Z({
+  return /*#__PURE__*/React.createElement(Component, _extends$_({
     className: classNames(logoSize, className, type)
   }, props));
 };
@@ -109,7 +109,7 @@ var Loader = function Loader(_ref) {
       isCompleted = _ref.isCompleted,
       props = _objectWithoutProperties(_ref, ["className", "size", "color", "type", "isError", "isCompleted"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$1.loader, className, size, color, type)
   }, props), !isError && !isCompleted && /*#__PURE__*/React.createElement("div", {
     className: Styles$1.spinner
@@ -177,7 +177,7 @@ var Button = function Button(_ref) {
   var isLight = lightTypes.filter(function (l) {
     return l === type;
   });
-  return /*#__PURE__*/React.createElement(Elem, _extends$Z({
+  return /*#__PURE__*/React.createElement(Elem, _extends$_({
     type: "button",
     className: classNames(Styles$2.btn, className, type, size),
     disabled: disabled
@@ -220,7 +220,7 @@ var InputContainer = function InputContainer(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$3.inputContainer, className)
   }, props), children);
 };
@@ -230,7 +230,7 @@ var InputGroup = function InputGroup(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$3.inputGroup, className)
   }, props), children);
 };
@@ -254,7 +254,7 @@ var TextInput = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var Elem = mask ? InputMask : 'input';
   return /*#__PURE__*/React.createElement("div", {
     className: classNames(Styles$4.container, disabled && Styles$4.disabled, error && Styles$4.containerError, className)
-  }, /*#__PURE__*/React.createElement(Elem, _extends$Z({
+  }, /*#__PURE__*/React.createElement(Elem, _extends$_({
     ref: ref,
     className: classNames(Styles$4.base, Styles$4.input),
     id: id,
@@ -299,7 +299,7 @@ var TextArea = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
 
   return /*#__PURE__*/React.createElement("div", {
     className: classNames(Styles$4.container, props.className, disabled && Styles$4.disabled)
-  }, /*#__PURE__*/React.createElement(TextareaAutosize, _extends$Z({
+  }, /*#__PURE__*/React.createElement(TextareaAutosize, _extends$_({
     ref: ref,
     className: classNames(Styles$4.base, Styles$4.textArea),
     id: name,
@@ -371,13 +371,13 @@ var Option = function Option(props) {
     onClick: function onClick() {
       return setIsExpanded(!isExpanded);
     }
-  }, isExpanded ? /*#__PURE__*/React.createElement(RightArrow, null) : /*#__PURE__*/React.createElement(DownArrow, null))), /*#__PURE__*/React.createElement("div", _extends$Z({}, newInnerProps, {
+  }, isExpanded ? /*#__PURE__*/React.createElement(RightArrow, null) : /*#__PURE__*/React.createElement(DownArrow, null))), /*#__PURE__*/React.createElement("div", _extends$_({}, newInnerProps, {
     style: {
       marginLeft: "".concat(20 * indentBy, "px")
     },
     className: Styles$4.optionItem
   }), selectProps === null || selectProps === void 0 ? void 0 : (_selectProps$getOptio2 = selectProps.getOptionLabel) === null || _selectProps$getOptio2 === void 0 ? void 0 : _selectProps$getOptio2.call(selectProps, data))), isExpanded && (children === null || children === void 0 ? void 0 : children.length) > 0 ? children === null || children === void 0 ? void 0 : children.map(function (v, idx) {
-    return /*#__PURE__*/React.createElement(Option, _extends$Z({
+    return /*#__PURE__*/React.createElement(Option, _extends$_({
       key: idx
     }, props, {
       data: v,
@@ -467,11 +467,11 @@ var SelectInput = function SelectInput(_ref) {
 
   var CustomSelect = props.isPaginated ? AsyncPaginate : props.isAsync ? AsyncSelect : Select;
   var SelectComponent = props.isCreatable ? CreatableSelect : Select;
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: containerClass
   }, {
     'data-test-id': props['data-test-id']
-  }), /*#__PURE__*/React.createElement(CustomSelect, _extends$Z({
+  }), /*#__PURE__*/React.createElement(CustomSelect, _extends$_({
     className: fieldClass,
     styles: customStyles,
     name: name,
@@ -499,9 +499,9 @@ var SelectInput = function SelectInput(_ref) {
 
 SelectInput.propTypes = {
   classNamePrefix: PropTypes.string,
+  'data-test-id': PropTypes.string,
   isMultiLevel: PropTypes.bool,
   getOptionChildren: PropTypes.func
-  'data-test-id': PropTypes.string
 };
 SelectInput.defaultProps = {
   menuPlacement: 'auto',
@@ -520,7 +520,7 @@ var CardHeader = function CardHeader(_ref) {
       title = _ref.title,
       props = _objectWithoutProperties(_ref, ["className", "children", "title"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$5.header, className)
   }, props), children || title && /*#__PURE__*/React.createElement("span", null, title));
 };
@@ -536,7 +536,7 @@ var Note = function Note(_ref) {
       className = _ref.className,
       props = _objectWithoutProperties(_ref, ["children", "className"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$5.note, className)
   }, props), children);
 };
@@ -552,7 +552,7 @@ var CardHeader$1 = function CardHeader(_ref) {
       right = _ref.right,
       props = _objectWithoutProperties(_ref, ["className", "children", "right"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$5.footer, right && Styles$5.right, className)
   }, props), children);
 };
@@ -572,7 +572,7 @@ var CardItem = function CardItem(_ref) {
       flex = _ref.flex,
       props = _objectWithoutProperties(_ref, ["className", "children", "noPadding", "noBorder", "noPaddingLeft", "flex"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$5.item, _defineProperty({}, Styles$5.flex, flex), _defineProperty({}, Styles$5.noPadding, noPadding), _defineProperty({}, Styles$5.noPaddingLeft, noPaddingLeft), _defineProperty({}, Styles$5.noBorder, noBorder), className)
   }, props), children);
 };
@@ -587,7 +587,7 @@ var Card = function Card(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$Z({
+  return /*#__PURE__*/React.createElement("div", _extends$_({
     className: classNames(Styles$5.container, className)
   }, props), children);
 };
@@ -1194,10 +1194,31 @@ var Down = (({
 })));
 
 function _extends$C() { _extends$C = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$C.apply(this, arguments); }
-var Company = (({
+var Download = (({
   styles = {},
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$C({
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 20 20"
+}, props), /*#__PURE__*/React.createElement("g", {
+  fill: "none",
+  fillRule: "evenodd"
+}, /*#__PURE__*/React.createElement("path", {
+  d: "M15.705 9.739l-4.992 4.967a1.012 1.012 0 01-1.426 0L4.295 9.74a1 1 0 010-1.42 1.012 1.012 0 011.426 0l3.22 3.203V2.004C8.94 1.449 9.392 1 9.949 1c.557 0 1.009.45 1.009 1.004v9.62l3.32-3.305a1.012 1.012 0 011.427 0 1 1 0 010 1.42z",
+  fill: "currentColor"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M2 13v3a2 2 0 002 2h12a2 2 0 002-2v-3h0",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round"
+}))));
+
+function _extends$D() { _extends$D = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$D.apply(this, arguments); }
+var Company = (({
+  styles = {},
+  ...props
+}) => /*#__PURE__*/React.createElement("svg", _extends$D({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1219,11 +1240,11 @@ var Company = (({
   d: "M15 13h2v2h-2z"
 }))));
 
-function _extends$D() { _extends$D = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$D.apply(this, arguments); }
+function _extends$E() { _extends$E = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$E.apply(this, arguments); }
 var Dashboard = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$D({
+}) => /*#__PURE__*/React.createElement("svg", _extends$E({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1234,11 +1255,11 @@ var Dashboard = (({
   fillRule: "evenodd"
 })));
 
-function _extends$E() { _extends$E = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$E.apply(this, arguments); }
+function _extends$F() { _extends$F = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$F.apply(this, arguments); }
 var Guide = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$E({
+}) => /*#__PURE__*/React.createElement("svg", _extends$F({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1254,11 +1275,11 @@ var Guide = (({
   d: "M13 19l-6-2.55L1 19V3.527l6-2.55 6 2.55 6-2.55V16.45z"
 }))));
 
-function _extends$F() { _extends$F = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$F.apply(this, arguments); }
+function _extends$G() { _extends$G = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$G.apply(this, arguments); }
 var Reference = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$F({
+}) => /*#__PURE__*/React.createElement("svg", _extends$G({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1273,11 +1294,11 @@ var Reference = (({
   strokeWidth: "2"
 }))));
 
-function _extends$G() { _extends$G = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$G.apply(this, arguments); }
+function _extends$H() { _extends$H = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$H.apply(this, arguments); }
 var Caret = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$G({
+}) => /*#__PURE__*/React.createElement("svg", _extends$H({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1285,11 +1306,11 @@ var Caret = (({
   fill: "currentColor"
 })));
 
-function _extends$H() { _extends$H = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$H.apply(this, arguments); }
+function _extends$I() { _extends$I = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$I.apply(this, arguments); }
 var Link = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$H({
+}) => /*#__PURE__*/React.createElement("svg", _extends$I({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1304,11 +1325,11 @@ var Link = (({
   d: "M12.728 5.657l1.414 1.414-7.071 7.071-1.414-1.414z"
 }))));
 
-function _extends$I() { _extends$I = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$I.apply(this, arguments); }
+function _extends$J() { _extends$J = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$J.apply(this, arguments); }
 var Pencil = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$I({
+}) => /*#__PURE__*/React.createElement("svg", _extends$J({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1323,11 +1344,11 @@ var Pencil = (({
   d: "M3.636 12.121l4.243 4.243-1.414 1.414-4.243-4.242z"
 }))));
 
-function _extends$J() { _extends$J = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$J.apply(this, arguments); }
+function _extends$K() { _extends$K = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$K.apply(this, arguments); }
 var Picture = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$J({
+}) => /*#__PURE__*/React.createElement("svg", _extends$K({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1342,20 +1363,8 @@ var Picture = (({
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z"
 }))));
 
-function _extends$K() { _extends$K = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$K.apply(this, arguments); }
-var StarEmpty = (({
-  styles = {},
-  ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$K({
-  xmlns: "http://www.w3.org/2000/svg",
-  viewBox: "0 0 20 20"
-}, props), /*#__PURE__*/React.createElement("path", {
-  fill: "currentColor",
-  d: "M10 14.632l.614.323 4.288 2.254-.936-5.458.497-.485 3.468-3.381-5.48-.797L10 2.122 7.55 7.088l-.687.1-4.794.697 3.965 3.865-.117.684-.819 4.775L10 14.632zm-6.597 2.702l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
-})));
-
 function _extends$L() { _extends$L = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$L.apply(this, arguments); }
-var StarFull = (({
+var StarEmpty = (({
   styles = {},
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$L({
@@ -1363,14 +1372,26 @@ var StarFull = (({
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
   fill: "currentColor",
-  d: "M3.403 17.334l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
+  d: "M10 14.632l.614.323 4.288 2.254-.936-5.458.497-.485 3.468-3.381-5.48-.797L10 2.122 7.55 7.088l-.687.1-4.794.697 3.965 3.865-.117.684-.819 4.775L10 14.632zm-6.597 2.702l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
 })));
 
 function _extends$M() { _extends$M = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$M.apply(this, arguments); }
-var External = (({
+var StarFull = (({
   styles = {},
   ...props
 }) => /*#__PURE__*/React.createElement("svg", _extends$M({
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 20 20"
+}, props), /*#__PURE__*/React.createElement("path", {
+  fill: "currentColor",
+  d: "M3.403 17.334l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
+})));
+
+function _extends$N() { _extends$N = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$N.apply(this, arguments); }
+var External = (({
+  styles = {},
+  ...props
+}) => /*#__PURE__*/React.createElement("svg", _extends$N({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1390,11 +1411,11 @@ var External = (({
   strokeLinejoin: "round"
 }))));
 
-function _extends$N() { _extends$N = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$N.apply(this, arguments); }
+function _extends$O() { _extends$O = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$O.apply(this, arguments); }
 var Activity = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$N({
+}) => /*#__PURE__*/React.createElement("svg", _extends$O({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1402,11 +1423,11 @@ var Activity = (({
   fill: "currentColor"
 })));
 
-function _extends$O() { _extends$O = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$O.apply(this, arguments); }
+function _extends$P() { _extends$P = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$P.apply(this, arguments); }
 var Notification = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$O({
+}) => /*#__PURE__*/React.createElement("svg", _extends$P({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1422,11 +1443,11 @@ var Notification = (({
   d: "M12 18a2 2 0 11-4 0h4z"
 }))));
 
-function _extends$P() { _extends$P = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$P.apply(this, arguments); }
+function _extends$Q() { _extends$Q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Q.apply(this, arguments); }
 var Ok = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$P({
+}) => /*#__PURE__*/React.createElement("svg", _extends$Q({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1437,11 +1458,11 @@ var Ok = (({
   strokeLinecap: "round"
 })));
 
-function _extends$Q() { _extends$Q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Q.apply(this, arguments); }
+function _extends$R() { _extends$R = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$R.apply(this, arguments); }
 var Phone = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$Q({
+}) => /*#__PURE__*/React.createElement("svg", _extends$R({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1449,11 +1470,11 @@ var Phone = (({
   fill: "currentColor"
 })));
 
-function _extends$R() { _extends$R = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$R.apply(this, arguments); }
+function _extends$S() { _extends$S = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$S.apply(this, arguments); }
 var Email = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$R({
+}) => /*#__PURE__*/React.createElement("svg", _extends$S({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1461,11 +1482,11 @@ var Email = (({
   fill: "currentColor"
 })));
 
-function _extends$S() { _extends$S = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$S.apply(this, arguments); }
+function _extends$T() { _extends$T = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$T.apply(this, arguments); }
 var Add = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$S({
+}) => /*#__PURE__*/React.createElement("svg", _extends$T({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1478,11 +1499,11 @@ var Add = (({
   strokeLinejoin: "round"
 })));
 
-function _extends$T() { _extends$T = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$T.apply(this, arguments); }
+function _extends$U() { _extends$U = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$U.apply(this, arguments); }
 var More = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$T({
+}) => /*#__PURE__*/React.createElement("svg", _extends$U({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 10"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1501,11 +1522,11 @@ var More = (({
   r: "1.5"
 }))));
 
-function _extends$U() { _extends$U = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$U.apply(this, arguments); }
+function _extends$V() { _extends$V = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$V.apply(this, arguments); }
 var MoreVertical = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$U({
+}) => /*#__PURE__*/React.createElement("svg", _extends$V({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 10 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1527,11 +1548,11 @@ var MoreVertical = (({
   r: "1.5"
 }))));
 
-function _extends$V() { _extends$V = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$V.apply(this, arguments); }
+function _extends$W() { _extends$W = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$W.apply(this, arguments); }
 var Settings = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$V({
+}) => /*#__PURE__*/React.createElement("svg", _extends$W({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1541,11 +1562,11 @@ var Settings = (({
   fill: "none"
 })));
 
-function _extends$W() { _extends$W = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$W.apply(this, arguments); }
+function _extends$X() { _extends$X = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$X.apply(this, arguments); }
 var Question = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$W({
+}) => /*#__PURE__*/React.createElement("svg", _extends$X({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("path", {
@@ -1553,11 +1574,11 @@ var Question = (({
   fill: "currentColor"
 })));
 
-function _extends$X() { _extends$X = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$X.apply(this, arguments); }
+function _extends$Y() { _extends$Y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Y.apply(this, arguments); }
 var Text = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$X({
+}) => /*#__PURE__*/React.createElement("svg", _extends$Y({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1570,11 +1591,11 @@ var Text = (({
   fillRule: "nonzero"
 }))));
 
-function _extends$Y() { _extends$Y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Y.apply(this, arguments); }
+function _extends$Z() { _extends$Z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Z.apply(this, arguments); }
 var Logout = (({
   styles = {},
   ...props
-}) => /*#__PURE__*/React.createElement("svg", _extends$Y({
+}) => /*#__PURE__*/React.createElement("svg", _extends$Z({
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 20 20"
 }, props), /*#__PURE__*/React.createElement("g", {
@@ -1621,6 +1642,7 @@ Icon.Assessment = Assessment;
 Icon.Talent = Talent;
 Icon.Profile = Profile;
 Icon.ChatUsers = ChatUsers;
+Icon.Download = Download;
 Icon.Down = Down;
 Icon.Company = Company;
 Icon.Dashboard = Dashboard;
@@ -1673,7 +1695,7 @@ var Toggle = function Toggle(_ref) {
     onChange === null || onChange === void 0 ? void 0 : onChange(e);
   };
 
-  return /*#__PURE__*/React.createElement(Switch, _extends$Z({
+  return /*#__PURE__*/React.createElement(Switch, _extends$_({
     height: 24,
     checked: checked,
     onChange: handleChange
@@ -1693,7 +1715,7 @@ var Text$1 = function Text(_ref) {
       className = _ref.className,
       restProps = _objectWithoutProperties(_ref, ["element", "children", "size", "color", "type", "className"]);
 
-  return /*#__PURE__*/React.createElement(Elem, _extends$Z({
+  return /*#__PURE__*/React.createElement(Elem, _extends$_({
     className: classNames(Styles$6.base, size, type, color, className)
   }, restProps), children);
 };
@@ -1746,7 +1768,7 @@ var Segment = function Segment(_ref) {
   var className = _ref.className,
       props = _objectWithoutProperties(_ref, ["className"]);
 
-  return /*#__PURE__*/React.createElement(SegmentedControl, _extends$Z({}, props, {
+  return /*#__PURE__*/React.createElement(SegmentedControl, _extends$_({}, props, {
     className: classNames(Styles$7.segment, className)
   }));
 };
