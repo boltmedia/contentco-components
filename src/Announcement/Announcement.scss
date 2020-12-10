@@ -1,0 +1,60 @@
+@import '../variables';
+
+.container {
+  background: $blue-5;
+  display: flex;
+  color: $gray-80;
+  padding: 10px 20px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  line-height: 1.5;
+
+  @include for-size(phone-only) {
+    margin-right: 20px;
+  }
+
+  .content {
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  a {
+    color: $blue-100;
+    text-decoration: none;
+    border-bottom: 1px solid $blue-100;
+    &:hover {
+      color: $blue-alt;
+      border-bottom: 1px solid $blue-alt;
+    }
+  }
+}
+
+.close {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @include for-size(phone-only) {
+    font-size: 20px;
+  }
+}
+
+.closeButton {
+  padding: 8px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  &:hover {
+    background: $gray-60;
+    color: $white;
+  }
+}
