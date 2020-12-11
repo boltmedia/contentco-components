@@ -11,6 +11,7 @@ import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Toggle from './Toggle/Toggle';
 import Text from './Text/Text';
+import Action from './Action/Action';
 import SegmentedControl from './SegmentedControl/SegmentedControl';
 import evergreenTheme from './theme';
 
@@ -29,5 +30,6 @@ export {
   Text,
   evergreenTheme,
   SegmentedControl,
+  Action
   //Quill
 };
