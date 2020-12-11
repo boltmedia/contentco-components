@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import convert from 'htmr';
 import Cookies from 'universal-cookie';
 import Styles from './Announcement.module.scss';
 import { messages } from './data';
@@ -32,7 +31,10 @@ function Announcement({ className, ...props }) {
     (message && (
       <div className={classNames(Styles.container, className)}>
         <div className={Styles.text}>
-          <p className={Styles.content}>{convert(message.message)}</p>
+          <p
+            className={Styles.content}
+            dangerouslySetInnerHTML={{ __html: message.message }}
+          />
         </div>
         <div className={Styles.close}>
           <span
