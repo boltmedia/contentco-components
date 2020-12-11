@@ -6,6 +6,7 @@ export default {
   title: 'Announcement'
 };
 
-export const WithBar = () => <Announcement foo='bar' />;
+const Template = (args) => <Announcement {...args} />;
 
-export const WithBaz = () => <Announcement foo='baz' />;
+export const Default = Template.bind({});
+Default.args = {};
