@@ -33,7 +33,15 @@ module.exports = (api) => {
       [
         '@babel/preset-env',
         {
-          modules: false
+          targets: {
+            browsers: '> 0.5%, ie >= 11'
+          },
+          modules: false,
+          useBuiltIns: 'usage',
+          corejs: {
+            version: 3,
+            proposals: false
+          }
         }
       ],
       '@babel/preset-react'
