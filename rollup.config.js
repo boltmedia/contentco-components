@@ -5,9 +5,8 @@ import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import clear from 'rollup-plugin-clear';
-import reactSvg from 'rollup-plugin-react-svg';
 import external from 'rollup-plugin-peer-deps-external';
-
+import svgr from '@svgr/rollup';
 import scss from 'rollup-plugin-scss';
 
 const packageJson = require('./package.json');
@@ -17,17 +16,17 @@ export default {
     {
       file: packageJson.module,
       format: 'esm',
-      sourcemap: true
+      sourcemap: false
     },
     {
       file: packageJson.main,
       format: 'cjs',
-      sourcemap: true
+      sourcemap: false
     }
   ],
   plugins: [
     scss(),
-    reactSvg(),
+    svgr(),
     external({ includeDependencies: true }),
     postcss({
       // extract: true,
