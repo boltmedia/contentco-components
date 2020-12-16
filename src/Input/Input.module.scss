@@ -33,6 +33,11 @@ $labelTopColor: $blue-badge;
   transition: 0.1s all ease-in-out;
   margin-bottom: 0;
   cursor: text;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 0); // workaround to fix overlapping ellipsis
+  right: 10px;
 
   &.error {
     color: $strongred;
