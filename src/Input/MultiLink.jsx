@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Styles from './Input.module.scss';
 import classNames from 'classnames';
 import { authRequest } from '../../../shared/apis/utils';
-import { Button, Loader } from 'contentco-components';
+import Button from '../Button/Button';
 
 class MultiLink extends React.Component {
   constructor(props) {

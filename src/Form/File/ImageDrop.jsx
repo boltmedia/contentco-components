@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Dropzone, { useDropzone } from 'react-dropzone';
+import Dropzone from 'react-dropzone';
 
 import { authRequest } from '../../../shared/apis/utils';
-import { Button } from 'contentco-components';
 import classNames from 'classnames';
 import Styles from './File.module.scss';
-import TruncateString from 'react-truncate-string';
 
 class ImageDrop extends Component {
   constructor(props) {

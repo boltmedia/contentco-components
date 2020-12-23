@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Dropzone, { useDropzone } from 'react-dropzone';
+import Dropzone from 'react-dropzone';
 
 import { authRequest, baseAuthRequest } from '../../../shared/apis/utils';
-import { Button } from 'contentco-components';
+import Button from '../../Button/Button';
 import classNames from 'classnames';
 import Styles from './File.module.scss';
 import TruncateString from 'react-truncate-string';
-import axios from 'axios';
 
 const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropRejected, ...props }) => {
   const [progress, setProgress] = useState(0);

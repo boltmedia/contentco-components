@@ -6,7 +6,7 @@ import Dropzone from 'react-dropzone';
 
 import { authRequest } from '../../../shared/apis/utils';
 
-import { Button } from 'contentco-components';
+import Button from '../../Button/Button';
 
 import classNames from 'classnames';
 import Styles from './File.module.scss';
