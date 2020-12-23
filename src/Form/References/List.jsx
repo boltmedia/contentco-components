@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import TruncateString from 'react-truncate-string';
 import Dropzone from 'react-dropzone';
-import { Toast } from 'react-bootstrap';
 import { authRequest } from '../../../shared/apis/utils';
 import withToast from '../../../shared/hoc/withToast';
 
-import { Button } from 'contentco-components';
+import Button from '../../Button/Button';
 import Icon from '../../Icon/Icon';
-import FileIcon from '../../FileIcon/FileIcon';
 import SimpleModal from '../../SimpleModal/SimpleModal';
 
 import Styles from './Styles.module.scss';
