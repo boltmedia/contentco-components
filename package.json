@@ -1,6 +1,6 @@
 {
   "name": "contentco-components",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "description": "Shared components for Content.co platform",
   "author": "himynameistimli",
   "license": "MIT",
@@ -31,7 +31,6 @@
   },
   "peerDependencies": {
     "classnames": "2.2.6",
-    "evergreen-ui": "^5.1.2",
     "prop-types": "^15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0"
@@ -83,7 +82,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
-    "evergreen-ui": "^5.1.2",
     "execa": "^4.0.3",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.14.1",
