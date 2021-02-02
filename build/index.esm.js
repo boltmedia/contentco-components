@@ -1829,7 +1829,7 @@ var SelectInput = function SelectInput(_ref) {
   return /*#__PURE__*/React.createElement("div", _extends$_({
     className: containerClass
   }, {
-    'data-test-id': props['data-test-id']
+    'data-test-id': props['data-test-id'] || name
   }), /*#__PURE__*/React.createElement(CustomSelect, _extends$_({
     className: fieldClass,
     styles: customStyles,
