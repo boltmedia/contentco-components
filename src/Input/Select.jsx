@@ -7,42 +7,52 @@ import AsyncSelect from 'react-select/async';
 import AsyncPaginate from 'react-select-async-paginate';
 import CreatableSelect from 'react-select/creatable';
 
-
-const RightArrow = () => <span className={Styles.rightArrow} />
-const DownArrow = () => <span className={Styles.downArrow} />
+const RightArrow = () => <span className={Styles.rightArrow} />;
+const DownArrow = () => <span className={Styles.downArrow} />;
 
 const Option = (props) => {
-  const { data, getStyles, innerRef, innerProps, indentBy = 0, selectOption, selectProps } = props;
+  const {
+    data,
+    getStyles,
+    innerRef,
+    innerProps,
+    indentBy = 0,
+    selectOption,
+    selectProps
+  } = props;
   const [isExpanded, setIsExpanded] = useState(false);
-  const newInnerProps = { ...innerProps,  onClick: () => selectOption(data)};
-  const children = (data && selectProps?.getOptionChildren?.(data)) || data?.children || [];
+  const newInnerProps = { ...innerProps, onClick: () => selectOption(data) };
+  const children =
+    (data && selectProps?.getOptionChildren?.(data)) || data?.children || [];
   return (
     <React.Fragment>
       <div className={Styles.multiLevelOption}>
         <div className={Styles.actions}>
           {props.data?.children?.length > 0 && (
-            <button className={Styles.action} onClick={() => setIsExpanded(!isExpanded)}>
+            <button
+              className={Styles.action}
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
               {isExpanded ? <RightArrow /> : <DownArrow />}
             </button>
           )}
         </div>
         <div
           {...newInnerProps}
-          style={{ marginLeft: `${20 * indentBy}px`}}
-          className={Styles.optionItem}>
+          style={{ marginLeft: `${20 * indentBy}px` }}
+          className={Styles.optionItem}
+        >
           {selectProps?.getOptionLabel?.(data)}
         </div>
       </div>
-      {isExpanded && children?.length > 0 ? (
-        children?.map((v, idx) => (
-          <Option key={idx} {...props} data={v} indentBy={indentBy + 1} />
-        ))
-      ) : (
-        null
-      )}
+      {isExpanded && children?.length > 0
+        ? children?.map((v, idx) => (
+            <Option key={idx} {...props} data={v} indentBy={indentBy + 1} />
+          ))
+        : null}
     </React.Fragment>
   );
-}
+};
 
 const customStyles = {
   option: (provided, state) => ({
@@ -135,7 +145,7 @@ const SelectInput = ({
   return (
     <div
       className={containerClass}
-      {...{ 'data-test-id': props['data-test-id'] }}
+      {...{ 'data-test-id': props['data-test-id'] || name }}
     >
       <CustomSelect
         className={fieldClass}
@@ -152,7 +162,9 @@ const SelectInput = ({
         classNamePrefix={classNamePrefix}
         closeMenuOnSelect={!props.isMulti}
         {...props}
-        {...(props.isMultiLevel && { components: { ...props.components, Option } })}
+        {...(props.isMultiLevel && {
+          components: { ...props.components, Option }
+        })}
       />
 
       <label htmlFor={name} className={labelClass}>
@@ -173,7 +185,7 @@ SelectInput.defaultProps = {
   menuPlacement: 'auto',
   classNamePrefix: 's-contact',
   isAsync: false,
-  isPaginated: false,
+  isPaginated: false
 };
 
 export default SelectInput;
