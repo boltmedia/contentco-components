@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var _extends$_ = require('@babel/runtime/helpers/extends');
+var _extends$$ = require('@babel/runtime/helpers/extends');
 var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProperties');
 var React = require('react');
 var classNames = require('classnames');
@@ -18,7 +18,7 @@ var CreatableSelect = require('react-select/creatable');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends$_);
+var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends$$);
 var _objectWithoutProperties__default = /*#__PURE__*/_interopDefaultLegacy(_objectWithoutProperties);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
@@ -3111,6 +3111,24 @@ function SvgLogoutinline(props) {
   }, props), _ref$Z);
 }
 
+function _extends$_() { _extends$_ = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$_.apply(this, arguments); }
+
+var _ref$_ = /*#__PURE__*/React.createElement("path", {
+  d: "M4 10h12M4 5h12M4 15h12",
+  fill: "none",
+  fillRule: "evenodd",
+  strokeLinecap: "round",
+  stroke: "currentColor",
+  strokeWidth: 2
+});
+
+function SvgMenuinline(props) {
+  return /*#__PURE__*/React.createElement("svg", _extends$_({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20"
+  }, props), _ref$_);
+}
+
 var Icon = function Icon(props) {
   return /*#__PURE__*/React__default['default'].createElement("div", null);
 };
@@ -3169,6 +3187,7 @@ Icon.Intercom = SvgQuestioninline; // Fallback
 
 Icon.Text = SvgTextinline;
 Icon.Logout = SvgLogoutinline;
+Icon.Menu = SvgMenuinline;
 Icon.Drag = SvgDraginline;
 Icon.Preview = SvgPreviewinline;
 Icon.Xero = SvgXeroinline;

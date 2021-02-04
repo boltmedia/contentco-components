@@ -1,4 +1,4 @@
-import _extends$_ from '@babel/runtime/helpers/extends';
+import _extends$$ from '@babel/runtime/helpers/extends';
 import _objectWithoutProperties from '@babel/runtime/helpers/objectWithoutProperties';
 import React, { createElement, useState, useEffect } from 'react';
 import classNames from 'classnames';
@@ -82,7 +82,7 @@ var Logo = function Logo(_ref) {
 
   var Component = site === '2' ? SvgHdinline : SvgCcinline;
   var logoSize = site === '2' ? Styles.hdLogo : Styles.logo;
-  return /*#__PURE__*/React.createElement(Component, _extends$_({
+  return /*#__PURE__*/React.createElement(Component, _extends$$({
     className: classNames(logoSize, className, type)
   }, props));
 };
@@ -669,7 +669,7 @@ var Loader = function Loader(_ref) {
       isCompleted = _ref.isCompleted,
       props = _objectWithoutProperties(_ref, ["className", "size", "color", "type", "isError", "isCompleted"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$1.loader, className, size, color, type)
   }, props), !isError && !isCompleted && /*#__PURE__*/React.createElement("div", {
     className: Styles$1.spinner
@@ -955,7 +955,7 @@ var Button = function Button(_ref) {
   var isLight = lightTypes.filter(function (l) {
     return l === type;
   });
-  return /*#__PURE__*/React.createElement(Elem, _extends$_({
+  return /*#__PURE__*/React.createElement(Elem, _extends$$({
     type: "button",
     className: classNames(Styles$2.btn, className, type, size),
     disabled: disabled
@@ -998,7 +998,7 @@ var InputContainer = function InputContainer(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$3.inputContainer, className)
   }, props), children);
 };
@@ -1008,7 +1008,7 @@ var InputGroup = function InputGroup(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$3.inputGroup, className)
   }, props), children);
 };
@@ -1054,7 +1054,7 @@ var TextInput = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var Elem = mask ? InputMask : 'input';
   return /*#__PURE__*/React.createElement("div", {
     className: classNames(Styles$4.container, disabled && Styles$4.disabled, error && Styles$4.containerError, className)
-  }, /*#__PURE__*/React.createElement(Elem, _extends$_({
+  }, /*#__PURE__*/React.createElement(Elem, _extends$$({
     ref: ref,
     className: classNames(Styles$4.base, Styles$4.input),
     id: id,
@@ -1099,7 +1099,7 @@ var TextArea = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
 
   return /*#__PURE__*/React.createElement("div", {
     className: classNames(Styles$4.container, props.className, disabled && Styles$4.disabled)
-  }, /*#__PURE__*/React.createElement(TextareaAutosize, _extends$_({
+  }, /*#__PURE__*/React.createElement(TextareaAutosize, _extends$$({
     ref: ref,
     className: classNames(Styles$4.base, Styles$4.textArea),
     id: name,
@@ -1730,13 +1730,13 @@ var Option = function Option(props) {
     onClick: function onClick() {
       return setIsExpanded(!isExpanded);
     }
-  }, isExpanded ? /*#__PURE__*/React.createElement(RightArrow, null) : /*#__PURE__*/React.createElement(DownArrow, null))), /*#__PURE__*/React.createElement("div", _extends$_({}, newInnerProps, {
+  }, isExpanded ? /*#__PURE__*/React.createElement(RightArrow, null) : /*#__PURE__*/React.createElement(DownArrow, null))), /*#__PURE__*/React.createElement("div", _extends$$({}, newInnerProps, {
     style: {
       marginLeft: "".concat(20 * indentBy, "px")
     },
     className: Styles$4.optionItem
   }), selectProps === null || selectProps === void 0 ? void 0 : (_selectProps$getOptio2 = selectProps.getOptionLabel) === null || _selectProps$getOptio2 === void 0 ? void 0 : _selectProps$getOptio2.call(selectProps, data))), isExpanded && (children === null || children === void 0 ? void 0 : children.length) > 0 ? children === null || children === void 0 ? void 0 : children.map(function (v, idx) {
-    return /*#__PURE__*/React.createElement(Option, _extends$_({
+    return /*#__PURE__*/React.createElement(Option, _extends$$({
       key: idx
     }, props, {
       data: v,
@@ -1826,11 +1826,11 @@ var SelectInput = function SelectInput(_ref) {
 
   var CustomSelect = props.isPaginated ? AsyncPaginate : props.isAsync ? AsyncSelect : Select;
   var SelectComponent = props.isCreatable ? CreatableSelect : Select;
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: containerClass
   }, {
     'data-test-id': props['data-test-id'] || name
-  }), /*#__PURE__*/React.createElement(CustomSelect, _extends$_({
+  }), /*#__PURE__*/React.createElement(CustomSelect, _extends$$({
     className: fieldClass,
     styles: customStyles,
     name: name,
@@ -1879,7 +1879,7 @@ var CardHeader = function CardHeader(_ref) {
       title = _ref.title,
       props = _objectWithoutProperties(_ref, ["className", "children", "title"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$5.header, className)
   }, props), children || title && /*#__PURE__*/React.createElement("span", null, title));
 };
@@ -1895,7 +1895,7 @@ var Note = function Note(_ref) {
       className = _ref.className,
       props = _objectWithoutProperties(_ref, ["children", "className"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$5.note, className)
   }, props), children);
 };
@@ -1911,7 +1911,7 @@ var CardHeader$1 = function CardHeader(_ref) {
       right = _ref.right,
       props = _objectWithoutProperties(_ref, ["className", "children", "right"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$5.footer, right && Styles$5.right, className)
   }, props), children);
 };
@@ -1931,7 +1931,7 @@ var CardItem = function CardItem(_ref) {
       flex = _ref.flex,
       props = _objectWithoutProperties(_ref, ["className", "children", "noPadding", "noBorder", "noPaddingLeft", "flex"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$5.item, _defineProperty({}, Styles$5.flex, flex), _defineProperty({}, Styles$5.noPadding, noPadding), _defineProperty({}, Styles$5.noPaddingLeft, noPaddingLeft), _defineProperty({}, Styles$5.noBorder, noBorder), className)
   }, props), children);
 };
@@ -1946,7 +1946,7 @@ var Card = function Card(_ref) {
       children = _ref.children,
       props = _objectWithoutProperties(_ref, ["className", "children"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$5.container, className)
   }, props), children);
 };
@@ -3091,6 +3091,24 @@ function SvgLogoutinline(props) {
   }, props), _ref$Z);
 }
 
+function _extends$_() { _extends$_ = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$_.apply(this, arguments); }
+
+var _ref$_ = /*#__PURE__*/createElement("path", {
+  d: "M4 10h12M4 5h12M4 15h12",
+  fill: "none",
+  fillRule: "evenodd",
+  strokeLinecap: "round",
+  stroke: "currentColor",
+  strokeWidth: 2
+});
+
+function SvgMenuinline(props) {
+  return /*#__PURE__*/createElement("svg", _extends$_({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20"
+  }, props), _ref$_);
+}
+
 var Icon = function Icon(props) {
   return /*#__PURE__*/React.createElement("div", null);
 };
@@ -3149,6 +3167,7 @@ Icon.Intercom = SvgQuestioninline; // Fallback
 
 Icon.Text = SvgTextinline;
 Icon.Logout = SvgLogoutinline;
+Icon.Menu = SvgMenuinline;
 Icon.Drag = SvgDraginline;
 Icon.Preview = SvgPreviewinline;
 Icon.Xero = SvgXeroinline;
@@ -3172,7 +3191,7 @@ var Text = function Text(_ref) {
       className = _ref.className,
       restProps = _objectWithoutProperties(_ref, ["element", "children", "size", "color", "type", "className"]);
 
-  return /*#__PURE__*/React.createElement(Elem, _extends$_({
+  return /*#__PURE__*/React.createElement(Elem, _extends$$({
     className: classNames(Styles$6.base, size, type, color, className)
   }, restProps), children);
 };
@@ -3226,7 +3245,7 @@ var Action = function Action(_ref) {
       className = _ref.className,
       props = _objectWithoutProperties(_ref, ["children", "className"]);
 
-  return /*#__PURE__*/React.createElement("div", _extends$_({
+  return /*#__PURE__*/React.createElement("div", _extends$$({
     className: classNames(Styles$7.action, className)
   }, props), children);
 };

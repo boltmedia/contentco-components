@@ -61,6 +61,7 @@ import Settings from './icons/settings.inline.svg';
 import Question from './icons/question.inline.svg';
 import Text from './icons/text.inline.svg';
 import Logout from './icons/logout.inline.svg';
+import Menu from './icons/menu.inline.svg';
 
 // TODO TRITONE ICONS
 
@@ -121,6 +122,7 @@ Icon.Question = Question;
 Icon.Intercom = Question; // Fallback
 Icon.Text = Text;
 Icon.Logout = Logout;
+Icon.Menu = Menu;
 
 Icon.Drag = Drag;
 Icon.Preview = Preview;
