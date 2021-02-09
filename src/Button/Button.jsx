@@ -23,36 +23,38 @@ const lightTypes = [
   Type.LIGHT_GRAY
 ];
 
-const Button = ({
-  type,
-  size,
-  className,
-  children,
-  content,
-  disabled,
-  isLoading,
-  element: Elem,
-  ...props
-}) => {
-  const isLight = lightTypes.filter((l) => l === type);
-  return (
-    <Elem
-      type='button'
-      className={classNames(Styles.btn, className, type, size)}
-      disabled={disabled}
-      {...props}
-    >
-      {isLoading && (
-        <Loader
-          style={{ marginRight: '10px' }}
-          color={isLight?.length ? Loader.Color.BLUE : Loader.Color.WHITE}
-          size={Loader.Size.SMALL}
-        />
-      )}
-      {content || children}
-    </Elem>
-  );
-};
+const Button = React.memo(
+  ({
+    type,
+    size,
+    className,
+    children,
+    content,
+    disabled,
+    isLoading,
+    element: Elem,
+    ...props
+  }) => {
+    const isLight = lightTypes.filter((l) => l === type);
+    return (
+      <Elem
+        type='button'
+        className={classNames(Styles.btn, className, type, size)}
+        disabled={disabled}
+        {...props}
+      >
+        {isLoading && (
+          <Loader
+            style={{ marginRight: '10px' }}
+            color={isLight?.length ? Loader.Color.BLUE : Loader.Color.WHITE}
+            size={Loader.Size.SMALL}
+          />
+        )}
+        {content || children}
+      </Elem>
+    );
+  }
+);
 
 Button.Type = Type;
 

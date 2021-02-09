@@ -73,7 +73,7 @@ function SvgCcinline(props) {
   }, props), _ref$1);
 }
 
-var Logo = function Logo(_ref) {
+var Logo = /*#__PURE__*/React.memo(function (_ref) {
   var className = _ref.className,
       type = _ref.type,
       _ref$site = _ref.site,
@@ -85,8 +85,7 @@ var Logo = function Logo(_ref) {
   return /*#__PURE__*/React.createElement(Component, _extends$$({
     className: classNames(logoSize, className, type)
   }, props));
-};
-
+});
 Logo.propTypes = {
   className: PropTypes.string,
   type: PropTypes.string
@@ -660,7 +659,7 @@ var css_248z$1 = "/* prettier-ignore */\n/* beautify ignore:start */\n@keyframes
 var Styles$1 = {"loader":"Loader-module_loader__1Wyo3","large":"Loader-module_large__2Kqju","small":"Loader-module_small__1ziqy","checkmark":"Loader-module_checkmark__3Wc2t","error":"Loader-module_error__3xEKa","spinner":"Loader-module_spinner__1RNuN","spin":"Loader-module_spin__LpOfZ","white":"Loader-module_white__3ZIZK","blue":"Loader-module_blue__14W3S","full":"Loader-module_full__1yGGp","container":"Loader-module_container__1GovT"};
 styleInject(css_248z$1);
 
-var Loader = function Loader(_ref) {
+var Loader = /*#__PURE__*/React.memo(function (_ref) {
   var className = _ref.className,
       size = _ref.size,
       color = _ref.color,
@@ -678,8 +677,7 @@ var Loader = function Loader(_ref) {
   }), isError && /*#__PURE__*/React.createElement("div", {
     className: classNames(Styles$1.error)
   }));
-};
-
+});
 Loader.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
@@ -940,8 +938,7 @@ var Type = {
   GRAY: Styles$2.gray
 };
 var lightTypes = [Type.WHITE, Type.WHITE_BLUE_OUTLINE, Type.BLUE_OUTLINE, Type.RED_OUTLINE, Type.LIGHT_GRAY];
-
-var Button = function Button(_ref) {
+var Button = /*#__PURE__*/React.memo(function (_ref) {
   var type = _ref.type,
       size = _ref.size,
       className = _ref.className,
@@ -966,8 +963,7 @@ var Button = function Button(_ref) {
     color: (isLight === null || isLight === void 0 ? void 0 : isLight.length) ? Loader.Color.BLUE : Loader.Color.WHITE,
     size: Loader.Size.SMALL
   }), content || children);
-};
-
+});
 Button.Type = Type;
 Button.Size = {
   FULLWIDTH: Styles$2.fullwidth,

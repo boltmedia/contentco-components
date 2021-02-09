@@ -74,6 +74,7 @@ const Template = (args) => (
     <Icon.Caret {...args} />
     <Icon.Close {...args} />
     <Icon.Down {...args} />
+    <Icon.Menu {...args} />
     <Icon.More {...args} />
     <Icon.MoreVertical {...args} />
     <Icon.StarEmpty {...args} />

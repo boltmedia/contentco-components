@@ -3,26 +3,20 @@ import PropTypes from 'prop-types';
 import Styles from './Loader.module.scss';
 import classNames from 'classnames';
 
-const Loader = ({
-  className,
-  size,
-  color,
-  type,
-  isError,
-  isCompleted,
-  ...props
-}) => {
-  return (
-    <div
-      className={classNames(Styles.loader, className, size, color, type)}
-      {...props}
-    >
-      {!isError && !isCompleted && <div className={Styles.spinner} />}
-      {isCompleted && <div className={classNames(Styles.checkmark)} />}
-      {isError && <div className={classNames(Styles.error)} />}
-    </div>
-  );
-};
+const Loader = React.memo(
+  ({ className, size, color, type, isError, isCompleted, ...props }) => {
+    return (
+      <div
+        className={classNames(Styles.loader, className, size, color, type)}
+        {...props}
+      >
+        {!isError && !isCompleted && <div className={Styles.spinner} />}
+        {isCompleted && <div className={classNames(Styles.checkmark)} />}
+        {isError && <div className={classNames(Styles.error)} />}
+      </div>
+    );
+  }
+);
 
 Loader.propTypes = {
   className: PropTypes.string,

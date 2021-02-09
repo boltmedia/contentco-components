@@ -6,18 +6,20 @@ import Styles from './Logo.module.scss';
 import HireDigital from './svg/hd.inline.svg';
 import ContentCo from './svg/cc.inline.svg';
 
-const Logo = ({
-  className,
-  type,
-  site = process.env.NEXT_PUBLIC_SITE_ID || '1',
-  ...props
-}) => {
-  const Component = site === '2' ? HireDigital : ContentCo;
-  const logoSize = site === '2' ? Styles.hdLogo : Styles.logo;
-  return (
-    <Component className={classNames(logoSize, className, type)} {...props} />
-  );
-};
+const Logo = React.memo(
+  ({
+    className,
+    type,
+    site = process.env.NEXT_PUBLIC_SITE_ID || '1',
+    ...props
+  }) => {
+    const Component = site === '2' ? HireDigital : ContentCo;
+    const logoSize = site === '2' ? Styles.hdLogo : Styles.logo;
+    return (
+      <Component className={classNames(logoSize, className, type)} {...props} />
+    );
+  }
+);
 
 Logo.propTypes = {
   className: PropTypes.string,
