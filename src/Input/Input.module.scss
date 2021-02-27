@@ -111,6 +111,7 @@ $labelTopColor: $blue-badge;
     // Use this focus styling for all
     transition: none;
     outline: none;
+    border: 1px solid $blue-100;
     box-shadow: 0 0 0 3px $blue-10;
   }
 }
@@ -193,6 +194,7 @@ $labelTopColor: $blue-badge;
         // Use this focus styling for all
         transition: none;
         outline: none;
+        border: 1px solid $blue-100;
         box-shadow: 0 0 0 3px $blue-10;
       }
     }
@@ -550,7 +552,7 @@ $labelTopColor: $blue-badge;
 .rightArrow {
   &:before {
     border: 5px solid transparent;
-    border-top-color: #A1AAB3;
+    border-top-color: #a1aab3;
     content: '';
     display: block;
     height: 0;
@@ -564,7 +566,7 @@ $labelTopColor: $blue-badge;
 .downArrow {
   &:before {
     border: 5px solid transparent;
-    border-left-color: #A1AAB3;
+    border-left-color: #a1aab3;
     content: '';
     display: block;
     height: 0;
