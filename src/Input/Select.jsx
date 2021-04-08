@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 import Styles from './Input.module.scss';
 import classNames from 'classnames';
-import Select from 'react-select';
-import AsyncSelect from 'react-select/async';
-import AsyncPaginate from 'react-select-async-paginate';
-import CreatableSelect from 'react-select/creatable';
+import InitialSelect from 'react-select';
+import InitialAsyncSelect from 'react-select/async';
+import InitialAsyncPaginate from 'react-select-async-paginate';
+import InitialCreatableSelect from 'react-select/creatable';
+
+const Select = memo(InitialSelect);
+const AsyncSelect = memo(InitialAsyncSelect);
+const AsyncPaginate = memo(InitialAsyncPaginate);
+const CreatableSelect = memo(InitialCreatableSelect);
 
 const RightArrow = () => <span className={Styles.rightArrow} />;
 const DownArrow = () => <span className={Styles.downArrow} />;

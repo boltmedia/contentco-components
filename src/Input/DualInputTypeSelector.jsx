@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Styles from './Input.module.scss';
 import classNames from 'classnames';
 import Select from 'react-select';
-import AsyncSelect from 'react-select/async';
-import AsyncPaginate from 'react-select-async-paginate';
-import CreatableSelect from 'react-select/creatable';
 import { debounce } from 'lodash';
 
 const SHRINK_THRESHOLD = 245;
@@ -281,7 +278,8 @@ class DualInputTypeSelector extends React.Component {
           this.state.shouldShrink && Styles.shrink
         )}
         style={{ display: 'flex', width: '100%' }}
-        ref={(el) => (this.container = el)}>
+        ref={(el) => (this.container = el)}
+      >
         <div className={classNames(Styles.dualInput)}>
           <input
             className={classNames(Styles.base, Styles.dualInputTextInput)}
@@ -289,10 +287,10 @@ class DualInputTypeSelector extends React.Component {
             name={inputName}
             type={this.props.type}
             step={this.props.step}
-            min="0"
+            min='0'
             max={this.props.max}
             value={inputValue}
-            placeholder="0"
+            placeholder='0'
             required={required}
             onChange={this.handleInputChange}
             onKeyPress={this.handleInputKeyPress}
@@ -303,15 +301,14 @@ class DualInputTypeSelector extends React.Component {
         </div>
         <label
           htmlFor={inputName}
-          className={classNames(
-            Styles.label,
-            this.state.error && Styles.error
-          )}>
+          className={classNames(Styles.label, this.state.error && Styles.error)}
+        >
           {this.state.error || inputLabel}
         </label>
         <div
           className={classNames(Styles.dualSelect)}
-          style={{ flexBasis: selectWidth }}>
+          style={{ flexBasis: selectWidth }}
+        >
           <Select
             className={classNames(Styles.select, Styles.field)}
             name={selectName}

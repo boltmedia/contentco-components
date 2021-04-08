@@ -1,16 +1,16 @@
 import _extends$$ from '@babel/runtime/helpers/extends';
 import _objectWithoutProperties from '@babel/runtime/helpers/objectWithoutProperties';
-import React, { createElement, useState, useEffect } from 'react';
+import React, { createElement, useState, useEffect, memo } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import InputMask from 'react-input-mask';
 import TextareaAutosize from 'react-autosize-textarea';
 import _defineProperty from '@babel/runtime/helpers/defineProperty';
 import _slicedToArray from '@babel/runtime/helpers/slicedToArray';
-import Select from 'react-select';
-import AsyncSelect from 'react-select/async';
-import AsyncPaginate from 'react-select-async-paginate';
-import CreatableSelect from 'react-select/creatable';
+import InitialSelect from 'react-select';
+import InitialAsyncSelect from 'react-select/async';
+import InitialAsyncPaginate from 'react-select-async-paginate';
+import InitialCreatableSelect from 'react-select/creatable';
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -1680,6 +1680,10 @@ for (var COLLECTION_NAME in domIterables) {
 function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+var Select = /*#__PURE__*/memo(InitialSelect);
+var AsyncSelect = /*#__PURE__*/memo(InitialAsyncSelect);
+var AsyncPaginate = /*#__PURE__*/memo(InitialAsyncPaginate);
+var CreatableSelect = /*#__PURE__*/memo(InitialCreatableSelect);
 
 var RightArrow = function RightArrow() {
   return /*#__PURE__*/React.createElement("span", {

@@ -11,10 +11,10 @@ var InputMask = require('react-input-mask');
 var TextareaAutosize = require('react-autosize-textarea');
 var _defineProperty = require('@babel/runtime/helpers/defineProperty');
 var _slicedToArray = require('@babel/runtime/helpers/slicedToArray');
-var Select = require('react-select');
-var AsyncSelect = require('react-select/async');
-var AsyncPaginate = require('react-select-async-paginate');
-var CreatableSelect = require('react-select/creatable');
+var InitialSelect = require('react-select');
+var InitialAsyncSelect = require('react-select/async');
+var InitialAsyncPaginate = require('react-select-async-paginate');
+var InitialCreatableSelect = require('react-select/creatable');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -27,10 +27,10 @@ var InputMask__default = /*#__PURE__*/_interopDefaultLegacy(InputMask);
 var TextareaAutosize__default = /*#__PURE__*/_interopDefaultLegacy(TextareaAutosize);
 var _defineProperty__default = /*#__PURE__*/_interopDefaultLegacy(_defineProperty);
 var _slicedToArray__default = /*#__PURE__*/_interopDefaultLegacy(_slicedToArray);
-var Select__default = /*#__PURE__*/_interopDefaultLegacy(Select);
-var AsyncSelect__default = /*#__PURE__*/_interopDefaultLegacy(AsyncSelect);
-var AsyncPaginate__default = /*#__PURE__*/_interopDefaultLegacy(AsyncPaginate);
-var CreatableSelect__default = /*#__PURE__*/_interopDefaultLegacy(CreatableSelect);
+var InitialSelect__default = /*#__PURE__*/_interopDefaultLegacy(InitialSelect);
+var InitialAsyncSelect__default = /*#__PURE__*/_interopDefaultLegacy(InitialAsyncSelect);
+var InitialAsyncPaginate__default = /*#__PURE__*/_interopDefaultLegacy(InitialAsyncPaginate);
+var InitialCreatableSelect__default = /*#__PURE__*/_interopDefaultLegacy(InitialCreatableSelect);
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -1700,6 +1700,10 @@ for (var COLLECTION_NAME in domIterables) {
 function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(Object(source), true).forEach(function (key) { _defineProperty__default['default'](target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+var Select = /*#__PURE__*/React.memo(InitialSelect__default['default']);
+var AsyncSelect = /*#__PURE__*/React.memo(InitialAsyncSelect__default['default']);
+var AsyncPaginate = /*#__PURE__*/React.memo(InitialAsyncPaginate__default['default']);
+var CreatableSelect = /*#__PURE__*/React.memo(InitialCreatableSelect__default['default']);
 
 var RightArrow = function RightArrow() {
   return /*#__PURE__*/React__default['default'].createElement("span", {
@@ -1840,8 +1844,8 @@ var SelectInput = function SelectInput(_ref) {
     } catch (err) {}
   };
 
-  var CustomSelect = props.isPaginated ? AsyncPaginate__default['default'] : props.isAsync ? AsyncSelect__default['default'] : Select__default['default'];
-  var SelectComponent = props.isCreatable ? CreatableSelect__default['default'] : Select__default['default'];
+  var CustomSelect = props.isPaginated ? AsyncPaginate : props.isAsync ? AsyncSelect : Select;
+  var SelectComponent = props.isCreatable ? CreatableSelect : Select;
   return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
     className: containerClass
   }, {

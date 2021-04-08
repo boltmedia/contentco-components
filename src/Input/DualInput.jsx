@@ -7,9 +7,6 @@ import { debounce } from 'lodash';
 import InputMask from 'react-input-mask';
 
 import Select from 'react-select';
-import AsyncSelect from 'react-select/async';
-import AsyncPaginate from 'react-select-async-paginate';
-import CreatableSelect from 'react-select/creatable';
 import { useGlobalEvent } from 'beautiful-react-hooks';
 import Styles from './Input.module.scss';
 
@@ -104,7 +101,8 @@ const DualInput = ({ input, select, className }) => {
     <div
       className={containerClass}
       style={{ display: 'flex', width: '100%' }}
-      ref={elementRef}>
+      ref={elementRef}
+    >
       <div className={Styles.dualInput}>
         <Elem
           className={classNames(Styles.base, Styles.input)}
@@ -123,7 +121,7 @@ const DualInput = ({ input, select, className }) => {
           onChange={handleChange}
           additional={{ page: 1 }}
           createOptionPosition={'first'}
-          classNamePrefix="s-contact"
+          classNamePrefix='s-contact'
           isDisabled={selectDisabled}
           {...selectProps}
         />
