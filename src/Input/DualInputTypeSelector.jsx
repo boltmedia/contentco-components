@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import Styles from './Input.module.scss';
 import classNames from 'classnames';
-import Select from 'react-select';
+import InitialSelect from 'react-select';
 import { debounce } from 'lodash';
+
+const Select = memo(InitialSelect);
 
 const SHRINK_THRESHOLD = 245;
 const customStyles = {

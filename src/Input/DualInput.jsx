@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
@@ -6,9 +6,11 @@ import { debounce } from 'lodash';
 
 import InputMask from 'react-input-mask';
 
-import Select from 'react-select';
+import InitialSelect from 'react-select';
 import { useGlobalEvent } from 'beautiful-react-hooks';
 import Styles from './Input.module.scss';
+
+const Select = memo(InitialSelect);
 
 const SHRINK_THRESHOLD = 245;
 
