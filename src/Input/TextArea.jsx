@@ -7,7 +7,13 @@ import TextareaAutosize from 'react-autosize-textarea';
 const TextArea = React.forwardRef(
   ({ disabled, name, placeholder, label, required, error, ...props }, ref) => {
     return (
-      <div className={classNames(Styles.container, props.className, disabled && Styles.disabled)}>
+      <div
+        className={classNames(
+          Styles.container,
+          props.className,
+          disabled && Styles.disabled
+        )}
+      >
         <TextareaAutosize
           ref={ref}
           className={classNames(Styles.base, Styles.textArea)}
@@ -18,7 +24,10 @@ const TextArea = React.forwardRef(
           disabled={disabled}
           {...props}
         />
-        <label htmlFor={name} className={classNames(Styles.label, error && Styles.error)}>
+        <label
+          htmlFor={name}
+          className={classNames(Styles.label, error && Styles.error)}
+        >
           {error || label}
         </label>
       </div>
@@ -33,7 +42,7 @@ TextArea.propTypes = {
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   predicted: PropTypes.bool,
   label: PropTypes.string,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.string
 };
 
 export default TextArea;
