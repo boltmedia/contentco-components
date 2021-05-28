@@ -22,7 +22,7 @@
 }
 
 .note {
-  padding: 20px;
+  padding: 10px 20px;
   background-color: $light-blue-grey;
   font-size: 14px;
   border-top: 1px solid $gray-10;
@@ -30,7 +30,7 @@
 
 .item {
   margin: 0;
-  padding: 20px;
+  padding: 10px 20px;
   border-top: 1px solid $gray-7;
 
   &.noPaddingLeft {
@@ -49,7 +49,7 @@
 .footer {
   border-top: 1px solid $gray-10;
   display: flex;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-bottom-right-radius: $card-border-radius;
   border-bottom-left-radius: $card-border-radius;
 
