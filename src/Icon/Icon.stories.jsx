@@ -9,12 +9,12 @@ export default {
 };
 
 const renderIcon = (arr, args) => {
-  return arr.map((key) => {
+  return arr.map((key,indx) => {
     const IconComponent = Icon[key];
     return (
-      <span className={classNames(Styles.icon)} key={key}>
-        <IconComponent {...args} />
-        <span className='icon-name'>{key}</span>
+      <span className={classNames(Styles.icon)} key={indx}>
+        <IconComponent {...args} key={indx}/>
+        <span className='icon-name' >{key}</span>
       </span>
     );
   });
@@ -130,16 +130,17 @@ const Template = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   style: { height: '20px', width: '20px', margin: '10px' },
-  label:'google'
 };
 
 export const White = Template.bind({});
 White.args = {
-  style: { height: '20px', width: '20px', margin: '10px' },
-  color: 'white'
+  style: { height: '20px', width: '20px', margin: '10px',color: 'white' },
+  
 };
 White.parameters = {
-  backgrounds: { default: 'dark-blue' }
+  backgrounds: { default: 'dark-blue' },
+ 
+
 };
 
 // TODO: Add more stories for Card
