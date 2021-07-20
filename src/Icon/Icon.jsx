@@ -65,9 +65,7 @@ import Menu from './icons/menu.inline.svg';
 
 // TODO TRITONE ICONS
 
-const Icon = (props) => {
-  return <div />;
-};
+const Icon = {};
 
 Icon.Google = Google;
 Icon.Facebook = Facebook;
@@ -134,5 +132,4 @@ Icon.Split = Split;
 Icon.Invoice = Invoice;
 Icon.Play = Play;
 Icon.Stop = Stop;
-
 export default Icon;
