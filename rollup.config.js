@@ -8,23 +8,28 @@ import clear from 'rollup-plugin-clear';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
 import scss from 'rollup-plugin-scss';
+import multi from '@rollup/plugin-multi-entry';
 
 const packageJson = require('./package.json');
 export default {
-  input: 'src/index.jsx',
+  input: [
+    'src/index.jsx',
+    'src/Button/Button.jsx',
+    'src/Action/Action.jsx',
+    'src/Card/Card.jsx',
+    'src/Input/Input.jsx',
+    'src/Text/Text.jsx'
+  ],
   output: [
     {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: false
-    },
-    {
-      file: packageJson.main,
-      format: 'cjs',
-      sourcemap: false
+      dir: "build",
+      format: "cjs",
+      sourcemap: true
     }
   ],
+  preserveModules: true,
   plugins: [
+    multi(),
     scss(),
     svgr(),
     external({ includeDependencies: true }),
