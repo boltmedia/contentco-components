@@ -1,104 +1,146 @@
 // Generated with util/create-component.js
 import React from 'react';
 import Icon from './Icon';
-
+import classNames from 'classnames';
+import Styles from './Icon.module.scss';
 export default {
   title: 'Icon',
   component: Icon
 };
 
+const renderIcon = (arr, args) => {
+  return arr.map((key,indx) => {
+    const IconComponent = Icon[key];
+    return (
+      <span className={classNames(Styles.icon)} key={indx}>
+        <IconComponent {...args} key={indx}/>
+        <span className='icon-name' >{key}</span>
+      </span>
+    );
+  });
+};
+
 const Template = (args) => (
   <React.Fragment>
     <h3>General</h3>
-    <Icon.Drag {...args} />
-    <Icon.Refresh {...args} />
-    <Icon.Preview {...args} />
-    <Icon.Play {...args} />
-    <Icon.Stop {...args} />
-    <Icon.Download {...args} />
-
-    <Icon.Xero {...args} style={{ ...args.style, width: '64px' }} />
-    <Icon.Filter {...args} />
-    <Icon.Split {...args} />
+    <div className={classNames(Styles.wrapper)}>
+      {renderIcon(
+        [
+          'Drag',
+          'Refresh',
+          'Play',
+          'Stop',
+          'Download',
+          'Xero',
+          'Filter',
+          'Split',
+          'Filter',
+          'Split'
+        ],
+        args
+      )}
+    </div>
 
     <h3>File Types</h3>
-    <Icon.Audio {...args} />
-    <Icon.Excel {...args} />
-    <Icon.Word {...args} />
-    <Icon.Pdf {...args} />
-    <Icon.Text {...args} />
-    <Icon.File {...args} />
-    <Icon.Picture {...args} />
-    <Icon.Reference {...args} />
+    <div className={classNames(Styles.wrapper)}>
+      {renderIcon(
+        [
+          'Audio',
+          'Excel',
+          'Word',
+          'Pdf',
+          'Text',
+          'File',
+          'Picture',
+          'Reference'
+        ],
+        args
+      )}
+    </div>
 
     <h3>Chat</h3>
-    <Icon.Attachment {...args} />
-    <Icon.Expand {...args} />
-    <Icon.Minimize {...args} />
+    <div className={classNames(Styles.wrapper)}>
+      {renderIcon(['Attachment', 'Expand', 'Minimize'], args)}
+    </div>
 
     <h3>Navigation</h3>
-    <Icon.Dashboard {...args} />
-    <Icon.Brief {...args} />
-    <Icon.ChatUsers {...args} />
-    <Icon.Company {...args} />
-    <Icon.Chat {...args} />
-    <Icon.Settings {...args} />
-    <Icon.Question {...args} />
-    <Icon.Talent {...args} />
-    <Icon.Project {...args} />
-    <Icon.Timesheet {...args} />
-    <Icon.Guide {...args} />
-    <Icon.Notification {...args} />
-    <Icon.Profile {...args} />
-    <Icon.Invoice {...args} />
+    <div className={classNames(Styles.wrapper)}>
+      {renderIcon(
+        [
+          'Dashboard',
+          'Brief',
+          'ChatUsers',
+          'Company',
+          'Chat',
+          'Settings',
+          'Question',
+          'Talent',
+          'Project',
+          'Timesheet',
+          'Guide',
+          'Notification',
+          'Profile',
+          'Invoice'
+        ],
+        args
+      )}
+    </div>
 
     <h3>Social</h3>
-    <Icon.Google {...args} />
-    <Icon.Facebook {...args} />
-    <Icon.Twitter {...args} />
-    <Icon.Linkedin {...args} />
-    <Icon.Instagram {...args} />
-    <Icon.Youtube {...args} />
+    <div className={classNames(Styles.wrapper)}>
+      {renderIcon(
+        ['Google', 'Facebook', 'Twitter', 'Linkedin', 'Instagram', 'Youtube'],
+        args
+      )}
+    </div>
 
     <h3>Brief</h3>
-    <Icon.Email {...args} />
-    <Icon.Phone {...args} />
-    <Icon.Chat {...args} />
-    <Icon.Skill {...args} />
+
+    <div className={classNames(Styles.wrapper)}>
+      {renderIcon(['Email', 'Phone', 'Chat', 'Skill'], args)}
+    </div>
 
     <h3>Other</h3>
-
-    <Icon.Activity {...args} />
-    <Icon.Add {...args} />
-    <Icon.Assessment {...args} />
-    <Icon.Caret {...args} />
-    <Icon.Close {...args} />
-    <Icon.Down {...args} />
-    <Icon.Menu {...args} />
-    <Icon.More {...args} />
-    <Icon.MoreVertical {...args} />
-    <Icon.StarEmpty {...args} />
-    <Icon.StarFull {...args} />
-    <Icon.Logout {...args} />
-    <Icon.Search {...args} />
-    <Icon.Link {...args} />
-    <Icon.Edit {...args} />
-    <Icon.External {...args} />
-    <Icon.Ok {...args} />
+    <div className={classNames(Styles.wrapper)}>
+    {renderIcon(
+      [
+        'Activity',
+        'Add',
+        'Assessment',
+        'Caret',
+        'Close',
+        'Down',
+        'Menu',
+        'More',
+        'MoreVertical',
+        'StarEmpty',
+        'StarFull',
+        'Logout',
+        'Search',
+        'Link',
+        'Edit',
+        'External',
+        'Ok'
+      ],
+      args
+    )}
+    </div>
   </React.Fragment>
 );
 export const Default = Template.bind({});
 Default.args = {
-  style: { height: '20px', width: '20px', margin: '10px' }
+  style: { height: '20px', width: '20px', margin: '10px' },
 };
 
 export const White = Template.bind({});
 White.args = {
-  style: { height: '20px', width: '20px', margin: '10px' },
-  color: 'white'
+  style: { height: '20px', width: '20px', margin: '10px',color: 'white' },
+  
 };
 White.parameters = {
-  backgrounds: { default: 'dark-blue' }
+  backgrounds: { default: 'dark-blue' },
+ 
+
 };
 
 // TODO: Add more stories for Card

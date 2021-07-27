@@ -186,8 +186,12 @@ $labelTopColor: $blue-badge;
     }
 
     .s-contact__control {
-      border: 0;
+      border: 1px solid transparent;
       min-height: $height;
+
+      &:hover {
+        border-color: transparent;
+      }
 
       transition: 0.3s box-shadow ease-in-out;
       &.s-contact__control--is-focused {
@@ -219,11 +223,15 @@ $labelTopColor: $blue-badge;
       margin-top: 3px;
       // To account for focus
     }
-
     .s-contact__input {
-      // margin-left: 12px;
+      & > input {
+        font-size: 16px;
+        // font-family: $publicsans;
+        line-height: 24px;
+        // margin-left: 2px;
+        // margin: 0 0 12px 0 !important;
+      }
     }
-
     .s-contact__option {
       font-size: 14px;
     }
@@ -231,14 +239,16 @@ $labelTopColor: $blue-badge;
     .s-contact__value-container {
       padding: 0;
       line-height: 24px;
-      min-height: 48px;
-      padding: 12px;
+      // Subtracting 1px on all sides because of the focus issue
+      min-height: 48px - 2px;
+      padding: 12px - 2px;
       &.s-contact__value-container--is-multi {
-        padding: 12px;
+        padding: 12px - 2px;
       }
 
       &.s-contact__value-container--has-value {
-        padding: 20px 12px 4px 12px;
+        padding: 19px 11px 3px 11px;
+        // padding: 20px 12px 4px 12px;
         &.s-contact__value-container--is-multi {
           padding: 20px 10px 4px 10px;
         }
