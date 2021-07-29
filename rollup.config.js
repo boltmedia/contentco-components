@@ -9,27 +9,28 @@ import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
 import scss from 'rollup-plugin-scss';
 import multi from '@rollup/plugin-multi-entry';
+import rename from 'rollup-plugin-rename';
 
 const packageJson = require('./package.json');
 export default {
-  input: [
-    'src/index.jsx',
-    'src/Button/Button.jsx',
-    'src/Action/Action.jsx',
-    'src/Card/Card.jsx',
-    'src/Input/Input.jsx',
-    'src/Text/Text.jsx'
+  input: ['src/index.jsx', 
+  'src/Action/Action.jsx',
+  'src/Card/Card.jsx',
+  'src/Form/InputContainer.jsx',
+  'src/Form/InputGroup.jsx',
+  'src/Button/Button.jsx',
+  'src/Loader/Loader.jsx',
+  'src/Text/Text.jsx'
   ],
   output: [
     {
-      dir: "build",
-      format: "cjs",
-      sourcemap: true
+      dir: 'build',
+      format: 'cjs'
     }
   ],
-  preserveModules: true,
+  preserveModules: false,
   plugins: [
-    multi(),
+    commonjs(),
     scss(),
     svgr(),
     external({ includeDependencies: true }),
@@ -46,7 +47,15 @@ export default {
       extensions: ['.js', '.jsx']
       // resolveOnly: [/^(?!react$)/, /^(?!react-dom$)/, /^(?!prop-types)/]
     }),
-    commonjs(),
+    rename({
+      include: ['**/*.js'],
+      map: (name) =>
+        name
+          .replace('src/', '')
+          .replace('node_modules/', 'external/')
+          .replace('../../external', '../external')
+    }),
+
     copy({
       targets: [
         {
@@ -60,11 +69,6 @@ export default {
           rename: 'typography.scss'
         }
       ]
-    }),
-
-    clear({
-      targets: ['build'],
-      watch: true // default: false
     })
   ]
 };

@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import {Button} from '../../build/index.esm.js'
+ //import {Button} from '../../build/'
+import Button from '../../build/Button'
 
 const HelloWorld = () => {
     return (
         <h1>
-            {/* <Button>
-                testing button component
-            </Button> */}
+            <Button>
+                name Import button
+            </Button>
+
+           
         </h1>
     );
 }

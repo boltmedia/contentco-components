@@ -1,3 +1,3 @@
 import InputContainer from './InputContainer';
 
-export default { InputContainer };
+export default  InputContainer ;
