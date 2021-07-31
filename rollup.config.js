@@ -4,7 +4,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
-import clear from 'rollup-plugin-clear';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
 import scss from 'rollup-plugin-scss';
@@ -24,6 +23,11 @@ export default {
     'src/Text/Text.jsx'
   ],
   output: [
+    {
+      file: packageJson.module,
+      format: 'esm',
+      sourcemap: false
+    },
     {
       dir: 'build',
       format: 'cjs'
