@@ -3,9 +3,9 @@
 var _extends = require('@babel/runtime/helpers/extends');
 var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProperties');
 var React = require('react');
+var classNames = require('classnames');
 require('prop-types');
 require('./style-inject.es-dcee06b6.js');
-var classNames = require('classnames');
 var Styles_module = require('./Styles.module-5239bc23.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }

@@ -3,9 +3,9 @@
 var _extends = require('@babel/runtime/helpers/extends');
 var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProperties');
 var React = require('react');
+var classNames = require('classnames');
 var PropTypes = require('prop-types');
 var styleInject_es = require('./style-inject.es-dcee06b6.js');
-var classNames = require('classnames');
 var _defineProperty = require('@babel/runtime/helpers/defineProperty');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -13,8 +13,8 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends);
 var _objectWithoutProperties__default = /*#__PURE__*/_interopDefaultLegacy(_objectWithoutProperties);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
+var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
 var _defineProperty__default = /*#__PURE__*/_interopDefaultLegacy(_defineProperty);
 
 var css_248z = "/* prettier-ignore */\n/* beautify ignore:start */\n.Card-module_container__19jRJ {\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  background: #fff;\n  border: 1px solid #d8dfe6;\n  border-radius: 3px;\n  margin-bottom: 20px; }\n\n.Card-module_header__2UPBX {\n  padding: 10px 20px;\n  display: flex;\n  align-items: center;\n  flex-wrap: wrap;\n  font-size: 20px;\n  font-weight: 600;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  min-height: 65px;\n  box-sizing: border-box; }\n\n.Card-module_note__22XAs {\n  padding: 10px 20px;\n  background-color: #d2e5f8;\n  font-size: 14px;\n  border-top: 1px solid #d8dfe6; }\n\n.Card-module_item__1VJRt {\n  margin: 0;\n  padding: 10px 20px;\n  border-top: 1px solid #edf0f3; }\n  .Card-module_item__1VJRt.Card-module_noPaddingLeft__3HajD {\n    padding-left: 0; }\n  .Card-module_item__1VJRt.Card-module_noPadding__2j_hA {\n    padding: 0; }\n  .Card-module_item__1VJRt.Card-module_noBorder__PVp40 {\n    border: 0; }\n\n.Card-module_footer__2zfeT {\n  border-top: 1px solid #d8dfe6;\n  display: flex;\n  padding: 10px 20px;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px; }\n  .Card-module_footer__2zfeT.Card-module_right__3RLNc {\n    justify-content: flex-end; }\n\n.Card-module_flex__2VnYC {\n  display: flex; }\n";

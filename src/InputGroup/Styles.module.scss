@@ -1,0 +1,17 @@
+.inputGroup {
+  display: flex;
+  width: 100%;
+
+  .inputGroup {
+    flex-basis: 50%;
+    margin-left: 10px;
+  }
+
+  .inputContainer {
+    flex: 50%;
+  }
+
+  .inputContainer ~ .inputContainer {
+    margin-left: 10px;
+  }
+}

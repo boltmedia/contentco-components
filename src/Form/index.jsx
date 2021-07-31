@@ -1,3 +1,3 @@
-import InputContainer from './InputContainer';
+import Form from './Form';
 
-export default  InputContainer ;
+export default Form;

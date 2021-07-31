@@ -13,14 +13,15 @@ import rename from 'rollup-plugin-rename';
 
 const packageJson = require('./package.json');
 export default {
-  input: ['src/index.jsx', 
-  'src/Action/Action.jsx',
-  'src/Card/Card.jsx',
-  'src/Form/InputContainer.jsx',
-  'src/Form/InputGroup.jsx',
-  'src/Button/Button.jsx',
-  'src/Loader/Loader.jsx',
-  'src/Text/Text.jsx'
+  input: [
+    'src/index.jsx',
+    'src/Action/Action.jsx',
+    'src/Card/Card.jsx',
+    'src/Form/InputContainer.jsx',
+    'src/Form/InputGroup.jsx',
+    'src/Button/Button.jsx',
+    'src/Loader/Loader.jsx',
+    'src/Text/Text.jsx'
   ],
   output: [
     {
@@ -30,6 +31,7 @@ export default {
   ],
   preserveModules: false,
   plugins: [
+    multi(),
     commonjs(),
     scss(),
     svgr(),
