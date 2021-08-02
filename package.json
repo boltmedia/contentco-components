@@ -9,6 +9,10 @@
   "module": "build/index.esm.js",
   "browser": "build/index.js",
   "style": "build/index.css",
+  "exports": {
+    ".": "./build/index.js",
+    "./*": "./build/*.js"
+  },
   "files": [
     "build"
   ],

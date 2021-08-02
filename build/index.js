@@ -8,11 +8,8 @@ var React = require('react');
 var classNames = require('classnames');
 var PropTypes = require('prop-types');
 var styleInject_es = require('./style-inject.es-dcee06b6.js');
-var Loader = require('./Loader-1aeed820.js');
-var Button = require('./Button-42d1e5ab.js');
-require('./Styles.module-5239bc23.js');
-var InputContainer = require('./InputContainer.js');
-var InputGroup = require('./InputGroup.js');
+var Loader = require('./Loader-e05c48f6.js');
+var Button = require('./Button-deee7f52.js');
 var InputMask = require('react-input-mask');
 var TextareaAutosize = require('react-autosize-textarea');
 var _defineProperty = require('@babel/runtime/helpers/defineProperty');
@@ -34,8 +31,29 @@ var Action = require('./Action.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
+function _interopNamespace(e) {
+  if (e && e.__esModule) return e;
+  var n = Object.create(null);
+  if (e) {
+    Object.keys(e).forEach(function (k) {
+      if (k !== 'default') {
+        var d = Object.getOwnPropertyDescriptor(e, k);
+        Object.defineProperty(n, k, d.get ? d : {
+          enumerable: true,
+          get: function () {
+            return e[k];
+          }
+        });
+      }
+    });
+  }
+  n['default'] = e;
+  return Object.freeze(n);
+}
+
 var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends$$);
 var _objectWithoutProperties__default = /*#__PURE__*/_interopDefaultLegacy(_objectWithoutProperties);
+var React__namespace = /*#__PURE__*/_interopNamespace(React);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
 var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
@@ -55,38 +73,38 @@ var _possibleConstructorReturn__default = /*#__PURE__*/_interopDefaultLegacy(_po
 var _getPrototypeOf__default = /*#__PURE__*/_interopDefaultLegacy(_getPrototypeOf);
 var ReactDOM__default = /*#__PURE__*/_interopDefaultLegacy(ReactDOM);
 
-var css_248z = "/* prettier-ignore */\n/* beautify ignore:start */\n.Logo-module_white__1JjCX {\n  color: #fff; }\n\n.Logo-module_black__3Yv5k {\n  color: #212529; }\n\n.Logo-module_blue__1CBpI {\n  color: #1269db; }\n\n.Logo-module_darkblue__H2TFN {\n  color: #193278; }\n\n.Logo-module_darkgray__35Ap8 {\n  color: #626e7a; }\n\n.Logo-module_logo__2-Ewj {\n  width: 180px; }\n\n.Logo-module_hdLogo__2nNTV {\n  width: 155px; }\n";
-var Styles = {"white":"Logo-module_white__1JjCX","black":"Logo-module_black__3Yv5k","blue":"Logo-module_blue__1CBpI","darkblue":"Logo-module_darkblue__H2TFN","darkgray":"Logo-module_darkgray__35Ap8","logo":"Logo-module_logo__2-Ewj","hdLogo":"Logo-module_hdLogo__2nNTV"};
-styleInject_es.styleInject(css_248z);
+var css_248z$4 = "/* prettier-ignore */\n/* beautify ignore:start */\n.Logo-module_white__1JjCX {\n  color: #fff; }\n\n.Logo-module_black__3Yv5k {\n  color: #212529; }\n\n.Logo-module_blue__1CBpI {\n  color: #1269db; }\n\n.Logo-module_darkblue__H2TFN {\n  color: #193278; }\n\n.Logo-module_darkgray__35Ap8 {\n  color: #626e7a; }\n\n.Logo-module_logo__2-Ewj {\n  width: 180px; }\n\n.Logo-module_hdLogo__2nNTV {\n  width: 155px; }\n";
+var Styles$3 = {"white":"Logo-module_white__1JjCX","black":"Logo-module_black__3Yv5k","blue":"Logo-module_blue__1CBpI","darkblue":"Logo-module_darkblue__H2TFN","darkgray":"Logo-module_darkgray__35Ap8","logo":"Logo-module_logo__2-Ewj","hdLogo":"Logo-module_hdLogo__2nNTV"};
+styleInject_es.styleInject(css_248z$4);
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _extends$_() { _extends$_ = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$_.apply(this, arguments); }
 
-var _ref = /*#__PURE__*/React.createElement("g", {
+var _ref$_ = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M9.565 61.913V35.821H42.61v26.092h9.565V0h-9.565v26.976H9.565V0H0v61.913zm61.392-49.391v-9.74h-9.74v9.74zm-.696 48.695V19.478h-9.044v41.74zM96.93 18.783c1.806 0 3.457.3 4.95.899l.382.161-.112.079a19.797 19.797 0 00-2.926 2.562 20.922 20.922 0 00-3.315 4.62l.087.033c-.796-.31-1.68-.464-2.65-.464-2.032 0-3.66.629-4.884 1.885-1.156 1.187-1.767 2.752-1.831 4.695l-.006.347v27.617h-9.408V19.66h9.408v6.05l.121-.311c1.769-4.41 5.163-6.615 10.183-6.615zm21.896 0c5.438 0 9.892 1.658 13.363 4.976 3.47 3.318 5.206 7.742 5.206 13.271 0 1.294-.114 2.702-.343 4.225l-.09.577h-29.069l.005.412c.08 3.814 1.294 6.732 3.64 8.755 2.545 2.038 5.437 3.056 8.677 3.056 5.959 0 9.635-2.801 11.028-8.404l.078-.327 7.81 3.056-.142.413c-3.062 8.747-9.35 13.12-18.861 13.12-6.363 0-11.511-1.979-15.445-5.937-3.934-3.958-5.9-9.255-5.9-15.89 0-6.054 1.865-11.117 5.596-15.192 3.731-4.074 8.547-6.111 14.447-6.111zm-.086 7.857c-2.835 0-5.25.815-7.246 2.445-1.909 1.559-3.09 3.65-3.543 6.274l-.058.361h20.391l.087-.785-.005-.331c-.075-2.405-.97-4.318-2.685-5.737-1.793-1.485-4.107-2.227-6.941-2.227zM189.642 0l.56.003c9.495.11 16.895 2.997 22.203 8.665 5.411 5.778 8.117 13.355 8.117 22.73 0 8.963-2.75 16.29-8.25 21.98-5.39 5.576-12.742 8.42-22.058 8.532l-.572.003H166.26V0h23.38zm0 8.845h-13.676v44.223h13.675c6.588 0 11.764-2.078 15.529-6.235 3.764-4.157 5.646-9.302 5.646-15.434 0-6.722-1.852-12.162-5.558-16.319-3.615-4.055-8.658-6.133-15.129-6.232l-.488-.003zm44.793 3.677v-9.74h-9.74v9.74zm0 48.695V19.478h-9.044v41.74zM258.5 18.783c5.814 0 10.166 2.081 13.057 6.245l.204.301v-5.662h9.282v38.394l-.004.547c-.095 6.352-1.862 11.477-5.3 15.376-3.536 4.01-8.546 6.016-15.029 6.016-10.216 0-16.801-4.233-19.757-12.699l-.134-.394 8.398-3.538.093.382c.678 2.643 1.973 4.668 3.886 6.076 2.003 1.474 4.508 2.211 7.514 2.211 7.257 0 10.94-4.378 11.048-13.134l.003-.4V54.08l-.173.35c-1.128 2.192-2.868 3.918-5.22 5.179-2.475 1.327-5.393 1.99-8.752 1.99-5.422 0-9.946-1.916-13.57-5.75-3.625-3.833-5.437-8.846-5.437-15.039 0-6.428 1.915-11.707 5.746-15.835 3.831-4.128 8.546-6.192 14.145-6.192zm1.503 7.961c-3.536 0-6.439 1.283-8.708 3.849-2.27 2.565-3.404 5.971-3.404 10.217 0 3.893 1.135 7.004 3.404 9.333 2.269 2.33 5.172 3.495 8.708 3.495 3.477 0 6.365-1.239 8.664-3.716 2.298-2.595 3.448-5.81 3.448-9.642 0-3.893-1.15-7.122-3.448-9.687-2.299-2.566-5.187-3.849-8.664-3.849zm39.127-14.222v-9.74h-9.739v9.74zm-.695 48.695V19.478h-9.044v41.74zm26.901.696c4.007 0 7.263-1.154 9.767-3.462 2.504-2.308 3.963-5.536 4.375-9.684l-8.839-1.753c-.353 4.674-2.268 7.011-5.745 7.011-1.532 0-2.799-.496-3.8-1.49-1.002-.993-1.503-2.395-1.503-4.206V27.382h17.301v-7.887h-17.301V6.26h-9.281v13.234h-8.397v7.887h8.397V47.89c0 4.382 1.282 7.815 3.845 10.298s6.29 3.725 11.181 3.725zM360 18.783c5.91 0 10.461 1.44 13.65 4.321 3.093 2.794 4.687 6.696 4.78 11.707l.005.473V61.04h-8.779v-6.985l-.138.338c-.959 2.23-2.58 4.023-4.865 5.381-2.4 1.426-5.385 2.14-8.954 2.14-3.629 0-6.818-1.165-9.569-3.493-2.75-2.328-4.126-5.384-4.126-9.168 0-4.365 1.449-7.668 4.345-9.91 2.897-2.24 6.745-3.36 11.544-3.36 2.414 0 4.68.244 6.8.733l.574.14 4.39 1.047v-3.056l-.005-.331c-.072-2.52-.962-4.52-2.673-5.998-1.785-1.543-4.111-2.314-6.979-2.314-2.692 0-4.93.727-6.715 2.183-1.696 1.382-2.798 3.263-3.305 5.644l-.075.38-8.34-2.183.105-.44c.98-3.925 3.008-7.053 6.084-9.382 3.19-2.415 7.271-3.623 12.246-3.623zm-.615 24.097c-5.15 0-7.725 1.833-7.725 5.5 0 1.688.659 3.056 1.976 4.104 1.316 1.047 3.233 1.571 5.75 1.571 3.101 0 5.588-.771 7.461-2.313 1.795-1.479 2.73-3.505 2.804-6.079l.005-.339v-.436l-3.336-.873-.5-.13c-2.637-.67-4.782-1.005-6.435-1.005zm35.745 19.033V0h-9.043v61.913z"
 }));
 
 function SvgHdinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$_({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 400 80"
-  }, props), _ref);
+  }, props), _ref$_);
 }
 
-function _extends$1() { _extends$1 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1.apply(this, arguments); }
+function _extends$Z() { _extends$Z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Z.apply(this, arguments); }
 
-var _ref$1 = /*#__PURE__*/React.createElement("path", {
+var _ref$Z = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M33.066 43.785c-2.216 1.684-5.762 3.103-9.751 3.103-6.471 0-11.081-5.142-11.081-11.259s4.61-11.17 11.08-11.17c4.079 0 7.448 1.419 9.752 3.014V14.708c-2.482-1.241-6.826-2.04-9.751-2.04C9.308 12.67 0 22.599 0 35.63c0 12.943 9.308 23.05 23.315 23.05 3.014 0 7.27-.799 9.751-2.128V43.785zm28.451-31.116c12.943 0 22.96 10.017 22.96 22.96 0 12.943-10.017 23.05-22.96 23.05s-22.96-10.107-22.96-23.05c0-12.943 10.017-22.96 22.96-22.96zm0 11.79c-6.117 0-10.726 5.053-10.726 11.17s4.61 11.259 10.726 11.259c6.206 0 10.638-5.142 10.638-11.259s-4.432-11.17-10.638-11.17zm43.078-10.903H92.539v44.147h12.056v-25.62c.266-4.698 3.103-7.624 7.535-7.624 4.61 0 7.536 3.28 7.536 8.156v25.088h12.145V29.246c0-9.485-6.117-16.577-15.603-16.577-5.496 0-9.22 2.66-11.613 6.471v-5.585zm52.031 44.147V23.839h7.447V13.556h-7.447V1.322l-11.347 2.57v9.664h-7.446v10.283h6.737v33.864zm32.706-45.034c12.766 0 20.656 9.574 20.656 21.01 0 1.862-.355 4.344-.71 5.762h-29.963c1.064 5.053 5.496 8.333 11.702 8.333 5.496 0 10.992-1.595 14.982-4.166V55.22c-3.901 2.039-9.575 3.457-15.957 3.457-13.12 0-22.783-9.308-22.783-23.049 0-12.943 9.308-22.96 22.073-22.96zm-.088 10.017c-5.32 0-9.309 3.458-9.929 7.624h19.06c-.178-4.52-3.99-7.624-9.131-7.624zm40.498-9.13h-12.056v44.147h12.056v-25.62c.266-4.698 3.103-7.624 7.535-7.624 4.61 0 7.536 3.28 7.536 8.156v25.088h12.145V29.246c0-9.485-6.117-16.577-15.603-16.577-5.496 0-9.22 2.66-11.613 6.471v-5.585zm52.032 44.147V23.839h7.446V13.556h-7.447V1.322l-11.347 2.57v9.664h-7.446v10.283h6.737v33.864zm10.809-7.27c0 4.7 3.457 8.157 8.156 8.157 4.787 0 8.333-3.458 8.333-8.156 0-4.787-3.546-8.333-8.333-8.333-4.699 0-8.156 3.546-8.156 8.333zm55.666-6.648c-2.216 1.684-5.762 3.103-9.751 3.103-6.472 0-11.082-5.142-11.082-11.259s4.61-11.17 11.082-11.17c4.078 0 7.446 1.419 9.751 3.014V14.708c-2.482-1.241-6.826-2.04-9.751-2.04-14.007 0-23.315 9.93-23.315 22.961 0 12.943 9.308 23.05 23.315 23.05 3.014 0 7.269-.799 9.751-2.128V43.785zm28.45-31.116c12.944 0 22.961 10.017 22.961 22.96 0 12.943-10.017 23.05-22.96 23.05s-22.96-10.107-22.96-23.05c0-12.943 10.017-22.96 22.96-22.96zm0 11.79c-6.116 0-10.726 5.053-10.726 11.17s4.61 11.259 10.727 11.259c6.205 0 10.638-5.142 10.638-11.259s-4.433-11.17-10.638-11.17z",
   fill: "currentColor",
   fillRule: "evenodd"
 });
 
 function SvgCcinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$1({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$Z({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 400 60"
-  }, props), _ref$1);
+  }, props), _ref$Z);
 }
 
 var Logo = /*#__PURE__*/React__default['default'].memo(function (_ref) {
@@ -97,7 +115,7 @@ var Logo = /*#__PURE__*/React__default['default'].memo(function (_ref) {
       props = _objectWithoutProperties__default['default'](_ref, ["className", "type", "site"]);
 
   var Component = site === '2' ? SvgHdinline : SvgCcinline;
-  var logoSize = site === '2' ? Styles.hdLogo : Styles.logo;
+  var logoSize = site === '2' ? Styles$3.hdLogo : Styles$3.logo;
   return /*#__PURE__*/React__default['default'].createElement(Component, _extends__default['default']({
     className: classNames__default['default'](logoSize, className, type)
   }, props));
@@ -107,14 +125,42 @@ Logo.propTypes = {
   type: PropTypes__default['default'].string
 };
 Logo.Type = {
-  WHITE: Styles.white,
-  BLACK: Styles.black,
-  BLUE: Styles.blue,
-  DARKBLUE: Styles.darkblue,
-  DARKGRAY: Styles.darkgray
+  WHITE: Styles$3.white,
+  BLACK: Styles$3.black,
+  BLUE: Styles$3.blue,
+  DARKBLUE: Styles$3.darkblue,
+  DARKGRAY: Styles$3.darkgray
 };
 
-var defineProperty = Loader.objectDefineProperty.f;
+var css_248z$3 = ".Styles-module_inputContainer__1cj_2 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-bottom: 15px; }\n";
+var Styles$2 = {"inputContainer":"Styles-module_inputContainer__1cj_2"};
+styleInject_es.styleInject(css_248z$3);
+
+var InputContainer = function InputContainer(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      props = _objectWithoutProperties__default['default'](_ref, ["className", "children"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$2.inputContainer, className)
+  }, props), children);
+};
+
+var css_248z$2 = ".Styles-module_inputGroup__3lWdS {\n  display: flex;\n  width: 100%; }\n  .Styles-module_inputGroup__3lWdS .Styles-module_inputGroup__3lWdS {\n    flex-basis: 50%;\n    margin-left: 10px; }\n  .Styles-module_inputGroup__3lWdS .Styles-module_inputContainer__12qit {\n    flex: 50%; }\n  .Styles-module_inputGroup__3lWdS .Styles-module_inputContainer__12qit ~ .Styles-module_inputContainer__12qit {\n    margin-left: 10px; }\n";
+var Styles$1 = {"inputGroup":"Styles-module_inputGroup__3lWdS","inputContainer":"Styles-module_inputContainer__12qit"};
+styleInject_es.styleInject(css_248z$2);
+
+var InputGroup = function InputGroup(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      props = _objectWithoutProperties__default['default'](_ref, ["className", "children"]);
+
+  return /*#__PURE__*/React__default['default'].createElement("div", _extends__default['default']({
+    className: classNames__default['default'](Styles$1.inputGroup, className)
+  }, props), children);
+};
+
+var defineProperty$2 = Loader.objectDefineProperty.f;
 
 var FunctionPrototype = Function.prototype;
 var FunctionPrototypeToString = FunctionPrototype.toString;
@@ -124,7 +170,7 @@ var NAME = 'name';
 // Function instances `.name` property
 // https://tc39.github.io/ecma262/#sec-function-instances-name
 if (Loader.descriptors && !(NAME in FunctionPrototype)) {
-  defineProperty(FunctionPrototype, NAME, {
+  defineProperty$2(FunctionPrototype, NAME, {
     configurable: true,
     get: function () {
       try {
@@ -137,7 +183,7 @@ if (Loader.descriptors && !(NAME in FunctionPrototype)) {
 }
 
 var css_248z$1 = "/* prettier-ignore */\n/* beautify ignore:start */\n.Input-module_container__7_hNh {\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  width: 100%;\n  box-sizing: border-box;\n  min-height: 50px;\n  border-radius: 4px;\n  position: relative;\n  background-color: #fff;\n  border: 1px solid #c3ced9; }\n  .Input-module_container__7_hNh.Input-module_containerError__1VTCs {\n    border: 1px solid #ec392f; }\n\n.Input-module_label__29rQT {\n  position: absolute;\n  top: 13px;\n  left: 12px;\n  font-size: 16px;\n  line-height: 24px;\n  pointer-events: none;\n  color: #084b8a;\n  transition: 0.1s all ease-in-out;\n  margin-bottom: 0;\n  cursor: text;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: calc(100% - 0);\n  right: 10px; }\n  .Input-module_label__29rQT.Input-module_error__1F01K {\n    color: #ec392f; }\n\n.Input-module_base__2s2cs {\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  border: 1px solid transparent;\n  position: relative;\n  font-size: 16px;\n  font-weight: 300;\n  line-height: normal;\n  background-color: transparent;\n  border-radius: 4px;\n  outline: none;\n  color: #212529;\n  vertical-align: top;\n  -webkit-appearance: none;\n  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out; }\n  .Input-module_base__2s2cs:-ms-input-placeholder {\n    color: transparent; }\n  .Input-module_base__2s2cs::-moz-placeholder {\n    color: transparent; }\n  .Input-module_base__2s2cs::placeholder {\n    color: transparent; }\n  .Input-module_base__2s2cs:not(:-moz-placeholder-shown) {\n    padding-top: 20px;\n    padding-bottom: 4px; }\n  .Input-module_base__2s2cs:not(:-ms-input-placeholder) {\n    padding-top: 20px;\n    padding-bottom: 4px; }\n  .Input-module_base__2s2cs:not(:placeholder-shown),\n  .Input-module_error__1F01K .Input-module_base__2s2cs {\n    padding-top: 20px;\n    padding-bottom: 4px; }\n  .Input-module_base__2s2cs:not(:-moz-placeholder-shown) ~ .Input-module_label__29rQT {\n    left: 12px;\n    font-size: 12px;\n    font-weight: 600;\n    line-height: 18px;\n    top: 4px; }\n  .Input-module_base__2s2cs:not(:-ms-input-placeholder) ~ .Input-module_label__29rQT {\n    left: 12px;\n    font-size: 12px;\n    font-weight: 600;\n    line-height: 18px;\n    top: 4px; }\n  .Input-module_base__2s2cs:not(:placeholder-shown) ~ .Input-module_label__29rQT {\n    left: 12px;\n    font-size: 12px;\n    font-weight: 600;\n    line-height: 18px;\n    top: 4px; }\n  .Input-module_base__2s2cs:not(:-moz-placeholder-shown) ~ .Input-module_label__29rQT.Input-module_error__1F01K {\n    left: 12px;\n    font-size: 12px;\n    font-weight: 600;\n    line-height: 18px;\n    top: 4px;\n    color: #ec392f; }\n  .Input-module_base__2s2cs:not(:-ms-input-placeholder) ~ .Input-module_label__29rQT.Input-module_error__1F01K {\n    left: 12px;\n    font-size: 12px;\n    font-weight: 600;\n    line-height: 18px;\n    top: 4px;\n    color: #ec392f; }\n  .Input-module_error__1F01K .Input-module_base__2s2cs ~ .Input-module_label__29rQT,\n  .Input-module_base__2s2cs:not(:placeholder-shown) ~ .Input-module_label__29rQT.Input-module_error__1F01K {\n    left: 12px;\n    font-size: 12px;\n    font-weight: 600;\n    line-height: 18px;\n    top: 4px;\n    color: #ec392f; }\n  .Input-module_base__2s2cs:disabled {\n    background: #f8f9fa; }\n  .Input-module_base__2s2cs:focus {\n    transition: none;\n    outline: none;\n    border: 1px solid #1269db;\n    box-shadow: 0 0 0 3px #c4e0fb; }\n\n.Input-module_quill__3oqSZ {\n  min-height: 108px;\n  padding: 12px 12px 12px 12px; }\n  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n    .Input-module_quill__3oqSZ {\n      padding: 0; } }\n\n.Input-module_textArea__37YXB {\n  min-height: 108px;\n  padding: 12px 12px 12px 12px;\n  resize: vertical;\n  position: relative;\n  overflow: auto; }\n\n.Input-module_input__1IPSm {\n  padding: 12px 12px 12px 12px;\n  min-height: 48px; }\n\n.Input-module_inputActive__18Dfx {\n  padding: 20px 12px 4px 12px; }\n\n.Input-module_select__21Aar {\n  padding: 0 !important; }\n  .Input-module_select__21Aar + .Input-module_label__29rQT {\n    opacity: 0; }\n    .Input-module_select__21Aar + .Input-module_label__29rQT.Input-module_hasValue__yjvbk {\n      opacity: 1;\n      left: 12px;\n      font-weight: 600;\n      font-size: 12px;\n      line-height: 18px;\n      top: 4px; }\n    .Input-module_select__21Aar + .Input-module_label__29rQT.Input-module_error__1F01K {\n      opacity: 1;\n      color: #ec392f; }\n  .Input-module_select__21Aar .s-contact__loading-indicator > span {\n    width: 5px;\n    height: 5px;\n    border-radius: 10px; }\n    .Input-module_select__21Aar .s-contact__loading-indicator > span ~ span {\n      margin-left: 5px; }\n  .Input-module_select__21Aar .s-contact__indicator {\n    color: #c3ced9;\n    cursor: pointer;\n    border-left: 1px solid #d8dfe6;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center; }\n    .Input-module_select__21Aar .s-contact__indicator:hover {\n      background-color: #f2f6fa; }\n  .Input-module_select__21Aar .s-contact__control {\n    border: 1px solid transparent;\n    min-height: 48px;\n    transition: 0.3s box-shadow ease-in-out; }\n    .Input-module_select__21Aar .s-contact__control:hover {\n      border-color: transparent; }\n    .Input-module_select__21Aar .s-contact__control.s-contact__control--is-focused {\n      transition: none;\n      outline: none;\n      border: 1px solid #1269db;\n      box-shadow: 0 0 0 3px #c4e0fb; }\n  .Input-module_select__21Aar .s-contact__placeholder {\n    color: #084b8a;\n    transition: 0.1s all ease-in-out; }\n    .Input-module_containerError__1VTCs .Input-module_select__21Aar .s-contact__placeholder {\n      display: none; }\n  .Input-module_select__21Aar .s-contact__indicator-separator {\n    display: none !important; }\n  .Input-module_select__21Aar .s-contact__menu {\n    z-index: 4;\n    margin-top: 3px; }\n  .Input-module_select__21Aar .s-contact__input > input {\n    font-size: 16px;\n    line-height: 24px; }\n  .Input-module_select__21Aar .s-contact__option {\n    font-size: 14px; }\n  .Input-module_select__21Aar .s-contact__value-container {\n    padding: 0;\n    line-height: 24px;\n    min-height: 46px;\n    padding: 10px; }\n    .Input-module_select__21Aar .s-contact__value-container.s-contact__value-container--is-multi {\n      padding: 10px; }\n    .Input-module_select__21Aar .s-contact__value-container.s-contact__value-container--has-value {\n      padding: 19px 11px 3px 11px; }\n      .Input-module_select__21Aar .s-contact__value-container.s-contact__value-container--has-value.s-contact__value-container--is-multi {\n        padding: 20px 10px 4px 10px; }\n  .Input-module_select__21Aar .s-contact__single-value {\n    top: initial;\n    transform: initial; }\n  .Input-module_select__21Aar .s-contact__multi-value-orderable {\n    padding: 4px; }\n    .Input-module_select__21Aar .s-contact__multi-value-orderable ~ div > .s-contact__input {\n      margin-left: 0; }\n  .Input-module_select__21Aar .s-contact__multi-value {\n    background: #edf0f3;\n    white-space: nowrap; }\n    .Input-module_select__21Aar .s-contact__multi-value ~ div > .s-contact__input {\n      margin-left: 0; }\n  .Input-module_select__21Aar .s-contact__multi-value__label {\n    padding: 0 4px 0 5px; }\n  .Input-module_select__21Aar .s-contact__multi-value__remove {\n    cursor: pointer; }\n\n.Input-module_multiContainer__2Mq0y {\n  height: auto !important;\n  min-height: 50px; }\n\n.Input-module_containerMultiLink__3-CKd .Input-module_addButton__xe-Dz {\n  position: absolute;\n  right: 16px;\n  top: 10px;\n  margin: 0;\n  padding: 0 16px;\n  min-width: 0;\n  height: 38px;\n  min-height: 38px;\n  line-height: 38px; }\n  .Input-module_containerMultiLink__3-CKd .Input-module_addButton__xe-Dz:disabled {\n    opacity: 0.5;\n    cursor: default;\n    pointer-events: none; }\n\n.Input-module_linkList__3mr1q {\n  display: flex;\n  flex-direction: column;\n  padding: 8px;\n  padding-top: 0; }\n\n.Input-module_link__3k_SN {\n  padding: 5px 8px;\n  font-size: 14px;\n  border-radius: 4px;\n  display: flex;\n  overflow: hidden; }\n  .Input-module_link__3k_SN .Input-module_remove__oKrKC {\n    margin-left: auto;\n    padding: 0 4px;\n    display: none;\n    flex-shrink: 0; }\n  .Input-module_link__3k_SN a {\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden; }\n  .Input-module_link__3k_SN a:link,\n  .Input-module_link__3k_SN a:visited {\n    color: #1269db; }\n  .Input-module_link__3k_SN:hover {\n    background-color: #f2f6fa; }\n    .Input-module_link__3k_SN:hover .Input-module_remove__oKrKC {\n      display: block;\n      cursor: pointer; }\n      .Input-module_link__3k_SN:hover .Input-module_remove__oKrKC:hover {\n        color: #1269db;\n        text-decoration: underline; }\n    .Input-module_link__3k_SN:hover a {\n      color: #193278; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualInput__1pVfj {\n  border: 0;\n  flex-basis: 50%;\n  flex-grow: 1; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualInputTextInput__39H-P {\n  padding: 20px 12px 4px 12px;\n  width: 100%; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualInputTextInput__39H-P:-ms-input-placeholder {\n    color: #d8dfe6; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualInputTextInput__39H-P::-moz-placeholder {\n    color: #d8dfe6; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualInputTextInput__39H-P::placeholder {\n    color: #d8dfe6; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__single-value {\n  position: initial; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__indicators {\n  height: 100% !important;\n  align-items: flex-end; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__indicator-separator {\n  display: none !important; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__indicator {\n  border-left: 0;\n  padding: 14px 6px; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container {\n  padding: 12px 0 !important;\n  height: 100% !important;\n  position: relative;\n  display: flex;\n  align-items: flex-end;\n  justify-content: flex-end; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container div {\n    line-height: normal !important;\n    margin: 0 !important;\n    width: 100%; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container .s-contact__single-value {\n    height: 20px;\n    text-align: right; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container > div:last-child {\n    position: absolute;\n    top: 0; }\n  .Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container .s-contact__input {\n    width: 100%;\n    display: flex !important;\n    align-items: flex-end !important;\n    justify-content: flex-end !important;\n    padding: 0 !important; }\n    .Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container .s-contact__input > div {\n      display: none !important; }\n    .Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__value-container .s-contact__input > input {\n      width: 100% !important;\n      height: 20px !important;\n      margin: 0 0 12px 0 !important;\n      position: static;\n      text-align: right; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualSelect__38iVx .s-contact__menu {\n  min-width: 150px !important;\n  right: 0; }\n\n.Input-module_dualContainer__Vn-6k .Input-module_dualInput__1pVfj + .Input-module_label__29rQT.Input-module_error__1F01K {\n  color: #ec392f; }\n\n.Input-module_dualContainer__Vn-6k.Input-module_active__17Kv1 .Input-module_label__29rQT {\n  top: 4px;\n  font-size: 12px;\n  font-weight: 600;\n  line-height: 18px;\n  color: #084b8a; }\n\n.Input-module_dualContainer__Vn-6k.Input-module_shrink__2j5O6 .Input-module_dualInput__1pVfj {\n  flex-basis: 60% !important; }\n\n.Input-module_dualContainer__Vn-6k.Input-module_shrink__2j5O6 .Input-module_dualSelect__38iVx {\n  flex-basis: 40% !important; }\n\n.Input-module_dualContainer__Vn-6k.Input-module_shrink__2j5O6 .Input-module_base__2s2cs {\n  padding-right: 0; }\n\n.Input-module_dualContainer__Vn-6k.Input-module_shrink__2j5O6 .s-contact__indicators {\n  display: none !important; }\n\n.Input-module_dualContainer__Vn-6k.Input-module_shrink__2j5O6 .s-contact__value-container {\n  padding-right: 10px !important; }\n\n.Input-module_multiLevelOption__30LcC {\n  display: flex;\n  flex-direction: row;\n  border-bottom: 1px solid #d8dfe6;\n  font-size: 14px;\n  cursor: pointer; }\n  .Input-module_multiLevelOption__30LcC:hover {\n    background-color: #f8f9fa; }\n\n.Input-module_select__21Aar .Input-module_multiLevelOption__30LcC:last-child {\n  border: 0; }\n\n.Input-module_actions__17Tfy {\n  min-width: 40px;\n  border-right: 1px solid #d8dfe6; }\n\n.Input-module_action__1hVlA {\n  border: 0;\n  outline: 0;\n  background: none;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  cursor: pointer; }\n\n.Input-module_rightArrow__3FCvZ:before {\n  border: 5px solid transparent;\n  border-top-color: #a1aab3;\n  content: '';\n  display: block;\n  height: 0;\n  width: 0;\n  left: 0;\n  top: 5px;\n  margin-top: 7px; }\n\n.Input-module_downArrow__7FnWw:before {\n  border: 5px solid transparent;\n  border-left-color: #a1aab3;\n  content: '';\n  display: block;\n  height: 0;\n  left: 2px;\n  top: 4px;\n  width: 0;\n  margin-left: 6px; }\n\n.Input-module_optionItem__3yYN4 {\n  padding: 10px 15px;\n  flex: 1; }\n";
-var Styles$1 = {"container":"Input-module_container__7_hNh","containerError":"Input-module_containerError__1VTCs","label":"Input-module_label__29rQT","error":"Input-module_error__1F01K","base":"Input-module_base__2s2cs","quill":"Input-module_quill__3oqSZ","textArea":"Input-module_textArea__37YXB","input":"Input-module_input__1IPSm","inputActive":"Input-module_inputActive__18Dfx","select":"Input-module_select__21Aar","hasValue":"Input-module_hasValue__yjvbk","multiContainer":"Input-module_multiContainer__2Mq0y","containerMultiLink":"Input-module_containerMultiLink__3-CKd","addButton":"Input-module_addButton__xe-Dz","linkList":"Input-module_linkList__3mr1q","link":"Input-module_link__3k_SN","remove":"Input-module_remove__oKrKC","dualContainer":"Input-module_dualContainer__Vn-6k","dualInput":"Input-module_dualInput__1pVfj","dualInputTextInput":"Input-module_dualInputTextInput__39H-P","dualSelect":"Input-module_dualSelect__38iVx","active":"Input-module_active__17Kv1","shrink":"Input-module_shrink__2j5O6","multiLevelOption":"Input-module_multiLevelOption__30LcC","actions":"Input-module_actions__17Tfy","action":"Input-module_action__1hVlA","rightArrow":"Input-module_rightArrow__3FCvZ","downArrow":"Input-module_downArrow__7FnWw","optionItem":"Input-module_optionItem__3yYN4"};
+var Styles = {"container":"Input-module_container__7_hNh","containerError":"Input-module_containerError__1VTCs","label":"Input-module_label__29rQT","error":"Input-module_error__1F01K","base":"Input-module_base__2s2cs","quill":"Input-module_quill__3oqSZ","textArea":"Input-module_textArea__37YXB","input":"Input-module_input__1IPSm","inputActive":"Input-module_inputActive__18Dfx","select":"Input-module_select__21Aar","hasValue":"Input-module_hasValue__yjvbk","multiContainer":"Input-module_multiContainer__2Mq0y","containerMultiLink":"Input-module_containerMultiLink__3-CKd","addButton":"Input-module_addButton__xe-Dz","linkList":"Input-module_linkList__3mr1q","link":"Input-module_link__3k_SN","remove":"Input-module_remove__oKrKC","dualContainer":"Input-module_dualContainer__Vn-6k","dualInput":"Input-module_dualInput__1pVfj","dualInputTextInput":"Input-module_dualInputTextInput__39H-P","dualSelect":"Input-module_dualSelect__38iVx","active":"Input-module_active__17Kv1","shrink":"Input-module_shrink__2j5O6","multiLevelOption":"Input-module_multiLevelOption__30LcC","actions":"Input-module_actions__17Tfy","action":"Input-module_action__1hVlA","rightArrow":"Input-module_rightArrow__3FCvZ","downArrow":"Input-module_downArrow__7FnWw","optionItem":"Input-module_optionItem__3yYN4"};
 styleInject_es.styleInject(css_248z$1);
 
 var TextInput = /*#__PURE__*/React__default['default'].forwardRef(function (_ref, ref) {
@@ -154,10 +200,10 @@ var TextInput = /*#__PURE__*/React__default['default'].forwardRef(function (_ref
 
   var Elem = mask ? InputMask__default['default'] : 'input';
   return /*#__PURE__*/React__default['default'].createElement("div", {
-    className: classNames__default['default'](Styles$1.container, disabled && Styles$1.disabled, error && Styles$1.containerError, className)
+    className: classNames__default['default'](Styles.container, disabled && Styles.disabled, error && Styles.containerError, className)
   }, /*#__PURE__*/React__default['default'].createElement(Elem, _extends__default['default']({
     ref: ref,
-    className: classNames__default['default'](Styles$1.base, Styles$1.input),
+    className: classNames__default['default'](Styles.base, Styles.input),
     id: id,
     name: name,
     placeholder: placeholder || label,
@@ -166,7 +212,7 @@ var TextInput = /*#__PURE__*/React__default['default'].forwardRef(function (_ref
     mask: mask
   }, props)), /*#__PURE__*/React__default['default'].createElement("label", {
     htmlFor: name,
-    className: classNames__default['default'](Styles$1.label, error && Styles$1.error)
+    className: classNames__default['default'](Styles.label, error && Styles.error)
   }, error || label));
 });
 TextInput.propTypes = {
@@ -199,10 +245,10 @@ var TextArea = /*#__PURE__*/React__default['default'].forwardRef(function (_ref,
       props = _objectWithoutProperties__default['default'](_ref, ["disabled", "name", "placeholder", "label", "required", "error"]);
 
   return /*#__PURE__*/React__default['default'].createElement("div", {
-    className: classNames__default['default'](Styles$1.container, props.className, disabled && Styles$1.disabled)
+    className: classNames__default['default'](Styles.container, props.className, disabled && Styles.disabled)
   }, /*#__PURE__*/React__default['default'].createElement(TextareaAutosize__default['default'], _extends__default['default']({
     ref: ref,
-    className: classNames__default['default'](Styles$1.base, Styles$1.textArea),
+    className: classNames__default['default'](Styles.base, Styles.textArea),
     id: name,
     name: name,
     placeholder: placeholder || label,
@@ -210,7 +256,7 @@ var TextArea = /*#__PURE__*/React__default['default'].forwardRef(function (_ref,
     disabled: disabled
   }, props)), /*#__PURE__*/React__default['default'].createElement("label", {
     htmlFor: name,
-    className: classNames__default['default'](Styles$1.label, error && Styles$1.error)
+    className: classNames__default['default'](Styles.label, error && Styles.error)
   }, error || label));
 });
 TextArea.propTypes = {
@@ -245,7 +291,7 @@ var html = Loader.getBuiltIn('document', 'documentElement');
 
 var GT = '>';
 var LT = '<';
-var PROTOTYPE = 'prototype';
+var PROTOTYPE$1 = 'prototype';
 var SCRIPT = 'script';
 var IE_PROTO = Loader.sharedKey('IE_PROTO');
 
@@ -294,7 +340,7 @@ var NullProtoObject = function () {
   } catch (error) { /* ignore */ }
   NullProtoObject = activeXDocument ? NullProtoObjectViaActiveX(activeXDocument) : NullProtoObjectViaIFrame();
   var length = Loader.enumBugKeys.length;
-  while (length--) delete NullProtoObject[PROTOTYPE][Loader.enumBugKeys[length]];
+  while (length--) delete NullProtoObject[PROTOTYPE$1][Loader.enumBugKeys[length]];
   return NullProtoObject();
 };
 
@@ -305,16 +351,16 @@ Loader.hiddenKeys[IE_PROTO] = true;
 var objectCreate = Object.create || function create(O, Properties) {
   var result;
   if (O !== null) {
-    EmptyConstructor[PROTOTYPE] = Loader.anObject(O);
+    EmptyConstructor[PROTOTYPE$1] = Loader.anObject(O);
     result = new EmptyConstructor();
-    EmptyConstructor[PROTOTYPE] = null;
+    EmptyConstructor[PROTOTYPE$1] = null;
     // add "__proto__" for Object.getPrototypeOf polyfill
     result[IE_PROTO] = O;
   } else result = NullProtoObject();
   return Properties === undefined ? result : objectDefineProperties(result, Properties);
 };
 
-var nativeGetOwnPropertyNames = Loader.objectGetOwnPropertyNames.f;
+var nativeGetOwnPropertyNames$1 = Loader.objectGetOwnPropertyNames.f;
 
 var toString = {}.toString;
 
@@ -323,21 +369,21 @@ var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNa
 
 var getWindowNames = function (it) {
   try {
-    return nativeGetOwnPropertyNames(it);
+    return nativeGetOwnPropertyNames$1(it);
   } catch (error) {
     return windowNames.slice();
   }
 };
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var f = function getOwnPropertyNames(it) {
+var f$2 = function getOwnPropertyNames(it) {
   return windowNames && toString.call(it) == '[object Window]'
     ? getWindowNames(it)
-    : nativeGetOwnPropertyNames(Loader.toIndexedObject(it));
+    : nativeGetOwnPropertyNames$1(Loader.toIndexedObject(it));
 };
 
 var objectGetOwnPropertyNamesExternal = {
-	f: f
+	f: f$2
 };
 
 var f$1 = Button.wellKnownSymbol;
@@ -355,32 +401,32 @@ var defineWellKnownSymbol = function (NAME) {
   });
 };
 
-var defineProperty$2 = Loader.objectDefineProperty.f;
+var defineProperty = Loader.objectDefineProperty.f;
 
 
 
-var TO_STRING_TAG = Button.wellKnownSymbol('toStringTag');
+var TO_STRING_TAG$2 = Button.wellKnownSymbol('toStringTag');
 
 var setToStringTag = function (it, TAG, STATIC) {
-  if (it && !Loader.has(it = STATIC ? it : it.prototype, TO_STRING_TAG)) {
-    defineProperty$2(it, TO_STRING_TAG, { configurable: true, value: TAG });
+  if (it && !Loader.has(it = STATIC ? it : it.prototype, TO_STRING_TAG$2)) {
+    defineProperty(it, TO_STRING_TAG$2, { configurable: true, value: TAG });
   }
 };
 
-var $forEach = Button.arrayIteration.forEach;
+var $forEach$1 = Button.arrayIteration.forEach;
 
 var HIDDEN = Loader.sharedKey('hidden');
 var SYMBOL = 'Symbol';
-var PROTOTYPE$1 = 'prototype';
+var PROTOTYPE = 'prototype';
 var TO_PRIMITIVE = Button.wellKnownSymbol('toPrimitive');
-var setInternalState = Loader.internalState.set;
-var getInternalState = Loader.internalState.getterFor(SYMBOL);
-var ObjectPrototype = Object[PROTOTYPE$1];
+var setInternalState$1 = Loader.internalState.set;
+var getInternalState$1 = Loader.internalState.getterFor(SYMBOL);
+var ObjectPrototype = Object[PROTOTYPE];
 var $Symbol = Loader.global.Symbol;
 var $stringify = Loader.getBuiltIn('JSON', 'stringify');
-var nativeGetOwnPropertyDescriptor = Loader.objectGetOwnPropertyDescriptor.f;
+var nativeGetOwnPropertyDescriptor$1 = Loader.objectGetOwnPropertyDescriptor.f;
 var nativeDefineProperty = Loader.objectDefineProperty.f;
-var nativeGetOwnPropertyNames$1 = objectGetOwnPropertyNamesExternal.f;
+var nativeGetOwnPropertyNames = objectGetOwnPropertyNamesExternal.f;
 var nativePropertyIsEnumerable = Loader.objectPropertyIsEnumerable.f;
 var AllSymbols = Loader.shared('symbols');
 var ObjectPrototypeSymbols = Loader.shared('op-symbols');
@@ -389,7 +435,7 @@ var SymbolToStringRegistry = Loader.shared('symbol-to-string-registry');
 var WellKnownSymbolsStore = Loader.shared('wks');
 var QObject = Loader.global.QObject;
 // Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-var USE_SETTER = !QObject || !QObject[PROTOTYPE$1] || !QObject[PROTOTYPE$1].findChild;
+var USE_SETTER = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
 
 // fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
 var setSymbolDescriptor = Loader.descriptors && Loader.fails(function () {
@@ -397,7 +443,7 @@ var setSymbolDescriptor = Loader.descriptors && Loader.fails(function () {
     get: function () { return nativeDefineProperty(this, 'a', { value: 7 }).a; }
   })).a != 7;
 }) ? function (O, P, Attributes) {
-  var ObjectPrototypeDescriptor = nativeGetOwnPropertyDescriptor(ObjectPrototype, P);
+  var ObjectPrototypeDescriptor = nativeGetOwnPropertyDescriptor$1(ObjectPrototype, P);
   if (ObjectPrototypeDescriptor) delete ObjectPrototype[P];
   nativeDefineProperty(O, P, Attributes);
   if (ObjectPrototypeDescriptor && O !== ObjectPrototype) {
@@ -406,8 +452,8 @@ var setSymbolDescriptor = Loader.descriptors && Loader.fails(function () {
 } : nativeDefineProperty;
 
 var wrap = function (tag, description) {
-  var symbol = AllSymbols[tag] = objectCreate($Symbol[PROTOTYPE$1]);
-  setInternalState(symbol, {
+  var symbol = AllSymbols[tag] = objectCreate($Symbol[PROTOTYPE]);
+  setInternalState$1(symbol, {
     type: SYMBOL,
     tag: tag,
     description: description
@@ -442,7 +488,7 @@ var $defineProperties = function defineProperties(O, Properties) {
   Loader.anObject(O);
   var properties = Loader.toIndexedObject(Properties);
   var keys = objectKeys(properties).concat($getOwnPropertySymbols(properties));
-  $forEach(keys, function (key) {
+  $forEach$1(keys, function (key) {
     if (!Loader.descriptors || $propertyIsEnumerable.call(properties, key)) $defineProperty(O, key, properties[key]);
   });
   return O;
@@ -463,7 +509,7 @@ var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(O, P) {
   var it = Loader.toIndexedObject(O);
   var key = Loader.toPrimitive(P, true);
   if (it === ObjectPrototype && Loader.has(AllSymbols, key) && !Loader.has(ObjectPrototypeSymbols, key)) return;
-  var descriptor = nativeGetOwnPropertyDescriptor(it, key);
+  var descriptor = nativeGetOwnPropertyDescriptor$1(it, key);
   if (descriptor && Loader.has(AllSymbols, key) && !(Loader.has(it, HIDDEN) && it[HIDDEN][key])) {
     descriptor.enumerable = true;
   }
@@ -471,9 +517,9 @@ var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(O, P) {
 };
 
 var $getOwnPropertyNames = function getOwnPropertyNames(O) {
-  var names = nativeGetOwnPropertyNames$1(Loader.toIndexedObject(O));
+  var names = nativeGetOwnPropertyNames(Loader.toIndexedObject(O));
   var result = [];
-  $forEach(names, function (key) {
+  $forEach$1(names, function (key) {
     if (!Loader.has(AllSymbols, key) && !Loader.has(Loader.hiddenKeys, key)) result.push(key);
   });
   return result;
@@ -481,9 +527,9 @@ var $getOwnPropertyNames = function getOwnPropertyNames(O) {
 
 var $getOwnPropertySymbols = function getOwnPropertySymbols(O) {
   var IS_OBJECT_PROTOTYPE = O === ObjectPrototype;
-  var names = nativeGetOwnPropertyNames$1(IS_OBJECT_PROTOTYPE ? ObjectPrototypeSymbols : Loader.toIndexedObject(O));
+  var names = nativeGetOwnPropertyNames(IS_OBJECT_PROTOTYPE ? ObjectPrototypeSymbols : Loader.toIndexedObject(O));
   var result = [];
-  $forEach(names, function (key) {
+  $forEach$1(names, function (key) {
     if (Loader.has(AllSymbols, key) && (!IS_OBJECT_PROTOTYPE || Loader.has(ObjectPrototype, key))) {
       result.push(AllSymbols[key]);
     }
@@ -507,8 +553,8 @@ if (!Button.nativeSymbol) {
     return wrap(tag, description);
   };
 
-  Loader.redefine($Symbol[PROTOTYPE$1], 'toString', function toString() {
-    return getInternalState(this).tag;
+  Loader.redefine($Symbol[PROTOTYPE], 'toString', function toString() {
+    return getInternalState$1(this).tag;
   });
 
   Loader.redefine($Symbol, 'withoutSetter', function (description) {
@@ -527,10 +573,10 @@ if (!Button.nativeSymbol) {
 
   if (Loader.descriptors) {
     // https://github.com/tc39/proposal-Symbol-description
-    nativeDefineProperty($Symbol[PROTOTYPE$1], 'description', {
+    nativeDefineProperty($Symbol[PROTOTYPE], 'description', {
       configurable: true,
       get: function description() {
-        return getInternalState(this).description;
+        return getInternalState$1(this).description;
       }
     });
     {
@@ -543,7 +589,7 @@ Loader._export({ global: true, wrap: true, forced: !Button.nativeSymbol, sham: !
   Symbol: $Symbol
 });
 
-$forEach(objectKeys(WellKnownSymbolsStore), function (name) {
+$forEach$1(objectKeys(WellKnownSymbolsStore), function (name) {
   defineWellKnownSymbol(name);
 });
 
@@ -634,8 +680,8 @@ if ($stringify) {
 
 // `Symbol.prototype[@@toPrimitive]` method
 // https://tc39.github.io/ecma262/#sec-symbol.prototype-@@toprimitive
-if (!$Symbol[PROTOTYPE$1][TO_PRIMITIVE]) {
-  Loader.createNonEnumerableProperty($Symbol[PROTOTYPE$1], TO_PRIMITIVE, $Symbol[PROTOTYPE$1].valueOf);
+if (!$Symbol[PROTOTYPE][TO_PRIMITIVE]) {
+  Loader.createNonEnumerableProperty($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 }
 // `Symbol.prototype[@@toStringTag]` property
 // https://tc39.github.io/ecma262/#sec-symbol.prototype-@@tostringtag
@@ -651,17 +697,17 @@ var arrayMethodIsStrict = function (METHOD_NAME, argument) {
   });
 };
 
-var $forEach$1 = Button.arrayIteration.forEach;
+var $forEach = Button.arrayIteration.forEach;
 
 
 
-var STRICT_METHOD = arrayMethodIsStrict('forEach');
-var USES_TO_LENGTH = Button.arrayMethodUsesToLength('forEach');
+var STRICT_METHOD$1 = arrayMethodIsStrict('forEach');
+var USES_TO_LENGTH$2 = Button.arrayMethodUsesToLength('forEach');
 
 // `Array.prototype.forEach` method implementation
 // https://tc39.github.io/ecma262/#sec-array.prototype.foreach
-var arrayForEach = (!STRICT_METHOD || !USES_TO_LENGTH) ? function forEach(callbackfn /* , thisArg */) {
-  return $forEach$1(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+var arrayForEach = (!STRICT_METHOD$1 || !USES_TO_LENGTH$2) ? function forEach(callbackfn /* , thisArg */) {
+  return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
 } : [].forEach;
 
 // `Array.prototype.forEach` method
@@ -687,17 +733,17 @@ Loader._export({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT || !
   }
 });
 
-var nativeGetOwnPropertyDescriptor$1 = Loader.objectGetOwnPropertyDescriptor.f;
+var nativeGetOwnPropertyDescriptor = Loader.objectGetOwnPropertyDescriptor.f;
 
 
-var FAILS_ON_PRIMITIVES = Loader.fails(function () { nativeGetOwnPropertyDescriptor$1(1); });
-var FORCED = !Loader.descriptors || FAILS_ON_PRIMITIVES;
+var FAILS_ON_PRIMITIVES$1 = Loader.fails(function () { nativeGetOwnPropertyDescriptor(1); });
+var FORCED$3 = !Loader.descriptors || FAILS_ON_PRIMITIVES$1;
 
 // `Object.getOwnPropertyDescriptor` method
 // https://tc39.github.io/ecma262/#sec-object.getownpropertydescriptor
-Loader._export({ target: 'Object', stat: true, forced: FORCED, sham: !Loader.descriptors }, {
+Loader._export({ target: 'Object', stat: true, forced: FORCED$3, sham: !Loader.descriptors }, {
   getOwnPropertyDescriptor: function getOwnPropertyDescriptor(it, key) {
-    return nativeGetOwnPropertyDescriptor$1(Loader.toIndexedObject(it), key);
+    return nativeGetOwnPropertyDescriptor(Loader.toIndexedObject(it), key);
   }
 });
 
@@ -725,11 +771,11 @@ Loader._export({ target: 'Object', stat: true, sham: !Loader.descriptors }, {
   }
 });
 
-var FAILS_ON_PRIMITIVES$1 = Loader.fails(function () { objectKeys(1); });
+var FAILS_ON_PRIMITIVES = Loader.fails(function () { objectKeys(1); });
 
 // `Object.keys` method
 // https://tc39.github.io/ecma262/#sec-object.keys
-Loader._export({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES$1 }, {
+Loader._export({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES }, {
   keys: function keys(it) {
     return objectKeys(Button.toObject(it));
   }
@@ -792,23 +838,23 @@ var CreatableSelect = /*#__PURE__*/React.memo(InitialCreatableSelect__default['d
 
 var RightArrow = function RightArrow() {
   return /*#__PURE__*/React__default['default'].createElement("span", {
-    className: Styles$1.rightArrow
+    className: Styles.rightArrow
   });
 };
 
 var DownArrow = function DownArrow() {
   return /*#__PURE__*/React__default['default'].createElement("span", {
-    className: Styles$1.downArrow
+    className: Styles.downArrow
   });
 };
 
 var Option = function Option(props) {
   var _selectProps$getOptio, _props$data, _props$data$children, _selectProps$getOptio2;
 
-  var data = props.data,
-      getStyles = props.getStyles,
-      innerRef = props.innerRef,
-      innerProps = props.innerProps,
+  var data = props.data;
+      props.getStyles;
+      props.innerRef;
+      var innerProps = props.innerProps,
       _props$indentBy = props.indentBy,
       indentBy = _props$indentBy === void 0 ? 0 : _props$indentBy,
       selectOption = props.selectOption,
@@ -827,11 +873,11 @@ var Option = function Option(props) {
 
   var children = data && (selectProps === null || selectProps === void 0 ? void 0 : (_selectProps$getOptio = selectProps.getOptionChildren) === null || _selectProps$getOptio === void 0 ? void 0 : _selectProps$getOptio.call(selectProps, data)) || (data === null || data === void 0 ? void 0 : data.children) || [];
   return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement("div", {
-    className: Styles$1.multiLevelOption
+    className: Styles.multiLevelOption
   }, /*#__PURE__*/React__default['default'].createElement("div", {
-    className: Styles$1.actions
+    className: Styles.actions
   }, ((_props$data = props.data) === null || _props$data === void 0 ? void 0 : (_props$data$children = _props$data.children) === null || _props$data$children === void 0 ? void 0 : _props$data$children.length) > 0 && /*#__PURE__*/React__default['default'].createElement("button", {
-    className: Styles$1.action,
+    className: Styles.action,
     onClick: function onClick() {
       return setIsExpanded(!isExpanded);
     }
@@ -839,7 +885,7 @@ var Option = function Option(props) {
     style: {
       marginLeft: "".concat(20 * indentBy, "px")
     },
-    className: Styles$1.optionItem
+    className: Styles.optionItem
   }), selectProps === null || selectProps === void 0 ? void 0 : (_selectProps$getOptio2 = selectProps.getOptionLabel) === null || _selectProps$getOptio2 === void 0 ? void 0 : _selectProps$getOptio2.call(selectProps, data))), isExpanded && (children === null || children === void 0 ? void 0 : children.length) > 0 ? children === null || children === void 0 ? void 0 : children.map(function (v, idx) {
     return /*#__PURE__*/React__default['default'].createElement(Option, _extends__default['default']({
       key: idx
@@ -904,14 +950,14 @@ var SelectInput = function SelectInput(_ref) {
       value = _useState4[0],
       setValue = _useState4[1];
 
-  var containerClass = classNames__default['default'](Styles$1.container, className, props.isMulti && (value === null || value === void 0 ? void 0 : value.length) && Styles$1.active, !props.isMulti && Object.keys(value || {}).length && Styles$1.active, disabled && Styles$1.locked, props.error && Styles$1.containerError, props.isMulti && Styles$1.multiContainer);
+  var containerClass = classNames__default['default'](Styles.container, className, props.isMulti && (value === null || value === void 0 ? void 0 : value.length) && Styles.active, !props.isMulti && Object.keys(value || {}).length && Styles.active, disabled && Styles.locked, props.error && Styles.containerError, props.isMulti && Styles.multiContainer);
   React.useEffect(function () {
     if (props.value) {
       setValue(props.value);
     }
   }, [props.value]);
-  var fieldClass = classNames__default['default'](Styles$1.select, props.isMulti && Styles$1.multi, props.error && Styles$1.error);
-  var labelClass = classNames__default['default'](Styles$1.label, props.error && Styles$1.error, props.isMulti && (value === null || value === void 0 ? void 0 : value.length) && Styles$1.hasValue, !props.isMulti && Object.keys(value || {}).length && Styles$1.hasValue);
+  var fieldClass = classNames__default['default'](Styles.select, props.isMulti && Styles.multi, props.error && Styles.error);
+  var labelClass = classNames__default['default'](Styles.label, props.error && Styles.error, props.isMulti && (value === null || value === void 0 ? void 0 : value.length) && Styles.hasValue, !props.isMulti && Object.keys(value || {}).length && Styles.hasValue);
 
   var handleChange = function handleChange(event, _ref2) {
     var action = _ref2.action,
@@ -974,12 +1020,12 @@ SelectInput.defaultProps = {
   isPaginated: false
 };
 
-var css_248z$2 = "/* prettier-ignore */\n/* beautify ignore:start */\n@import url(react-quill/dist/quill.bubble.css);\n.Quill-module_editor__iWvN8 {\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"; }\n  .Quill-module_editor__iWvN8 .ql-tooltip {\n    z-index: 200; }\n  .Quill-module_editor__iWvN8 .ql-editor {\n    box-sizing: border-box;\n    cursor: text;\n    outline: none;\n    overflow-y: auto;\n    padding: 0;\n    -o-tab-size: 4;\n       tab-size: 4;\n    -moz-tab-size: 4;\n    text-align: left;\n    word-wrap: break-word; }\n    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n      .Quill-module_editor__iWvN8 .ql-editor {\n        padding: 10px 15px; } }\n    .Quill-module_editor__iWvN8 .ql-editor * {\n      font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\" !important;\n      word-break: break-word !important;\n      box-sizing: border-box;\n      max-width: 100%; }\n    .Quill-module_editor__iWvN8 .ql-editor a {\n      color: #0751b3 !important;\n      word-break: break-all !important; }\n    .Quill-module_editor__iWvN8 .ql-editor img {\n      max-width: 100%;\n      height: auto;\n      margin: 10px 0 !important; }\n    .Quill-module_editor__iWvN8 .ql-editor p,\n    .Quill-module_editor__iWvN8 .ql-editor ol,\n    .Quill-module_editor__iWvN8 .ql-editor ul,\n    .Quill-module_editor__iWvN8 .ql-editor pre,\n    .Quill-module_editor__iWvN8 .ql-editor blockquote,\n    .Quill-module_editor__iWvN8 .ql-editor h1,\n    .Quill-module_editor__iWvN8 .ql-editor h2,\n    .Quill-module_editor__iWvN8 .ql-editor h3,\n    .Quill-module_editor__iWvN8 .ql-editor h4,\n    .Quill-module_editor__iWvN8 .ql-editor h5,\n    .Quill-module_editor__iWvN8 .ql-editor h6 {\n      margin: 0;\n      padding: 0;\n      word-break: break-word;\n      counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }\n    .Quill-module_editor__iWvN8 .ql-editor ol,\n    .Quill-module_editor__iWvN8 .ql-editor ul {\n      padding: 10px 0;\n      font-size: 16px; }\n      .Quill-module_editor__iWvN8 .ql-editor ol:last-child,\n      .Quill-module_editor__iWvN8 .ql-editor ul:last-child {\n        padding-bottom: 0; }\n    .Quill-module_editor__iWvN8 .ql-editor ol > li {\n      list-style-type: none; }\n    .Quill-module_editor__iWvN8 .ql-editor ul > li {\n      list-style-type: none; }\n      .Quill-module_editor__iWvN8 .ql-editor ul > li::before {\n        content: '\\2022'; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'], .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] {\n      pointer-events: none; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'] > li *,\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] > li * {\n      pointer-events: all; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'] > li::before,\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] > li::before {\n      color: #777;\n      cursor: pointer;\n      pointer-events: all; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'] > li::before {\n      content: '\\2611'; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] > li::before {\n      content: '\\2610'; }\n    .Quill-module_editor__iWvN8 .ql-editor li::before {\n      display: inline-block;\n      margin-right: 0.3em;\n      text-align: right;\n      white-space: nowrap;\n      width: 1.2em; }\n    .Quill-module_editor__iWvN8 .ql-editor li:not(.ql-direction-rtl)::before {\n      margin-left: -1.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor ol li,\n    .Quill-module_editor__iWvN8 .ql-editor ul li {\n      padding-left: 1.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor ol li {\n      counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;\n      counter-increment: list-num; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li:before {\n        content: counter(list-num, decimal) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-1 {\n        counter-increment: list-1;\n        counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-1:before {\n          content: counter(list-1, lower-alpha) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-2 {\n        counter-increment: list-2;\n        counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-2:before {\n          content: counter(list-2, lower-roman) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-3 {\n        counter-increment: list-3;\n        counter-reset: list-4 list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-3:before {\n          content: counter(list-3, decimal) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-4 {\n        counter-increment: list-4;\n        counter-reset: list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-4:before {\n          content: counter(list-4, lower-alpha) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-5 {\n        counter-increment: list-5;\n        counter-reset: list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-5:before {\n          content: counter(list-5, lower-roman) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-6 {\n        counter-increment: list-6;\n        counter-reset: list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-6:before {\n          content: counter(list-6, decimal) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-7 {\n        counter-increment: list-7;\n        counter-reset: list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-7:before {\n          content: counter(list-7, lower-alpha) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-8 {\n        counter-increment: list-8;\n        counter-reset: list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-8:before {\n          content: counter(list-8, lower-roman) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-9 {\n        counter-increment: list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-9:before {\n          content: counter(list-9, decimal) \". \"; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-1:not(.ql-direction-rtl) {\n      padding-left: 3em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-1:not(.ql-direction-rtl) {\n      padding-left: 4.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {\n      padding-right: 3em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {\n      padding-right: 4.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-2:not(.ql-direction-rtl) {\n      padding-left: 6em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-2:not(.ql-direction-rtl) {\n      padding-left: 7.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {\n      padding-right: 6em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {\n      padding-right: 7.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-3:not(.ql-direction-rtl) {\n      padding-left: 9em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-3:not(.ql-direction-rtl) {\n      padding-left: 10.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {\n      padding-right: 9em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {\n      padding-right: 10.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-4:not(.ql-direction-rtl) {\n      padding-left: 12em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-4:not(.ql-direction-rtl) {\n      padding-left: 13.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {\n      padding-right: 12em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {\n      padding-right: 13.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-5:not(.ql-direction-rtl) {\n      padding-left: 15em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-5:not(.ql-direction-rtl) {\n      padding-left: 16.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {\n      padding-right: 15em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {\n      padding-right: 16.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-6:not(.ql-direction-rtl) {\n      padding-left: 18em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-6:not(.ql-direction-rtl) {\n      padding-left: 19.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {\n      padding-right: 18em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {\n      padding-right: 19.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-7:not(.ql-direction-rtl) {\n      padding-left: 21em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-7:not(.ql-direction-rtl) {\n      padding-left: 22.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {\n      padding-right: 21em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {\n      padding-right: 22.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-8:not(.ql-direction-rtl) {\n      padding-left: 24em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-8:not(.ql-direction-rtl) {\n      padding-left: 25.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {\n      padding-right: 24em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {\n      padding-right: 25.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-9:not(.ql-direction-rtl) {\n      padding-left: 27em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-9:not(.ql-direction-rtl) {\n      padding-left: 28.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {\n      padding-right: 27em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {\n      padding-right: 28.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-video {\n      display: block;\n      max-width: 100%; }\n      .Quill-module_editor__iWvN8 .ql-editor .ql-video.ql-align-center {\n        margin: 0 auto; }\n      .Quill-module_editor__iWvN8 .ql-editor .ql-video.ql-align-right {\n        margin: 0 0 0 auto; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-black {\n      background-color: #000; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-red {\n      background-color: #e60000; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-orange {\n      background-color: #f90; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-yellow {\n      background-color: #ff0; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-green {\n      background-color: #008a00; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-blue {\n      background-color: #06c; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-purple {\n      background-color: #93f; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-white {\n      color: #fff; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-red {\n      color: #e60000; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-orange {\n      color: #f90; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-yellow {\n      color: #ff0; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-green {\n      color: #008a00; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-blue {\n      color: #06c; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-purple {\n      color: #93f; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-font-serif {\n      font-family: Georgia, Times New Roman, serif; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-font-monospace {\n      font-family: Monaco, Courier New, monospace; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-size-small {\n      font-size: 0.75em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-size-large {\n      font-size: 1.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-size-huge {\n      font-size: 2.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-direction-rtl {\n      direction: rtl;\n      text-align: inherit; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-align-center {\n      text-align: center; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-align-justify {\n      text-align: justify; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-align-right {\n      text-align: right; }\n    .Quill-module_editor__iWvN8 .ql-editor.ql-blank::before {\n      font-style: normal;\n      font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n      line-height: 28px;\n      font-size: 16px;\n      color: #a1aab3;\n      content: attr(data-placeholder);\n      pointer-events: none;\n      left: 0; }\n";
+var css_248z = "/* prettier-ignore */\n/* beautify ignore:start */\n@import url(react-quill/dist/quill.bubble.css);\n.Quill-module_editor__iWvN8 {\n  font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"; }\n  .Quill-module_editor__iWvN8 .ql-tooltip {\n    z-index: 200; }\n  .Quill-module_editor__iWvN8 .ql-editor {\n    box-sizing: border-box;\n    cursor: text;\n    outline: none;\n    overflow-y: auto;\n    padding: 0;\n    -o-tab-size: 4;\n       tab-size: 4;\n    -moz-tab-size: 4;\n    text-align: left;\n    word-wrap: break-word; }\n    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n      .Quill-module_editor__iWvN8 .ql-editor {\n        padding: 10px 15px; } }\n    .Quill-module_editor__iWvN8 .ql-editor * {\n      font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\" !important;\n      word-break: break-word !important;\n      box-sizing: border-box;\n      max-width: 100%; }\n    .Quill-module_editor__iWvN8 .ql-editor a {\n      color: #0751b3 !important;\n      word-break: break-all !important; }\n    .Quill-module_editor__iWvN8 .ql-editor img {\n      max-width: 100%;\n      height: auto;\n      margin: 10px 0 !important; }\n    .Quill-module_editor__iWvN8 .ql-editor p,\n    .Quill-module_editor__iWvN8 .ql-editor ol,\n    .Quill-module_editor__iWvN8 .ql-editor ul,\n    .Quill-module_editor__iWvN8 .ql-editor pre,\n    .Quill-module_editor__iWvN8 .ql-editor blockquote,\n    .Quill-module_editor__iWvN8 .ql-editor h1,\n    .Quill-module_editor__iWvN8 .ql-editor h2,\n    .Quill-module_editor__iWvN8 .ql-editor h3,\n    .Quill-module_editor__iWvN8 .ql-editor h4,\n    .Quill-module_editor__iWvN8 .ql-editor h5,\n    .Quill-module_editor__iWvN8 .ql-editor h6 {\n      margin: 0;\n      padding: 0;\n      word-break: break-word;\n      counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }\n    .Quill-module_editor__iWvN8 .ql-editor ol,\n    .Quill-module_editor__iWvN8 .ql-editor ul {\n      padding: 10px 0;\n      font-size: 16px; }\n      .Quill-module_editor__iWvN8 .ql-editor ol:last-child,\n      .Quill-module_editor__iWvN8 .ql-editor ul:last-child {\n        padding-bottom: 0; }\n    .Quill-module_editor__iWvN8 .ql-editor ol > li {\n      list-style-type: none; }\n    .Quill-module_editor__iWvN8 .ql-editor ul > li {\n      list-style-type: none; }\n      .Quill-module_editor__iWvN8 .ql-editor ul > li::before {\n        content: '\\2022'; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'], .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] {\n      pointer-events: none; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'] > li *,\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] > li * {\n      pointer-events: all; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'] > li::before,\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] > li::before {\n      color: #777;\n      cursor: pointer;\n      pointer-events: all; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='true'] > li::before {\n      content: '\\2611'; }\n    .Quill-module_editor__iWvN8 .ql-editor ul[data-checked='false'] > li::before {\n      content: '\\2610'; }\n    .Quill-module_editor__iWvN8 .ql-editor li::before {\n      display: inline-block;\n      margin-right: 0.3em;\n      text-align: right;\n      white-space: nowrap;\n      width: 1.2em; }\n    .Quill-module_editor__iWvN8 .ql-editor li:not(.ql-direction-rtl)::before {\n      margin-left: -1.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor ol li,\n    .Quill-module_editor__iWvN8 .ql-editor ul li {\n      padding-left: 1.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor ol li {\n      counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;\n      counter-increment: list-num; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li:before {\n        content: counter(list-num, decimal) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-1 {\n        counter-increment: list-1;\n        counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-1:before {\n          content: counter(list-1, lower-alpha) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-2 {\n        counter-increment: list-2;\n        counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-2:before {\n          content: counter(list-2, lower-roman) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-3 {\n        counter-increment: list-3;\n        counter-reset: list-4 list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-3:before {\n          content: counter(list-3, decimal) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-4 {\n        counter-increment: list-4;\n        counter-reset: list-5 list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-4:before {\n          content: counter(list-4, lower-alpha) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-5 {\n        counter-increment: list-5;\n        counter-reset: list-6 list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-5:before {\n          content: counter(list-5, lower-roman) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-6 {\n        counter-increment: list-6;\n        counter-reset: list-7 list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-6:before {\n          content: counter(list-6, decimal) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-7 {\n        counter-increment: list-7;\n        counter-reset: list-8 list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-7:before {\n          content: counter(list-7, lower-alpha) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-8 {\n        counter-increment: list-8;\n        counter-reset: list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-8:before {\n          content: counter(list-8, lower-roman) \". \"; }\n      .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-9 {\n        counter-increment: list-9; }\n        .Quill-module_editor__iWvN8 .ql-editor ol li.ql-indent-9:before {\n          content: counter(list-9, decimal) \". \"; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-1:not(.ql-direction-rtl) {\n      padding-left: 3em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-1:not(.ql-direction-rtl) {\n      padding-left: 4.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {\n      padding-right: 3em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {\n      padding-right: 4.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-2:not(.ql-direction-rtl) {\n      padding-left: 6em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-2:not(.ql-direction-rtl) {\n      padding-left: 7.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {\n      padding-right: 6em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {\n      padding-right: 7.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-3:not(.ql-direction-rtl) {\n      padding-left: 9em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-3:not(.ql-direction-rtl) {\n      padding-left: 10.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {\n      padding-right: 9em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {\n      padding-right: 10.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-4:not(.ql-direction-rtl) {\n      padding-left: 12em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-4:not(.ql-direction-rtl) {\n      padding-left: 13.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {\n      padding-right: 12em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {\n      padding-right: 13.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-5:not(.ql-direction-rtl) {\n      padding-left: 15em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-5:not(.ql-direction-rtl) {\n      padding-left: 16.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {\n      padding-right: 15em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {\n      padding-right: 16.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-6:not(.ql-direction-rtl) {\n      padding-left: 18em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-6:not(.ql-direction-rtl) {\n      padding-left: 19.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {\n      padding-right: 18em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {\n      padding-right: 19.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-7:not(.ql-direction-rtl) {\n      padding-left: 21em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-7:not(.ql-direction-rtl) {\n      padding-left: 22.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {\n      padding-right: 21em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {\n      padding-right: 22.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-8:not(.ql-direction-rtl) {\n      padding-left: 24em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-8:not(.ql-direction-rtl) {\n      padding-left: 25.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {\n      padding-right: 24em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {\n      padding-right: 25.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-9:not(.ql-direction-rtl) {\n      padding-left: 27em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-9:not(.ql-direction-rtl) {\n      padding-left: 28.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {\n      padding-right: 27em; }\n    .Quill-module_editor__iWvN8 .ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {\n      padding-right: 28.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-video {\n      display: block;\n      max-width: 100%; }\n      .Quill-module_editor__iWvN8 .ql-editor .ql-video.ql-align-center {\n        margin: 0 auto; }\n      .Quill-module_editor__iWvN8 .ql-editor .ql-video.ql-align-right {\n        margin: 0 0 0 auto; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-black {\n      background-color: #000; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-red {\n      background-color: #e60000; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-orange {\n      background-color: #f90; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-yellow {\n      background-color: #ff0; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-green {\n      background-color: #008a00; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-blue {\n      background-color: #06c; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-bg-purple {\n      background-color: #93f; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-white {\n      color: #fff; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-red {\n      color: #e60000; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-orange {\n      color: #f90; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-yellow {\n      color: #ff0; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-green {\n      color: #008a00; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-blue {\n      color: #06c; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-color-purple {\n      color: #93f; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-font-serif {\n      font-family: Georgia, Times New Roman, serif; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-font-monospace {\n      font-family: Monaco, Courier New, monospace; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-size-small {\n      font-size: 0.75em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-size-large {\n      font-size: 1.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-size-huge {\n      font-size: 2.5em; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-direction-rtl {\n      direction: rtl;\n      text-align: inherit; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-align-center {\n      text-align: center; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-align-justify {\n      text-align: justify; }\n    .Quill-module_editor__iWvN8 .ql-editor .ql-align-right {\n      text-align: right; }\n    .Quill-module_editor__iWvN8 .ql-editor.ql-blank::before {\n      font-style: normal;\n      font-family: \"Cerebri Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n      line-height: 28px;\n      font-size: 16px;\n      color: #a1aab3;\n      content: attr(data-placeholder);\n      pointer-events: none;\n      left: 0; }\n";
 var QuillStyles = {"editor":"Quill-module_editor__iWvN8"};
-styleInject_es.styleInject(css_248z$2);
+styleInject_es.styleInject(css_248z);
 
 var IS_CONCAT_SPREADABLE = Button.wellKnownSymbol('isConcatSpreadable');
-var MAX_SAFE_INTEGER = 0x1FFFFFFFFFFFFF;
+var MAX_SAFE_INTEGER$2 = 0x1FFFFFFFFFFFFF;
 var MAXIMUM_ALLOWED_INDEX_EXCEEDED = 'Maximum allowed index exceeded';
 
 // We can't use this feature detection in V8 since it causes
@@ -999,12 +1045,12 @@ var isConcatSpreadable = function (O) {
   return spreadable !== undefined ? !!spreadable : Button.isArray(O);
 };
 
-var FORCED$1 = !IS_CONCAT_SPREADABLE_SUPPORT || !SPECIES_SUPPORT;
+var FORCED$2 = !IS_CONCAT_SPREADABLE_SUPPORT || !SPECIES_SUPPORT;
 
 // `Array.prototype.concat` method
 // https://tc39.github.io/ecma262/#sec-array.prototype.concat
 // with adding support of @@isConcatSpreadable and @@species
-Loader._export({ target: 'Array', proto: true, forced: FORCED$1 }, {
+Loader._export({ target: 'Array', proto: true, forced: FORCED$2 }, {
   concat: function concat(arg) { // eslint-disable-line no-unused-vars
     var O = Button.toObject(this);
     var A = Button.arraySpeciesCreate(O, 0);
@@ -1014,10 +1060,10 @@ Loader._export({ target: 'Array', proto: true, forced: FORCED$1 }, {
       E = i === -1 ? O : arguments[i];
       if (isConcatSpreadable(E)) {
         len = Loader.toLength(E.length);
-        if (n + len > MAX_SAFE_INTEGER) throw TypeError(MAXIMUM_ALLOWED_INDEX_EXCEEDED);
+        if (n + len > MAX_SAFE_INTEGER$2) throw TypeError(MAXIMUM_ALLOWED_INDEX_EXCEEDED);
         for (k = 0; k < len; k++, n++) if (k in E) createProperty(A, n, E[k]);
       } else {
-        if (n >= MAX_SAFE_INTEGER) throw TypeError(MAXIMUM_ALLOWED_INDEX_EXCEEDED);
+        if (n >= MAX_SAFE_INTEGER$2) throw TypeError(MAXIMUM_ALLOWED_INDEX_EXCEEDED);
         createProperty(A, n++, E);
       }
     }
@@ -1030,12 +1076,12 @@ var $some = Button.arrayIteration.some;
 
 
 
-var STRICT_METHOD$1 = arrayMethodIsStrict('some');
-var USES_TO_LENGTH$2 = Button.arrayMethodUsesToLength('some');
+var STRICT_METHOD = arrayMethodIsStrict('some');
+var USES_TO_LENGTH = Button.arrayMethodUsesToLength('some');
 
 // `Array.prototype.some` method
 // https://tc39.github.io/ecma262/#sec-array.prototype.some
-Loader._export({ target: 'Array', proto: true, forced: !STRICT_METHOD$1 || !USES_TO_LENGTH$2 }, {
+Loader._export({ target: 'Array', proto: true, forced: !STRICT_METHOD || !USES_TO_LENGTH }, {
   some: function some(callbackfn /* , thisArg */) {
     return $some(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
@@ -1048,7 +1094,7 @@ test[TO_STRING_TAG$1] = 'z';
 
 var toStringTagSupport = String(test) === '[object z]';
 
-var TO_STRING_TAG$2 = Button.wellKnownSymbol('toStringTag');
+var TO_STRING_TAG = Button.wellKnownSymbol('toStringTag');
 // ES3 wrong here
 var CORRECT_ARGUMENTS = Loader.classofRaw(function () { return arguments; }()) == 'Arguments';
 
@@ -1064,7 +1110,7 @@ var classof = toStringTagSupport ? Loader.classofRaw : function (it) {
   var O, tag, result;
   return it === undefined ? 'Undefined' : it === null ? 'Null'
     // @@toStringTag case
-    : typeof (tag = tryGet(O = Object(it), TO_STRING_TAG$2)) == 'string' ? tag
+    : typeof (tag = tryGet(O = Object(it), TO_STRING_TAG)) == 'string' ? tag
     // builtinTag case
     : CORRECT_ARGUMENTS ? Loader.classofRaw(O)
     // ES3 arguments fallback
@@ -1073,14 +1119,14 @@ var classof = toStringTagSupport ? Loader.classofRaw : function (it) {
 
 // `Object.prototype.toString` method implementation
 // https://tc39.github.io/ecma262/#sec-object.prototype.tostring
-var objectToString = toStringTagSupport ? {}.toString : function toString() {
+var objectToString$1 = toStringTagSupport ? {}.toString : function toString() {
   return '[object ' + classof(this) + ']';
 };
 
 // `Object.prototype.toString` method
 // https://tc39.github.io/ecma262/#sec-object.prototype.tostring
 if (!toStringTagSupport) {
-  Loader.redefine(Object.prototype, 'toString', objectToString, { unsafe: true });
+  Loader.redefine(Object.prototype, 'toString', objectToString$1, { unsafe: true });
 }
 
 var nativePromiseConstructor = Loader.global.Promise;
@@ -1090,14 +1136,14 @@ var redefineAll = function (target, src, options) {
   return target;
 };
 
-var SPECIES = Button.wellKnownSymbol('species');
+var SPECIES$2 = Button.wellKnownSymbol('species');
 
 var setSpecies = function (CONSTRUCTOR_NAME) {
   var Constructor = Loader.getBuiltIn(CONSTRUCTOR_NAME);
   var defineProperty = Loader.objectDefineProperty.f;
 
-  if (Loader.descriptors && Constructor && !Constructor[SPECIES]) {
-    defineProperty(Constructor, SPECIES, {
+  if (Loader.descriptors && Constructor && !Constructor[SPECIES$2]) {
+    defineProperty(Constructor, SPECIES$2, {
       configurable: true,
       get: function () { return this; }
     });
@@ -1112,12 +1158,12 @@ var anInstance = function (it, Constructor, name) {
 
 var iterators = {};
 
-var ITERATOR = Button.wellKnownSymbol('iterator');
+var ITERATOR$2 = Button.wellKnownSymbol('iterator');
 var ArrayPrototype = Array.prototype;
 
 // check on default Array iterator
 var isArrayIteratorMethod = function (it) {
-  return it !== undefined && (iterators.Array === it || ArrayPrototype[ITERATOR] === it);
+  return it !== undefined && (iterators.Array === it || ArrayPrototype[ITERATOR$2] === it);
 };
 
 var ITERATOR$1 = Button.wellKnownSymbol('iterator');
@@ -1187,7 +1233,7 @@ var iterate = function (iterable, unboundFunction, options) {
   } return new Result(false);
 };
 
-var ITERATOR$2 = Button.wellKnownSymbol('iterator');
+var ITERATOR = Button.wellKnownSymbol('iterator');
 var SAFE_CLOSING = false;
 
 try {
@@ -1200,7 +1246,7 @@ try {
       SAFE_CLOSING = true;
     }
   };
-  iteratorWithReturn[ITERATOR$2] = function () {
+  iteratorWithReturn[ITERATOR] = function () {
     return this;
   };
   // eslint-disable-next-line no-throw-literal
@@ -1212,7 +1258,7 @@ var checkCorrectnessOfIteration = function (exec, SKIP_CLOSING) {
   var ITERATION_SUPPORT = false;
   try {
     var object = {};
-    object[ITERATOR$2] = function () {
+    object[ITERATOR] = function () {
       return {
         next: function () {
           return { done: ITERATION_SUPPORT = true };
@@ -1241,7 +1287,7 @@ var engineIsNode = Loader.classofRaw(Loader.global.process) == 'process';
 var location = Loader.global.location;
 var set = Loader.global.setImmediate;
 var clear = Loader.global.clearImmediate;
-var process$1 = Loader.global.process;
+var process$3 = Loader.global.process;
 var MessageChannel = Loader.global.MessageChannel;
 var Dispatch = Loader.global.Dispatch;
 var counter = 0;
@@ -1292,7 +1338,7 @@ if (!set || !clear) {
   // Node.js 0.8-
   if (engineIsNode) {
     defer = function (id) {
-      process$1.nextTick(runner(id));
+      process$3.nextTick(runner(id));
     };
   // Sphere (JS game engine) Dispatch API
   } else if (Dispatch && Dispatch.now) {
@@ -1333,25 +1379,25 @@ if (!set || !clear) {
   }
 }
 
-var task = {
+var task$1 = {
   set: set,
   clear: clear
 };
 
 var getOwnPropertyDescriptor = Loader.objectGetOwnPropertyDescriptor.f;
-var macrotask = task.set;
+var macrotask = task$1.set;
 
 
 
 var MutationObserver$1 = Loader.global.MutationObserver || Loader.global.WebKitMutationObserver;
-var document$1 = Loader.global.document;
+var document$2 = Loader.global.document;
 var process$2 = Loader.global.process;
-var Promise$1 = Loader.global.Promise;
+var Promise$2 = Loader.global.Promise;
 // Node.js 11 shows ExperimentalWarning on getting `queueMicrotask`
 var queueMicrotaskDescriptor = getOwnPropertyDescriptor(Loader.global, 'queueMicrotask');
 var queueMicrotask = queueMicrotaskDescriptor && queueMicrotaskDescriptor.value;
 
-var flush, head, last, notify, toggle, node, promise, then;
+var flush, head, last, notify$1, toggle, node, promise, then;
 
 // modern engines have queueMicrotask method
 if (!queueMicrotask) {
@@ -1364,7 +1410,7 @@ if (!queueMicrotask) {
       try {
         fn();
       } catch (error) {
-        if (head) notify();
+        if (head) notify$1();
         else last = undefined;
         throw error;
       }
@@ -1373,24 +1419,24 @@ if (!queueMicrotask) {
   };
 
   // browsers with MutationObserver, except iOS - https://github.com/zloirock/core-js/issues/339
-  if (!engineIsIos && !engineIsNode && MutationObserver$1 && document$1) {
+  if (!engineIsIos && !engineIsNode && MutationObserver$1 && document$2) {
     toggle = true;
-    node = document$1.createTextNode('');
+    node = document$2.createTextNode('');
     new MutationObserver$1(flush).observe(node, { characterData: true });
-    notify = function () {
+    notify$1 = function () {
       node.data = toggle = !toggle;
     };
   // environments with maybe non-completely correct, but existent Promise
-  } else if (Promise$1 && Promise$1.resolve) {
+  } else if (Promise$2 && Promise$2.resolve) {
     // Promise.resolve without an argument throws an error in LG WebOS 2
-    promise = Promise$1.resolve(undefined);
+    promise = Promise$2.resolve(undefined);
     then = promise.then;
-    notify = function () {
+    notify$1 = function () {
       then.call(promise, flush);
     };
   // Node.js without promises
   } else if (engineIsNode) {
-    notify = function () {
+    notify$1 = function () {
       process$2.nextTick(flush);
     };
   // for other environments - macrotask based on:
@@ -1400,7 +1446,7 @@ if (!queueMicrotask) {
   // - onreadystatechange
   // - setTimeout
   } else {
-    notify = function () {
+    notify$1 = function () {
       // strange IE + webpack dev server bug - use .call(global)
       macrotask.call(Loader.global, flush);
     };
@@ -1412,7 +1458,7 @@ var microtask = queueMicrotask || function (fn) {
   if (last) last.next = task;
   if (!head) {
     head = task;
-    notify();
+    notify$1();
   } last = task;
 };
 
@@ -1428,18 +1474,18 @@ var PromiseCapability = function (C) {
 };
 
 // 25.4.1.5 NewPromiseCapability(C)
-var f$2 = function (C) {
+var f = function (C) {
   return new PromiseCapability(C);
 };
 
-var newPromiseCapability = {
-	f: f$2
+var newPromiseCapability$1 = {
+	f: f
 };
 
 var promiseResolve = function (C, x) {
   Loader.anObject(C);
   if (Loader.isObject(x) && x.constructor === C) return x;
-  var promiseCapability = newPromiseCapability.f(C);
+  var promiseCapability = newPromiseCapability$1.f(C);
   var resolve = promiseCapability.resolve;
   resolve(x);
   return promiseCapability.promise;
@@ -1460,7 +1506,7 @@ var perform = function (exec) {
   }
 };
 
-var task$1 = task.set;
+var task = task$1.set;
 
 
 
@@ -1472,19 +1518,19 @@ var task$1 = task.set;
 
 
 
-var SPECIES$2 = Button.wellKnownSymbol('species');
+var SPECIES = Button.wellKnownSymbol('species');
 var PROMISE = 'Promise';
-var getInternalState$1 = Loader.internalState.get;
-var setInternalState$1 = Loader.internalState.set;
+var getInternalState = Loader.internalState.get;
+var setInternalState = Loader.internalState.set;
 var getInternalPromiseState = Loader.internalState.getterFor(PROMISE);
 var PromiseConstructor = nativePromiseConstructor;
 var TypeError$1 = Loader.global.TypeError;
-var document$2 = Loader.global.document;
-var process$3 = Loader.global.process;
+var document$1 = Loader.global.document;
+var process$1 = Loader.global.process;
 var $fetch = Loader.getBuiltIn('fetch');
-var newPromiseCapability$1 = newPromiseCapability.f;
-var newGenericPromiseCapability = newPromiseCapability$1;
-var DISPATCH_EVENT = !!(document$2 && document$2.createEvent && Loader.global.dispatchEvent);
+var newPromiseCapability = newPromiseCapability$1.f;
+var newGenericPromiseCapability = newPromiseCapability;
+var DISPATCH_EVENT = !!(document$1 && document$1.createEvent && Loader.global.dispatchEvent);
 var NATIVE_REJECTION_EVENT = typeof PromiseRejectionEvent == 'function';
 var UNHANDLED_REJECTION = 'unhandledrejection';
 var REJECTION_HANDLED = 'rejectionhandled';
@@ -1495,7 +1541,7 @@ var HANDLED = 1;
 var UNHANDLED = 2;
 var Internal, OwnPromiseCapability, PromiseWrapper, nativeThen;
 
-var FORCED$2 = Loader.isForced_1(PROMISE, function () {
+var FORCED$1 = Loader.isForced_1(PROMISE, function () {
   var GLOBAL_CORE_JS_PROMISE = Loader.inspectSource(PromiseConstructor) !== String(PromiseConstructor);
   if (!GLOBAL_CORE_JS_PROMISE) {
     // V8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
@@ -1515,11 +1561,11 @@ var FORCED$2 = Loader.isForced_1(PROMISE, function () {
     exec(function () { /* empty */ }, function () { /* empty */ });
   };
   var constructor = promise.constructor = {};
-  constructor[SPECIES$2] = FakePromise;
+  constructor[SPECIES] = FakePromise;
   return !(promise.then(function () { /* empty */ }) instanceof FakePromise);
 });
 
-var INCORRECT_ITERATION = FORCED$2 || !checkCorrectnessOfIteration(function (iterable) {
+var INCORRECT_ITERATION = FORCED$1 || !checkCorrectnessOfIteration(function (iterable) {
   PromiseConstructor.all(iterable)['catch'](function () { /* empty */ });
 });
 
@@ -1529,7 +1575,7 @@ var isThenable = function (it) {
   return Loader.isObject(it) && typeof (then = it.then) == 'function' ? then : false;
 };
 
-var notify$1 = function (state, isReject) {
+var notify = function (state, isReject) {
   if (state.notified) return;
   state.notified = true;
   var chain = state.reactions;
@@ -1580,7 +1626,7 @@ var notify$1 = function (state, isReject) {
 var dispatchEvent = function (name, promise, reason) {
   var event, handler;
   if (DISPATCH_EVENT) {
-    event = document$2.createEvent('Event');
+    event = document$1.createEvent('Event');
     event.promise = promise;
     event.reason = reason;
     event.initEvent(name, false, true);
@@ -1591,7 +1637,7 @@ var dispatchEvent = function (name, promise, reason) {
 };
 
 var onUnhandled = function (state) {
-  task$1.call(Loader.global, function () {
+  task.call(Loader.global, function () {
     var promise = state.facade;
     var value = state.value;
     var IS_UNHANDLED = isUnhandled(state);
@@ -1599,7 +1645,7 @@ var onUnhandled = function (state) {
     if (IS_UNHANDLED) {
       result = perform(function () {
         if (engineIsNode) {
-          process$3.emit('unhandledRejection', value, promise);
+          process$1.emit('unhandledRejection', value, promise);
         } else dispatchEvent(UNHANDLED_REJECTION, promise, value);
       });
       // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
@@ -1614,10 +1660,10 @@ var isUnhandled = function (state) {
 };
 
 var onHandleUnhandled = function (state) {
-  task$1.call(Loader.global, function () {
+  task.call(Loader.global, function () {
     var promise = state.facade;
     if (engineIsNode) {
-      process$3.emit('rejectionHandled', promise);
+      process$1.emit('rejectionHandled', promise);
     } else dispatchEvent(REJECTION_HANDLED, promise, state.value);
   });
 };
@@ -1634,7 +1680,7 @@ var internalReject = function (state, value, unwrap) {
   if (unwrap) state = unwrap;
   state.value = value;
   state.state = REJECTED;
-  notify$1(state, true);
+  notify(state, true);
 };
 
 var internalResolve = function (state, value, unwrap) {
@@ -1659,7 +1705,7 @@ var internalResolve = function (state, value, unwrap) {
     } else {
       state.value = value;
       state.state = FULFILLED;
-      notify$1(state, false);
+      notify(state, false);
     }
   } catch (error) {
     internalReject({ done: false }, error, state);
@@ -1667,13 +1713,13 @@ var internalResolve = function (state, value, unwrap) {
 };
 
 // constructor polyfill
-if (FORCED$2) {
+if (FORCED$1) {
   // 25.4.3.1 Promise(executor)
   PromiseConstructor = function Promise(executor) {
     anInstance(this, PromiseConstructor, PROMISE);
     Button.aFunction(executor);
     Internal.call(this);
-    var state = getInternalState$1(this);
+    var state = getInternalState(this);
     try {
       executor(bind(internalResolve, state), bind(internalReject, state));
     } catch (error) {
@@ -1682,7 +1728,7 @@ if (FORCED$2) {
   };
   // eslint-disable-next-line no-unused-vars
   Internal = function Promise(executor) {
-    setInternalState$1(this, {
+    setInternalState(this, {
       type: PROMISE,
       done: false,
       notified: false,
@@ -1698,13 +1744,13 @@ if (FORCED$2) {
     // https://tc39.github.io/ecma262/#sec-promise.prototype.then
     then: function then(onFulfilled, onRejected) {
       var state = getInternalPromiseState(this);
-      var reaction = newPromiseCapability$1(speciesConstructor(this, PromiseConstructor));
+      var reaction = newPromiseCapability(speciesConstructor(this, PromiseConstructor));
       reaction.ok = typeof onFulfilled == 'function' ? onFulfilled : true;
       reaction.fail = typeof onRejected == 'function' && onRejected;
-      reaction.domain = engineIsNode ? process$3.domain : undefined;
+      reaction.domain = engineIsNode ? process$1.domain : undefined;
       state.parent = true;
       state.reactions.push(reaction);
-      if (state.state != PENDING) notify$1(state, false);
+      if (state.state != PENDING) notify(state, false);
       return reaction.promise;
     },
     // `Promise.prototype.catch` method
@@ -1715,18 +1761,18 @@ if (FORCED$2) {
   });
   OwnPromiseCapability = function () {
     var promise = new Internal();
-    var state = getInternalState$1(promise);
+    var state = getInternalState(promise);
     this.promise = promise;
     this.resolve = bind(internalResolve, state);
     this.reject = bind(internalReject, state);
   };
-  newPromiseCapability.f = newPromiseCapability$1 = function (C) {
+  newPromiseCapability$1.f = newPromiseCapability = function (C) {
     return C === PromiseConstructor || C === PromiseWrapper
       ? new OwnPromiseCapability(C)
       : newGenericPromiseCapability(C);
   };
 
-  if ( typeof nativePromiseConstructor == 'function') {
+  if (typeof nativePromiseConstructor == 'function') {
     nativeThen = nativePromiseConstructor.prototype.then;
 
     // wrap native Promise#then for native async functions
@@ -1748,7 +1794,7 @@ if (FORCED$2) {
   }
 }
 
-Loader._export({ global: true, wrap: true, forced: FORCED$2 }, {
+Loader._export({ global: true, wrap: true, forced: FORCED$1 }, {
   Promise: PromiseConstructor
 });
 
@@ -1758,21 +1804,21 @@ setSpecies(PROMISE);
 PromiseWrapper = Loader.getBuiltIn(PROMISE);
 
 // statics
-Loader._export({ target: PROMISE, stat: true, forced: FORCED$2 }, {
+Loader._export({ target: PROMISE, stat: true, forced: FORCED$1 }, {
   // `Promise.reject` method
   // https://tc39.github.io/ecma262/#sec-promise.reject
   reject: function reject(r) {
-    var capability = newPromiseCapability$1(this);
+    var capability = newPromiseCapability(this);
     capability.reject.call(undefined, r);
     return capability.promise;
   }
 });
 
-Loader._export({ target: PROMISE, stat: true, forced:  FORCED$2 }, {
+Loader._export({ target: PROMISE, stat: true, forced: FORCED$1 }, {
   // `Promise.resolve` method
   // https://tc39.github.io/ecma262/#sec-promise.resolve
   resolve: function resolve(x) {
-    return promiseResolve( this, x);
+    return promiseResolve(this, x);
   }
 });
 
@@ -1781,7 +1827,7 @@ Loader._export({ target: PROMISE, stat: true, forced: INCORRECT_ITERATION }, {
   // https://tc39.github.io/ecma262/#sec-promise.all
   all: function all(iterable) {
     var C = this;
-    var capability = newPromiseCapability$1(C);
+    var capability = newPromiseCapability(C);
     var resolve = capability.resolve;
     var reject = capability.reject;
     var result = perform(function () {
@@ -1810,7 +1856,7 @@ Loader._export({ target: PROMISE, stat: true, forced: INCORRECT_ITERATION }, {
   // https://tc39.github.io/ecma262/#sec-promise.race
   race: function race(iterable) {
     var C = this;
-    var capability = newPromiseCapability$1(C);
+    var capability = newPromiseCapability(C);
     var reject = capability.reject;
     var result = perform(function () {
       var $promiseResolve = Button.aFunction(C.resolve);
@@ -1860,9 +1906,9 @@ var NEW_TARGET_BUG = Loader.fails(function () {
 var ARGS_BUG = !Loader.fails(function () {
   nativeConstruct(function () { /* empty */ });
 });
-var FORCED$3 = NEW_TARGET_BUG || ARGS_BUG;
+var FORCED = NEW_TARGET_BUG || ARGS_BUG;
 
-Loader._export({ target: 'Reflect', stat: true, forced: FORCED$3, sham: FORCED$3 }, {
+Loader._export({ target: 'Reflect', stat: true, forced: FORCED, sham: FORCED }, {
   construct: function construct(Target, args /* , newTarget */) {
     Button.aFunction(Target);
     Loader.anObject(args);
@@ -2198,20 +2244,20 @@ var Symbol$1 = _root.Symbol;
 var _Symbol = Symbol$1;
 
 /** Used for built-in method references. */
-var objectProto = Object.prototype;
+var objectProto$b = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
+var hasOwnProperty$8 = objectProto$b.hasOwnProperty;
 
 /**
  * Used to resolve the
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var nativeObjectToString = objectProto.toString;
+var nativeObjectToString$1 = objectProto$b.toString;
 
 /** Built-in value references. */
-var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
+var symToStringTag$1 = _Symbol ? _Symbol.toStringTag : undefined;
 
 /**
  * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
@@ -2221,20 +2267,20 @@ var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
  * @returns {string} Returns the raw `toStringTag`.
  */
 function getRawTag(value) {
-  var isOwn = hasOwnProperty.call(value, symToStringTag),
-      tag = value[symToStringTag];
+  var isOwn = hasOwnProperty$8.call(value, symToStringTag$1),
+      tag = value[symToStringTag$1];
 
   try {
-    value[symToStringTag] = undefined;
+    value[symToStringTag$1] = undefined;
     var unmasked = true;
   } catch (e) {}
 
-  var result = nativeObjectToString.call(value);
+  var result = nativeObjectToString$1.call(value);
   if (unmasked) {
     if (isOwn) {
-      value[symToStringTag] = tag;
+      value[symToStringTag$1] = tag;
     } else {
-      delete value[symToStringTag];
+      delete value[symToStringTag$1];
     }
   }
   return result;
@@ -2243,14 +2289,14 @@ function getRawTag(value) {
 var _getRawTag = getRawTag;
 
 /** Used for built-in method references. */
-var objectProto$1 = Object.prototype;
+var objectProto$a = Object.prototype;
 
 /**
  * Used to resolve the
  * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
  * of values.
  */
-var nativeObjectToString$1 = objectProto$1.toString;
+var nativeObjectToString = objectProto$a.toString;
 
 /**
  * Converts `value` to a string using `Object.prototype.toString`.
@@ -2259,18 +2305,18 @@ var nativeObjectToString$1 = objectProto$1.toString;
  * @param {*} value The value to convert.
  * @returns {string} Returns the converted string.
  */
-function objectToString$1(value) {
-  return nativeObjectToString$1.call(value);
+function objectToString(value) {
+  return nativeObjectToString.call(value);
 }
 
-var _objectToString = objectToString$1;
+var _objectToString = objectToString;
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
     undefinedTag = '[object Undefined]';
 
 /** Built-in value references. */
-var symToStringTag$1 = _Symbol ? _Symbol.toStringTag : undefined;
+var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
 
 /**
  * The base implementation of `getTag` without fallbacks for buggy environments.
@@ -2283,7 +2329,7 @@ function baseGetTag(value) {
   if (value == null) {
     return value === undefined ? undefinedTag : nullTag;
   }
-  return (symToStringTag$1 && symToStringTag$1 in Object(value))
+  return (symToStringTag && symToStringTag in Object(value))
     ? _getRawTag(value)
     : _objectToString(value);
 }
@@ -2324,7 +2370,7 @@ var isObject_1 = isObject;
 
 /** `Object#toString` result references. */
 var asyncTag = '[object AsyncFunction]',
-    funcTag = '[object Function]',
+    funcTag$1 = '[object Function]',
     genTag = '[object GeneratorFunction]',
     proxyTag = '[object Proxy]';
 
@@ -2352,7 +2398,7 @@ function isFunction(value) {
   // The use of `Object#toString` avoids issues with the `typeof` operator
   // in Safari 9 which returns 'object' for typed arrays and other constructors.
   var tag = _baseGetTag(value);
-  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+  return tag == funcTag$1 || tag == genTag || tag == asyncTag || tag == proxyTag;
 }
 
 var isFunction_1 = isFunction;
@@ -2382,10 +2428,10 @@ function isMasked(func) {
 var _isMasked = isMasked;
 
 /** Used for built-in method references. */
-var funcProto = Function.prototype;
+var funcProto$1 = Function.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var funcToString = funcProto.toString;
+var funcToString$1 = funcProto$1.toString;
 
 /**
  * Converts `func` to its source code.
@@ -2397,7 +2443,7 @@ var funcToString = funcProto.toString;
 function toSource(func) {
   if (func != null) {
     try {
-      return funcToString.call(func);
+      return funcToString$1.call(func);
     } catch (e) {}
     try {
       return (func + '');
@@ -2418,18 +2464,18 @@ var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
 var reIsHostCtor = /^\[object .+?Constructor\]$/;
 
 /** Used for built-in method references. */
-var funcProto$1 = Function.prototype,
-    objectProto$2 = Object.prototype;
+var funcProto = Function.prototype,
+    objectProto$9 = Object.prototype;
 
 /** Used to resolve the decompiled source of functions. */
-var funcToString$1 = funcProto$1.toString;
+var funcToString = funcProto.toString;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$1 = objectProto$2.hasOwnProperty;
+var hasOwnProperty$7 = objectProto$9.hasOwnProperty;
 
 /** Used to detect if a method is native. */
 var reIsNative = RegExp('^' +
-  funcToString$1.call(hasOwnProperty$1).replace(reRegExpChar, '\\$&')
+  funcToString.call(hasOwnProperty$7).replace(reRegExpChar, '\\$&')
   .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
 );
 
@@ -2523,13 +2569,13 @@ function hashDelete(key) {
 var _hashDelete = hashDelete;
 
 /** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED = '__lodash_hash_undefined__';
+var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
 
 /** Used for built-in method references. */
-var objectProto$3 = Object.prototype;
+var objectProto$8 = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$2 = objectProto$3.hasOwnProperty;
+var hasOwnProperty$6 = objectProto$8.hasOwnProperty;
 
 /**
  * Gets the hash value for `key`.
@@ -2544,18 +2590,18 @@ function hashGet(key) {
   var data = this.__data__;
   if (_nativeCreate) {
     var result = data[key];
-    return result === HASH_UNDEFINED ? undefined : result;
+    return result === HASH_UNDEFINED$2 ? undefined : result;
   }
-  return hasOwnProperty$2.call(data, key) ? data[key] : undefined;
+  return hasOwnProperty$6.call(data, key) ? data[key] : undefined;
 }
 
 var _hashGet = hashGet;
 
 /** Used for built-in method references. */
-var objectProto$4 = Object.prototype;
+var objectProto$7 = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
+var hasOwnProperty$5 = objectProto$7.hasOwnProperty;
 
 /**
  * Checks if a hash value for `key` exists.
@@ -2568,7 +2614,7 @@ var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
  */
 function hashHas(key) {
   var data = this.__data__;
-  return _nativeCreate ? (data[key] !== undefined) : hasOwnProperty$3.call(data, key);
+  return _nativeCreate ? (data[key] !== undefined) : hasOwnProperty$5.call(data, key);
 }
 
 var _hashHas = hashHas;
@@ -2821,7 +2867,7 @@ Stack.prototype.set = _stackSet;
 var _Stack = Stack;
 
 /** Used to stand-in for `undefined` hash values. */
-var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
 /**
  * Adds `value` to the array cache.
@@ -2834,7 +2880,7 @@ var HASH_UNDEFINED$2 = '__lodash_hash_undefined__';
  * @returns {Object} Returns the cache instance.
  */
 function setCacheAdd(value) {
-  this.__data__.set(value, HASH_UNDEFINED$2);
+  this.__data__.set(value, HASH_UNDEFINED);
   return this;
 }
 
@@ -2918,8 +2964,8 @@ function cacheHas(cache, key) {
 var _cacheHas = cacheHas;
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG = 1,
-    COMPARE_UNORDERED_FLAG = 2;
+var COMPARE_PARTIAL_FLAG$3 = 1,
+    COMPARE_UNORDERED_FLAG$1 = 2;
 
 /**
  * A specialized version of `baseIsEqualDeep` for arrays with support for
@@ -2935,7 +2981,7 @@ var COMPARE_PARTIAL_FLAG = 1,
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  */
 function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG$3,
       arrLength = array.length,
       othLength = other.length;
 
@@ -2950,7 +2996,7 @@ function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
   }
   var index = -1,
       result = true,
-      seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new _SetCache : undefined;
+      seen = (bitmask & COMPARE_UNORDERED_FLAG$1) ? new _SetCache : undefined;
 
   stack.set(array, other);
   stack.set(other, array);
@@ -3042,22 +3088,22 @@ function setToArray(set) {
 var _setToArray = setToArray;
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG$1 = 1,
-    COMPARE_UNORDERED_FLAG$1 = 2;
+var COMPARE_PARTIAL_FLAG$2 = 1,
+    COMPARE_UNORDERED_FLAG = 2;
 
 /** `Object#toString` result references. */
-var boolTag = '[object Boolean]',
-    dateTag = '[object Date]',
-    errorTag = '[object Error]',
-    mapTag = '[object Map]',
-    numberTag = '[object Number]',
-    regexpTag = '[object RegExp]',
-    setTag = '[object Set]',
-    stringTag = '[object String]',
+var boolTag$1 = '[object Boolean]',
+    dateTag$1 = '[object Date]',
+    errorTag$1 = '[object Error]',
+    mapTag$2 = '[object Map]',
+    numberTag$1 = '[object Number]',
+    regexpTag$1 = '[object RegExp]',
+    setTag$2 = '[object Set]',
+    stringTag$1 = '[object String]',
     symbolTag = '[object Symbol]';
 
-var arrayBufferTag = '[object ArrayBuffer]',
-    dataViewTag = '[object DataView]';
+var arrayBufferTag$1 = '[object ArrayBuffer]',
+    dataViewTag$2 = '[object DataView]';
 
 /** Used to convert symbols to primitives and strings. */
 var symbolProto = _Symbol ? _Symbol.prototype : undefined,
@@ -3082,7 +3128,7 @@ var symbolProto = _Symbol ? _Symbol.prototype : undefined,
  */
 function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
   switch (tag) {
-    case dataViewTag:
+    case dataViewTag$2:
       if ((object.byteLength != other.byteLength) ||
           (object.byteOffset != other.byteOffset)) {
         return false;
@@ -3090,35 +3136,35 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
       object = object.buffer;
       other = other.buffer;
 
-    case arrayBufferTag:
+    case arrayBufferTag$1:
       if ((object.byteLength != other.byteLength) ||
           !equalFunc(new _Uint8Array(object), new _Uint8Array(other))) {
         return false;
       }
       return true;
 
-    case boolTag:
-    case dateTag:
-    case numberTag:
+    case boolTag$1:
+    case dateTag$1:
+    case numberTag$1:
       // Coerce booleans to `1` or `0` and dates to milliseconds.
       // Invalid dates are coerced to `NaN`.
       return eq_1(+object, +other);
 
-    case errorTag:
+    case errorTag$1:
       return object.name == other.name && object.message == other.message;
 
-    case regexpTag:
-    case stringTag:
+    case regexpTag$1:
+    case stringTag$1:
       // Coerce regexes to strings and treat strings, primitives and objects,
       // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
       // for more details.
       return object == (other + '');
 
-    case mapTag:
+    case mapTag$2:
       var convert = _mapToArray;
 
-    case setTag:
-      var isPartial = bitmask & COMPARE_PARTIAL_FLAG$1;
+    case setTag$2:
+      var isPartial = bitmask & COMPARE_PARTIAL_FLAG$2;
       convert || (convert = _setToArray);
 
       if (object.size != other.size && !isPartial) {
@@ -3129,7 +3175,7 @@ function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
       if (stacked) {
         return stacked == other;
       }
-      bitmask |= COMPARE_UNORDERED_FLAG$1;
+      bitmask |= COMPARE_UNORDERED_FLAG;
 
       // Recursively compare objects (susceptible to call stack limits).
       stack.set(object, other);
@@ -3264,10 +3310,10 @@ function stubArray() {
 var stubArray_1 = stubArray;
 
 /** Used for built-in method references. */
-var objectProto$5 = Object.prototype;
+var objectProto$6 = Object.prototype;
 
 /** Built-in value references. */
-var propertyIsEnumerable = objectProto$5.propertyIsEnumerable;
+var propertyIsEnumerable$1 = objectProto$6.propertyIsEnumerable;
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -3285,7 +3331,7 @@ var getSymbols = !nativeGetSymbols ? stubArray_1 : function(object) {
   }
   object = Object(object);
   return _arrayFilter(nativeGetSymbols(object), function(symbol) {
-    return propertyIsEnumerable.call(object, symbol);
+    return propertyIsEnumerable$1.call(object, symbol);
   });
 };
 
@@ -3343,7 +3389,7 @@ function isObjectLike(value) {
 var isObjectLike_1 = isObjectLike;
 
 /** `Object#toString` result references. */
-var argsTag = '[object Arguments]';
+var argsTag$2 = '[object Arguments]';
 
 /**
  * The base implementation of `_.isArguments`.
@@ -3353,19 +3399,19 @@ var argsTag = '[object Arguments]';
  * @returns {boolean} Returns `true` if `value` is an `arguments` object,
  */
 function baseIsArguments(value) {
-  return isObjectLike_1(value) && _baseGetTag(value) == argsTag;
+  return isObjectLike_1(value) && _baseGetTag(value) == argsTag$2;
 }
 
 var _baseIsArguments = baseIsArguments;
 
 /** Used for built-in method references. */
-var objectProto$6 = Object.prototype;
+var objectProto$5 = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$4 = objectProto$6.hasOwnProperty;
+var hasOwnProperty$4 = objectProto$5.hasOwnProperty;
 
 /** Built-in value references. */
-var propertyIsEnumerable$1 = objectProto$6.propertyIsEnumerable;
+var propertyIsEnumerable = objectProto$5.propertyIsEnumerable;
 
 /**
  * Checks if `value` is likely an `arguments` object.
@@ -3387,7 +3433,7 @@ var propertyIsEnumerable$1 = objectProto$6.propertyIsEnumerable;
  */
 var isArguments = _baseIsArguments(function() { return arguments; }()) ? _baseIsArguments : function(value) {
   return isObjectLike_1(value) && hasOwnProperty$4.call(value, 'callee') &&
-    !propertyIsEnumerable$1.call(value, 'callee');
+    !propertyIsEnumerable.call(value, 'callee');
 };
 
 var isArguments_1 = isArguments;
@@ -3413,7 +3459,7 @@ var stubFalse_1 = stubFalse;
 
 var isBuffer_1 = Loader.createCommonjsModule(function (module, exports) {
 /** Detect free variable `exports`. */
-var freeExports =  exports && !exports.nodeType && exports;
+var freeExports = exports && !exports.nodeType && exports;
 
 /** Detect free variable `module`. */
 var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
@@ -3476,7 +3522,7 @@ function isIndex(value, length) {
 var _isIndex = isIndex;
 
 /** Used as references for various `Number` constants. */
-var MAX_SAFE_INTEGER$2 = 9007199254740991;
+var MAX_SAFE_INTEGER = 9007199254740991;
 
 /**
  * Checks if `value` is a valid array-like length.
@@ -3506,27 +3552,27 @@ var MAX_SAFE_INTEGER$2 = 9007199254740991;
  */
 function isLength(value) {
   return typeof value == 'number' &&
-    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$2;
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
 }
 
 var isLength_1 = isLength;
 
 /** `Object#toString` result references. */
 var argsTag$1 = '[object Arguments]',
-    arrayTag = '[object Array]',
-    boolTag$1 = '[object Boolean]',
-    dateTag$1 = '[object Date]',
-    errorTag$1 = '[object Error]',
-    funcTag$1 = '[object Function]',
+    arrayTag$1 = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
     mapTag$1 = '[object Map]',
-    numberTag$1 = '[object Number]',
-    objectTag = '[object Object]',
-    regexpTag$1 = '[object RegExp]',
+    numberTag = '[object Number]',
+    objectTag$2 = '[object Object]',
+    regexpTag = '[object RegExp]',
     setTag$1 = '[object Set]',
-    stringTag$1 = '[object String]',
-    weakMapTag = '[object WeakMap]';
+    stringTag = '[object String]',
+    weakMapTag$1 = '[object WeakMap]';
 
-var arrayBufferTag$1 = '[object ArrayBuffer]',
+var arrayBufferTag = '[object ArrayBuffer]',
     dataViewTag$1 = '[object DataView]',
     float32Tag = '[object Float32Array]',
     float64Tag = '[object Float64Array]',
@@ -3545,14 +3591,14 @@ typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
 typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
 typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
 typedArrayTags[uint32Tag] = true;
-typedArrayTags[argsTag$1] = typedArrayTags[arrayTag] =
-typedArrayTags[arrayBufferTag$1] = typedArrayTags[boolTag$1] =
-typedArrayTags[dataViewTag$1] = typedArrayTags[dateTag$1] =
-typedArrayTags[errorTag$1] = typedArrayTags[funcTag$1] =
-typedArrayTags[mapTag$1] = typedArrayTags[numberTag$1] =
-typedArrayTags[objectTag] = typedArrayTags[regexpTag$1] =
-typedArrayTags[setTag$1] = typedArrayTags[stringTag$1] =
-typedArrayTags[weakMapTag] = false;
+typedArrayTags[argsTag$1] = typedArrayTags[arrayTag$1] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag$1] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag$1] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag$2] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag$1] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag$1] = false;
 
 /**
  * The base implementation of `_.isTypedArray` without Node.js optimizations.
@@ -3585,7 +3631,7 @@ var _baseUnary = baseUnary;
 
 var _nodeUtil = Loader.createCommonjsModule(function (module, exports) {
 /** Detect free variable `exports`. */
-var freeExports =  exports && !exports.nodeType && exports;
+var freeExports = exports && !exports.nodeType && exports;
 
 /** Detect free variable `module`. */
 var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
@@ -3639,10 +3685,10 @@ var isTypedArray = nodeIsTypedArray ? _baseUnary(nodeIsTypedArray) : _baseIsType
 var isTypedArray_1 = isTypedArray;
 
 /** Used for built-in method references. */
-var objectProto$7 = Object.prototype;
+var objectProto$4 = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$5 = objectProto$7.hasOwnProperty;
+var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
 
 /**
  * Creates an array of the enumerable property names of the array-like `value`.
@@ -3662,7 +3708,7 @@ function arrayLikeKeys(value, inherited) {
       length = result.length;
 
   for (var key in value) {
-    if ((inherited || hasOwnProperty$5.call(value, key)) &&
+    if ((inherited || hasOwnProperty$3.call(value, key)) &&
         !(skipIndexes && (
            // Safari 9 has enumerable `arguments.length` in strict mode.
            key == 'length' ||
@@ -3682,7 +3728,7 @@ function arrayLikeKeys(value, inherited) {
 var _arrayLikeKeys = arrayLikeKeys;
 
 /** Used for built-in method references. */
-var objectProto$8 = Object.prototype;
+var objectProto$3 = Object.prototype;
 
 /**
  * Checks if `value` is likely a prototype object.
@@ -3693,7 +3739,7 @@ var objectProto$8 = Object.prototype;
  */
 function isPrototype(value) {
   var Ctor = value && value.constructor,
-      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$8;
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$3;
 
   return value === proto;
 }
@@ -3722,10 +3768,10 @@ var nativeKeys = _overArg(Object.keys, Object);
 var _nativeKeys = nativeKeys;
 
 /** Used for built-in method references. */
-var objectProto$9 = Object.prototype;
+var objectProto$2 = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$6 = objectProto$9.hasOwnProperty;
+var hasOwnProperty$2 = objectProto$2.hasOwnProperty;
 
 /**
  * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
@@ -3740,7 +3786,7 @@ function baseKeys(object) {
   }
   var result = [];
   for (var key in Object(object)) {
-    if (hasOwnProperty$6.call(object, key) && key != 'constructor') {
+    if (hasOwnProperty$2.call(object, key) && key != 'constructor') {
       result.push(key);
     }
   }
@@ -3828,13 +3874,13 @@ function getAllKeys(object) {
 var _getAllKeys = getAllKeys;
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG$2 = 1;
+var COMPARE_PARTIAL_FLAG$1 = 1;
 
 /** Used for built-in method references. */
-var objectProto$a = Object.prototype;
+var objectProto$1 = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$7 = objectProto$a.hasOwnProperty;
+var hasOwnProperty$1 = objectProto$1.hasOwnProperty;
 
 /**
  * A specialized version of `baseIsEqualDeep` for objects with support for
@@ -3850,7 +3896,7 @@ var hasOwnProperty$7 = objectProto$a.hasOwnProperty;
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
 function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
-  var isPartial = bitmask & COMPARE_PARTIAL_FLAG$2,
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG$1,
       objProps = _getAllKeys(object),
       objLength = objProps.length,
       othProps = _getAllKeys(other),
@@ -3862,7 +3908,7 @@ function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
   var index = objLength;
   while (index--) {
     var key = objProps[index];
-    if (!(isPartial ? key in other : hasOwnProperty$7.call(other, key))) {
+    if (!(isPartial ? key in other : hasOwnProperty$1.call(other, key))) {
       return false;
     }
   }
@@ -3922,9 +3968,9 @@ var DataView = _getNative(_root, 'DataView');
 var _DataView = DataView;
 
 /* Built-in method references that are verified to be native. */
-var Promise$2 = _getNative(_root, 'Promise');
+var Promise$1 = _getNative(_root, 'Promise');
 
-var _Promise = Promise$2;
+var _Promise = Promise$1;
 
 /* Built-in method references that are verified to be native. */
 var Set$1 = _getNative(_root, 'Set');
@@ -3937,13 +3983,13 @@ var WeakMap = _getNative(_root, 'WeakMap');
 var _WeakMap = WeakMap;
 
 /** `Object#toString` result references. */
-var mapTag$2 = '[object Map]',
+var mapTag = '[object Map]',
     objectTag$1 = '[object Object]',
     promiseTag = '[object Promise]',
-    setTag$2 = '[object Set]',
-    weakMapTag$1 = '[object WeakMap]';
+    setTag = '[object Set]',
+    weakMapTag = '[object WeakMap]';
 
-var dataViewTag$2 = '[object DataView]';
+var dataViewTag = '[object DataView]';
 
 /** Used to detect maps, sets, and weakmaps. */
 var dataViewCtorString = _toSource(_DataView),
@@ -3962,11 +4008,11 @@ var dataViewCtorString = _toSource(_DataView),
 var getTag = _baseGetTag;
 
 // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != dataViewTag$2) ||
-    (_Map && getTag(new _Map) != mapTag$2) ||
+if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (_Map && getTag(new _Map) != mapTag) ||
     (_Promise && getTag(_Promise.resolve()) != promiseTag) ||
-    (_Set && getTag(new _Set) != setTag$2) ||
-    (_WeakMap && getTag(new _WeakMap) != weakMapTag$1)) {
+    (_Set && getTag(new _Set) != setTag) ||
+    (_WeakMap && getTag(new _WeakMap) != weakMapTag)) {
   getTag = function(value) {
     var result = _baseGetTag(value),
         Ctor = result == objectTag$1 ? value.constructor : undefined,
@@ -3974,11 +4020,11 @@ if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != dataViewTag$2) ||
 
     if (ctorString) {
       switch (ctorString) {
-        case dataViewCtorString: return dataViewTag$2;
-        case mapCtorString: return mapTag$2;
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
         case promiseCtorString: return promiseTag;
-        case setCtorString: return setTag$2;
-        case weakMapCtorString: return weakMapTag$1;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
       }
     }
     return result;
@@ -3988,18 +4034,18 @@ if ((_DataView && getTag(new _DataView(new ArrayBuffer(1))) != dataViewTag$2) ||
 var _getTag = getTag;
 
 /** Used to compose bitmasks for value comparisons. */
-var COMPARE_PARTIAL_FLAG$3 = 1;
+var COMPARE_PARTIAL_FLAG = 1;
 
 /** `Object#toString` result references. */
-var argsTag$2 = '[object Arguments]',
-    arrayTag$1 = '[object Array]',
-    objectTag$2 = '[object Object]';
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    objectTag = '[object Object]';
 
 /** Used for built-in method references. */
-var objectProto$b = Object.prototype;
+var objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
-var hasOwnProperty$8 = objectProto$b.hasOwnProperty;
+var hasOwnProperty = objectProto.hasOwnProperty;
 
 /**
  * A specialized version of `baseIsEqual` for arrays and objects which performs
@@ -4018,14 +4064,14 @@ var hasOwnProperty$8 = objectProto$b.hasOwnProperty;
 function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
   var objIsArr = isArray_1(object),
       othIsArr = isArray_1(other),
-      objTag = objIsArr ? arrayTag$1 : _getTag(object),
-      othTag = othIsArr ? arrayTag$1 : _getTag(other);
+      objTag = objIsArr ? arrayTag : _getTag(object),
+      othTag = othIsArr ? arrayTag : _getTag(other);
 
-  objTag = objTag == argsTag$2 ? objectTag$2 : objTag;
-  othTag = othTag == argsTag$2 ? objectTag$2 : othTag;
+  objTag = objTag == argsTag ? objectTag : objTag;
+  othTag = othTag == argsTag ? objectTag : othTag;
 
-  var objIsObj = objTag == objectTag$2,
-      othIsObj = othTag == objectTag$2,
+  var objIsObj = objTag == objectTag,
+      othIsObj = othTag == objectTag,
       isSameTag = objTag == othTag;
 
   if (isSameTag && isBuffer_1(object)) {
@@ -4041,9 +4087,9 @@ function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
       ? _equalArrays(object, other, bitmask, customizer, equalFunc, stack)
       : _equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
   }
-  if (!(bitmask & COMPARE_PARTIAL_FLAG$3)) {
-    var objIsWrapped = objIsObj && hasOwnProperty$8.call(object, '__wrapped__'),
-        othIsWrapped = othIsObj && hasOwnProperty$8.call(other, '__wrapped__');
+  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
 
     if (objIsWrapped || othIsWrapped) {
       var objUnwrapped = objIsWrapped ? object.value() : object,
@@ -5692,7 +5738,7 @@ Quill.DEFAULTS = {
 Quill.events = _emitter4.default.events;
 Quill.sources = _emitter4.default.sources;
 // eslint-disable-next-line no-undef
-Quill.version =   "1.3.7";
+Quill.version =  "1.3.7";
 
 Quill.imports = {
   'delta': _quillDelta2.default,
@@ -15884,7 +15930,7 @@ var ReactQuill = /*#__PURE__*/function (_React$Component) {
     value: function setEditorTabIndex(editor, tabIndex) {
       var _editor$scroll;
 
-      if (editor === null || editor === void 0 ? void 0 : (_editor$scroll = editor.scroll) === null || _editor$scroll === void 0 ? void 0 : _editor$scroll.domNode) {
+      if (editor !== null && editor !== void 0 && (_editor$scroll = editor.scroll) !== null && _editor$scroll !== void 0 && _editor$scroll.domNode) {
         editor.scroll.domNode.tabIndex = tabIndex;
       }
     }
@@ -16053,7 +16099,7 @@ function postpone(fn) {
 } // Compatibility Export to avoid `require(...).default` on CommonJS.
 
 var QuillEditor = function QuillEditor(props) {
-  var fieldClassName = classNames__default['default'](Styles$1.container, props.className, props.locked && Styles$1.locked);
+  var fieldClassName = classNames__default['default'](Styles.container, props.className, props.locked && Styles.locked);
 
   var handleChange = function handleChange(content, delta, source, editor) {
     var updateContent;
@@ -16081,7 +16127,7 @@ var QuillEditor = function QuillEditor(props) {
     className: fieldClassName,
     style: props.style
   }, /*#__PURE__*/React__default['default'].createElement(ReactQuill, {
-    className: classNames__default['default'](Styles$1.base, Styles$1.quill, QuillStyles.editor),
+    className: classNames__default['default'](Styles.base, Styles.quill, QuillStyles.editor),
     id: props.name,
     name: props.name,
     defaultValue: props.defaultValue,
@@ -16093,7 +16139,7 @@ var QuillEditor = function QuillEditor(props) {
     readOnly: props.locked
   }), /*#__PURE__*/React__default['default'].createElement("label", {
     htmlFor: props.name,
-    className: classNames__default['default'](Styles$1.label, props.error && Styles$1.error)
+    className: classNames__default['default'](Styles.label, props.error && Styles.error)
   }, props.error || props.label));
 };
 
@@ -16115,83 +16161,83 @@ QuillEditor.props = {
   className: PropTypes__default['default'].string
 };
 
-function _extends$2() { _extends$2 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$2.apply(this, arguments); }
+function _extends$Y() { _extends$Y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Y.apply(this, arguments); }
 
-var _ref$2 = /*#__PURE__*/React.createElement("path", {
+var _ref$Y = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M3 10a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0-6.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0 13a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zM9 10a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0-6.5a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zm0 13a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0z",
   fill: "currentColor"
 });
 
 function SvgDraginline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$2({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$Y({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 15 20"
-  }, props), _ref$2);
+  }, props), _ref$Y);
 }
 
-function _extends$3() { _extends$3 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$3.apply(this, arguments); }
+function _extends$X() { _extends$X = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$X.apply(this, arguments); }
 
-var _ref$3 = /*#__PURE__*/React.createElement("g", {
+var _ref$X = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   strokeWidth: 2,
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M10 16c4.97 0 9-6 9-6s-4.03-6-9-6-9 6-9 6 4.03 6 9 6z"
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   cx: 10,
   cy: 10,
   r: 3
 }));
 
 function SvgPreviewinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$3({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$X({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$3);
+  }, props), _ref$X);
 }
 
-function _extends$4() { _extends$4 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$4.apply(this, arguments); }
+function _extends$W() { _extends$W = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$W.apply(this, arguments); }
 
-var _ref$4 = /*#__PURE__*/React.createElement("g", {
+var _ref$W = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M11.639 9.991l6.805-6.822a1.219 1.219 0 00-.869-2.076 1.21 1.21 0 00-.866.363l-6.8 6.795L3.08 1.446a1.219 1.219 0 00-.86-.353A1.22 1.22 0 001 2.31c0 .328.131.636.366.868L8.17 9.982l-6.8 6.813a1.22 1.22 0 101.71 1.735l6.819-6.809 6.793 6.785a1.216 1.216 0 002.102-.838 1.21 1.21 0 00-.354-.86l-6.802-6.817zm40.455-.002c0 1.222.994 2.216 2.217 2.216 1.22 0 2.214-.994 2.214-2.216a2.218 2.218 0 00-2.214-2.216 2.218 2.218 0 00-2.217 2.216"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M47.892 9.99a6.424 6.424 0 016.417-6.417 6.424 6.424 0 016.415 6.417 6.423 6.423 0 01-6.415 6.415 6.423 6.423 0 01-6.417-6.415m-2.524 0c0 4.93 4.01 8.94 8.94 8.94s8.944-4.01 8.944-8.94-4.014-8.941-8.943-8.941c-4.93 0-8.941 4.011-8.941 8.941m-.635-8.788l-.375-.001a5.072 5.072 0 00-3.12 1.054 1.222 1.222 0 00-1.19-.959c-.67 0-1.208.537-1.21 1.21l.005 15.058a1.22 1.22 0 001.219 1.215c.67 0 1.217-.545 1.22-1.217V8.303c0-3.086.282-4.332 2.925-4.663.245-.03.51-.025.512-.025.723-.025 1.237-.522 1.237-1.194 0-.672-.549-1.22-1.223-1.22M21.321 8.519c0-.033.003-.068.004-.102a6.459 6.459 0 0112.544.102H21.322zm15.046-.23c-.526-2.488-1.888-4.53-3.962-5.843-3.031-1.925-7.034-1.818-9.963.264-2.388 1.7-3.767 4.479-3.767 7.342 0 .718.087 1.443.267 2.156.902 3.548 3.952 6.234 7.588 6.679 1.08.13 2.13.068 3.217-.214a8.801 8.801 0 002.672-1.14c.865-.556 1.588-1.29 2.287-2.167.015-.016.029-.03.043-.047.486-.602.396-1.46-.138-1.868-.45-.345-1.206-.485-1.8.277a8.244 8.244 0 01-.428.556 6.998 6.998 0 01-1.762 1.422 6.418 6.418 0 01-2.997.757c-3.547-.04-5.445-2.515-6.12-4.282a6.417 6.417 0 01-.272-1.025 2.305 2.305 0 01-.017-.188l12.727-.002c1.745-.037 2.684-1.269 2.425-2.677"
 }));
 
 function SvgXeroinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$4({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$W({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 64 20"
-  }, props), _ref$4);
+  }, props), _ref$W);
 }
 
-function _extends$5() { _extends$5 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$5.apply(this, arguments); }
+function _extends$V() { _extends$V = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$V.apply(this, arguments); }
 
-var _ref$5 = /*#__PURE__*/React.createElement("g", {
+var _ref$V = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M17.481 12.84a7.988 7.988 0 01-1.353 2.302 8 8 0 01-14.034-3.919m.394-3.981a7.986 7.986 0 011.384-2.384 8 8 0 0114.047 4.006",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M19.895 4.324l-.418 3.979a1 1 0 01-1.099.89L14.4 8.775a1 1 0 01.21-1.99l1.988.21a1 1 0 001.1-.89l.208-1.99a1 1 0 011.99.21zM.105 15.675l.418-3.978a1 1 0 011.099-.89l3.978.418a1 1 0 01-.21 1.99l-1.988-.21a1 1 0 00-1.1.89l-.208 1.99a1 1 0 01-1.99-.21z",
   fill: "currentColor"
 }));
 
 function SvgRefreshinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$5({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$V({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$5);
+  }, props), _ref$V);
 }
 
-function _extends$6() { _extends$6 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$6.apply(this, arguments); }
+function _extends$U() { _extends$U = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$U.apply(this, arguments); }
 
-var _ref$6 = /*#__PURE__*/React.createElement("path", {
+var _ref$U = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M16.453 2c.277 0 .527.112.708.293a1 1 0 01.03 1.383h0l-5.192 5.662.001 7.445c-.179.645-.405.914-.685 1.066a1.119 1.119 0 01-.844.094h0l-1.832-.703a.999.999 0 01-.44-.334 1 1 0 01-.193-.483h0L8 9.338l-5.19-5.662a.997.997 0 01-.262-.72.997.997 0 01.324-.693A1 1 0 013.546 2h0z",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -16199,18 +16245,18 @@ var _ref$6 = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgFilterinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$6({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$U({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$6);
+  }, props), _ref$U);
 }
 
-function _extends$7() { _extends$7 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$7.apply(this, arguments); }
+function _extends$T() { _extends$T = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$T.apply(this, arguments); }
 
-var _ref$7 = /*#__PURE__*/React.createElement("g", {
+var _ref$T = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("rect", {
+}, /*#__PURE__*/React__namespace.createElement("rect", {
   stroke: "currentColor",
   strokeWidth: 2,
   x: 1,
@@ -16218,61 +16264,61 @@ var _ref$7 = /*#__PURE__*/React.createElement("g", {
   width: 18,
   height: 16,
   rx: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M4 5h5v10H4zm7 0h5v10h-5z"
 }));
 
 function SvgSplitinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$7({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$T({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$7);
+  }, props), _ref$T);
 }
 
-function _extends$8() { _extends$8 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$8.apply(this, arguments); }
+function _extends$S() { _extends$S = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$S.apply(this, arguments); }
 
-var _ref$8 = /*#__PURE__*/React.createElement("g", {
+var _ref$S = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M19 14v2a2.99 2.99 0 01-.879 2.121A2.99 2.99 0 0116 19h0H5c.426-.321.808-.566 1.121-.879A2.99 2.99 0 007 16h0v-2h12z",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M15 1.203V14H7v2c0 .801-.314 1.53-.826 2.067a2.99 2.99 0 01-2 .928c-.904-.004-1.697-.33-2.266-.87A2.913 2.913 0 011 16h0V1.204l2.429 2.125 2.29-2.004L8.034 3.33l2.255-1.997L12.57 3.33 15 1.203z",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M4 10h6v2H4zm0-4h8v2H4z"
 }));
 
 function SvgInvoiceinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$8({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$S({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$8);
+  }, props), _ref$S);
 }
 
-function _extends$9() { _extends$9 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$9.apply(this, arguments); }
+function _extends$R() { _extends$R = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$R.apply(this, arguments); }
 
-var _ref$9 = /*#__PURE__*/React.createElement("path", {
+var _ref$R = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M2.068 1.699v16.588a1 1 0 001 1 1 1 0 00.491-.129l14.817-8.361a1 1 0 00.38-1.363 1 1 0 00-.386-.382L3.553.825a1 1 0 00-1.36.389 1 1 0 00-.125.485z",
   fill: "currentColor",
   fillRule: "evenodd"
 });
 
 function SvgPlayinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$9({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$R({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$9);
+  }, props), _ref$R);
 }
 
-function _extends$a() { _extends$a = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$a.apply(this, arguments); }
+function _extends$Q() { _extends$Q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Q.apply(this, arguments); }
 
-var _ref$a = /*#__PURE__*/React.createElement("rect", {
+var _ref$Q = /*#__PURE__*/React__namespace.createElement("rect", {
   x: 1,
   y: 1,
   width: 18,
@@ -16283,225 +16329,225 @@ var _ref$a = /*#__PURE__*/React.createElement("rect", {
 });
 
 function SvgStopinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$a({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$Q({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$a);
+  }, props), _ref$Q);
 }
 
-function _extends$b() { _extends$b = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$b.apply(this, arguments); }
+function _extends$P() { _extends$P = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$P.apply(this, arguments); }
 
-var _ref$b = /*#__PURE__*/React.createElement("path", {
+var _ref$P = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M10.202 8.568h9.44c.104.581.156 1.137.156 1.666 0 1.884-.395 3.566-1.185 5.046a8.554 8.554 0 01-3.379 3.47c-1.462.833-3.14 1.25-5.032 1.25a9.83 9.83 0 01-3.893-.788 9.999 9.999 0 01-3.19-2.129 10.001 10.001 0 01-2.13-3.19C.466 12.661.203 11.363.203 10S.464 7.34.99 6.107a10 10 0 012.129-3.19 10 10 0 013.19-2.13A9.834 9.834 0 0110.202 0c2.604 0 4.84.872 6.706 2.617l-2.722 2.617c-1.067-1.033-2.396-1.55-3.984-1.55-1.12 0-2.155.283-3.106.847A6.236 6.236 0 004.837 6.83c-.555.968-.833 2.025-.833 3.171s.278 2.203.833 3.17a6.235 6.235 0 002.26 2.299c.95.564 1.985.846 3.105.846a6.64 6.64 0 002.083-.312c.634-.209 1.155-.47 1.563-.782a5.653 5.653 0 001.067-1.067c.304-.4.528-.777.671-1.133.143-.356.241-.695.293-1.016h-5.677V8.568z",
   fill: "currentColor"
 });
 
 function SvgGoogleinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$b({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$P({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$b);
+  }, props), _ref$P);
 }
 
-function _extends$c() { _extends$c = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$c.apply(this, arguments); }
+function _extends$O() { _extends$O = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$O.apply(this, arguments); }
 
-var _ref$c = /*#__PURE__*/React.createElement("path", {
+var _ref$O = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M7.494 6.557H5.41V9.96h2.085v9.989H11.5V9.915h2.796l.295-3.358H11.5V4.642c0-.79.159-1.108.926-1.108h2.17V.051h-2.772C8.84.051 7.5 1.364 7.5 3.875c-.006 2.193-.006 2.682-.006 2.682z",
   fill: "currentColor"
 });
 
 function SvgFacebookinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$c({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$O({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$c);
+  }, props), _ref$O);
 }
 
-function _extends$d() { _extends$d = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$d.apply(this, arguments); }
+function _extends$N() { _extends$N = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$N.apply(this, arguments); }
 
-var _ref$d = /*#__PURE__*/React.createElement("path", {
+var _ref$N = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M19.975 3.811a7.993 7.993 0 01-2.352.642 4.106 4.106 0 001.798-2.264 8.125 8.125 0 01-2.597.993 4.106 4.106 0 00-2.988-1.295c-2.641 0-4.585 2.465-3.987 5.025a11.618 11.618 0 01-8.44-4.277 4.107 4.107 0 001.264 5.466 4.107 4.107 0 01-1.855-.51c-.044 1.9 1.314 3.673 3.283 4.063a4.054 4.054 0 01-1.85.07 4.092 4.092 0 003.825 2.842 8.27 8.27 0 01-6.063 1.698 11.566 11.566 0 006.276 1.837c7.598 0 11.893-6.422 11.636-12.176a7.991 7.991 0 002.05-2.114z",
   fill: "currentColor"
 });
 
 function SvgTwitterinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$d({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$N({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$d);
+  }, props), _ref$N);
 }
 
-function _extends$e() { _extends$e = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$e.apply(this, arguments); }
+function _extends$M() { _extends$M = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$M.apply(this, arguments); }
 
-var _ref$e = /*#__PURE__*/React.createElement("path", {
+var _ref$M = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M4.851 2.447c0 1.347-1.085 2.447-2.425 2.447A2.434 2.434 0 010 2.447C0 1.099 1.085 0 2.425 0c1.341 0 2.426 1.1 2.426 2.447zm-.354 4.177h-4.1v13.248h4.1zm6.553 0H7.12v13.248h3.93v-6.95c0-1.865.858-2.972 2.496-2.972 1.51 0 2.234 1.064 2.234 2.972v6.95h4.078v-8.39c0-3.546-2.007-5.262-4.823-5.262-2.808 0-3.993 2.191-3.993 2.191V6.624h.008z",
   fill: "currentColor"
 });
 
 function SvgLinkedininline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$e({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$M({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$e);
+  }, props), _ref$M);
 }
 
-function _extends$f() { _extends$f = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$f.apply(this, arguments); }
+function _extends$L() { _extends$L = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$L.apply(this, arguments); }
 
-var _ref$f = /*#__PURE__*/React.createElement("g", {
+var _ref$L = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M10 1.804c2.67 0 2.983.012 4.04.056.971.045 1.502.207 1.854.347.47.179.799.396 1.15.748.353.352.565.682.75 1.151.139.352.301.883.346 1.855.05 1.056.056 1.369.056 4.039s-.012 2.983-.056 4.04c-.045.971-.207 1.502-.347 1.854-.178.47-.396.799-.748 1.15a3.112 3.112 0 01-1.151.75c-.352.139-.883.301-1.855.346-1.056.05-1.369.056-4.039.056s-2.983-.012-4.04-.056c-.971-.045-1.502-.207-1.854-.347a3.045 3.045 0 01-1.15-.748 3.112 3.112 0 01-.75-1.151c-.139-.352-.301-.883-.346-1.855-.05-1.056-.056-1.369-.056-4.039s.012-2.983.056-4.04c.045-.971.207-1.502.347-1.854.178-.47.396-.799.748-1.15a3.112 3.112 0 011.151-.75c.352-.139.883-.301 1.855-.346C7.017 1.816 7.33 1.804 10 1.804m0-1.798c-2.715 0-3.056.01-4.123.061-1.061.05-1.793.218-2.425.464a4.96 4.96 0 00-1.77 1.15A4.839 4.839 0 00.53 3.454C.285 4.089.117 4.816.067 5.877.017 6.944.006 7.285.006 10c0 2.715.01 3.056.061 4.123.05 1.061.218 1.793.464 2.425a4.96 4.96 0 001.15 1.77c.554.553 1.112.9 1.772 1.151.636.246 1.363.414 2.424.464 1.067.05 1.408.061 4.123.061 2.715 0 3.056-.01 4.123-.061 1.061-.05 1.793-.218 2.425-.464a4.96 4.96 0 001.77-1.15c.553-.554.9-1.112 1.151-1.772.246-.636.414-1.363.464-2.424.05-1.067.061-1.408.061-4.123 0-2.715-.01-3.056-.061-4.123-.05-1.061-.218-1.793-.464-2.425a4.96 4.96 0 00-1.15-1.77A4.839 4.839 0 0016.546.53c-.636-.246-1.363-.414-2.424-.464C13.056.017 12.715.006 10 .006z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M10 4.866a5.134 5.134 0 100 10.269 5.134 5.134 0 000-10.269zm0 8.464a3.33 3.33 0 010-6.66 3.33 3.33 0 010 6.66z"
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   cx: 15.335,
   cy: 4.665,
   r: 1.201
 }));
 
 function SvgInstagraminline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$f({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$L({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$f);
+  }, props), _ref$L);
 }
 
-function _extends$g() { _extends$g = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$g.apply(this, arguments); }
+function _extends$K() { _extends$K = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$K.apply(this, arguments); }
 
-var _ref$g = /*#__PURE__*/React.createElement("path", {
+var _ref$K = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M19.55 5.186a2.505 2.505 0 00-1.763-1.774c-1.554-.42-7.787-.42-7.787-.42s-6.233 0-7.787.42c-.858.23-1.533.91-1.763 1.774C.034 6.75.034 10.014.034 10.014s0 3.264.416 4.829c.23.863.905 1.514 1.763 1.745 1.554.42 7.787.42 7.787.42s6.233 0 7.787-.42a2.467 2.467 0 001.763-1.745c.416-1.565.416-4.829.416-4.829s0-3.264-.416-4.828zM7.96 12.977V7.05l5.21 2.963-5.21 2.964z",
   fill: "currentColor"
 });
 
 function SvgYoutubeinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$g({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$K({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$g);
+  }, props), _ref$K);
 }
 
-function _extends$h() { _extends$h = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$h.apply(this, arguments); }
+function _extends$J() { _extends$J = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$J.apply(this, arguments); }
 
-var _ref$h = /*#__PURE__*/React.createElement("g", {
+var _ref$J = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M4.427 9v1.115h.73L6.863 17h1.657l1.333-5.052c.049-.139.083-.299.104-.48.014-.11.021-.194.021-.25h.042l.031.25c.007.022.019.091.036.21.018.117.037.207.058.27L11.479 17h1.656l1.709-6.885h.729V9h-3.125v1.115h.937l-1.03 4.562a2.913 2.913 0 00-.074.48l-.02.218h-.042a.48.48 0 00-.005-.068 1.119 1.119 0 00-.016-.083.353.353 0 01-.01-.068 23.706 23.706 0 01-.042-.219 8.466 8.466 0 00-.052-.26L10.594 9H9.406l-1.5 5.677a4.656 4.656 0 00-.047.255 51.211 51.211 0 01-.036.224l-.042.219H7.74l-.021-.219a2.892 2.892 0 00-.073-.479l-1.031-4.562h.937V9H4.427z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z"
 }));
 
 function SvgWordinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$h({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$J({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$h);
+  }, props), _ref$J);
 }
 
-function _extends$i() { _extends$i = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$i.apply(this, arguments); }
+function _extends$I() { _extends$I = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$I.apply(this, arguments); }
 
-var _ref$i = /*#__PURE__*/React.createElement("g", {
+var _ref$I = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M8.705 9.883c.15.055.224.158.224.31v5.62c0 .15-.075.254-.224.309a.66.66 0 01-.134.02.42.42 0 01-.256-.092l-1.853-1.725H5a.363.363 0 01-.257-.093.31.31 0 01-.1-.238v-1.983c0-.097.033-.176.1-.238A.363.363 0 015 11.68h1.462l1.853-1.725a.36.36 0 01.39-.072zM13.36 17c.231 0 .417-.083.558-.248.96-1.095 1.44-2.345 1.44-3.75 0-1.405-.48-2.655-1.44-3.75a.686.686 0 00-.48-.247.7.7 0 00-.524.144.622.622 0 00-.262.45.623.623 0 00.162.49c.743.847 1.115 1.818 1.115 2.913 0 1.095-.372 2.066-1.116 2.913a.623.623 0 00-.161.491.59.59 0 00.262.439.713.713 0 00.446.155zm-2.355-1.529a.747.747 0 00.525-.206c.647-.64.971-1.395.971-2.263 0-.867-.324-1.622-.971-2.262a.727.727 0 00-.502-.207.712.712 0 00-.514.176.623.623 0 00-.022.94c.387.393.58.844.58 1.353 0 .51-.193.961-.58 1.353a.624.624 0 00.022.94.777.777 0 00.491.176z"
 }));
 
 function SvgAudioinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$i({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$I({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$i);
+  }, props), _ref$I);
 }
 
-function _extends$j() { _extends$j = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$j.apply(this, arguments); }
+function _extends$H() { _extends$H = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$H.apply(this, arguments); }
 
-var _ref$j = /*#__PURE__*/React.createElement("g", {
+var _ref$H = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M6.469 15.896V17h2.927v-1.104h-.781l1.072-1.677a1.493 1.493 0 00.105-.172 2.461 2.461 0 01.078-.14c.017-.029.03-.042.036-.042h.021a.362.362 0 00.052.104.582.582 0 00.047.078l.062.083c.025.031.048.061.068.089l1.115 1.677h-.792V17h3.031v-1.104h-.708l-2-2.844 2.031-2.937h.698V9h-2.906v1.115h.77l-1.072 1.656a4.645 4.645 0 01-.104.172 2.381 2.381 0 01-.094.14l-.02.032h-.022a.362.362 0 00-.052-.105 1.245 1.245 0 00-.177-.24L8.75 10.116h.792V9H6.52v1.115h.708l1.969 2.833-2.02 2.948h-.71z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z"
 }));
 
 function SvgExcelinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$j({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$H({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$j);
+  }, props), _ref$H);
 }
 
-function _extends$k() { _extends$k = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$k.apply(this, arguments); }
+function _extends$G() { _extends$G = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$G.apply(this, arguments); }
 
-var _ref$k = /*#__PURE__*/React.createElement("path", {
+var _ref$G = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z",
   fill: "currentColor"
 });
 
 function SvgFileinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$k({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$G({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$k);
+  }, props), _ref$G);
 }
 
-function _extends$l() { _extends$l = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$l.apply(this, arguments); }
+function _extends$F() { _extends$F = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$F.apply(this, arguments); }
 
-var _ref$l = /*#__PURE__*/React.createElement("g", {
+var _ref$F = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M11.474 11.55c.258.204.586.423.985.657.46-.055.918-.082 1.37-.082 1.15 0 1.84.191 2.075.574.125.172.133.375.023.61 0 .007-.004.015-.011.023l-.024.024v.011c-.047.297-.324.445-.832.445-.375 0-.824-.078-1.347-.234a8.544 8.544 0 01-1.524-.62c-1.726.186-3.258.51-4.594.972C6.4 15.977 5.455 17 4.76 17a.681.681 0 01-.328-.082l-.28-.14a1.254 1.254 0 00-.071-.06c-.078-.077-.102-.218-.07-.421.07-.313.288-.67.656-1.072.367-.403.882-.78 1.547-1.131.109-.07.199-.047.27.07.015.016.023.031.023.047a28.66 28.66 0 001.253-2.309 17.89 17.89 0 001.22-3.07 9.466 9.466 0 01-.358-1.87c-.051-.605-.026-1.103.076-1.493.086-.313.25-.469.492-.469h.258c.18 0 .316.059.41.176.14.164.176.43.106.797a.255.255 0 01-.047.093.302.302 0 01.011.094v.352c-.015.96-.07 1.71-.164 2.25.43 1.281 1 2.21 1.711 2.789zm-6.75 4.817c.406-.187.942-.805 1.606-1.851-.399.312-.74.64-1.026.984-.285.344-.478.633-.58.867zM9.388 5.586c-.117.328-.125.844-.023 1.547.008-.055.035-.227.082-.516 0-.023.027-.191.082-.504a.264.264 0 01.047-.093c-.008-.008-.012-.016-.012-.024a.09.09 0 01-.012-.035.675.675 0 00-.152-.422c0 .008-.004.016-.012.024v.023zm-1.453 7.746a17.19 17.19 0 013.328-.95 1.792 1.792 0 01-.152-.11 2.1 2.1 0 01-.188-.159c-.593-.523-1.09-1.21-1.488-2.062-.21.672-.535 1.441-.972 2.308-.235.438-.41.762-.528.973zm7.57-.188c-.187-.187-.734-.28-1.64-.28.594.218 1.078.327 1.453.327.11 0 .18-.004.211-.011 0-.008-.008-.02-.024-.035z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z"
 }));
 
 function SvgPdfinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$l({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$F({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$l);
+  }, props), _ref$F);
 }
 
-function _extends$m() { _extends$m = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$m.apply(this, arguments); }
+function _extends$E() { _extends$E = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$E.apply(this, arguments); }
 
-var _ref$m = /*#__PURE__*/React.createElement("g", {
+var _ref$E = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   strokeWidth: 1.5,
   fill: "none",
   fillRule: "evenodd",
   strokeLinecap: "round"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M12.684 8.457l-5.467 6.314c-.371.443-1.164.389-1.772-.12-.607-.51-.798-1.282-.427-1.725L8.38 8.92"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M8.594 8.664l4.842-5.77c1.023-1.219 2.88-1.344 4.15-.279 1.27 1.065 1.469 2.917.446 4.136l-4.841 5.77"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M14.878 10.51L9.089 17.41c-1.498 1.785-4.256 1.938-6.16.34a4.773 4.773 0 01-.91-1.016 4.483 4.483 0 01-.74-2.949 4.011 4.011 0 01.916-2.16L8.088 4.6"
 }));
 
 function SvgAttachmentinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$m({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$E({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$m);
+  }, props), _ref$E);
 }
 
-function _extends$n() { _extends$n = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$n.apply(this, arguments); }
+function _extends$D() { _extends$D = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$D.apply(this, arguments); }
 
-var _ref$n = /*#__PURE__*/React.createElement("path", {
+var _ref$D = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M7.5 0a7.5 7.5 0 016.257 11.636l5.182 5.182a1.5 1.5 0 01-2.121 2.121l-5.182-5.182A7.5 7.5 0 117.5 0zm0 2a5.5 5.5 0 100 11 5.5 5.5 0 000-11z",
   fill: "currentColor"
 });
 
 function SvgSearchinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$n({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$D({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$n);
+  }, props), _ref$D);
 }
 
-function _extends$o() { _extends$o = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$o.apply(this, arguments); }
+function _extends$C() { _extends$C = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$C.apply(this, arguments); }
 
-var _ref$o = /*#__PURE__*/React.createElement("path", {
+var _ref$C = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M4.034 4.034l11.932 11.932M3.99 16.01L16.01 3.99",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -16512,15 +16558,15 @@ var _ref$o = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgCloseinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$o({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$C({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$o);
+  }, props), _ref$C);
 }
 
-function _extends$p() { _extends$p = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$p.apply(this, arguments); }
+function _extends$B() { _extends$B = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$B.apply(this, arguments); }
 
-var _ref$p = /*#__PURE__*/React.createElement("path", {
+var _ref$B = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M8.333 7h5.334C14.403 7 15 7.554 15 8.236v14.528c0 .682-.597 1.236-1.333 1.236H8.333C7.597 24 7 23.446 7 22.764V8.236C7 7.554 7.597 7 8.333 7zm8 6h5.334c.736 0 1.333.563 1.333 1.257v8.486c0 .694-.597 1.257-1.333 1.257H15v-9.743c0-.694.597-1.257 1.333-1.257z",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -16529,33 +16575,33 @@ var _ref$p = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgOrginline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$p({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$B({
     className: "org_inline_svg__i-org",
     width: 30,
     height: 30,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _ref$p);
+  }, props), _ref$B);
 }
 
-function _extends$q() { _extends$q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$q.apply(this, arguments); }
+function _extends$A() { _extends$A = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$A.apply(this, arguments); }
 
-var _ref$q = /*#__PURE__*/React.createElement("g", {
+var _ref$A = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   fill: "none"
-}, /*#__PURE__*/React.createElement("rect", {
+}, /*#__PURE__*/React__namespace.createElement("rect", {
   x: 9,
   y: 10.5,
   width: 6,
   height: 1,
   rx: 0.5
-}), /*#__PURE__*/React.createElement("rect", {
+}), /*#__PURE__*/React__namespace.createElement("rect", {
   transform: "rotate(-120 8.25 8.835)",
   x: 5.25,
   y: 8.335,
   width: 6,
   height: 1,
   rx: 0.5
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   strokeWidth: 2,
   cx: 10,
   cy: 10,
@@ -16563,177 +16609,177 @@ var _ref$q = /*#__PURE__*/React.createElement("g", {
 }));
 
 function SvgTimesheetinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$q({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$A({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$q);
+  }, props), _ref$A);
 }
 
-function _extends$r() { _extends$r = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$r.apply(this, arguments); }
+function _extends$z() { _extends$z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$z.apply(this, arguments); }
 
-var _ref$r = /*#__PURE__*/React.createElement("path", {
+var _ref$z = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13 4V2H7v2h6zm5 7.5H1.999L2 16c0 .776.224 1 1 1h14c.776 0 1-.224 1-1v-4.5zM17 6H3c-.776 0-1 .224-1 1l-.001 3H18V7c0-.776-.224-1-1-1zM5 2a2 2 0 012-2h6a2 2 0 012 2v2h2c1.88 0 3 1.12 3 3v9c0 1.88-1.12 3-3 3H3c-1.88 0-3-1.12-3-3V7c0-1.88 1.12-3 3-3h2V2z",
   fill: "currentColor"
 });
 
 function SvgBriefinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$r({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$z({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$r);
+  }, props), _ref$z);
 }
 
-function _extends$s() { _extends$s = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$s.apply(this, arguments); }
+function _extends$y() { _extends$y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$y.apply(this, arguments); }
 
-var _ref$s = /*#__PURE__*/React.createElement("path", {
+var _ref$y = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M15 20H5v-3.073s.108-2.157-.693-4.421c-.8-2.264-2.299-4.421-2.299-4.421L8.498.697A2 2 0 0111.32.514a2 2 0 01.183.183l6.489 7.388s-1.536 2.263-2.299 4.42C14.93 14.664 15 16.928 15 16.928V20zM4.496 8.256c.218.374.447.789.677 1.236a18.88 18.88 0 011.014 2.316c.355 1.002.581 2.036.706 3.07h6.225c.11-.923.295-1.838.576-2.716a11.98 11.98 0 01.119-.354c.04-.114.082-.228.126-.343.252-.66.566-1.34.929-2.037.207-.399.423-.788.642-1.164l-4.87-5.839V6.91c.564.253.958.83.958 1.501 0 .905-.715 1.638-1.598 1.638S8.402 9.316 8.402 8.41c0-.671.394-1.248.959-1.5V2.424L4.496 8.256z",
   fill: "currentColor"
 });
 
 function SvgSkillinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$s({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$y({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$s);
+  }, props), _ref$y);
 }
 
-function _extends$t() { _extends$t = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$t.apply(this, arguments); }
+function _extends$x() { _extends$x = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$x.apply(this, arguments); }
 
-var _ref$t = /*#__PURE__*/React.createElement("g", {
+var _ref$x = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M16.857 2c.603 0 1.155.263 1.553.706.36.402.59.954.59 1.569h0v8.45a2.35 2.35 0 01-.59 1.569c-.398.443-.95.706-1.553.706h0H14c-.405 0-.772.233-1.008.592h0L10 19.698l-2.992-4.106C6.772 15.233 6.405 15 6 15h0-2.857a2.076 2.076 0 01-1.553-.706A2.348 2.348 0 011 12.725h0v-8.45c0-.615.23-1.167.59-1.569C1.988 2.263 2.54 2 3.143 2h0z",
   stroke: "currentColor",
   strokeWidth: 2,
   strokeLinejoin: "round"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M16 9a1 1 0 11-2 0 1 1 0 012 0zm-5 0a1 1 0 11-2 0 1 1 0 012 0zM6 9a1 1 0 11-2 0 1 1 0 012 0z",
   fill: "currentColor"
 }));
 
 function SvgChatinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$t({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$x({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$t);
+  }, props), _ref$x);
 }
 
-function _extends$u() { _extends$u = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$u.apply(this, arguments); }
+function _extends$w() { _extends$w = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$w.apply(this, arguments); }
 
-var _ref$u = /*#__PURE__*/React.createElement("path", {
+var _ref$w = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M18 1a1 1 0 011 1v7a1 1 0 11-2 0l-.001-4.586L4.414 16.999 9 17a1 1 0 110 2H2a1 1 0 01-1-1v-7a1 1 0 112 0v4.585L15.585 3H11a1 1 0 110-2h7z",
   fill: "currentColor",
   fillRule: "evenodd"
 });
 
 function SvgExpandinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$u({
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20"
-  }, props), _ref$u);
-}
-
-function _extends$v() { _extends$v = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$v.apply(this, arguments); }
-
-var _ref$v = /*#__PURE__*/React.createElement("g", {
-  fill: "currentColor",
-  fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
-  d: "M2 10h7a1 1 0 011 1v7a1 1 0 11-2 0v-5a1 1 0 00-1-1H2a1 1 0 110-2zm16 0h-7a1 1 0 01-1-1V2a1 1 0 112 0v5a1 1 0 001 1h5a1 1 0 110 2z"
-}), /*#__PURE__*/React.createElement("path", {
-  d: "M1.707 16.879L7.586 11A1 1 0 019 12.414l-5.879 5.879a1 1 0 01-1.414-1.414zM11 7.586l5.879-5.879a1 1 0 011.414 1.414L12.414 9A1 1 0 0111 7.586z"
-}));
-
-function SvgMinimizeinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$v({
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20"
-  }, props), _ref$v);
-}
-
-function _extends$w() { _extends$w = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$w.apply(this, arguments); }
-
-var _ref$w = /*#__PURE__*/React.createElement("g", {
-  fill: "none",
-  fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
-  d: "M7.586 2l3 3H18a.997.997 0 011 1h0v11a.997.997 0 01-.293.707A.997.997 0 0118 18h0H2a.997.997 0 01-.707-.293A.997.997 0 011 17h0V3c0-.276.112-.526.293-.707A.997.997 0 012 2h5.586z",
-  stroke: "currentColor",
-  strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
-  fill: "currentColor",
-  d: "M0 7h20v2H0z"
-}));
-
-function SvgProjectinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$w({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$w({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
   }, props), _ref$w);
 }
 
-function _extends$x() { _extends$x = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$x.apply(this, arguments); }
+function _extends$v() { _extends$v = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$v.apply(this, arguments); }
 
-var _ref$x = /*#__PURE__*/React.createElement("g", {
+var _ref$v = /*#__PURE__*/React__namespace.createElement("g", {
+  fill: "currentColor",
+  fillRule: "evenodd"
+}, /*#__PURE__*/React__namespace.createElement("path", {
+  d: "M2 10h7a1 1 0 011 1v7a1 1 0 11-2 0v-5a1 1 0 00-1-1H2a1 1 0 110-2zm16 0h-7a1 1 0 01-1-1V2a1 1 0 112 0v5a1 1 0 001 1h5a1 1 0 110 2z"
+}), /*#__PURE__*/React__namespace.createElement("path", {
+  d: "M1.707 16.879L7.586 11A1 1 0 019 12.414l-5.879 5.879a1 1 0 01-1.414-1.414zM11 7.586l5.879-5.879a1 1 0 011.414 1.414L12.414 9A1 1 0 0111 7.586z"
+}));
+
+function SvgMinimizeinline(props) {
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$v({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20"
+  }, props), _ref$v);
+}
+
+function _extends$u() { _extends$u = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$u.apply(this, arguments); }
+
+var _ref$u = /*#__PURE__*/React__namespace.createElement("g", {
+  fill: "none",
+  fillRule: "evenodd"
+}, /*#__PURE__*/React__namespace.createElement("path", {
+  d: "M7.586 2l3 3H18a.997.997 0 011 1h0v11a.997.997 0 01-.293.707A.997.997 0 0118 18h0H2a.997.997 0 01-.707-.293A.997.997 0 011 17h0V3c0-.276.112-.526.293-.707A.997.997 0 012 2h5.586z",
+  stroke: "currentColor",
+  strokeWidth: 2
+}), /*#__PURE__*/React__namespace.createElement("path", {
+  fill: "currentColor",
+  d: "M0 7h20v2H0z"
+}));
+
+function SvgProjectinline(props) {
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$u({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20"
+  }, props), _ref$u);
+}
+
+function _extends$t() { _extends$t = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$t.apply(this, arguments); }
+
+var _ref$t = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   strokeWidth: 2,
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M16.5 1A1.496 1.496 0 0118 2.5h0v15c0 .414-.168.79-.44 1.06a1.495 1.495 0 01-1.06.44h0-13a1.495 1.495 0 01-1.06-.44A1.495 1.495 0 012 17.5h0v-15c0-.414.168-.79.44-1.06A1.495 1.495 0 013.5 1h0z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   strokeLinecap: "round",
   d: "M7 6h6m-6 4h6m-6 4h6"
 }));
 
 function SvgAssessmentinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$x({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$t({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$x);
+  }, props), _ref$t);
 }
 
-function _extends$y() { _extends$y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$y.apply(this, arguments); }
+function _extends$s() { _extends$s = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$s.apply(this, arguments); }
 
-var _ref$y = /*#__PURE__*/React.createElement("g", {
+var _ref$s = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   fill: "none",
   fillRule: "evenodd",
   strokeLinecap: "round"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M4.75 6c.118 0 .234.007.349.02A4.852 4.852 0 005 7c0 1.657.724 3.076 2 4-1.857 1.075-3 2.994-3 5h0-3v-1.25h0c0-1.254.714-2.453 1.875-3.125-.797-.577-1.25-1.465-1.25-2.5C1.625 7.417 3.025 6 4.75 6zm10.5 0a3.137 3.137 0 013.125 3.125c0 1.035-.453 1.923-1.25 2.5C18.286 12.297 19 13.496 19 14.75V16h0-3c0-2.006-1.143-3.925-3-5 1.276-.924 2-2.344 2-4 0-.335-.034-.663-.098-.981A3.269 3.269 0 0115.25 6z",
   strokeWidth: 1.5
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M4 18v-2c0-2.006 1.143-3.925 3-5-1.276-.924-2-2.344-2-4 0-2.732 2.239-5 5-5s5 2.268 5 5c0 1.657-.724 3.076-2 4 1.857 1.075 3 2.994 3 5v2H4z",
   strokeWidth: 2
 }));
 
 function SvgTalentinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$y({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$s({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$y);
+  }, props), _ref$s);
 }
 
-function _extends$z() { _extends$z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$z.apply(this, arguments); }
+function _extends$r() { _extends$r = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$r.apply(this, arguments); }
 
-var _ref$z = /*#__PURE__*/React.createElement("g", {
+var _ref$r = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   fill: "none"
-}, /*#__PURE__*/React.createElement("rect", {
+}, /*#__PURE__*/React__namespace.createElement("rect", {
   x: 6.5,
   y: 14.5,
   width: 7,
   height: 1,
   rx: 0.5
-}), /*#__PURE__*/React.createElement("rect", {
+}), /*#__PURE__*/React__namespace.createElement("rect", {
   strokeWidth: 2,
   x: 2,
   y: 1,
   width: 16,
   height: 18,
   rx: 2
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   strokeWidth: 2,
   cx: 10,
   cy: 8,
@@ -16741,29 +16787,29 @@ var _ref$z = /*#__PURE__*/React.createElement("g", {
 }));
 
 function SvgProfileinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$z({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$r({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$z);
+  }, props), _ref$r);
 }
 
-function _extends$A() { _extends$A = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$A.apply(this, arguments); }
+function _extends$q() { _extends$q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$q.apply(this, arguments); }
 
-var _ref$A = /*#__PURE__*/React.createElement("path", {
+var _ref$q = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm0 5.548c-1.503 0-2.785 1.245-2.937 2.815l-.009.117.015.15c.101.82.421 1.475 1.072 2.129l.17.163 1.203 1.115-1.542.56c-1.5.543-2.421 1.89-2.495 3.576l-.005.222-.001.2A7.963 7.963 0 0010 18a7.962 7.962 0 004.529-1.405v-.2c0-1.716-.86-3.11-2.308-3.723l-.193-.076-1.542-.56 1.204-1.114c.765-.709 1.132-1.404 1.24-2.293l.015-.149-.008-.117c-.146-1.512-1.34-2.722-2.771-2.81L10 5.549zM10 2a8 8 0 00-6.354 12.861c.336-1.434 1.147-2.658 2.33-3.472l.056-.037-.027-.037a5.316 5.316 0 01-.924-2.465l-.027-.276-.002-.119C5.166 5.755 7.345 3.55 10 3.55c2.583 0 4.716 2.088 4.934 4.688l.014.218-.002.119c-.08 1.026-.382 1.922-.951 2.741l-.028.037.056.037c1.184.814 1.995 2.038 2.331 3.472A8 8 0 0010 2z",
   fill: "currentColor"
 });
 
 function SvgChatUsersinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$A({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$q({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$A);
+  }, props), _ref$q);
 }
 
-function _extends$B() { _extends$B = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$B.apply(this, arguments); }
+function _extends$p() { _extends$p = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$p.apply(this, arguments); }
 
-var _ref$B = /*#__PURE__*/React.createElement("path", {
+var _ref$p = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M2 7l8 8 8-8",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -16773,21 +16819,21 @@ var _ref$B = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgDowninline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$B({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$p({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$B);
+  }, props), _ref$p);
 }
 
-function _extends$C() { _extends$C = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$C.apply(this, arguments); }
+function _extends$o() { _extends$o = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$o.apply(this, arguments); }
 
-var _ref$C = /*#__PURE__*/React.createElement("g", {
+var _ref$o = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M15.705 9.739l-4.992 4.967a1.012 1.012 0 01-1.426 0L4.295 9.74a1 1 0 010-1.42 1.012 1.012 0 011.426 0l3.22 3.203V2.004C8.94 1.449 9.392 1 9.949 1c.557 0 1.009.45 1.009 1.004v9.62l3.32-3.305a1.012 1.012 0 011.427 0 1 1 0 010 1.42z",
   fill: "currentColor"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M2 13v3a2 2 0 002 2h12a2 2 0 002-2v-3h0",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -16796,43 +16842,43 @@ var _ref$C = /*#__PURE__*/React.createElement("g", {
 }));
 
 function SvgDownloadinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$C({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$o({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$C);
+  }, props), _ref$o);
 }
 
-function _extends$D() { _extends$D = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$D.apply(this, arguments); }
+function _extends$n() { _extends$n = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$n.apply(this, arguments); }
 
-var _ref$D = /*#__PURE__*/React.createElement("g", {
+var _ref$n = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13 2v17h0H1V2a1 1 0 011-1h10a1 1 0 011 1z",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M4 5h2v2H4zm4 0h2v2H8zM4 9h2v2H4zm4 0h2v2H8zm-4 4h2v2H4zm11-4h2v2h-2zm-7 4h2v2H8z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M17.4 5H13v14h6V6.6A1.6 1.6 0 0017.4 5z",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M15 13h2v2h-2z"
 }));
 
 function SvgCompanyinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$D({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$n({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$D);
+  }, props), _ref$n);
 }
 
-function _extends$E() { _extends$E = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$E.apply(this, arguments); }
+function _extends$m() { _extends$m = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$m.apply(this, arguments); }
 
-var _ref$E = /*#__PURE__*/React.createElement("path", {
+var _ref$m = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M2 2h6v6H2zm10 0h6v6h-6zm0 10h6v6h-6zM2 12h6v6H2z",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -16841,21 +16887,21 @@ var _ref$E = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgDashboardinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$E({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$m({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$E);
+  }, props), _ref$m);
 }
 
-function _extends$F() { _extends$F = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$F.apply(this, arguments); }
+function _extends$l() { _extends$l = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$l.apply(this, arguments); }
 
-var _ref$F = /*#__PURE__*/React.createElement("g", {
+var _ref$l = /*#__PURE__*/React__namespace.createElement("g", {
   stroke: "currentColor",
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M18.5.733v16.386l-5 2.125V2.858l5-2.125zm-12 0v16.386l-5 2.125V2.858l5-2.125zm1 0v16.386l5 2.125V2.858L7.5.733z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   strokeWidth: 2,
   strokeLinecap: "round",
   strokeLinejoin: "round",
@@ -16863,150 +16909,150 @@ var _ref$F = /*#__PURE__*/React.createElement("g", {
 }));
 
 function SvgGuideinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$F({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$l({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$F);
+  }, props), _ref$l);
 }
 
-function _extends$G() { _extends$G = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$G.apply(this, arguments); }
+function _extends$k() { _extends$k = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$k.apply(this, arguments); }
 
-var _ref$G = /*#__PURE__*/React.createElement("g", {
+var _ref$k = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M17 0H6a1 1 0 00-1 1v19l7.5-7 7.5 7V3a3 3 0 00-3-3z",
   fill: "currentColor"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M3 1a1.994 1.994 0 00-1.414.586A1.994 1.994 0 001 3h0v4h5V1z",
   stroke: "currentColor",
   strokeWidth: 2
 }));
 
 function SvgReferenceinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$G({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$k({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$G);
+  }, props), _ref$k);
 }
 
-function _extends$H() { _extends$H = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$H.apply(this, arguments); }
+function _extends$j() { _extends$j = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$j.apply(this, arguments); }
 
-var _ref$H = /*#__PURE__*/React.createElement("path", {
+var _ref$j = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M18.633 6.64l-7.865 9.438a1 1 0 01-1.408.128 1 1 0 01-.128-.128L1.367 6.64A1 1 0 012.135 5h15.73a1 1 0 011 1 1 1 0 01-.232.64z",
   fill: "currentColor"
 });
 
 function SvgCaretinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$H({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$j({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$H);
+  }, props), _ref$j);
 }
 
-function _extends$I() { _extends$I = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$I.apply(this, arguments); }
+function _extends$i() { _extends$i = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$i.apply(this, arguments); }
 
-var _ref$I = /*#__PURE__*/React.createElement("g", {
+var _ref$i = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M9.192 6.364l4.455-4.455c1.055-1.054 2.86-.96 4.03.212 1.172 1.172 1.267 2.976.213 4.03l-4.455 4.456h0M6.364 9.192l-4.455 4.455c-1.054 1.055-.96 2.86.212 4.03 1.172 1.172 2.976 1.267 4.03.213l4.456-4.455h0",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M12.728 5.657l1.414 1.414-7.071 7.071-1.414-1.414z"
 }));
 
 function SvgLinkinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$I({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$i({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$I);
+  }, props), _ref$i);
 }
 
-function _extends$J() { _extends$J = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$J.apply(this, arguments); }
+function _extends$h() { _extends$h = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$h.apply(this, arguments); }
 
-var _ref$J = /*#__PURE__*/React.createElement("g", {
+var _ref$h = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M6.034 17.502l-3.65.793a.531.531 0 01-.271-.014c-.286-.09-.468-.388-.408-.666l.794-3.65L13.11 3.354l3.536 3.536L6.034 17.502h0zm7.08-14.151l3.535 3.536 1.483-1.483a2.5 2.5 0 00-3.536-3.536l-1.483 1.483h0z",
   stroke: "currentColor",
   strokeWidth: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M3.636 12.121l4.243 4.243-1.414 1.414-4.243-4.242z"
 }));
 
 function SvgPencilinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$J({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$h({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$J);
+  }, props), _ref$h);
 }
 
-function _extends$K() { _extends$K = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$K.apply(this, arguments); }
+function _extends$g() { _extends$g = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$g.apply(this, arguments); }
 
-var _ref$K = /*#__PURE__*/React.createElement("g", {
+var _ref$g = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M5 13.6l2.5-2.4 1.25 1.2 2.5-2.4L15 13.6V15a1 1 0 01-1 1H6a1 1 0 01-1-1v-1.4z"
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   cx: 7,
   cy: 6,
   r: 2
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z"
 }));
 
 function SvgPictureinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$K({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$g({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$K);
+  }, props), _ref$g);
 }
 
-function _extends$L() { _extends$L = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$L.apply(this, arguments); }
+function _extends$f() { _extends$f = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$f.apply(this, arguments); }
 
-var _ref$L = /*#__PURE__*/React.createElement("path", {
+var _ref$f = /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M10 14.632l.614.323 4.288 2.254-.936-5.458.497-.485 3.468-3.381-5.48-.797L10 2.122 7.55 7.088l-.687.1-4.794.697 3.965 3.865-.117.684-.819 4.775L10 14.632zm-6.597 2.702l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
 });
 
 function SvgStaremptyinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$L({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$f({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$L);
+  }, props), _ref$f);
 }
 
-function _extends$M() { _extends$M = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$M.apply(this, arguments); }
+function _extends$e() { _extends$e = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$e.apply(this, arguments); }
 
-var _ref$M = /*#__PURE__*/React.createElement("path", {
+var _ref$e = /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M3.403 17.334l.859-5.008L.624 8.78c-1.091-1.064-.706-2.25.802-2.469l5.028-.73 2.248-4.556c.675-1.367 1.922-1.367 2.596 0l2.248 4.556 5.028.73c1.508.22 1.893 1.405.802 2.47l-3.638 3.545.86 5.008c.257 1.502-.752 2.235-2.101 1.526L10 16.495 5.503 18.86c-1.348.71-2.357-.023-2.1-1.525z"
 });
 
 function SvgStarfullinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$M({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$e({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$M);
+  }, props), _ref$e);
 }
 
-function _extends$N() { _extends$N = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$N.apply(this, arguments); }
+function _extends$d() { _extends$d = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$d.apply(this, arguments); }
 
-var _ref$N = /*#__PURE__*/React.createElement("g", {
+var _ref$d = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13 0h6a1 1 0 011 1v6a1 1 0 11-2 0V3a1 1 0 00-1-1h-4a1 1 0 110-2z",
   fill: "currentColor"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M7.707 10.879L17.586 1A1 1 0 0119 2.414l-9.879 9.879a1 1 0 01-1.414-1.414z",
   fill: "currentColor"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M16 11.143V17a2 2 0 01-2 2H3a2 2 0 01-2-2V6a2 2 0 012-2h5.857",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -17015,51 +17061,51 @@ var _ref$N = /*#__PURE__*/React.createElement("g", {
 }));
 
 function SvgExternalinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$N({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$d({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$N);
+  }, props), _ref$d);
 }
 
-function _extends$O() { _extends$O = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$O.apply(this, arguments); }
+function _extends$c() { _extends$c = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$c.apply(this, arguments); }
 
-var _ref$O = /*#__PURE__*/React.createElement("path", {
+var _ref$c = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M11.678 14.874l-1.881-4.76-1.51 3.792a.99.99 0 01-.808.617.983.983 0 01-.925-.42l-1.707-2.467-1.536 1.851a.99.99 0 11-1.523-1.264l2.37-2.855a.973.973 0 01.805-.357.989.989 0 01.77.426L7.13 11.46l1.75-4.394a.99.99 0 011.84.002l1.756 4.447L14.403 5.2a.99.99 0 01.867-.698c.4-.033.789.186.968.551l2.101 4.282a.99.99 0 01-1.777.872l-.997-2.033-2.02 6.624a.99.99 0 01-.907.7c-.445.001-.81-.246-.96-.625z",
   fill: "currentColor"
 });
 
 function SvgActivityinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$O({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$c({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$O);
+  }, props), _ref$c);
 }
 
-function _extends$P() { _extends$P = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$P.apply(this, arguments); }
+function _extends$b() { _extends$b = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$b.apply(this, arguments); }
 
-var _ref$P = /*#__PURE__*/React.createElement("g", {
+var _ref$b = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   stroke: "currentColor",
   strokeWidth: 2,
   d: "M12.614 4.458l-.093-.408C12.25 2.85 11.206 2 10 2s-2.252.85-2.52 2.05l-.094.408-.344.209C5.26 5.733 4.162 7.683 4.16 9.792v2.8l-.614.229a1.647 1.647 0 00-1.021 1.817A1.62 1.62 0 004.084 16h11.831a1.62 1.62 0 001.561-1.362 1.647 1.647 0 00-1.021-1.817l-.623-.228V9.792a5.97 5.97 0 00-2.874-5.125l-.344-.209z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   fillRule: "nonzero",
   d: "M12 18a2 2 0 11-4 0h4z"
 }));
 
 function SvgNotificationinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$P({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$b({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$P);
+  }, props), _ref$b);
 }
 
-function _extends$Q() { _extends$Q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Q.apply(this, arguments); }
+function _extends$a() { _extends$a = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$a.apply(this, arguments); }
 
-var _ref$Q = /*#__PURE__*/React.createElement("path", {
+var _ref$a = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M2 12l5.172 4.31a1 1 0 001.454-.187L18 3h0",
   stroke: "currentColor",
   strokeWidth: 2.5,
@@ -17068,43 +17114,43 @@ var _ref$Q = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgOkinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$Q({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$a({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$Q);
+  }, props), _ref$a);
 }
 
-function _extends$R() { _extends$R = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$R.apply(this, arguments); }
+function _extends$9() { _extends$9 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$9.apply(this, arguments); }
 
-var _ref$R = /*#__PURE__*/React.createElement("path", {
+var _ref$9 = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M7.88 6.614a3.03 3.03 0 00.166-1.753L7.01.755A1 1 0 005.897.01L.857.737A1 1 0 00.002 1.79a19.525 19.525 0 005.62 12.574c3.398 3.432 7.973 5.392 12.788 5.636a1 1 0 001.045-.897l.54-5.273a1 1 0 00-.767-1.075l-3.768-.882a3.052 3.052 0 00-1.926.223l-1.362.587c-1.086-.718-1.82-1.305-2.626-2.118-.835-.844-1.423-1.593-2.124-2.688l.458-1.262zm9.684 11.315C13.59 17.518 9.86 15.8 7.043 12.956A17.51 17.51 0 012.078 2.582l3.213-.463.805 3.182c.03.161.008.382-.077.582l-.644 1.77a1 1 0 00.09.867c.894 1.445 1.609 2.389 2.66 3.45 1.027 1.039 1.958 1.755 3.411 2.685a1 1 0 00.935.076l1.885-.813c.232-.109.459-.136.677-.092l2.883.675-.351 3.428z",
   fill: "currentColor"
 });
 
 function SvgPhoneinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$R({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$9({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$R);
+  }, props), _ref$9);
 }
 
-function _extends$S() { _extends$S = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$S.apply(this, arguments); }
+function _extends$8() { _extends$8 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$8.apply(this, arguments); }
 
-var _ref$S = /*#__PURE__*/React.createElement("path", {
+var _ref$8 = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M18 6.382V5H2v1.382l8 4 8-4zm0 2.236l-8 4-8-4V16h16V8.618zM2 3h16a2 2 0 012 2v11a2 2 0 01-2 2H2a2 2 0 01-2-2V5a2 2 0 012-2z",
   fill: "currentColor"
 });
 
 function SvgEmailinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$S({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$8({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$S);
+  }, props), _ref$8);
 }
 
-function _extends$T() { _extends$T = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$T.apply(this, arguments); }
+function _extends$7() { _extends$7 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$7.apply(this, arguments); }
 
-var _ref$T = /*#__PURE__*/React.createElement("path", {
+var _ref$7 = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M2.5 10h15M10 17.5v-15",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -17115,52 +17161,52 @@ var _ref$T = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgAddinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$T({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$7({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$T);
+  }, props), _ref$7);
 }
 
-function _extends$U() { _extends$U = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$U.apply(this, arguments); }
+function _extends$6() { _extends$6 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$6.apply(this, arguments); }
 
-var _ref$U = /*#__PURE__*/React.createElement("g", {
+var _ref$6 = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("circle", {
+}, /*#__PURE__*/React__namespace.createElement("circle", {
   cx: 10,
   cy: 5,
   r: 1.5
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   cx: 3.5,
   cy: 5,
   r: 1.5
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   cx: 16.5,
   cy: 5,
   r: 1.5
 }));
 
 function SvgMoreinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$U({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$6({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 10"
-  }, props), _ref$U);
+  }, props), _ref$6);
 }
 
-function _extends$V() { _extends$V = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$V.apply(this, arguments); }
+function _extends$5() { _extends$5 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$5.apply(this, arguments); }
 
-var _ref$V = /*#__PURE__*/React.createElement("g", {
+var _ref$5 = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor"
-}, /*#__PURE__*/React.createElement("circle", {
+}, /*#__PURE__*/React__namespace.createElement("circle", {
   transform: "rotate(90 5 10)",
   cx: 5,
   cy: 10,
   r: 1.5
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   transform: "rotate(90 5 3.5)",
   cx: 5,
   cy: 3.5,
   r: 1.5
-}), /*#__PURE__*/React.createElement("circle", {
+}), /*#__PURE__*/React__namespace.createElement("circle", {
   transform: "rotate(90 5 16.5)",
   cx: 5,
   cy: 16.5,
@@ -17168,15 +17214,15 @@ var _ref$V = /*#__PURE__*/React.createElement("g", {
 }));
 
 function SvgMoreVerticalinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$V({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$5({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 10 20"
-  }, props), _ref$V);
+  }, props), _ref$5);
 }
 
-function _extends$W() { _extends$W = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$W.apply(this, arguments); }
+function _extends$4() { _extends$4 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$4.apply(this, arguments); }
 
-var _ref$W = /*#__PURE__*/React.createElement("path", {
+var _ref$4 = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.444 1.685a1.98 1.98 0 011.212 2.029l-.024.234a1.275 1.275 0 01-.06.278c.36.284.69.6.987.942l.216.26c.13-.034.222-.054.277-.06l.234-.024a1.98 1.98 0 011.451 3.503l-.182.15a1.275 1.275 0 01-.24.153c.053.447.065.902.033 1.359l-.032.342c.116.067.196.118.239.153l.182.149a1.98 1.98 0 01-1.45 3.503l-.235-.024a1.275 1.275 0 01-.278-.06 7.284 7.284 0 01-.942.987l-.261.215c.035.13.056.223.061.278l.024.234a1.98 1.98 0 01-3.503 1.451l-.15-.182a1.275 1.275 0 01-.153-.24 7.308 7.308 0 01-1.702.001c-.049.095-.1.175-.152.239l-.149.182a1.98 1.98 0 01-3.503-1.45l.024-.235a1.275 1.275 0 01.06-.278 7.284 7.284 0 01-.987-.942l-.216-.262c-.13.036-.222.056-.277.062l-.234.024a1.98 1.98 0 01-1.451-3.503l.182-.15a1.275 1.275 0 01.24-.153 7.308 7.308 0 01-.033-1.359l.032-.343a1.958 1.958 0 01-.239-.152l-.182-.149a1.98 1.98 0 011.45-3.503l.235.024c.097.01.19.03.278.06a7.284 7.284 0 01.942-.987l.261-.216a2.003 2.003 0 01-.061-.277l-.024-.234a1.98 1.98 0 013.503-1.451l.15.183c.06.075.112.155.153.238a7.308 7.308 0 011.702 0c.049-.095.1-.175.152-.239l.149-.182a1.98 1.98 0 012.291-.578zm-2.296 5.543a3 3 0 10-2.296 5.544 3 3 0 002.296-5.543z",
   stroke: "currentColor",
   strokeWidth: 2,
@@ -17184,71 +17230,71 @@ var _ref$W = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgSettingsinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$W({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$4({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$W);
+  }, props), _ref$4);
 }
 
-function _extends$X() { _extends$X = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$X.apply(this, arguments); }
+function _extends$3() { _extends$3 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$3.apply(this, arguments); }
 
-var _ref$X = /*#__PURE__*/React.createElement("path", {
+var _ref$3 = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0zm-.243 13.558c-.797 0-1.377.529-1.377 1.282 0 .726.58 1.264 1.376 1.264.83 0 1.403-.538 1.403-1.264 0-.753-.571-1.282-1.402-1.282zm.251-9.694c-1.808 0-3.799.882-3.758 3.454h1.801c0-1.065.623-1.887 1.852-1.887.936 0 1.792.467 1.792 1.592 0 .866-.511 1.264-1.316 1.87-.918.666-1.645 1.445-1.593 2.71l.01.63h1.783v-.483c0-.98.373-1.265 1.378-2.027.83-.631 1.696-1.332 1.696-2.805 0-2.059-1.74-3.054-3.645-3.054z",
   fill: "currentColor"
 });
 
 function SvgQuestioninline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$X({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$3({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$X);
+  }, props), _ref$3);
 }
 
-function _extends$Y() { _extends$Y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Y.apply(this, arguments); }
+function _extends$2() { _extends$2 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$2.apply(this, arguments); }
 
-var _ref$Y = /*#__PURE__*/React.createElement("g", {
+var _ref$2 = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "currentColor",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   d: "M5 6h4v2H5zm0 4h10v2H5zm0 4h10v2H5z"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   d: "M13.583 0L19 5.714V18a2 2 0 01-2 2H3a2 2 0 01-2-2V2a2 2 0 012-2h10.583zM3 2v16h14V8h-6V2H3zm13.516 4L13 2.292V6h3.516z",
   fillRule: "nonzero"
 }));
 
 function SvgTextinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$Y({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$2({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$Y);
+  }, props), _ref$2);
 }
 
-function _extends$Z() { _extends$Z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Z.apply(this, arguments); }
+function _extends$1() { _extends$1 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1.apply(this, arguments); }
 
-var _ref$Z = /*#__PURE__*/React.createElement("g", {
+var _ref$1 = /*#__PURE__*/React__namespace.createElement("g", {
   fill: "none",
   fillRule: "evenodd"
-}, /*#__PURE__*/React.createElement("path", {
+}, /*#__PURE__*/React__namespace.createElement("path", {
   stroke: "currentColor",
   strokeLinecap: "round",
   strokeLinejoin: "round",
   strokeWidth: 2,
   d: "M11 15v3H1V2h10v3"
-}), /*#__PURE__*/React.createElement("path", {
+}), /*#__PURE__*/React__namespace.createElement("path", {
   fill: "currentColor",
   d: "M14.707 4.293l4.95 4.95a1 1 0 010 1.414l-4.95 4.95a1 1 0 01-1.414-1.415L16.484 11H7a1 1 0 010-2h9.586l-3.293-3.293a1 1 0 111.414-1.414z"
 }));
 
 function SvgLogoutinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$Z({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends$1({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$Z);
+  }, props), _ref$1);
 }
 
-function _extends$_() { _extends$_ = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$_.apply(this, arguments); }
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var _ref$_ = /*#__PURE__*/React.createElement("path", {
+var _ref = /*#__PURE__*/React__namespace.createElement("path", {
   d: "M4 10h12M4 5h12M4 15h12",
   fill: "none",
   fillRule: "evenodd",
@@ -17258,10 +17304,10 @@ var _ref$_ = /*#__PURE__*/React.createElement("path", {
 });
 
 function SvgMenuinline(props) {
-  return /*#__PURE__*/React.createElement("svg", _extends$_({
+  return /*#__PURE__*/React__namespace.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _ref$_);
+  }, props), _ref);
 }
 
 var Icon = {};
@@ -17332,12 +17378,12 @@ Icon.Stop = SvgStopinline;
 
 exports.Loader = Loader.Loader;
 exports.Button = Button.Button;
-exports.InputContainer = InputContainer;
-exports.InputGroup = InputGroup;
 exports.Card = Card;
 exports.Text = Text$1;
 exports.Action = Action;
 exports.Icon = Icon;
+exports.InputContainer = InputContainer;
+exports.InputGroup = InputGroup;
 exports.Logo = Logo;
 exports.Quill = QuillEditor;
 exports.Select = SelectInput;

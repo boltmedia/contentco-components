@@ -7,7 +7,8 @@ const HelloWorld = () => {
   return (
     <h1>
       <ButtonA>Button A</ButtonA>
-      <ButtonB>Button B</ButtonB>
+  <ButtonB>Button B</ButtonB>
+  
     </h1>
   );
 };

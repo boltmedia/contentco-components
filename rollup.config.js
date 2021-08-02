@@ -24,18 +24,13 @@ export default {
   ],
   output: [
     {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: false
-    },
-    {
       dir: 'build',
       format: 'cjs'
     }
   ],
   preserveModules: false,
   plugins: [
-    multi(),
+ 
     commonjs(),
     scss(),
     svgr(),

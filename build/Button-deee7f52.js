@@ -1,20 +1,20 @@
 'use strict';
 
+var Loader = require('./Loader-e05c48f6.js');
 var _extends = require('@babel/runtime/helpers/extends');
 var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProperties');
 var React = require('react');
-var classNames = require('classnames');
 var PropTypes = require('prop-types');
 var styleInject_es = require('./style-inject.es-dcee06b6.js');
-var Loader = require('./Loader-1aeed820.js');
+var classNames = require('classnames');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var _extends__default = /*#__PURE__*/_interopDefaultLegacy(_extends);
 var _objectWithoutProperties__default = /*#__PURE__*/_interopDefaultLegacy(_objectWithoutProperties);
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
-var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
 var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
+var classNames__default = /*#__PURE__*/_interopDefaultLegacy(classNames);
 
 var aFunction = function (it) {
   if (typeof it != 'function') {
@@ -80,7 +80,7 @@ var wellKnownSymbol = function (name) {
   } return WellKnownSymbolsStore[name];
 };
 
-var SPECIES = wellKnownSymbol('species');
+var SPECIES$1 = wellKnownSymbol('species');
 
 // `ArraySpeciesCreate` abstract operation
 // https://tc39.github.io/ecma262/#sec-arrayspeciescreate
@@ -91,7 +91,7 @@ var arraySpeciesCreate = function (originalArray, length) {
     // cross-realm fallback
     if (typeof C == 'function' && (C === Array || isArray(C.prototype))) C = undefined;
     else if (Loader.isObject(C)) {
-      C = C[SPECIES];
+      C = C[SPECIES$1];
       if (C === null) C = undefined;
     }
   } return new (C === undefined ? Array : C)(length === 0 ? 0 : length);
@@ -99,13 +99,14 @@ var arraySpeciesCreate = function (originalArray, length) {
 
 var push = [].push;
 
-// `Array.prototype.{ forEach, map, filter, some, every, find, findIndex }` methods implementation
+// `Array.prototype.{ forEach, map, filter, some, every, find, findIndex, filterOut }` methods implementation
 var createMethod = function (TYPE) {
   var IS_MAP = TYPE == 1;
   var IS_FILTER = TYPE == 2;
   var IS_SOME = TYPE == 3;
   var IS_EVERY = TYPE == 4;
   var IS_FIND_INDEX = TYPE == 6;
+  var IS_FILTER_OUT = TYPE == 7;
   var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
   return function ($this, callbackfn, that, specificCreate) {
     var O = toObject($this);
@@ -114,7 +115,7 @@ var createMethod = function (TYPE) {
     var length = Loader.toLength(self.length);
     var index = 0;
     var create = specificCreate || arraySpeciesCreate;
-    var target = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
+    var target = IS_MAP ? create($this, length) : IS_FILTER || IS_FILTER_OUT ? create($this, 0) : undefined;
     var value, result;
     for (;length > index; index++) if (NO_HOLES || index in self) {
       value = self[index];
@@ -126,7 +127,10 @@ var createMethod = function (TYPE) {
           case 5: return value;             // find
           case 6: return index;             // findIndex
           case 2: push.call(target, value); // filter
-        } else if (IS_EVERY) return false;  // every
+        } else switch (TYPE) {
+          case 4: return false;             // every
+          case 7: push.call(target, value); // filterOut
+        }
       }
     }
     return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : target;
@@ -154,7 +158,10 @@ var arrayIteration = {
   find: createMethod(5),
   // `Array.prototype.findIndex` method
   // https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
-  findIndex: createMethod(6)
+  findIndex: createMethod(6),
+  // `Array.prototype.filterOut` method
+  // https://github.com/tc39/proposal-array-filtering
+  filterOut: createMethod(7)
 };
 
 var engineUserAgent = Loader.getBuiltIn('navigator', 'userAgent') || '';
@@ -177,7 +184,7 @@ if (v8) {
 
 var engineV8Version = version && +version;
 
-var SPECIES$1 = wellKnownSymbol('species');
+var SPECIES = wellKnownSymbol('species');
 
 var arrayMethodHasSpeciesSupport = function (METHOD_NAME) {
   // We can't use this feature detection in V8 since it causes
@@ -186,7 +193,7 @@ var arrayMethodHasSpeciesSupport = function (METHOD_NAME) {
   return engineV8Version >= 51 || !Loader.fails(function () {
     var array = [];
     var constructor = array.constructor = {};
-    constructor[SPECIES$1] = function () {
+    constructor[SPECIES] = function () {
       return { foo: 1 };
     };
     return array[METHOD_NAME](Boolean).foo !== 1;
@@ -271,7 +278,7 @@ var Button = /*#__PURE__*/React__default['default'].memo(function (_ref) {
     style: {
       marginRight: '10px'
     },
-    color: (isLight === null || isLight === void 0 ? void 0 : isLight.length) ? Loader.Loader.Color.BLUE : Loader.Loader.Color.WHITE,
+    color: isLight !== null && isLight !== void 0 && isLight.length ? Loader.Loader.Color.BLUE : Loader.Loader.Color.WHITE,
     size: Loader.Loader.Size.SMALL
   }), content || children);
 });
