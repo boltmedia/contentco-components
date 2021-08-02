@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
- //import {Button} from '../../build/'
-import Button from '../../build/Button'
+import { Button as ButtonA } from 'contentco-components';
+import ButtonB from 'contentco-components/Button';
 
 const HelloWorld = () => {
-    return (
-        <h1>
-            <Button>
-                name Import button
-            </Button>
+  return (
+    <h1>
+      <ButtonA>name Import button</ButtonA>
+      <ButtonB>name Import button</ButtonB>
+    </h1>
+  );
+};
 
-           
-        </h1>
-    );
-}
-
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+ReactDOM.render(<HelloWorld />, document.getElementById('root'));
