@@ -6,8 +6,8 @@ import ButtonB from 'contentco-components/Button';
 const HelloWorld = () => {
   return (
     <h1>
-      <ButtonA>name Import button</ButtonA>
-      <ButtonB>name Import button</ButtonB>
+      <ButtonA>Button A</ButtonA>
+      <ButtonB>Button B</ButtonB>
     </h1>
   );
 };
