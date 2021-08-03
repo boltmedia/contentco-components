@@ -30,7 +30,6 @@ export default {
   ],
   preserveModules: false,
   plugins: [
- 
     commonjs(),
     scss(),
     svgr(),

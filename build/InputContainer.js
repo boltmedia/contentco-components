@@ -5,8 +5,8 @@ var _objectWithoutProperties = require('@babel/runtime/helpers/objectWithoutProp
 var React = require('react');
 var classNames = require('classnames');
 require('prop-types');
-var Styles_module = require('./Styles.module-5239bc23.js');
 require('./style-inject.es-dcee06b6.js');
+var Styles_module = require('./Styles.module-5239bc23.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
