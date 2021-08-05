@@ -7,8 +7,10 @@ import copy from 'rollup-plugin-copy';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
 import scss from 'rollup-plugin-scss';
-import multi from '@rollup/plugin-multi-entry';
-import rename from 'rollup-plugin-rename';
+// import multi from '@rollup/plugin-multi-entry';
+// import rename from 'rollup-plugin-rename';
+import analyze from 'rollup-plugin-analyzer'
+import { terser } from "rollup-plugin-terser";
 
 const packageJson = require('./package.json');
 export default {
@@ -25,37 +27,29 @@ export default {
   output: [
     {
       dir: 'build',
-      format: 'cjs'
+      format: 'cjs',
+      sourceMaps:true
     }
   ],
-  preserveModules: false,
   plugins: [
+    analyze(),
     commonjs(),
     scss(),
     svgr(),
-    external({ includeDependencies: true }),
+    external({ includeDependencies: false }),
     postcss({
       // extract: true,
       plugins: [autoprefixer]
     }),
     babel({
       babelHelpers: 'runtime',
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
     }),
     resolve({
       browser: true,
       extensions: ['.js', '.jsx']
       // resolveOnly: [/^(?!react$)/, /^(?!react-dom$)/, /^(?!prop-types)/]
     }),
-    rename({
-      include: ['**/*.js'],
-      map: (name) =>
-        name
-          .replace('src/', '')
-          .replace('node_modules/', 'external/')
-          .replace('../../external', '../external')
-    }),
-
     copy({
       targets: [
         {
@@ -69,18 +63,10 @@ export default {
           rename: 'typography.scss'
         }
       ]
-    })
+    }),
+    terser()
   ]
+ 
 };
 
-// {
-//   ...settings,
-//   preserveModules: true,
-//   output: [
-//     {
-//       dir: `build/lib`,
-//       format: 'esm',
-//       sourcemap: true
-//     }
-//   ]
-// }
+
