@@ -32,11 +32,11 @@ export default {
     }
   ],
   plugins: [
+    external({ includeDependencies: true }),
     analyze(),
     commonjs(),
     scss(),
     svgr(),
-    external({ includeDependencies: false }),
     postcss({
       // extract: true,
       plugins: [autoprefixer]
