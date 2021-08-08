@@ -21,7 +21,7 @@
   },
   "scripts": {
     "bump": "npm version patch --no-git-tag-version",
-    "build": "npm install && rollup -c",
+    "build": "rollup -c",
     "dev": "rollup -c -w",
     "prepublishOnly": "npm run build",
     "install": "npm run build",
