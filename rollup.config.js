@@ -7,8 +7,6 @@ import copy from 'rollup-plugin-copy';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
 import scss from 'rollup-plugin-scss';
-// import multi from '@rollup/plugin-multi-entry';
-// import rename from 'rollup-plugin-rename';
 import analyze from 'rollup-plugin-analyzer'
 import { terser } from "rollup-plugin-terser";
 
