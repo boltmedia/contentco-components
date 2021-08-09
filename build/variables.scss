@@ -1,0 +1,238 @@
+/* prettier-ignore */
+/* beautify ignore:start */
+
+// NEW!
+$white: #fff;
+$white-shadow: #eff7ff;
+$light-blue: #c4e0fb;
+$light-blue-5: #ddebfe;
+$light-blue-shadow: #8cc0f0;
+
+$blue-badge: #084b8a;
+$blue-badge-bg: #ddebf7;
+
+$orange-badge: #95591e;
+$orange-badge-bg: #fbe3cd;
+
+$green-badge: #01783e;
+$green-badge-bg: #d4eee2;
+
+$gray-badge: #425a70;
+$gray-badge-bg: #e3e7eb;
+
+$blue: #1269db;
+$blue-shadow: #0751b3;
+// #0161e7
+$dark-blue: #193278;
+$dark-blue-shadow: #081d57;
+$blue-violet: #0b4ba3;
+$light-blue-40: #4a95e5;
+
+$blue-black: #071e54;
+
+$light-gray: #f2f6fa;
+$light-gray-shadow: #d8dfe6;
+$gray: #c3ced9;
+$gray-shadow: #a1aab3;
+$dark-gray: #626e7a;
+$dark-gray-shadow: #3f474f;
+$black: #212529;
+$light-blue-grey: #d2e5f8;
+$light-grey-blue: #e3effb;
+
+// Backwards compatibility, do not use blues and grays below:
+
+$blue-5: $white-shadow;
+$blue-10: $light-blue;
+$blue-20: $light-blue-shadow;
+$blue-40: $light-blue-shadow;
+$blue-80: $blue; // main
+$blue-100: $blue;
+$blue-alt: $blue-shadow;
+
+$darkblue: $dark-blue;
+$darkblue-alt: $dark-blue-shadow;
+
+$dark-cyan: #0794ae;
+
+$gray-5: $light-gray;
+$gray-10: $light-gray-shadow;
+$gray-20: $gray;
+$gray-40: $gray-shadow;
+$gray-60: $dark-gray;
+$gray-80: $dark-gray-shadow;
+
+$blue-5: #eff7ff;
+// $blue-10: #c4e0fb;
+// $blue-20: #8cc0f0;
+// $blue-40: #4a95e5;
+// $blue-80: #0d7fe2; // main
+// $blue-100: #125CDB;
+// $blue-alt: #0746B3;
+
+// $darkblue: #193278;
+// $darkblue-alt: #040D47;
+
+// $white: #fff;
+// $gray-5: #e6ecf1;
+// $gray-10: #d0dee9;
+// $gray-20: #afc0cd;
+// $gray-40: #80909d;
+// $gray-60: #64707b;
+// $gray-80: #404950;
+// $black: #31373c;
+
+$light-red: #fce4e3;
+$red: #c66;
+$red-10: #ec8787;
+$red-11: #ef5c50;
+$darkred: #551313;
+$strongred: #ec392f;
+$green: #4f8a10;
+$green-10: #dff2bf;
+$green-20: #09bfa7;
+
+$cubic: cubic-bezier(0.165, 0.84, 0.44, 1);
+$bg-cubic: background-color 0.1s $cubic;
+$color-cubic: color 0.1s $cubic;
+
+$z-important: 200;
+$z-image-viewer: 93;
+$z-dialog-dropdown: 92;
+$z-dialog: 91;
+$z-dialog-mask: 90;
+
+$z-nav: 10;
+$z-button: 5;
+$z-menu: 4;
+$z-mask: 3;
+$z-base: 1;
+$z-label: 1;
+
+$z-background: 0;
+$z-behind: -1;
+$z-underground: -1;
+
+$yellow-100: #feca4c;
+$yellow-20: #fff4db;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$basic-shadow: 0 2px 7px rgba(4, 13, 71, 0.2);
+$blog-shadow: 0 2px 35px rgba(4, 13, 71, 0.2);
+$slider-shadow: 0 5px 40px rgba(4, 13, 71, 0.8);
+$arrow-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+$arrow-shadow2: 0 0 15px rgba(0, 0, 0, 0.8);
+$portfolio-item-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+$arrow-shadow-hover: 0 0 2px rgba(0, 0, 0, 1);
+
+$big-shadow: 0 5px 35px rgba(4, 13, 71, 0.6);
+$resume-shadow: 0 5px 35px rgba(4, 13, 71, 0.1);
+$basic-shadow-alt: 0 5px 25px 0 rgba(4, 13, 71, 0.2);
+$card-shadow: 0 2px 7px rgba(4, 13, 71, 0.2);
+$card-shadow-hover: 0 0 25px rgba(4, 13, 71, 0.3);
+$card-shadow2: 0 15px 34px -12px rgba(0, 0, 0, 0.75);
+// $card-shadow: 0 1px 3px rgba(72, 74, 76, 0.15);
+
+$shadow-off: 0 4px 3px 0 rgba(34, 90, 182, 0.12),
+  0 0 1px 0 rgba(41, 92, 176, 0.25);
+$shadow-on: 0 10px 10px 0 rgba(34, 90, 182, 0.12),
+  0 0 1px 0 rgba(41, 92, 176, 0.25);
+
+$content-width: 1200px;
+// Media Queries
+
+$xs-min-screen: '(min-width: 485px)';
+$sx-min-screen: '(min-width: 700px)';
+$sm-min-screen: '(min-width: 960px)';
+$md-min-screen: '(min-width: 1280px)';
+
+$xs-screen: '(max-width: 485px)';
+$sx-screen: '(max-width: 700px)';
+$ss-screen: '(max-width: 768px)'; // Login only
+$sm-screen: '(max-width: 960px)';
+$md-screen: '(max-width: 1280px)';
+$mdl-screen: '(max-width: 1600px)';
+$lg-screen: '(max-width: 1920px)';
+
+$short-screen: '(max-height: 550px)';
+$short-min-screen: '(min-height: 551px)';
+
+$gray-2: #f8f9fa;
+$gray-7: #edf0f3;
+$gray-10: #d8dfe6;
+$gray-100: #30363c;
+$card-border: 1px solid $gray-10;
+$card-border-radius: 3px;
+$inter-card-border: 1px solid $gray-7;
+$true-black: #000;
+$dialog-shadow: 0 13px 25px -7px rgba(49, 55, 60, 0.25);
+
+@mixin for-size($size, $extra: 0) {
+  @if $size==small-phone-only {
+    @media only screen and (max-width: 320px + $extra) {
+      @content;
+    }
+  } @else if $size==medium-phone-only {
+    @media only screen and (max-width: 380px + $extra) {
+      @content;
+    }
+  } @else if $size==phone-only {
+    @media only screen and (max-width: 599px + $extra) {
+      @content;
+    }
+  } @else if $size==tablet-portrait-up {
+    @media only screen and (min-width: 600px + $extra) {
+      @content;
+    }
+  } @else if $size==tablet-portrait-down {
+    @media only screen and (max-width: 600px + $extra) {
+      @content;
+    }
+  } @else if $size==tablet-landscape-up {
+    @media only screen and (min-width: 900px + $extra) {
+      @content;
+    }
+  } @else if $size==tablet-landscape-down {
+    @media only screen and (max-width: 900px + $extra) {
+      @content;
+    }
+  } @else if $size==desktop-up {
+    @media only screen and (min-width: 1200px + $extra) {
+      @content;
+    }
+  } @else if $size==desktop-down {
+    @media only screen and (max-width: 1200px + $extra) {
+      @content;
+    }
+  } @else if $size==big-desktop-down {
+    @media only screen and (max-width: 1800px + $extra) {
+      @content;
+    }
+  } @else if $size==big-desktop-up {
+    @media only screen and (min-width: 1800px + $extra) {
+      @content;
+    }
+  }
+}
+
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1800px;
+
+$publicsans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+
+$cerebri: 'Cerebri Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+
+@mixin ie-only {
+  // media query that targets ie 10+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}

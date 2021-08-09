@@ -1,0 +1,2 @@
+"use strict";var e=require("./style-inject.es-619a93d8.js"),t=require("react"),r=require("classnames"),s=require("./Styles.module-986bb90f.js");function a(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}var u=a(t),l=a(r),i=["className","children"];module.exports=function(t){var r=t.className,a=t.children,c=e._objectWithoutProperties(t,i);return u.default.createElement("div",e._extends({className:l.default(s.Styles.inputGroup,r)},c),a)};
+//# sourceMappingURL=InputGroup.js.map

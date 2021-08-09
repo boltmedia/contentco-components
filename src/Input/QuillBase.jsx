@@ -3,7 +3,7 @@ React-Quill
 https://github.com/zenoamaro/react-quill
 */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import isEqual from 'lodash/isEqual';
 
@@ -92,17 +92,17 @@ class ReactQuill extends React.Component {
     'onBlur',
     'onKeyPress',
     'onKeyDown',
-    'onKeyUp',
+    'onKeyUp'
   ];
 
   static defaultProps = {
     theme: 'snow',
     modules: {},
-    readOnly: false,
+    readOnly: false
   };
 
   state = {
-    generation: 0,
+    generation: 0
   };
 
   constructor(props) {
@@ -113,12 +113,16 @@ class ReactQuill extends React.Component {
 
   validateProps(props) {
     if (React.Children.count(props.children) > 1)
-      throw new Error('The Quill editing area can only be composed of a single React element.');
+      throw new Error(
+        'The Quill editing area can only be composed of a single React element.'
+      );
 
     if (React.Children.count(props.children)) {
       const child = React.Children.only(props.children);
       if (child?.type === 'textarea')
-        throw new Error('Quill does not support editing on a <textarea>. Use a <div> instead.');
+        throw new Error(
+          'Quill does not support editing on a <textarea>. Use a <div> instead.'
+        );
     }
 
     if (this.lastDeltaChangeSet && props.value === this.lastDeltaChangeSet)
@@ -208,7 +212,10 @@ class ReactQuill extends React.Component {
 
   instantiateEditor() {
     if (this.editor) return;
-    this.editor = this.createEditor(this.getEditingArea(), this.getEditorConfig());
+    this.editor = this.createEditor(
+      this.getEditingArea(),
+      this.getEditorConfig()
+    );
   }
 
   destroyEditor() {
@@ -233,7 +240,7 @@ class ReactQuill extends React.Component {
       readOnly: this.props.readOnly,
       scrollingContainer: this.props.scrollingContainer,
       tabIndex: this.props.tabIndex,
-      theme: this.props.theme,
+      theme: this.props.theme
     };
   }
 
@@ -315,7 +322,10 @@ class ReactQuill extends React.Component {
       // Validate bounds before applying.
       const length = editor.getLength();
       range.index = Math.max(0, Math.min(range.index, length - 1));
-      range.length = Math.max(0, Math.min(range.length, length - 1 - range.index));
+      range.length = Math.max(
+        0,
+        Math.min(range.length, length - 1 - range.index)
+      );
       editor.setSelection(range);
     }
   }
@@ -346,7 +356,7 @@ class ReactQuill extends React.Component {
       getText: e.getText.bind(e),
       getContents: e.getContents.bind(e),
       getSelection: e.getSelection.bind(e),
-      getBounds: e.getBounds.bind(e),
+      getBounds: e.getBounds.bind(e)
     };
   }
 
@@ -375,14 +385,18 @@ class ReactQuill extends React.Component {
       key: generation,
       ref: (instance) => {
         this.editingArea = instance;
-      },
+      }
     };
 
     if (React.Children.count(children)) {
       return React.cloneElement(React.Children.only(children), properties);
     }
 
-    return preserveWhitespace ? <pre {...properties} /> : <div {...properties} />;
+    return preserveWhitespace ? (
+      <pre {...properties} />
+    ) : (
+      <div {...properties} />
+    );
   }
 
   render() {
@@ -394,7 +408,8 @@ class ReactQuill extends React.Component {
         className={`quill ${this.props.className ?? ''}`}
         onKeyPress={this.props.onKeyPress}
         onKeyDown={this.props.onKeyDown}
-        onKeyUp={this.props.onKeyUp}>
+        onKeyUp={this.props.onKeyUp}
+      >
         {this.renderEditingArea()}
       </div>
     );
@@ -409,7 +424,11 @@ class ReactQuill extends React.Component {
         this.unprivilegedEditor
       );
     } else if (eventName === 'selection-change') {
-      this.onEditorChangeSelection?.(rangeOrDelta, source, this.unprivilegedEditor);
+      this.onEditorChangeSelection?.(
+        rangeOrDelta,
+        source,
+        this.unprivilegedEditor
+      );
     }
   };
 
@@ -418,7 +437,9 @@ class ReactQuill extends React.Component {
 
     // We keep storing the same type of value as what the user gives us,
     // so that value comparisons will be more stable and predictable.
-    const nextContents = this.isDelta(this.value) ? editor.getContents() : editor.getHTML();
+    const nextContents = this.isDelta(this.value)
+      ? editor.getContents()
+      : editor.getHTML();
 
     if (nextContents !== this.getEditorContents()) {
       // Taint this `delta` object, so we can recognize whether the user

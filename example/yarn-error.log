@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/bin/node /Users/tim/.yarn/bin/yarn.js install
+
+PATH: 
+  /Users/tim/.serverless/bin:/Users/tim/.yarn/bin:/Users/tim/.config/yarn/global/node_modules/.bin:/usr/local/mysql/bin:/Applications/Postgres.app/Contents/Versions/10/bin:~/mongodb/bin:/usr/local/sbin:/usr/local/bin:/System/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.19.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/tim/contentco/contentco-components/build/index.js' -> '/Users/tim/Library/Caches/Yarn/v6/npm-contentco-components-1.4.14-c7bc9575-8294-4373-a800-5379c3f49871-1628486052426/node_modules/contentco-components/build/index.js'
+
+npm manifest: 
+  {
+    "name": "example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "watch": "webpack --watch",
+      "start": "webpack serve --open",
+      "build": "NODE_ENV=production webpack --mode production"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.14.8",
+      "@babel/node": "^7.14.7",
+      "@babel/preset-env": "^7.14.8",
+      "@babel/preset-react": "^7.14.5",
+      "babel-loader": "^8.2.2",
+      "html-webpack-plugin": "^5.3.2",
+      "webpack": "^5.46.0",
+      "webpack-bundle-analyzer": "^4.4.2",
+      "webpack-cli": "^4.7.2",
+      "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+      "@material-ui/core": "^4.12.2",
+      "contentco-components": "file:../",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

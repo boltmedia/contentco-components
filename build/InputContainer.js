@@ -1,0 +1,2 @@
+"use strict";var e=require("./style-inject.es-619a93d8.js"),r=require("react"),t=require("classnames");require("prop-types");var s=require("./Styles.module-986bb90f.js");function a(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}var u=a(r),i=a(t),l=["className","children"];module.exports=function(r){var t=r.className,a=r.children,n=e._objectWithoutProperties(r,l);return u.default.createElement("div",e._extends({className:i.default(s.Styles.inputContainer,t)},n),a)};
+//# sourceMappingURL=InputContainer.js.map
