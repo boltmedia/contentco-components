@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button as ButtonA } from 'contentco-components';
 import ButtonB from 'contentco-components/Button';
+import Container from '@material-ui/core/Container';
 
 const HelloWorld = () => {
   return (
     <h1>
-      <ButtonA>Button A</ButtonA>
+       <Container maxWidth="sm">
+       <ButtonA>Button A</ButtonA>
       <ButtonB>Button B</ButtonB>
+      </Container>
+      
     </h1>
   );
 };
