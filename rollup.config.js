@@ -24,6 +24,7 @@ const plugins = [
   postcss({
     modules: true,
     sourceMap: 'inline',
+    namedExports: true,
     // extract: true,
     plugins: [autoprefixer]
   }),

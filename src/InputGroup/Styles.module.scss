@@ -7,11 +7,11 @@
     margin-left: 10px;
   }
 
-  .inputContainer {
+  & > .inputContainer {
     flex: 50%;
   }
 
-  .inputContainer ~ .inputContainer {
+  & .inputContainer ~ .inputContainer {
     margin-left: 10px;
   }
 }
