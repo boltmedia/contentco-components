@@ -81,7 +81,7 @@ export default [
     input: 'src/index.jsx',
     output: {
       file: packageJson.module,
-      format: 'esm',
+      format: 'cjs',
       sourcemap: true
     },
     plugins
