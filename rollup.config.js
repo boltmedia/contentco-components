@@ -61,10 +61,17 @@ export default [
       'src/Action/Action.jsx',
       'src/Card/Card.jsx',
       'src/Form/InputContainer.jsx',
+      'src/Form/Password.jsx',
       'src/Form/InputGroup.jsx',
       'src/Button/Button.jsx',
       'src/Loader/Loader.jsx',
-      'src/Text/Text.jsx'
+      'src/Logo/Logo.jsx',
+      'src/Text/Text.jsx',
+      'src/Input/TextInput.jsx',
+      'src/Input/TextArea.jsx',
+      'src/Input/DateInput.jsx',
+      'src/Input/DateSelector.jsx',
+      'src/Input/Select.jsx'
     ],
     output: {
       dir: 'build',
