@@ -7,7 +7,7 @@ import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
-import scss from 'rollup-plugin-scss';
+// import scss from 'rollup-plugin-scss';
 import analyze from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
 import cleaner from 'rollup-plugin-cleaner';
@@ -17,20 +17,17 @@ const plugins = [
   external({ includeDependencies: true }),
   analyze(),
   commonjs(),
-  scss({
-    output: false,
-    sourceMap: true,
-    processor: () =>
-      postcss({
-        modules: true,
-        sourceMap: 'inline',
-        namedExports: true,
-        // extract: true,
-        plugins: [autoprefixer]
-      })
-  }),
+  // scss({
+  //   sourceMap: true
+  // }),
   svgr(),
-
+  postcss({
+    modules: true,
+    sourceMap: 'inline',
+    namedExports: true,
+    // extract: true,
+    plugins: [autoprefixer]
+  }),
   babel({
     babelHelpers: 'runtime',
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
