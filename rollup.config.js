@@ -59,19 +59,25 @@ export default [
     input: [
       // 'src/index.jsx',
       'src/Action/Action.jsx',
+      'src/Button/Button.jsx',
       'src/Card/Card.jsx',
       'src/Form/InputContainer.jsx',
-      'src/Form/Password.jsx',
       'src/Form/InputGroup.jsx',
-      'src/Button/Button.jsx',
-      'src/Loader/Loader.jsx',
-      'src/Logo/Logo.jsx',
-      'src/Text/Text.jsx',
+      // TODO: File, References
+      'src/Icon/Icon.jsx',
       'src/Input/TextInput.jsx',
       'src/Input/TextArea.jsx',
       'src/Input/DateInput.jsx',
       'src/Input/DateSelector.jsx',
-      'src/Input/Select.jsx'
+      'src/Input/Select.jsx',
+      'src/Input/OrderableSelect/OrderableSelect.jsx',
+      'src/Input/DualInput.jsx',
+      'src/Input/Quill.jsx',
+      'src/Input/Password/Password.jsx',
+
+      'src/Loader/Loader.jsx',
+      'src/Logo/Logo.jsx',
+      'src/Text/Text.jsx'
     ],
     output: {
       dir: 'build',

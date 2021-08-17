@@ -38,27 +38,29 @@ class References extends Component {
       linkName: props.linkName,
       linkField: props.linkField,
       linkLabel: props.linkLabel,
-      toggleLink: false,
+      toggleLink: false
     };
   }
 
   componentDidMount = () => {
-    const orderedList = this.state.links.concat(this.state.attachments).sort((a, b) => {
-      if (a.created > b.created) {
-        return 1;
-      }
-      if (b.created > a.created) {
-        return -1;
-      }
-      return 0;
-    });
+    const orderedList = this.state.links
+      .concat(this.state.attachments)
+      .sort((a, b) => {
+        if (a.created > b.created) {
+          return 1;
+        }
+        if (b.created > a.created) {
+          return -1;
+        }
+        return 0;
+      });
     this.setState({ list: orderedList });
   };
 
   handleError = (error) => {
     this.props.addToast(error, {
       appearance: 'error',
-      autoDismiss: true,
+      autoDismiss: true
     });
   };
 
@@ -66,7 +68,7 @@ class References extends Component {
     this.setState({
       linkValue: '',
       toggleLink: false,
-      toastShow: false,
+      toastShow: false
     });
   };
 
@@ -75,7 +77,7 @@ class References extends Component {
 
     this.setState({
       linkValue: event.target.value,
-      error: '',
+      error: ''
     });
   };
 
@@ -84,7 +86,7 @@ class References extends Component {
     const url = `${this.props.server}/${this.props.linkName}/`;
 
     const payload = {
-      [this.props.linkField]: this.state.linkValue,
+      [this.props.linkField]: this.state.linkValue
     };
 
     authRequest
@@ -111,19 +113,25 @@ class References extends Component {
     acceptedFiles.forEach((file) => {
       const formData = new FormData();
       if (file) {
-        formData.append(this.props.attachmentField, file, file.fileName || file.name);
+        formData.append(
+          this.props.attachmentField,
+          file,
+          file.fileName || file.name
+        );
       }
 
       const config = {
         headers: { 'content-type': 'multipart/form-data' },
         onUploadProgress: (progressEvent) => {
-          var percent = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+          var percent = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
           if (percent >= 100) {
             this.setState({ percent: 100 });
           } else {
             this.setState({ percent });
           }
-        },
+        }
       };
 
       const url = `${this.props.server}/${this.props.attachmentName}/`;
@@ -240,9 +248,12 @@ class References extends Component {
               name={item.attachment || item.url}
               href={item.attachment || item.url}
               target='_blank'
-              rel='noopener noreferrer'>
+              rel='noopener noreferrer'
+            >
               {/*<FileIcon className={Styles.icon} url={item.attachment || item.url}/>*/}
-              <TruncateString text={this.getName(item.attachment) || item.title || item.url} />
+              <TruncateString
+                text={this.getName(item.attachment) || item.title || item.url}
+              />
             </a>
             <p className={Styles.secondary}>
               {(item.size && formatBytes(item.size)) || item.url || 'Link'}
@@ -252,7 +263,8 @@ class References extends Component {
             className={Styles.remove}
             onClick={(e) => {
               this.openDeleteModal(e, item);
-            }}>
+            }}
+          >
             <Icon.Close className={Styles.closeIcon} />
           </div>
         </div>
@@ -284,9 +296,16 @@ class References extends Component {
         className={classNames(
           Styles.newContainer,
           Styles.multi,
-          this.props.attachments && this.props.attachments.length > 0 && Styles.hasFile
-        )}>
-        {renderedList.length ? <div className={Styles.list}>{renderedList}</div> : ''}
+          this.props.attachments &&
+            this.props.attachments.length > 0 &&
+            Styles.hasFile
+        )}
+      >
+        {renderedList.length ? (
+          <div className={Styles.list}>{renderedList}</div>
+        ) : (
+          ''
+        )}
 
         <div className={Styles.row}>
           <Dropzone onDrop={this.handleDrop}>
@@ -312,14 +331,16 @@ class References extends Component {
               <Button
                 className={Styles.fieldButton}
                 type={Button.Type.WHITE}
-                onClick={this.handleLinkCancel}>
+                onClick={this.handleLinkCancel}
+              >
                 {`Cancel`}
               </Button>
               <Button
                 className={Styles.fieldButton}
                 type={Button.Type.BLUE}
                 onClick={this.handleLinkCreate}
-                isLoading={this.state.loading}>
+                isLoading={this.state.loading}
+              >
                 {`Add`}
               </Button>
             </div>
@@ -344,7 +365,9 @@ class References extends Component {
           }
           title={`Confirm Delete`}
           actionLabel={`Delete`}
-          onAction={(e) => this.handleConfirmDeleteAction(e, this.state.deleteObj)}
+          onAction={(e) =>
+            this.handleConfirmDeleteAction(e, this.state.deleteObj)
+          }
           onHide={this.handleCancelDeleteAction}
         />
       </div>
@@ -365,7 +388,7 @@ References.propTypes = {
   links: PropTypes.array,
   linkName: PropTypes.string,
   linkField: PropTypes.string,
-  linkLabel: PropTypes.string,
+  linkLabel: PropTypes.string
 };
 
 References.defaultProps = {
@@ -374,7 +397,7 @@ References.defaultProps = {
   attachmentLabel: 'Add Attachment',
   linkName: 'links',
   linkField: 'url',
-  linkLabel: 'Add Link',
+  linkLabel: 'Add Link'
 };
 
 export default withToast(References);

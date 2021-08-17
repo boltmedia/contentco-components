@@ -1,9 +1,10 @@
 import React from 'react';
 import zxcvbn from 'zxcvbn';
 import PropTypes from 'prop-types';
-import Styles from './Password.module.scss';
-import InputStyles from '../Input/Input.module.scss';
 import classNames from 'classnames';
+
+import Styles from './Password.module.scss';
+import InputStyles from '../Input.module.scss';
 
 export default class Password extends React.Component {
   // This is a copied and updated version of PasswordStrength
