@@ -1,10 +1,15 @@
 import Logo from './Logo/Logo';
 import Loader from './Loader/Loader';
 import Button from './Button';
-import InputContainer from './InputContainer/InputContainer';
-import InputGroup from './InputGroup/InputGroup';
+import InputContainer from './Form/InputContainer';
+import InputGroup from './Form/InputGroup';
 import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
+import DateSelector from './Input/DateSelector';
+import DateInput from './Input/DateInput';
+import Password from './Input/Password/Password';
+import OrderableSelect from './Input/OrderableSelect/OrderableSelect';
+import DualInput from './Input/DualInput';
 import Select from './Input/Select';
 import Quill from './Input/Quill';
 import Card from './Card/Card';
@@ -21,11 +26,16 @@ export {
   InputGroup,
   TextInput,
   TextArea,
+  DateSelector,
+  DateInput,
+  Password,
+  OrderableSelect,
+  DualInput,
+  Quill,
   Select,
   Card,
   Icon,
   Text,
   Action,
-  Quill,
   TextEditor
 };

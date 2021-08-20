@@ -14,7 +14,7 @@ const renderIcon = (arr, args) => {
     return (
       <span className={classNames(Styles.icon)} key={indx}>
         <IconComponent {...args} key={indx}/>
-        <span className='icon-name' >{key}</span>
+        <span className='icon-name' style={{color:args.style?.color}} >{key}</span>
       </span>
     );
   });
@@ -22,7 +22,7 @@ const renderIcon = (arr, args) => {
 
 const Template = (args) => (
   <React.Fragment>
-    <h3>General</h3>
+    <h3 style={{color:args.style?.color}}>General</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         [
@@ -41,7 +41,7 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3>File Types</h3>
+    <h3 style={{color:args.style?.color}}>File Types</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         [
@@ -58,12 +58,12 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3>Chat</h3>
+    <h3 style={{color:args.style?.color}}>Chat</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(['Attachment', 'Expand', 'Minimize'], args)}
     </div>
 
-    <h3>Navigation</h3>
+    <h3 style={{color:args.style?.color}}>Navigation</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         [
@@ -86,7 +86,7 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3>Social</h3>
+    <h3 style={{color:args.style?.color}}> Social</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         ['Google', 'Facebook', 'Twitter', 'Linkedin', 'Instagram', 'Youtube'],
@@ -94,13 +94,13 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3>Brief</h3>
+    <h3 style={{color:args.style?.color}}>Brief</h3>
 
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(['Email', 'Phone', 'Chat', 'Skill'], args)}
     </div>
 
-    <h3>Other</h3>
+    <h3 style={{color:args.style?.color}}>Other</h3>
     <div className={classNames(Styles.wrapper)}>
     {renderIcon(
       [
@@ -138,7 +138,7 @@ White.args = {
   
 };
 White.parameters = {
-  backgrounds: { default: 'dark-blue' },
+  backgrounds: { default: 'dark-blue',color: 'white' },
  
 
 };

@@ -1,0 +1,2 @@
+"use strict";var e=require("./style-inject.es-16eb3807.js"),t=e.createCommonjsModule((function(e){function t(){return e.exports=t=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o])}return e},e.exports.default=e.exports,e.exports.__esModule=!0,t.apply(this,arguments)}e.exports=t,e.exports.default=e.exports,e.exports.__esModule=!0})),r=e.getDefaultExportFromCjs(t);exports._extends=r;
+//# sourceMappingURL=extends-56a4827e.js.map
