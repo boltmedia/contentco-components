@@ -21,6 +21,7 @@ const plugins = [
   //   sourceMap: true
   // }),
   svgr(),
+
   postcss({
     modules: true,
     sourceMap: 'inline',
@@ -81,6 +82,10 @@ export default [
       dir: 'build',
       format: 'cjs',
       sourcemap: true
+    },
+    external: ['zxcvbn'],
+    globals: {
+      zxcvbn: 'zxcvbn'
     },
     plugins: [
       cleaner({
