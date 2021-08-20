@@ -73,6 +73,9 @@ export default [
       'src/Logo/Logo.jsx',
       'src/Text/Text.jsx'
     ],
+    globals: {
+      zxcvbn: 'zxcvbn'
+    },
     output: {
       dir: 'build',
       format: 'cjs',
@@ -87,6 +90,9 @@ export default [
   },
   {
     input: 'src/index.jsx',
+    globals: {
+      zxcvbn: 'zxcvbn'
+    },
     output: {
       file: packageJson.module,
       format: 'esm',
