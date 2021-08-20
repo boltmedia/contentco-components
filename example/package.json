@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.2",
-    "contentco-components": "git+https://github.com/boltmedia/contentco-components.git#3d57ff0902be194624290c935e8fa05f5fae3f78",
+    "contentco-components": "^1.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
