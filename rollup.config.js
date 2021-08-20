@@ -14,14 +14,10 @@ import cleaner from 'rollup-plugin-cleaner';
 
 const packageJson = require('./package.json');
 const plugins = [
-  external({ includeDependencies: true }),
+  external(),
   analyze(),
   commonjs(),
-  // scss({
-  //   sourceMap: true
-  // }),
   svgr(),
-
   postcss({
     modules: true,
     sourceMap: 'inline',
@@ -73,7 +69,6 @@ export default [
       'src/Input/DualInput.jsx',
       'src/Input/Quill.jsx',
       'src/Input/Password/Password.jsx',
-
       'src/Loader/Loader.jsx',
       'src/Logo/Logo.jsx',
       'src/Text/Text.jsx'
@@ -82,10 +77,6 @@ export default [
       dir: 'build',
       format: 'cjs',
       sourcemap: true
-    },
-    external: ['zxcvbn'],
-    globals: {
-      zxcvbn: 'zxcvbn'
     },
     plugins: [
       cleaner({

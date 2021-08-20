@@ -1966,10 +1966,10 @@ content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
-contentco-components@^1.5.4:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/contentco-components/-/contentco-components-1.5.4.tgz#b3b4103dfe05d97fb1771ec51a2be15f7bb662ca"
-  integrity sha512-B2dPBDE+O93tH+vmZwXhzgaTatumeb+zda8WxceKuIqBkpVJDzBCXiSQfoPrmpYRnFx5STQDpW9NwMStqgHxQQ==
+contentco-components@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/contentco-components/-/contentco-components-1.5.5.tgz#de87754c0cfc5b6316a3617cbc293b4b19de1218"
+  integrity sha512-xdLSDoM+5+aZiy0dFuxDu9/bnztdCRrg6jI33Mmx2olFO2UkXI562jaHPn7BbLxAF3vpFRJrTUF0vabM8bxBLQ==
   dependencies:
     beautiful-react-hooks "^0.35.0"
     classnames "^2.3.1"

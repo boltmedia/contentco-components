@@ -5,11 +5,11 @@ import InputContainer from './Form/InputContainer';
 import InputGroup from './Form/InputGroup';
 import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
-import Password from './Input/Password/Password';
+// import Password from './Input/Password/Password';
 import OrderableSelect from './Input/OrderableSelect/OrderableSelect';
 import DualInput from './Input/DualInput';
 import Select from './Input/Select';
-import Quill from './Input/Quill';
+// import Quill from './Input/Quill';
 import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Text from './Text/Text';
@@ -23,10 +23,10 @@ export {
   InputGroup,
   TextInput,
   TextArea,
-  Password,
+  // Password,
   OrderableSelect,
   DualInput,
-  Quill,
+  // Quill,
   Select,
   Card,
   Icon,
