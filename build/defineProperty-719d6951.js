@@ -1,2 +1,0 @@
-"use strict";var e=require("./index-9506e720.js"),r=e.createCommonjsModule((function(e){e.exports=function(e,r,t){return r in e?Object.defineProperty(e,r,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[r]=t,e},e.exports.default=e.exports,e.exports.__esModule=!0})),t=e.getDefaultExportFromCjs(r);exports._defineProperty=t,exports.defineProperty=r;
-//# sourceMappingURL=defineProperty-719d6951.js.map

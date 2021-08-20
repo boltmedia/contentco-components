@@ -7,22 +7,24 @@ import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
-// import scss from 'rollup-plugin-scss';
 import analyze from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
 import cleaner from 'rollup-plugin-cleaner';
+import cleanup from 'rollup-plugin-cleanup';
+import pkg from './package.json';
 
-const packageJson = require('./package.json');
 const plugins = [
   external(),
-  analyze(),
-  commonjs(),
+  // analyze(),
+  commonjs({
+    exclude: 'node_modules',
+    ignoreGlobal: true
+  }),
   svgr(),
   postcss({
     modules: true,
     sourceMap: 'inline',
     namedExports: true,
-    // extract: true,
     plugins: [autoprefixer]
   }),
   babel({
@@ -33,23 +35,23 @@ const plugins = [
   resolve({
     browser: true,
     extensions: ['.js', '.jsx']
-    // resolveOnly: [/^(?!react$)/, /^(?!react-dom$)/, /^(?!prop-types)/]
   }),
   copy({
     targets: [
       {
         src: 'src/variables.scss',
-        dest: 'build',
+        dest: 'dist',
         rename: 'variables.scss'
       },
       {
         src: 'src/typography.scss',
-        dest: 'build',
+        dest: 'dist',
         rename: 'typography.scss'
       }
     ]
   }),
-  terser()
+  terser(),
+  cleanup({ comments: 'none' })
 ];
 export default [
   {
@@ -74,24 +76,34 @@ export default [
       'src/Text/Text.jsx'
     ],
     output: {
-      dir: 'build',
+      dir: 'dist',
       format: 'cjs',
-      sourcemap: true
+      sourcemap: false
     },
     plugins: [
       cleaner({
-        targets: ['./build/']
+        targets: ['./dist/']
       }),
       ...plugins
-    ]
+    ],
+    external: Object.keys({
+      ...pkg.devDependencies,
+      ...pkg.dependencies,
+      ...pkg.peerDependencies
+    })
   },
   {
     input: 'src/index.jsx',
     output: {
-      file: packageJson.module,
+      file: pkg.module,
       format: 'esm',
-      sourcemap: true
+      sourcemap: false
     },
-    plugins
+    plugins,
+    external: Object.keys({
+      ...pkg.devDependencies,
+      ...pkg.dependencies,
+      ...pkg.peerDependencies
+    })
   }
 ];

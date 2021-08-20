@@ -1,2 +1,0 @@
-"use strict";var e=require("./extends-0af1ba00.js"),r=require("./objectWithoutProperties-2dcf9e72.js"),s=require("./index-9506e720.js"),t=require("./style-inject.es-bb80f4a2.js"),i=require("./Styles.module-fe9ddebb.js"),a=["className","children"];module.exports=function(c){var n=c.className,u=c.children,l=r._objectWithoutProperties(c,a);return s.react.createElement("div",e._extends({className:t.classnames(i.Styles.inputContainer,n)},l),u)};
-//# sourceMappingURL=InputContainer.js.map
