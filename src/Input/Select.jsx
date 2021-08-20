@@ -99,6 +99,7 @@ const SelectInput = ({
   name,
   className,
   label,
+  placeholder,
   onChange,
   classNamePrefix,
   ...props
@@ -156,7 +157,7 @@ const SelectInput = ({
         className={fieldClass}
         styles={customStyles}
         name={name}
-        placeholder={label}
+        placeholder={placeholder || label}
         selectValue={value}
         defaultValue={value}
         onChange={handleChange}

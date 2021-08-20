@@ -12,18 +12,28 @@ export const ButtonType = {
   WHITE: Styles.white,
   WHITE_BLUE_OUTLINE: Styles.whiteBlueOutline,
   BLUE_OUTLINE: Styles.blueOutline,
-  RED_OUTLINE: Styles.redOutline,
+  RED_OUTLINE: Styles.redOutline
 };
 
 export const ButtonSize = {
   FULLWIDTH: Styles.fullwidth,
   FULLWIDTH_LARGE: Styles.large,
-  LARGE: Styles.fullwidthLarge,
+  LARGE: Styles.fullwidthLarge
 };
 export const buttonStyles = Styles;
 
 const ButtonLink = (props) => {
-  const { type, size, to: url, className, title, children, content, target, ...restProps } = props;
+  const {
+    type,
+    size,
+    to: url,
+    className,
+    title,
+    children,
+    content,
+    target,
+    ...restProps
+  } = props;
 
   const parentClass = classNames(Styles.btn, className, type, size);
   const linkTitle = title ? title : '';
@@ -34,11 +44,18 @@ const ButtonLink = (props) => {
       target={target}
       rel='noopener noreferrer'
       title={linkTitle}
-      {...restProps}>
+      {...restProps}
+    >
       {content || children}
     </a>
   ) : (
-    <Link className={parentClass} to={url} title={linkTitle} target={target} {...restProps}>
+    <Link
+      className={parentClass}
+      to={url}
+      title={linkTitle}
+      target={target}
+      {...restProps}
+    >
       {content || children}
     </Link>
   );
@@ -52,10 +69,10 @@ ButtonLink.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
   content: PropTypes.string,
-  target: PropTypes.string,
+  target: PropTypes.string
 };
 ButtonLink.defaultProps = {
-  target: '_blank',
+  target: '_blank'
 };
 
 export default ButtonLink;

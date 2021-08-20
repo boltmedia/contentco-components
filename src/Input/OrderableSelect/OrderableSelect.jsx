@@ -23,7 +23,7 @@ class SortableSelect extends React.Component {
       value: props.value.map((o, i) => set(o, 'index', i)) || '',
       error: props.error || '',
       label: props.label || 'Label',
-      hasValue: false,
+      hasValue: false
     };
   }
 
@@ -64,33 +64,33 @@ class SortableSelect extends React.Component {
       if (event && event.value) {
         this.setState({
           hasValue: true,
-          selectValue: event.value,
+          selectValue: event.value
         });
       } else if (optionLabel && optionValue) {
         this.setState({
           hasValue: true,
-          selectValue: optionValue,
+          selectValue: optionValue
         });
       } else {
         // Fallback
         this.setState({
           selectValue: null,
           hasValue: false,
-          isClearable: true,
+          isClearable: true
         });
       }
     } else if (action === 'remove-value' || action === 'clear') {
       this.setState({
         selectValue: null,
         hasValue: false,
-        isClearable: true,
+        isClearable: true
       });
     } else {
       // fallback, remove
       this.setState({
         hasValue: false,
         selectValue: null,
-        isClearable: true,
+        isClearable: true
       });
     }
 
@@ -158,7 +158,8 @@ class SortableSelect extends React.Component {
 
     const fieldClassName = classNames(
       Styles.container,
-      ((locked ? active : active || value.length) || this.state.error) && Styles.active,
+      ((locked ? active : active || value.length) || this.state.error) &&
+        Styles.active,
       locked && !active && Styles.locked,
       this.props.isMulti ? Styles.multiContainer : ''
     );
@@ -166,30 +167,30 @@ class SortableSelect extends React.Component {
     const customStyles = {
       menu: (styles) => ({
         ...styles,
-        margin: '2px 0',
+        margin: '2px 0'
       }),
       control: (styles) => ({
         ...styles,
         boxShadow: 'none',
         ':hover': {
-          borderColor: '#a1aab3',
-        },
+          borderColor: '#a1aab3'
+        }
       }),
       valueContainer: (styles) => ({
         ...styles,
         padding: '2px 15px',
-        fontSize: '16px',
+        fontSize: '16px'
       }),
       singleValue: (styles) => ({
         ...styles,
         marginLeft: '0',
-        fontSize: '16px',
+        fontSize: '16px'
       }),
       multiValue: (styles, { isDragging }) => ({
         ...styles,
         margin: '0',
-        opacity: isDragging ? 0.5 : null,
-      }),
+        opacity: isDragging ? 0.5 : null
+      })
     };
 
     let CustomSelect;
@@ -250,7 +251,8 @@ class SortableSelect extends React.Component {
             Styles.label,
             this.state.error && Styles.error,
             this.state.hasValue && Styles.hasValue
-          )}>
+          )}
+        >
           {this.state.error || label}
         </label>
       </div>
@@ -268,7 +270,11 @@ SortableSelect.propTypes = {
   isClearable: PropTypes.bool,
   predicted: PropTypes.bool,
   required: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.object
+  ]),
   label: PropTypes.string,
   onChange: PropTypes.func,
   onKeyPress: PropTypes.func,
@@ -280,12 +286,12 @@ SortableSelect.propTypes = {
   isPaginated: PropTypes.bool,
   isCreatable: PropTypes.bool,
   loadOptions: PropTypes.func,
-  onInputChange: PropTypes.func,
+  onInputChange: PropTypes.func
 };
 
 SortableSelect.defaultProps = {
   isAsync: false,
   isPaginated: false,
-  isCreatable: false,
+  isCreatable: false
 };
 export default DragDropContext(HTML5Backend)(SortableSelect);

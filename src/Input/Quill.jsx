@@ -24,7 +24,7 @@ const QuillEditor = (props) => {
     // this.setState({ value: updateContent });
     try {
       props.onChange({
-        target: { name: props.name, value: updateContent },
+        target: { name: props.name, value: updateContent }
       });
     } catch (err) {
       return;
@@ -42,9 +42,12 @@ const QuillEditor = (props) => {
         placeholder={props.placeholder}
         scrollingContainer='#scrollContainer'
         onChange={handleChange}
-        readOnly ={props.locked}
+        readOnly={props.locked}
       />
-      <label htmlFor={props.name} className={classNames(Styles.label, props.error && Styles.error)}>
+      <label
+        htmlFor={props.name}
+        className={classNames(Styles.label, props.error && Styles.error)}
+      >
         {props.error || props.label}
       </label>
     </div>
@@ -66,7 +69,7 @@ QuillEditor.props = {
   onKeyPress: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default QuillEditor;

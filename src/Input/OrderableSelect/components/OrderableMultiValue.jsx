@@ -22,10 +22,11 @@ const OrderableMultiValue = orderable(
  */
 export default (props) => (
   <div
-    className="s-contact__multi-value-orderable"
+    className='s-contact__multi-value-orderable'
     onMouseDown={(e) => {
       e.stopPropagation();
-    }}>
+    }}
+  >
     <OrderableMultiValue {...props} />
   </div>
 );

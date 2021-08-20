@@ -16,7 +16,7 @@ class MultiLink extends React.Component {
       links: props.links || [],
       value: props.value || '',
       error: props.error || '',
-      label: props.label || 'Label',
+      label: props.label || 'Label'
     };
   }
 
@@ -44,7 +44,7 @@ class MultiLink extends React.Component {
 
     this.setState({
       value: event.target.value,
-      error: '',
+      error: ''
     });
 
     // Pass any other change events from parent
@@ -60,14 +60,14 @@ class MultiLink extends React.Component {
     const url = `${this.props.server}/${this.props.name}/`;
 
     const payload = {
-      [this.props.field]: this.state.value,
+      [this.props.field]: this.state.value
     };
 
     const config = {
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     };
 
     authRequest
@@ -97,8 +97,8 @@ class MultiLink extends React.Component {
     const config = {
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     };
 
     authRequest
@@ -161,14 +161,19 @@ class MultiLink extends React.Component {
       Styles.container,
       Styles.containerArea,
       Styles.containerMultiLink,
-      ((locked ? active : active || value) || this.state.error) && Styles.active,
+      ((locked ? active : active || value) || this.state.error) &&
+        Styles.active,
       locked && !active && Styles.locked
     );
     // console.log('error', this.state.error);
     const linkList = this.state.links.map((link, index) => {
       return (
         <div className={Styles.link} key={index}>
-          <a href={link[this.props.field]} target='_blank' rel='noopener noreferrer'>
+          <a
+            href={link[this.props.field]}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             {' '}
             {link.title || link[this.props.field]}{' '}
           </a>
@@ -176,7 +181,8 @@ class MultiLink extends React.Component {
             className={Styles.remove}
             onClick={(e) => {
               this.handleDelete(e, link);
-            }}>{`Remove`}</div>
+            }}
+          >{`Remove`}</div>
         </div>
       );
     });
@@ -198,7 +204,8 @@ class MultiLink extends React.Component {
         />
         <label
           htmlFor={name}
-          className={classNames(Styles.label, this.state.error && Styles.error)}>
+          className={classNames(Styles.label, this.state.error && Styles.error)}
+        >
           {this.state.error || label}
         </label>
         <Button
@@ -206,7 +213,8 @@ class MultiLink extends React.Component {
           type={Button.Type.BLUE}
           onClick={this.handleUrlCreate}
           disabled={!value}
-          isLoading={this.state.loading}>
+          isLoading={this.state.loading}
+        >
           {`Add Link`}
         </Button>
         {this.state.links && this.state.links.length > 0 && (
@@ -232,7 +240,7 @@ MultiLink.propTypes = {
   onChange: PropTypes.func,
   onKeyPress: PropTypes.func,
   onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
+  onFocus: PropTypes.func
 };
 
 export default MultiLink;

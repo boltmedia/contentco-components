@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   const env = api.env();
 
   let dev = false;
@@ -22,14 +22,16 @@ module.exports = api => {
 
   return {
     presets: [
-    [
+      [
         '@react-bootstrap',
         {
           dev,
           modules,
-          removePropTypes: !dev,
-        },
-      ],'@babel/preset-react'],
-    plugins: [env === 'test' && 'istanbul'].filter(Boolean),
+          removePropTypes: !dev
+        }
+      ],
+      '@babel/preset-react'
+    ],
+    plugins: [env === 'test' && 'istanbul'].filter(Boolean)
   };
 };

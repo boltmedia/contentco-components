@@ -15,10 +15,11 @@ export default function CtaButton(props) {
         styles.btn
       )}
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+      target='_blank'
+      rel='noopener noreferrer'
       title={linkTitle}
-      {...restProps}>
+      {...restProps}
+    >
       {content || children}
     </a>
   ) : (
@@ -29,7 +30,8 @@ export default function CtaButton(props) {
       )}
       to={url}
       title={linkTitle}
-      {...restProps}>
+      {...restProps}
+    >
       {content || children}
     </Link>
   );

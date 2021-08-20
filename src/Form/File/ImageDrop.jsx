@@ -14,7 +14,7 @@ class ImageDrop extends Component {
       label: props.label || '',
       error: props.error || '',
       progress: 0,
-      progressLabel: null,
+      progressLabel: null
     };
   }
 
@@ -31,12 +31,15 @@ class ImageDrop extends Component {
       }
       const config = {
         onUploadProgress: (progressEvent) => {
-          const prog = parseInt((100.0 * progressEvent.loaded) / progressEvent.total, 10);
+          const prog = parseInt(
+            (100.0 * progressEvent.loaded) / progressEvent.total,
+            10
+          );
           this.setState({
             progress: prog,
-            progressLabel: prog === 100 ? 'Loading...' : `${prog}%`,
+            progressLabel: prog === 100 ? 'Loading...' : `${prog}%`
           });
-        },
+        }
       };
       req(
         this.props.server,
@@ -60,7 +63,7 @@ class ImageDrop extends Component {
 
   handleRemove = (event) => {
     const data = JSON.stringify({
-      [this.props.name]: null,
+      [this.props.name]: null
     });
 
     authRequest.put(`${this.props.server}reset-picture/`, data).then(
@@ -93,8 +96,15 @@ class ImageDrop extends Component {
         onDrop={this.handleDrop}
         accept={this.props.accept ? this.props.accept : ''}
         onDropRejected={this.handleDropRejected}
-        multiple={false}>
-        {({ getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject }) => (
+        multiple={false}
+      >
+        {({
+          getRootProps,
+          getInputProps,
+          isDragActive,
+          isDragAccept,
+          isDragReject
+        }) => (
           <div
             className={classNames(
               this.props.className,
@@ -103,7 +113,8 @@ class ImageDrop extends Component {
               isDragReject && Styles.dragReject
             )}
             style={{ position: 'relative' }}
-            {...getRootProps()}>
+            {...getRootProps()}
+          >
             <img src={this.props.value} />
             {/*<div
               className={classNames(Styles.progress)}
@@ -158,9 +169,15 @@ class ImageDrop extends Component {
               onClick={(e) => {
                 e.stopPropagation();
                 this.handleRemove();
-              }}>
+              }}
+            >
               <div className={Styles.removeCross}>
-                <svg width='26' height='26' viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'>
+                <svg
+                  width='26'
+                  height='26'
+                  viewBox='0 0 26 26'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
                   <path
                     d='M11.586 13l-2.293 2.293a1 1 0 0 0 1.414 1.414L13 14.414l2.293 2.293a1 1 0 0 0 1.414-1.414L14.414 13l2.293-2.293a1 1 0 0 0-1.414-1.414L13 11.586l-2.293-2.293a1 1 0 0 0-1.414 1.414L11.586 13z'
                     fill='currentColor'
@@ -174,7 +191,8 @@ class ImageDrop extends Component {
               className={Styles.imageAddButton}
               onClick={(e) => {
                 e.stopPropagation();
-              }}>
+              }}
+            >
               <div {...getRootProps()}>
                 <input {...getInputProps()} />
                 {`Browse`}
@@ -202,12 +220,12 @@ ImageDrop.propTypes = {
   accept: PropTypes.array,
   onDropRejected: PropTypes.func,
   className: PropTypes.string,
-  onUploadRequestPayloadGenerate: PropTypes.func,
+  onUploadRequestPayloadGenerate: PropTypes.func
 };
 
 ImageDrop.defaultProps = {
   hideRemove: false,
-  method: 'put',
+  method: 'put'
 };
 
 export default ImageDrop;

@@ -4,7 +4,7 @@ import Loader from '../Loader/Loader';
 
 const QuillNoSSRWrapper = dynamic(() => import('react-quill'), {
   ssr: false,
-  loading: () => <Loader />,
+  loading: () => <Loader />
 });
 
 export default QuillNoSSRWrapper;

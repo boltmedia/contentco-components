@@ -71,7 +71,8 @@ const DateSelector = ({
         />
         <label
           htmlFor={name}
-          className={classNames(Styles.label, props.error && Styles.error)}>
+          className={classNames(Styles.label, props.error && Styles.error)}
+        >
           {props.error || label}
         </label>
       </React.Fragment>
@@ -81,12 +82,12 @@ const DateSelector = ({
   return (
     <div className={fieldClassName}>
       <Datetime
-        dateFormat="DD/MM/YYYY"
+        dateFormat='DD/MM/YYYY'
         inputProps={{
           className: classNames(Styles.base, Styles.inputActive),
           placeholder: placeholder || label,
           label: label,
-          error: props.error,
+          error: props.error
         }}
         closeOnSelect={true}
         strictParsing
@@ -108,7 +109,7 @@ DateSelector.propTypes = {
   error: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.bool,
-    PropTypes.func,
+    PropTypes.func
   ]),
   required: PropTypes.bool,
   showTime: PropTypes.bool,
@@ -125,7 +126,7 @@ DateSelector.propTypes = {
   isValidDate: PropTypes.func,
   viewMode: PropTypes.string,
   dateFormat: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  isMasked: PropTypes.bool,
+  isMasked: PropTypes.bool
 };
 
 DateSelector.defaultProps = {
@@ -135,7 +136,7 @@ DateSelector.defaultProps = {
   showTime: false,
   viewMode: 'days',
   dateFormat: 'DD/MM/YYYY',
-  isMasked: true,
+  isMasked: true
 };
 
 export default DateSelector;

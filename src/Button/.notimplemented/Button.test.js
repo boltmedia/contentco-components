@@ -25,9 +25,9 @@ describe('Button component', () => {
       { type: Button.Type.WHITE, expectedClass: Styles.white },
       {
         type: Button.Type.WHITE_BLUE_OUTLINE,
-        expectedClass: Styles.whiteBlueOutline,
+        expectedClass: Styles.whiteBlueOutline
       },
-      { type: Button.Type.BLUE_OUTLINE, expectedClass: Styles.blueOutline },
+      { type: Button.Type.BLUE_OUTLINE, expectedClass: Styles.blueOutline }
     ];
 
     typeClasses.forEach((o, idx) => {
@@ -41,9 +41,9 @@ describe('Button component', () => {
       { type: Button.Size.FULLWIDTH, expectedClass: Styles.fullwidth },
       {
         type: Button.Size.FULLWIDTH_LARGE,
-        expectedClass: Styles.fullwidthLarge,
+        expectedClass: Styles.fullwidthLarge
       },
-      { type: Button.Size.LARGE, expectedClass: Styles.large },
+      { type: Button.Size.LARGE, expectedClass: Styles.large }
     ];
 
     sizeClasses.forEach((o, idx) => {
@@ -77,9 +77,9 @@ describe('ButtonLink component', () => {
     { type: ButtonLink.Type.WHITE, expectedClass: Styles.white },
     {
       type: ButtonLink.Type.WHITE_BLUE_OUTLINE,
-      expectedClass: Styles.whiteBlueOutline,
+      expectedClass: Styles.whiteBlueOutline
     },
-    { type: ButtonLink.Type.BLUE_OUTLINE, expectedClass: Styles.blueOutline },
+    { type: ButtonLink.Type.BLUE_OUTLINE, expectedClass: Styles.blueOutline }
   ];
 
   typeClasses.forEach((o, idx) => {
@@ -92,9 +92,9 @@ describe('ButtonLink component', () => {
       { type: ButtonLink.Size.FULLWIDTH, expectedClass: Styles.fullwidth },
       {
         type: ButtonLink.Size.FULLWIDTH_LARGE,
-        expectedClass: Styles.fullwidthLarge,
+        expectedClass: Styles.fullwidthLarge
       },
-      { type: ButtonLink.Size.LARGE, expectedClass: Styles.large },
+      { type: ButtonLink.Size.LARGE, expectedClass: Styles.large }
     ];
 
     sizeClasses.forEach((o, idx) => {
@@ -105,7 +105,9 @@ describe('ButtonLink component', () => {
 
   it('should passed other props', () => {
     const value = `this is a test props`;
-    const wrapper = shallow(<ButtonLink id={'linkId'} dataOtherProps={value} />);
+    const wrapper = shallow(
+      <ButtonLink id={'linkId'} dataOtherProps={value} />
+    );
     const node = wrapper.find('#linkId');
 
     expect(node).toHaveLength(1);
@@ -118,12 +120,17 @@ describe('CtaButton component', () => {
   it('should have correct class base of type props', () => {
     const typeClasses = [
       { type: 'darkblue', expectedClass: Styles.ctaDarkblue },
-      { type: 'white', expectedClass: Styles.ctaWhite },
+      { type: 'white', expectedClass: Styles.ctaWhite }
     ];
 
     typeClasses.forEach((o, idx) => {
       const wrapper = shallow(
-        <CtaButton id={`ctaBtn`} to={`https://google.com`} content={`content`} type={o.type} />
+        <CtaButton
+          id={`ctaBtn`}
+          to={`https://google.com`}
+          content={`content`}
+          type={o.type}
+        />
       );
       const node = wrapper.find('#ctaBtn');
       expect(node.hasClass(o.expectedClass)).toBeTruthy();

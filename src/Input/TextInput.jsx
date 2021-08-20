@@ -5,7 +5,21 @@ import Styles from './Input.module.scss';
 import classNames from 'classnames';
 
 const TextInput = React.forwardRef(
-  ({ className, disabled, name, required, id, placeholder, mask, label, error, ...props }, ref) => {
+  (
+    {
+      className,
+      disabled,
+      name,
+      required,
+      id,
+      placeholder,
+      mask,
+      label,
+      error,
+      ...props
+    },
+    ref
+  ) => {
     const Elem = mask ? InputMask : 'input';
     return (
       <div
@@ -14,7 +28,8 @@ const TextInput = React.forwardRef(
           disabled && Styles.disabled,
           error && Styles.containerError,
           className
-        )}>
+        )}
+      >
         <Elem
           ref={ref}
           className={classNames(Styles.base, Styles.input)}
@@ -26,7 +41,10 @@ const TextInput = React.forwardRef(
           mask={mask}
           {...props}
         />
-        <label htmlFor={name} className={classNames(Styles.label, error && Styles.error)}>
+        <label
+          htmlFor={name}
+          className={classNames(Styles.label, error && Styles.error)}
+        >
           {error || label}
         </label>
       </div>
@@ -48,11 +66,11 @@ TextInput.propTypes = {
   onKeyPress: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.string
 };
 
 TextInput.defaultProps = {
-  type: 'text',
+  type: 'text'
 };
 
 export default TextInput;

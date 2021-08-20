@@ -35,9 +35,9 @@ export const orderable = (
       );
     }
   );
-  Orderable.displayName = `Orderable(${Component.displayName ||
-    Component.name ||
-    'Component'})`;
+  Orderable.displayName = `Orderable(${
+    Component.displayName || Component.name || 'Component'
+  })`;
   Orderable.propTypes = {
     isDragging: PropTypes.bool.isRequired,
     connectDragSource: PropTypes.func.isRequired,

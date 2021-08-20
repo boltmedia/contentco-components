@@ -19,7 +19,7 @@ class NewMulti extends Component {
       active: props.active || false,
       label: props.label || '',
       error: props.error || '',
-      files: props.files,
+      files: props.files
     };
   }
 
@@ -44,13 +44,15 @@ class NewMulti extends Component {
       const config = {
         headers: { 'content-type': 'multipart/form-data' },
         onUploadProgress: (progressEvent) => {
-          var percent = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+          var percent = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
           if (percent >= 100) {
             this.setState({ percent: 100 });
           } else {
             this.setState({ percent });
           }
-        },
+        }
       };
 
       const url = `${this.props.server}/${this.props.name}/`;
@@ -102,14 +104,19 @@ class NewMulti extends Component {
       this.props.files.map((file, index) => {
         return (
           <div key={index} className={classNames(Styles.fileNew)}>
-            <a href={file[this.props.field]} target='_blank' rel='noopener noreferrer'>
+            <a
+              href={file[this.props.field]}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <TruncateString text={this.getName(file[this.props.field])} />
             </a>
             <div
               className={Styles.remove}
               onClick={(e) => {
                 this.handleRemove(e, file);
-              }}>{`Remove`}</div>
+              }}
+            >{`Remove`}</div>
           </div>
         );
       });
@@ -120,7 +127,8 @@ class NewMulti extends Component {
           Styles.newContainer,
           Styles.multi,
           this.props.files && this.props.files.length > 0 && Styles.hasFile
-        )}>
+        )}
+      >
         {/*<label
           htmlFor={name}
           className={classNames(
@@ -138,7 +146,10 @@ class NewMulti extends Component {
                   <div className={Styles.placeholder}>
                     <span>{this.state.label}</span>
                     {/* <div className={Styles.browse}>Browse</div> */}
-                    <Button className={Styles.addButton} type={Button.Type.BLUE}>
+                    <Button
+                      className={Styles.addButton}
+                      type={Button.Type.BLUE}
+                    >
                       {`Browse`}
                     </Button>
                   </div>
@@ -147,7 +158,11 @@ class NewMulti extends Component {
             )}
           </Dropzone>
         </div>
-        {fileList.length ? <div className={Styles.fileList}>{fileList}</div> : ''}
+        {fileList.length ? (
+          <div className={Styles.fileList}>{fileList}</div>
+        ) : (
+          ''
+        )}
       </div>
     );
   }
@@ -165,7 +180,7 @@ NewMulti.propTypes = {
   onInit: PropTypes.func,
   onFileUpdate: PropTypes.func,
   onResponse: PropTypes.func,
-  onRemoveResponse: PropTypes.func,
+  onRemoveResponse: PropTypes.func
 };
 
 export default NewMulti;

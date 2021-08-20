@@ -9,12 +9,14 @@ export default {
 };
 
 const renderIcon = (arr, args) => {
-  return arr.map((key,indx) => {
+  return arr.map((key, indx) => {
     const IconComponent = Icon[key];
     return (
       <span className={classNames(Styles.icon)} key={indx}>
-        <IconComponent {...args} key={indx}/>
-        <span className='icon-name' style={{color:args.style?.color}} >{key}</span>
+        <IconComponent {...args} key={indx} />
+        <span className='icon-name' style={{ color: args.style?.color }}>
+          {key}
+        </span>
       </span>
     );
   });
@@ -22,7 +24,7 @@ const renderIcon = (arr, args) => {
 
 const Template = (args) => (
   <React.Fragment>
-    <h3 style={{color:args.style?.color}}>General</h3>
+    <h3 style={{ color: args.style?.color }}>General</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         [
@@ -41,7 +43,7 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3 style={{color:args.style?.color}}>File Types</h3>
+    <h3 style={{ color: args.style?.color }}>File Types</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         [
@@ -58,12 +60,12 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3 style={{color:args.style?.color}}>Chat</h3>
+    <h3 style={{ color: args.style?.color }}>Chat</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(['Attachment', 'Expand', 'Minimize'], args)}
     </div>
 
-    <h3 style={{color:args.style?.color}}>Navigation</h3>
+    <h3 style={{ color: args.style?.color }}>Navigation</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         [
@@ -86,7 +88,7 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3 style={{color:args.style?.color}}> Social</h3>
+    <h3 style={{ color: args.style?.color }}> Social</h3>
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(
         ['Google', 'Facebook', 'Twitter', 'Linkedin', 'Instagram', 'Youtube'],
@@ -94,53 +96,50 @@ const Template = (args) => (
       )}
     </div>
 
-    <h3 style={{color:args.style?.color}}>Brief</h3>
+    <h3 style={{ color: args.style?.color }}>Brief</h3>
 
     <div className={classNames(Styles.wrapper)}>
       {renderIcon(['Email', 'Phone', 'Chat', 'Skill'], args)}
     </div>
 
-    <h3 style={{color:args.style?.color}}>Other</h3>
+    <h3 style={{ color: args.style?.color }}>Other</h3>
     <div className={classNames(Styles.wrapper)}>
-    {renderIcon(
-      [
-        'Activity',
-        'Add',
-        'Assessment',
-        'Caret',
-        'Close',
-        'Down',
-        'Menu',
-        'More',
-        'MoreVertical',
-        'StarEmpty',
-        'StarFull',
-        'Logout',
-        'Search',
-        'Link',
-        'Edit',
-        'External',
-        'Ok'
-      ],
-      args
-    )}
+      {renderIcon(
+        [
+          'Activity',
+          'Add',
+          'Assessment',
+          'Caret',
+          'Close',
+          'Down',
+          'Menu',
+          'More',
+          'MoreVertical',
+          'StarEmpty',
+          'StarFull',
+          'Logout',
+          'Search',
+          'Link',
+          'Edit',
+          'External',
+          'Ok'
+        ],
+        args
+      )}
     </div>
   </React.Fragment>
 );
 export const Default = Template.bind({});
 Default.args = {
-  style: { height: '20px', width: '20px', margin: '10px' },
+  style: { height: '20px', width: '20px', margin: '10px' }
 };
 
 export const White = Template.bind({});
 White.args = {
-  style: { height: '20px', width: '20px', margin: '10px',color: 'white' },
-  
+  style: { height: '20px', width: '20px', margin: '10px', color: 'white' }
 };
 White.parameters = {
-  backgrounds: { default: 'dark-blue',color: 'white' },
- 
-
+  backgrounds: { default: 'dark-blue', color: 'white' }
 };
 
 // TODO: Add more stories for Card

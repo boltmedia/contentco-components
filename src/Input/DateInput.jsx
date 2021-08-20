@@ -21,7 +21,7 @@ class DateInput extends React.Component {
       error: props.error || '',
       validError: null,
       required: props.required || false,
-      label: props.label || 'Label',
+      label: props.label || 'Label'
     };
   }
 
@@ -115,7 +115,7 @@ class DateInput extends React.Component {
         this.props.onChange(event, {
           month: this.state.month,
           year: this.state.year,
-          valid: !this.state.validError,
+          valid: !this.state.validError
         });
       } catch (err) {
         return;
@@ -124,7 +124,10 @@ class DateInput extends React.Component {
     };
 
     // Doing this validation here just because I think this is the only case we use this component
-    if (this.state.required && (isNaN(this.state.month) || isNaN(this.state.year))) {
+    if (
+      this.state.required &&
+      (isNaN(this.state.month) || isNaN(this.state.year))
+    ) {
       this.setState({ validError: 'Enter a date' }, callback);
     } else if (this.state.year < 1900 || this.state.year > 2040) {
       this.setState({ validError: 'Enter a valid year' }, callback);
@@ -141,7 +144,7 @@ class DateInput extends React.Component {
 
     return {
       value,
-      selection,
+      selection
     };
   };
 
@@ -165,7 +168,7 @@ class DateInput extends React.Component {
           dateFormat='MM/YYYY'
           inputProps={{
             className: classNames(Styles.base, Styles.input),
-            placeholder: label,
+            placeholder: label
           }}
           strictParsing
           value={this.state.value}
@@ -184,7 +187,8 @@ class DateInput extends React.Component {
                   className={classNames(
                     Styles.label,
                     (this.state.error || this.state.validError) && Styles.error
-                  )}>
+                  )}
+                >
                   {this.state.error || this.state.validError || label}
                 </label>
               </React.Fragment>
@@ -200,7 +204,11 @@ DateInput.propTypes = {
   name: PropTypes.string.isRequired,
   locked: PropTypes.bool,
   active: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool, PropTypes.func]),
+  error: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.func
+  ]),
   required: PropTypes.bool,
   value: PropTypes.string,
   step: PropTypes.string,
@@ -209,13 +217,13 @@ DateInput.propTypes = {
   onChange: PropTypes.func,
   onKeyPress: PropTypes.func,
   onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
+  onFocus: PropTypes.func
 };
 
 DateInput.defaultProps = {
   type: 'text',
   step: null,
-  max: null,
+  max: null
 };
 
 export default DateInput;

@@ -255,20 +255,10 @@ class DualInputTypeSelector extends React.Component {
   };
 
   render() {
-    const {
-      active,
-      inputValue,
-      inputLabel,
-      selectValue,
-      selectLabel
-    } = this.state;
-    const {
-      predicted,
-      inputName,
-      required,
-      selectName,
-      selectWidth
-    } = this.props;
+    const { active, inputValue, inputLabel, selectValue, selectLabel } =
+      this.state;
+    const { predicted, inputName, required, selectName, selectWidth } =
+      this.props;
 
     return (
       <div

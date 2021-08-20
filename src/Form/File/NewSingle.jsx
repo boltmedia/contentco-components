@@ -9,11 +9,26 @@ import classNames from 'classnames';
 import Styles from './File.module.scss';
 import TruncateString from 'react-truncate-string';
 
-const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropRejected, ...props }) => {
+const NewSingle = ({
+  name,
+  label,
+  error,
+  accept,
+  value,
+  hideRemove,
+  onDropRejected,
+  ...props
+}) => {
   const [progress, setProgress] = useState(0);
   const [progressLabel, setProgressLabel] = useState(null);
   const handleDrop = (acceptedFiles) => {
-    const { disableRequestTransformer, server, method, apiFileUpload, onResponse } = props;
+    const {
+      disableRequestTransformer,
+      server,
+      method,
+      apiFileUpload,
+      onResponse
+    } = props;
 
     acceptedFiles.forEach((file) => {
       const formData = new FormData();
@@ -21,7 +36,9 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
         formData.append(name, file, file.fileName || file.name);
       }
 
-      const httpRequest = disableRequestTransformer ? baseAuthRequest : authRequest;
+      const httpRequest = disableRequestTransformer
+        ? baseAuthRequest
+        : authRequest;
       const req = httpRequest[method];
       // if (this.props.method === 'post') {
       //   req = authRequest.post;
@@ -31,10 +48,13 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
       // }
       const config = {
         onUploadProgress: (progressEvent) => {
-          const prog = parseInt((100.0 * progressEvent.loaded) / progressEvent.total, 10);
+          const prog = parseInt(
+            (100.0 * progressEvent.loaded) / progressEvent.total,
+            10
+          );
           setProgress(prog);
           setProgressLabel(prog === 100 ? 'Loading...' : `${prog}%`);
-        },
+        }
       };
 
       const url = apiFileUpload || server;
@@ -62,16 +82,18 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
       apiFileRemove,
       apiFileUpload,
       onResponse,
-      onFileRemovePayloadGenerate,
+      onFileRemovePayloadGenerate
     } = props;
 
     const data = onFileRemovePayloadGenerate
       ? onFileRemovePayloadGenerate(name)
       : {
-          [name]: null,
+          [name]: null
         };
 
-    const httpRequest = disableRequestTransformer ? baseAuthRequest : authRequest;
+    const httpRequest = disableRequestTransformer
+      ? baseAuthRequest
+      : authRequest;
     const req = httpRequest[method];
 
     // added apiFileUpload and server as api url fallback when apiFileRemove is not supplied
@@ -101,8 +123,15 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
       onDrop={handleDrop}
       accept={accept ? accept : ''}
       onDropRejected={onDropRejected}
-      multiple={false}>
-      {({ getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject }) => (
+      multiple={false}
+    >
+      {({
+        getRootProps,
+        getInputProps,
+        isDragActive,
+        isDragAccept,
+        isDragReject
+      }) => (
         <div
           className={classNames(
             Styles.newContainer,
@@ -111,11 +140,18 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
             isDragAccept && Styles.dragAccept,
             isDragReject && Styles.dragReject
           )}
-          {...getRootProps()}>
-          <div className={classNames(Styles.progress)} style={{ width: `${progress}%` }} />
+          {...getRootProps()}
+        >
+          <div
+            className={classNames(Styles.progress)}
+            style={{ width: `${progress}%` }}
+          />
 
           <input {...getInputProps()} />
-          <label htmlFor={name} className={classNames(Styles.label, error && Styles.error)}>
+          <label
+            htmlFor={name}
+            className={classNames(Styles.label, error && Styles.error)}
+          >
             {error || label}
           </label>
           {/*<div className={classNames(Styles.drop)}>
@@ -133,7 +169,8 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
                       width='26'
                       height='26'
                       viewBox='0 0 26 26'
-                      xmlns='http://www.w3.org/2000/svg'>
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
                       <path
                         d='M11.586 13l-2.293 2.293a1 1 0 0 0 1.414 1.414L13 14.414l2.293 2.293a1 1 0 0 0 1.414-1.414L14.414 13l2.293-2.293a1 1 0 0 0-1.414-1.414L13 11.586l-2.293-2.293a1 1 0 0 0-1.414 1.414L11.586 13z'
                         fill='currentColor'
@@ -145,7 +182,10 @@ const NewSingle = ({ name, label, error, accept, value, hideRemove, onDropReject
               )}
             </div>
           </div>
-          <div className={Styles.newAddButton} onClick={(e) => e.stopPropagation()}>
+          <div
+            className={Styles.newAddButton}
+            onClick={(e) => e.stopPropagation()}
+          >
             <div {...getRootProps()}>
               <input {...getInputProps()} />
               <Button type={Button.Type.LIGHT_GRAY}>{`Browse`}</Button>
@@ -174,13 +214,13 @@ NewSingle.propTypes = {
   disableRequestTransformer: PropTypes.bool,
   apiFileUpload: PropTypes.string,
   apiFileRemove: PropTypes.string,
-  onFileRemovePayloadGenerate: PropTypes.func,
+  onFileRemovePayloadGenerate: PropTypes.func
 };
 
 NewSingle.defaultProps = {
   hideRemove: false,
   method: 'put',
-  disableRequestTransformer: false,
+  disableRequestTransformer: false
 };
 
 export default NewSingle;
