@@ -1,5 +1,4 @@
-@import "src/styles/variables";
-
+@import 'src/styles/variables';
 
 .list {
   display: flex;
@@ -22,7 +21,7 @@
   margin-right: 5px;
   margin-bottom: 5px;
   min-width: 250px;
-  transition: background-color .1s $cubic;
+  transition: background-color 0.1s $cubic;
 
   &:hover {
     background: $white;
@@ -31,7 +30,6 @@
   @include for-size(tablet-portrait-down) {
     flex-basis: 50%;
   }
-
 }
 
 .left {
@@ -48,7 +46,6 @@
   &:hover {
     color: $blue-100;
   }
-
 }
 
 .icon {
@@ -71,7 +68,7 @@
   margin-left: auto;
 
   &:hover {
-    color: $strongred;
+    color: $red-50;
   }
 }
 
@@ -127,7 +124,6 @@
   padding: 0;
 }
 
-
 .toastError {
   color: $red;
   min-width: 200px;
@@ -137,7 +133,6 @@
       margin-bottom: 0 !important;
     }
   }
-
 }
 
 .toastHeader {

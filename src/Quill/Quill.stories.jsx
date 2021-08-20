@@ -1,13 +1,13 @@
 // Generated with util/create-component.js
 import React from 'react';
-import Quill from './Quill';
+import Editor from './Editor';
 
 export default {
-  title: 'Input/Quill',
-  component: Quill
+  title: 'Input/QuillEditor',
+  component: Editor
 };
 
-const Template = (args) => <Quill {...args} />;
+const Template = (args) => <Editor {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

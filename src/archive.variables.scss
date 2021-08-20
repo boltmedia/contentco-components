@@ -1,72 +1,96 @@
 /* prettier-ignore */
 /* beautify ignore:start */
 
-// Default sizing
-$size-1: 12px;
-$size-2: 14px;
-$size-3: 16px;
-$size-4: 18px;
-$size-5: 20px;
-$size-6: 24px;
-$size-7: 30px;
-$size-8: 36px;
-$size-9: 48px;
-$size-10: 60px;
-$size-11: 72px;
+// NEW!
+$white: #fff;
+$white-shadow: #eff7ff;
+$light-blue: #c4e0fb;
+$light-blue-5: #ddebfe;
+$light-blue-shadow: #8cc0f0;
 
-// Font weights
-$fw-1: 300;
-$fw-2: 500;
-$fw-3: 700;
+$blue-badge: #084b8a;
+$blue-badge-bg: #ddebf7;
 
-// Default Border Radius
-$br-small: 3px;
-$br-large: 6px;
+$orange-badge: #95591e;
+$orange-badge-bg: #fbe3cd;
 
-// For white backgrounds
+$green-badge: #01783e;
+$green-badge-bg: #d4eee2;
 
-$white: hsla(0, 0%, 100%, 1);
+$gray-badge: #425a70;
+$gray-badge-bg: #e3e7eb;
 
-$blue-5: hsla(210, 100%, 97%, 1);
-$blue-7: hsla(215, 94%, 93%, 1);
-$blue-10: hsla(209, 87%, 88%, 1);
-$blue-20: hsla(209, 77%, 75%, 1);
-$blue-40: hsla(211, 75%, 59%, 1);
-$blue-80: hsla(214, 85%, 46%, 1);
-$blue-100: hsla(214, 92%, 36%, 1);
-$blue-120: hsla(224, 66%, 28%, 1);
-$blue-150: hsla(224, 83%, 19%, 1);
+$blue: #1269db;
+$blue-shadow: #0751b3;
+// #0161e7
+$dark-blue: #193278;
+$dark-blue-shadow: #081d57;
+$blue-violet: #0b4ba3;
+$light-blue-40: #4a95e5;
 
-$orange-10: hsla(28, 85%, 89%, 1);
-$orange-50: hsla(33, 100%, 50%, 1);
-$orange-100: hsla(25, 66%, 35%, 1);
+$blue-black: #071e54;
 
-$gray-2: hsla(210, 17%, 98%, 1);
-$gray-5: hsla(210, 44%, 96%, 1);
-$gray-7: hsla(210, 20%, 94%, 1);
-$gray-10: hsla(210, 22%, 87%, 1);
-$gray-20: hsla(210, 22%, 81%, 1);
-$gray-40: hsla(210, 11%, 67%, 1);
-$gray-60: hsla(210, 11%, 47%, 1);
-$gray-80: hsla(210, 11%, 28%, 1);
+$light-gray: #f2f6fa;
+$light-gray-shadow: #d8dfe6;
+$gray: #c3ced9;
+$gray-shadow: #a1aab3;
+$dark-gray: #626e7a;
+$dark-gray-shadow: #3f474f;
+$black: #212529;
+$light-blue-grey: #d2e5f8;
+$light-grey-blue: #e3effb;
 
-$black: hsla(210, 11%, 15%, 1);
-$true-black: hsla(0, 0%, 0%, 1);
-$yellow-20: hsla(42, 100%, 93%, 1);
-$yellow-100: hsla(42, 99%, 65%, 1);
+// Backwards compatibility, do not use blues and grays below:
 
-$red-5: hsla(2, 81%, 94%, 1);
-$red-10: hsla(0, 73%, 73%, 1);
-// $red-15: hsla(0, 50%, 60%, 1);
-$red-20: hsla(5, 83%, 63%, 1);
-$red-50: hsla(3, 83%, 55%, 1);
-$red-100: hsla(0, 63%, 20%, 1);
+$blue-5: $white-shadow;
+$blue-10: $light-blue;
+$blue-20: $light-blue-shadow;
+$blue-40: $light-blue-shadow;
+$blue-80: $blue; // main
+$blue-100: $blue;
+$blue-alt: $blue-shadow;
 
-$green-10: hsla(140, 60%, 85%, 1);
-$green-20: hsla(140, 60%, 77%, 1);
-$green-40: hsla(150, 70%, 45%, 1);
-$green-60: hsla(150, 75%, 35%, 1);
-$green-100: hsla(150, 80%, 24%, 1);
+$darkblue: $dark-blue;
+$darkblue-alt: $dark-blue-shadow;
+
+$dark-cyan: #0794ae;
+
+$gray-5: $light-gray;
+$gray-10: $light-gray-shadow;
+$gray-20: $gray;
+$gray-40: $gray-shadow;
+$gray-60: $dark-gray;
+$gray-80: $dark-gray-shadow;
+
+$blue-5: #eff7ff;
+// $blue-10: #c4e0fb;
+// $blue-20: #8cc0f0;
+// $blue-40: #4a95e5;
+// $blue-80: #0d7fe2; // main
+// $blue-100: #125CDB;
+// $blue-alt: #0746B3;
+
+// $darkblue: #193278;
+// $darkblue-alt: #040D47;
+
+// $white: #fff;
+// $gray-5: #e6ecf1;
+// $gray-10: #d0dee9;
+// $gray-20: #afc0cd;
+// $gray-40: #80909d;
+// $gray-60: #64707b;
+// $gray-80: #404950;
+// $black: #31373c;
+
+$light-red: #fce4e3;
+$red: #c66;
+$red-10: #ec8787;
+$red-11: #ef5c50;
+$darkred: #551313;
+$strongred: #ec392f;
+$green: #4f8a10;
+$green-10: #dff2bf;
+$green-20: #09bfa7;
 
 $cubic: cubic-bezier(0.165, 0.84, 0.44, 1);
 $bg-cubic: background-color 0.1s $cubic;
@@ -78,9 +102,7 @@ $z-dialog-dropdown: 92;
 $z-dialog: 91;
 $z-dialog-mask: 90;
 
-$z-chatbox: 10;
 $z-nav: 10;
-$z-subnav: 9;
 $z-button: 5;
 $z-menu: 4;
 $z-mask: 3;
@@ -91,24 +113,32 @@ $z-background: 0;
 $z-behind: -1;
 $z-underground: -1;
 
+$yellow-100: #feca4c;
+$yellow-20: #fff4db;
 $sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$mono: 'Courier', 'Courier New', Monaco, monospace;
 
-/* Shadow Update */
+$basic-shadow: 0 2px 7px rgba(4, 13, 71, 0.2);
+$blog-shadow: 0 2px 35px rgba(4, 13, 71, 0.2);
+$slider-shadow: 0 5px 40px rgba(4, 13, 71, 0.8);
+$arrow-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+$arrow-shadow2: 0 0 15px rgba(0, 0, 0, 0.8);
+$portfolio-item-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-$shadow-10: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%, 0.24);
-$shadow-20: 0 3px 6px hsla(0, 0%, 0%, 0.15), 0 2px 4px hsla(0, 0%, 0%, 0.12);
-$shadow-30: 0 10px 20px hsla(0, 0%, 0%, 0.15), 0 3px 6px hsla(0, 0%, 0%, 0.1);
-$shadow-40: 0 15px 25px hsla(0, 0%, 0%, 0.15), 0 5px 10px hsla(0, 0%, 0%, 0.05);
-$shadow-50: 0 20px 40px hsla(0, 0%, 0%, 0.2);
+$arrow-shadow-hover: 0 0 2px rgba(0, 0, 0, 1);
 
-/* End Shadow Update */
-$portfolio-item-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
-$card-shadow: 0 2px 7px hsla(232, 89%, 15%, 0.2);
-$card-shadow-hover: 0 0 25px hsla(232, 89%, 15%, 0.3);
-$shadow-on: 0 10px 10px 0 hsla(217, 69%, 42%, 0.12),
-  0 0 1px 0 hsla(217, 62%, 43%, 0.25);
+$big-shadow: 0 5px 35px rgba(4, 13, 71, 0.6);
+$resume-shadow: 0 5px 35px rgba(4, 13, 71, 0.1);
+$basic-shadow-alt: 0 5px 25px 0 rgba(4, 13, 71, 0.2);
+$card-shadow: 0 2px 7px rgba(4, 13, 71, 0.2);
+$card-shadow-hover: 0 0 25px rgba(4, 13, 71, 0.3);
+$card-shadow2: 0 15px 34px -12px rgba(0, 0, 0, 0.75);
+// $card-shadow: 0 1px 3px rgba(72, 74, 76, 0.15);
+
+$shadow-off: 0 4px 3px 0 rgba(34, 90, 182, 0.12),
+  0 0 1px 0 rgba(41, 92, 176, 0.25);
+$shadow-on: 0 10px 10px 0 rgba(34, 90, 182, 0.12),
+  0 0 1px 0 rgba(41, 92, 176, 0.25);
 
 $content-width: 1200px;
 // Media Queries
@@ -129,11 +159,15 @@ $lg-screen: '(max-width: 1920px)';
 $short-screen: '(max-height: 550px)';
 $short-min-screen: '(min-height: 551px)';
 
+$gray-2: #f8f9fa;
+$gray-7: #edf0f3;
+$gray-10: #d8dfe6;
+$gray-100: #30363c;
 $card-border: 1px solid $gray-10;
 $card-border-radius: 3px;
 $inter-card-border: 1px solid $gray-7;
-$true-black: hsla(0, 0%, 0%, 1);
-$dialog-shadow: 0 13px 25px -7px hsla(207, 10%, 21%, 0.25);
+$true-black: #000;
+$dialog-shadow: 0 13px 25px -7px rgba(49, 55, 60, 0.25);
 
 @mixin for-size($size, $extra: 0) {
   @if $size==small-phone-only {
@@ -196,37 +230,9 @@ $cerebri: 'Cerebri Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol';
 
-$sans-serif: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol';
-
 @mixin ie-only {
   // media query that targets ie 10+
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;
-  }
-}
-
-@mixin icon-hover {
-  transition: 0.3s background $cubic;
-  border-radius: 3px;
-  &:hover {
-    background-color: $gray-5;
-  }
-
-  &:active {
-    background-color: $gray-20;
-  }
-}
-
-@mixin icon-hover-dark {
-  transition: 0.3s background $cubic;
-  border-radius: 3px;
-  &:hover {
-    background-color: $gray-80;
-  }
-
-  &:active {
-    background-color: $gray-60;
   }
 }

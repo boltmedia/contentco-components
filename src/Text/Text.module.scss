@@ -11,7 +11,7 @@
   line-height: 1.2;
   margin: 0;
   // margin-bottom: 5px;
-  color: $darkblue;
+  color: $blue-120;
   letter-spacing: -1px;
 
   @include for-size(phone-only) {
@@ -36,7 +36,7 @@
   line-height: 1.2;
   margin: 0;
   // margin-bottom: 5px;
-  color: $darkblue;
+  color: $blue-120;
   letter-spacing: -0.5px;
 
   @include for-size(phone-only) {
@@ -58,7 +58,7 @@
   margin: 0;
   // margin-bottom: 5px;
   letter-spacing: -0.3px;
-  color: $darkblue;
+  color: $blue-120;
 
   @include for-size(phone-only) {
     font-size: 20px;
@@ -78,7 +78,7 @@
   line-height: 1.25;
   margin: 0;
   // margin-bottom: 5px;
-  color: $darkblue;
+  color: $blue-120;
 
   @include for-size(phone-only) {
     font-size: 18px;
@@ -99,7 +99,7 @@
   margin: 0;
   margin-bottom: 5px;
   letter-spacing: -0.3px;
-  color: $darkblue;
+  color: $blue-120;
 
   @include for-size(phone-only) {
     font-size: 16px;
@@ -161,7 +161,7 @@
 }
 
 .darkblueCenter {
-  color: $darkblue;
+  color: $blue-120;
   text-align: center;
 }
 

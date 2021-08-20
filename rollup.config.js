@@ -54,7 +54,7 @@ const plugins = [
 export default [
   {
     input: [
-      // 'src/index.jsx',
+      'src/index.jsx',
       'src/Action/Action.jsx',
       'src/Button/Button.jsx',
       'src/Card/Card.jsx',
@@ -67,15 +67,12 @@ export default [
       'src/Input/Select.jsx',
       'src/Input/OrderableSelect/OrderableSelect.jsx',
       'src/Input/DualInput.jsx',
-      'src/Input/Quill.jsx',
+      'src/Quill/Editor.jsx',
       'src/Input/Password/Password.jsx',
       'src/Loader/Loader.jsx',
       'src/Logo/Logo.jsx',
       'src/Text/Text.jsx'
     ],
-    globals: {
-      zxcvbn: 'zxcvbn'
-    },
     output: {
       dir: 'build',
       format: 'cjs',
@@ -90,9 +87,6 @@ export default [
   },
   {
     input: 'src/index.jsx',
-    globals: {
-      zxcvbn: 'zxcvbn'
-    },
     output: {
       file: packageJson.module,
       format: 'esm',

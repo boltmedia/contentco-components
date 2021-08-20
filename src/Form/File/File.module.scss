@@ -5,7 +5,7 @@ $margin: 10px;
 $height: 48px;
 $border: 2px;
 $labelTopPosition: 4px;
-$labelTopColor: $blue-badge;
+$labelTopColor: $blue-120;
 
 .newContainer {
   display: flex;
@@ -92,7 +92,7 @@ $labelTopColor: $blue-badge;
   cursor: text;
 
   &.error {
-    color: $strongred;
+    color: $red-50;
   }
 }
 
@@ -121,7 +121,7 @@ $labelTopColor: $blue-badge;
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
-  color: $darkblue-alt;
+  color: $blue-150;
   outline: none;
   box-shadow: 0px 4px 20px 0px transparent;
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
@@ -193,10 +193,10 @@ $labelTopColor: $blue-badge;
     cursor: pointer;
 
     &:hover {
-      color: $strongred;
+      color: $red-50;
 
       .removeCross {
-        border-color: $strongred;
+        border-color: $red-50;
       }
     }
   }
@@ -239,7 +239,7 @@ $labelTopColor: $blue-badge;
 
   a:link,
   a:visited {
-    color: $blue;
+    color: $blue-80;
   }
 
   &:hover {
@@ -250,13 +250,13 @@ $labelTopColor: $blue-badge;
       cursor: pointer;
 
       &:hover {
-        color: $blue;
+        color: $blue-80;
         text-decoration: underline;
       }
     }
 
     a {
-      color: $darkblue;
+      color: $blue-120;
     }
   }
 }
@@ -292,7 +292,7 @@ $labelTopColor: $blue-badge;
 //   .label {
 //     padding-left: 16px;
 //     padding-top: 4px;
-//     color: $darkblue;
+//     color: $blue-120;
 //     font-size: 12px;
 //     line-height: 24px;
 //     font-weight: 600;
@@ -301,7 +301,7 @@ $labelTopColor: $blue-badge;
 //   }
 
 //   .label.error {
-//     color: $strongred;
+//     color: $red-50;
 //   }
 
 //   .field {

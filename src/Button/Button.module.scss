@@ -61,14 +61,14 @@
 }
 
 .darkblue {
-  background-color: $dark-blue;
+  background-color: $blue-120;
   color: $white;
 
   &:hover {
-    background-color: darken($dark-blue, 10%);
+    background-color: darken($blue-120, 10%);
   }
   &:active {
-    background-color: darken($dark-blue, 20%);
+    background-color: darken($blue-120, 20%);
   }
 }
 
@@ -99,16 +99,16 @@
 
 .white {
   background-color: $white;
-  color: $dark-blue;
+  color: $blue-120;
 
   &:hover {
-    background-color: $white-shadow;
-    color: $dark-blue;
+    background-color: $blue-5;
+    color: $blue-120;
   }
 
   &:active {
-    background-color: $light-blue;
-    color: $dark-blue;
+    background-color: $blue-7;
+    color: $blue-120;
   }
 }
 
@@ -129,39 +129,39 @@
 }
 
 .redOutline {
-  color: $red;
-  border-color: $red;
+  color: $red-50;
+  border-color: $red-50;
   background: transparent;
 
   &:hover {
-    border-color: darken($red, 10%);
-    color: darken($red, 10%);
+    border-color: darken($red-50, 10%);
+    color: darken($red-50, 10%);
   }
 
   &:active {
-    border-color: darken($red, 20%);
-    color: darken($red, 20%);
+    border-color: darken($red-50, 20%);
+    color: darken($red-50, 20%);
   }
 }
 
 .whiteBlueOutline {
-  color: $blue-shadow;
+  color: $blue-100;
   border-color: $white;
   background-color: $white;
-  border-color: $blue-shadow;
+  border-color: $blue-100;
   word-break: break-word;
   white-space: normal;
 
   &:hover {
     background-color: $blue-5;
-    border-color: darken($blue-shadow, 10%);
-    color: darken($blue-shadow, 10%);
+    border-color: darken($blue-100, 10%);
+    color: darken($blue-100, 10%);
   }
 
   &:active {
     background-color: $blue-5;
-    border-color: darken($blue-shadow, 20%);
-    color: darken($blue-shadow, 20%);
+    border-color: darken($blue-100, 20%);
+    color: darken($blue-100, 20%);
   }
 }
 

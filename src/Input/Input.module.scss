@@ -5,7 +5,7 @@ $margin: 10px;
 $height: 48px;
 $border: 2px;
 $labelTopPosition: 4px;
-$labelTopColor: $blue-badge;
+$labelTopColor: $blue-120;
 
 .container {
   font-family: $cerebri;
@@ -18,7 +18,7 @@ $labelTopColor: $blue-badge;
   border: 1px solid $gray-20;
 
   &.containerError {
-    border: 1px solid $strongred;
+    border: 1px solid $red-50;
   }
 }
 
@@ -40,7 +40,7 @@ $labelTopColor: $blue-badge;
   right: 10px;
 
   &.error {
-    color: $strongred;
+    color: $red-50;
   }
 }
 
@@ -100,7 +100,7 @@ $labelTopColor: $blue-badge;
     font-weight: 600;
     line-height: 18px;
     top: $labelTopPosition;
-    color: $strongred;
+    color: $red-50;
   }
 
   &:disabled {
@@ -158,7 +158,7 @@ $labelTopColor: $blue-badge;
 
     &.error {
       opacity: 1;
-      color: $strongred;
+      color: $red-50;
     }
   }
 
@@ -362,7 +362,7 @@ $labelTopColor: $blue-badge;
 
   a:link,
   a:visited {
-    color: $blue;
+    color: $blue-80;
   }
 
   &:hover {
@@ -373,13 +373,13 @@ $labelTopColor: $blue-badge;
       cursor: pointer;
 
       &:hover {
-        color: $blue;
+        color: $blue-80;
         text-decoration: underline;
       }
     }
 
     a {
-      color: $darkblue;
+      color: $blue-120;
     }
   }
 }
@@ -485,7 +485,7 @@ $labelTopColor: $blue-badge;
   }
 
   .dualInput + .label.error {
-    color: $strongred;
+    color: $red-50;
   }
 
   &.active {

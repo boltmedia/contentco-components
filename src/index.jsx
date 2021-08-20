@@ -6,10 +6,10 @@ import InputGroup from './Form/InputGroup';
 import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
 // import Password from './Input/Password/Password';
-import OrderableSelect from './Input/OrderableSelect/OrderableSelect';
-import DualInput from './Input/DualInput';
+// import OrderableSelect from './Input/OrderableSelect/OrderableSelect';
+// import DualInput from './Input/DualInput';
 import Select from './Input/Select';
-// import Quill from './Input/Quill';
+// import QuillEditor from './Quill/Editor';
 import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Text from './Text/Text';
@@ -24,9 +24,9 @@ export {
   TextInput,
   TextArea,
   // Password,
-  OrderableSelect,
-  DualInput,
-  // Quill,
+  // OrderableSelect,
+  // DualInput,
+  // QuillEditor,
   Select,
   Card,
   Icon,
