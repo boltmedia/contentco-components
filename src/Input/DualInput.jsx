@@ -1,8 +1,6 @@
-import React, { useState, useRef, useEffect, memo } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef, memo } from 'react';
 
 import classNames from 'classnames';
-import { debounce } from 'lodash';
 
 import InputMask from 'react-input-mask';
 

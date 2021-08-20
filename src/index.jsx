@@ -5,8 +5,6 @@ import InputContainer from './Form/InputContainer';
 import InputGroup from './Form/InputGroup';
 import TextInput from './Input/TextInput';
 import TextArea from './Input/TextArea';
-import DateSelector from './Input/DateSelector';
-import DateInput from './Input/DateInput';
 import Password from './Input/Password/Password';
 import OrderableSelect from './Input/OrderableSelect/OrderableSelect';
 import DualInput from './Input/DualInput';
@@ -25,8 +23,6 @@ export {
   InputGroup,
   TextInput,
   TextArea,
-  DateSelector,
-  DateInput,
   Password,
   OrderableSelect,
   DualInput,

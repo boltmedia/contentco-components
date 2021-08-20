@@ -67,8 +67,6 @@ export default [
       'src/Icon/Icon.jsx',
       'src/Input/TextInput.jsx',
       'src/Input/TextArea.jsx',
-      'src/Input/DateInput.jsx',
-      'src/Input/DateSelector.jsx',
       'src/Input/Select.jsx',
       'src/Input/OrderableSelect/OrderableSelect.jsx',
       'src/Input/DualInput.jsx',
