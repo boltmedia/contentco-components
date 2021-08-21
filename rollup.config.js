@@ -7,19 +7,20 @@ import autoprefixer from 'autoprefixer';
 import copy from 'rollup-plugin-copy';
 import external from 'rollup-plugin-peer-deps-external';
 import svgr from '@svgr/rollup';
-import analyze from 'rollup-plugin-analyzer';
+// import analyze from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
 import cleaner from 'rollup-plugin-cleaner';
 import cleanup from 'rollup-plugin-cleanup';
 import pkg from './package.json';
 
 const plugins = [
-  external(),
+  external({ includeDependencies: true }),
   // analyze(),
-  commonjs({
-    exclude: 'node_modules',
-    ignoreGlobal: true
-  }),
+  // commonjs({
+  //   exclude: 'node_modules',
+  //   ignoreGlobal: true
+  // }),
+  commonjs(),
   svgr(),
   postcss({
     modules: true,
@@ -85,12 +86,12 @@ export default [
         targets: ['./dist/']
       }),
       ...plugins
-    ],
-    external: Object.keys({
-      ...pkg.devDependencies,
-      ...pkg.dependencies,
-      ...pkg.peerDependencies
-    })
+    ]
+    // external: Object.keys({
+    //   // ...pkg.devDependencies,
+    //   ...pkg.dependencies,
+    //   ...pkg.peerDependencies
+    // })
   },
   {
     input: 'src/index.jsx',
@@ -99,11 +100,11 @@ export default [
       format: 'esm',
       sourcemap: false
     },
-    plugins,
-    external: Object.keys({
-      ...pkg.devDependencies,
-      ...pkg.dependencies,
-      ...pkg.peerDependencies
-    })
+    plugins
+    // external: Object.keys({
+    //   // ...pkg.devDependencies,
+    //   ...pkg.dependencies,
+    //   ...pkg.peerDependencies
+    // })
   }
 ];
