@@ -57,7 +57,7 @@ const plugins = [
 export default [
   {
     input: [
-      'src/index.jsx',
+      // 'src/index.jsx',
       'src/Action/Action.jsx',
       'src/Button/Button.jsx',
       'src/Card/Card.jsx',
@@ -106,5 +106,32 @@ export default [
     //   ...pkg.dependencies,
     //   ...pkg.peerDependencies
     // })
+  },
+
+  {
+    input: 'src/index.jsx',
+    output: [
+      {
+        file: `dist/index.js`,
+        format: 'cjs',
+        sourcemap: false
+      }
+    ],
+    plugins: [
+      svgr(),
+      external({ includeDependencies: true }),
+      postcss({
+        plugins: [autoprefixer]
+      }),
+      babel({
+        babelHelpers: 'runtime',
+        exclude: 'node_modules/**'
+      }),
+      resolve({
+        browser: true,
+        extensions: ['.js', '.jsx']
+      }),
+      commonjs()
+    ]
   }
 ];

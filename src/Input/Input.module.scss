@@ -130,6 +130,22 @@ $labelTopColor: $blue-120;
   resize: vertical;
   position: relative;
   overflow: auto;
+
+  // &::-webkit-input-placeholder {
+  //   color: $gray-20;
+  // }
+  // &:-ms-input-placeholder {
+  //   color: $gray-20;
+  // }
+  // &::-moz-placeholder {
+  //   color: $gray-20;
+  // }
+  // &:-moz-placeholder {
+  //   color: $gray-20;
+  // }
+  // &::placeholder {
+  //   color: $gray-20;
+  // }
 }
 
 .input {
