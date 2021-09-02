@@ -22,7 +22,7 @@
   align-items: flex-start;
   margin-bottom: 15px;
 
-  &:last-of-type {
+  &.noMargin {
     margin-bottom: 0;
   }
 }
