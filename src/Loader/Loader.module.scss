@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../variables.scss';
 
 @keyframes spin {
@@ -16,13 +17,13 @@
 
 $brand-success: #5cb85c;
 $loader-size: 100px;
-$check-height: $loader-size/2;
-$check-width: $check-height/2;
-$check-left: ($loader-size/6 + $loader-size/12);
+$check-height: math.div($loader-size, 2);
+$check-width: math.div($check-height, 2);
+$check-left: math.div($loader-size, 6) + math.div($loader-size, 12);
 $check-thickness: 3px;
 $check-color: $brand-success;
 $error-color: red;
-$error-left: $loader-size/4;
+$error-left: math.div($loader-size, 4);
 
 @keyframes checkmark {
   0% {
@@ -89,8 +90,8 @@ $error-left: $loader-size/4;
     // position: absolute;
     // left: 7px;
     // top: 35px;
-    width: $loader-size/2;
-    height: $loader-size/2;
+    width: math.div($loader-size, 2);
+    height: math.div($loader-size, 2);
     // width: 50px;
     // height: 50px;
 
@@ -98,7 +99,7 @@ $error-left: $loader-size/4;
     &:after {
       position: absolute;
       content: ' ';
-      height: $loader-size/2;
+      height: math.div($loader-size, 2);
       width: 2px;
       left: 35.35px - 1px;
       background-color: #f00;
