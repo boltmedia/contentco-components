@@ -5,12 +5,24 @@ import classNames from 'classnames';
 import TextareaAutosize from 'react-autosize-textarea';
 
 const TextArea = React.forwardRef(
-  ({ disabled, name, placeholder, label, required, error, ...props }, ref) => {
+  (
+    {
+      disabled,
+      name,
+      placeholder,
+      label,
+      required,
+      error,
+      className,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <div
         className={classNames(
           Styles.container,
-          props.className,
+          className,
           disabled && Styles.disabled
         )}
       >
