@@ -16,6 +16,7 @@ import Card from './Card/Card';
 import Icon from './Icon/Icon';
 import Text from './Text/Text';
 import Action from './Action/Action';
+import TextEditor from './TextEditor/TextEditor';
 
 export {
   Logo,
@@ -35,5 +36,6 @@ export {
   Card,
   Icon,
   Text,
-  Action
+  Action,
+  TextEditor
 };
